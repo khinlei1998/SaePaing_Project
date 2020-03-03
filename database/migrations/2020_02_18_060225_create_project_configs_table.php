@@ -22,9 +22,9 @@ class CreateProjectConfigsTable extends Migration
             $table->unsignedInteger('project_id');
             $table->foreign('project_id')->references('project_id')->on('projects');
             $table->string('assign_person');
-            $table->date('d_line');
-            $table->string('report')->nullable();
             $table->foreign('assign_person')->references('emp_id')->on('employees');
+            $table->string('d_line');
+            $table->string('percent')->nullable();
             $table->timestamps();
         });
     }

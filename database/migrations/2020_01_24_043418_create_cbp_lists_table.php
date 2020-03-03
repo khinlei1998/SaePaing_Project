@@ -18,6 +18,7 @@ class CreateCbpListsTable extends Migration
             $table->Text('cbp_name');
             $table->unsignedInteger('dept_id')->nullable();
             $table->foreign('dept_id')->references('dept_id')->on('departments');
+            $table->integer('status')->default('0');
             $table->timestamps();
         });
     }
