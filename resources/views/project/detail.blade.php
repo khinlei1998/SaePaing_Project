@@ -214,13 +214,21 @@
                 var totalsubtask = $('#cbp_total_subtask');
                 var progress_complete = $('#cbp_process_complete');
                 var pg_container = $('#progress_container');
+                var show_per='';
+                if(cbp_list[0].percent != ''){
+                    var show_per=cbp_list[0].percent + '%';
+
+                }else{
+                    var show_per='';
+
+                }
                 pg_container.empty();
                 var pg = "\n" +
                     "<div class=\"progress progress-profile\">\n" +
                     "<div class=\"progress-bar bg-danger\"\n" +
                     "                     role=\"progressbar\" style=\"width: "+cbp_list[0].percent+"%;\"\n" +
                     "                     aria-valuenow=\"40\" aria-valuemin=\"0\"\n" +
-                    "                     aria-valuemax=\"100\">"+cbp_list[0].percent+"\n" +
+                    "                     aria-valuemax=\"100\">"+show_per+"\n" +
                     "                </div>\n" +
                     "            </div>";
                 pg_container.append(pg);
