@@ -41,8 +41,8 @@
                   <li><a href="#"><i class="fas fa-building"></i><span>Sub Department</span></a></li>
                   <li><a href="#"><i class="fas fa-users"></i><span>team</span></a></li>
                   <li><a href="#"><i class="fas fa-user"></i><span>Employee</span></a></li> -->
-                <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'profile' ? 'active' : null }}"><a href="{{ url('profile') }}"><i class="fas fa-address-card"></i><span>Profile</span></a></li>
-                <li class="mr-1 pr-2 pl-2 border-right-color {{ Request::segment(1) === 'logout' ? 'active' : null }}"><a href="{{ route('logout') }}"
+                <li class="mr-1 pr-2 pl-2 border-right-color {{ Request::segment(1) === 'profile' ? 'active' : null }}"><a href="{{ url('profile') }}"><i class="fas fa-address-card"></i><span>Profile</span></a></li>
+                <!-- <li class="mr-1 pr-2 pl-2 border-right-color {{ Request::segment(1) === 'logout' ? 'active' : null }}"><a href="{{ route('logout') }}"
                                                                                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         <i class="fa fa-sign-out-alt"></i> <span>{{ __('Logout') }}</span>
@@ -51,8 +51,32 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                </li>
-                <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li>
+                </li> -->
+
+                <div class="btn-group pt-1" style="position:absolute;margin-left:960px;">
+                
+                <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" width="37" height="37" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
+                </button>
+            
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                                                                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        <i class="fa fa-sign-out-alt"></i> <span>{{ __('Logout') }}</span>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    </a>
+
+                    
+                </div>
+
+                </div>
+                <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->
             </ul>
         </nav>
     </div>
