@@ -37,8 +37,11 @@
                                             <span class="progress-right">
         <span class="progress-bar border-primary"></span>
                                         </span>
+
+
+
                                             <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                                <div class="h2 font-weight-bold">80%<sup class="small"></sup></div>
+                                                <div class="h2 font-weight-bold">{{$per_of_whole_project}} %<sup class="small"></sup></div>
                                             </div>
                                         </div>
                         
