@@ -18,6 +18,7 @@ class CreateCbpSubtasksTable extends Migration
             $table->Text('cbp_subtask');
             $table->unsignedInteger('cbp_id')->nullable();
             $table->foreign('cbp_id')->references('cbp_id')->on('cbp_lists');
+            $table->integer('status')->default('0');
             $table->timestamps();
         });
     }

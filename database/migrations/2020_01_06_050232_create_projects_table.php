@@ -19,11 +19,8 @@ class CreateProjectsTable extends Migration
             $table->mediumtext('project_title');
             $table->mediumtext('project_description');
             $table->string('project_region');
-           
             $table->string('project_startDate');
             $table->string('project_endDate');
-//            $table->unsignedInteger('cbp_id');
-//            $table->foreign('cbp_id')->references('cbp_id')->on('cbp_lists');
             $table->timestamps();
         });
     }
