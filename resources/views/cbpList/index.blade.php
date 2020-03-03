@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'CBP Management System')
+@section('title', 'CMP Management System')
 @section('content')
 
 
@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="row">
-                        <h4 class="mt-4 text-center w-100"><strong>CBP Management System</strong></h4>
+                        <h4 class="mt-4 text-center w-100"><strong>CMP Management System</strong></h4>
                         <a class="position-absolute add-button-link mt-4 mr-3">
                         <button class="btn add-button text-white" data-toggle="modal" data-target="#addcbp"><i class="fas fa-plus-circle"></i> Add New CBP </button>
                         </a>              
