@@ -71,7 +71,7 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                                                                                       onclick="event.preventDefault();
+                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         <i class="fa fa-sign-out-alt"></i> <span>{{ __('Logout') }}</span>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -86,7 +86,7 @@
 
                 
                
-                <div class="rounded-circle bg-primary p-1 shadow mt-2" id="to_change_zaw"  style="position:absolute;margin-left:1115px;color:white;">&nbsp;zaw&nbsp;</div>
+                &nbsp;<div class="rounded-circle bg-primary p-1 shadow mt-2" id="to_change_zaw"  style="position:absolute;margin-left:1115px;color:white;">&nbsp;zaw&nbsp;</div>
                 <div class="pt-3" style="position:absolute;margin-left:1158px;color:white;"><i class="fas fa-exchange-alt" style="color:black;"></i></div>
 
                  <div class="rounded-circle bg-success p-1 shadow mt-2" id="to_change_uni" style="position:absolute;margin-left:1173px;color:white;">&nbsp;uni&nbsp;</div>

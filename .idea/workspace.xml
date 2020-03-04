@@ -35,22 +35,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/components/nav.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="70" />
+            <state relative-caret-position="491">
+              <caret line="98" column="6" selection-start-line="98" selection-start-column="6" selection-end-line="98" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#4031#4037#0#HTML" expanded="true" />
-                <element signature="e#4038#4044#0#HTML" expanded="true" />
-                <element signature="e#4045#4051#0#HTML" expanded="true" />
-                <element signature="e#4439#4445#0#HTML" expanded="true" />
-                <element signature="e#4445#4451#0#HTML" expanded="true" />
-                <element signature="e#4486#4492#1#HTML" expanded="true" />
+                <element signature="e#4361#4367#0#HTML" expanded="true" />
+                <element signature="e#4367#4373#0#HTML" expanded="true" />
+                <element signature="e#4408#4414#1#HTML" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#a#2;n#div#0;n#div#0;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#5361#5367#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#5574#5580#0#HTML" expanded="true" />
+                <element signature="e#5583#5589#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#div#2;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#6258#6264#0#HTML" expanded="true" />
+                <element signature="e#6267#6273#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Policies/TaskPolicy.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/components/footer.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -132,8 +156,8 @@
       <find>CBP</find>
       <find>zawgyi</find>
       <find>popins</find>
-      <find>zaw</find>
       <find>ZAW</find>
+      <find>zaw</find>
     </findStrings>
     <replaceStrings>
       <replace>Poppins</replace>
@@ -150,8 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/GroupController.php" />
         <option value="$PROJECT_DIR$/resources/views/Department/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Department.php" />
         <option value="$PROJECT_DIR$/resources/views/Department/edit.blade.php" />
@@ -201,6 +223,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/cbpList/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/components/nav.blade.php" />
+        <option value="$PROJECT_DIR$/app/Policies/TaskPolicy.php" />
+        <option value="$PROJECT_DIR$/resources/views/components/footer.blade.php" />
       </list>
     </option>
   </component>
@@ -500,12 +524,12 @@
       <workItem from="1583208019219" duration="775000" />
       <workItem from="1583210345550" duration="9883000" />
       <workItem from="1583232582786" duration="1061000" />
-      <workItem from="1583292120306" duration="5599000" />
+      <workItem from="1583292120306" duration="9499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="436229000" />
+    <option name="totallyTimeSpent" value="440129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -520,8 +544,8 @@
     <frame x="-3" y="-3" width="1542" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8882353" visible="true" weight="0.1785235" />
-      <window_info id="Structure" order="1" sideWeight="0.11176471" side_tool="true" visible="true" weight="0.1785235" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8882682" visible="true" weight="0.1785235" />
+      <window_info id="Structure" order="1" sideWeight="0.11173184" side_tool="true" visible="true" weight="0.1785235" />
       <window_info id="npm" order="2" sideWeight="0.45411393" side_tool="true" weight="0.1738255" />
       <window_info id="Favorites" order="3" sideWeight="0.45411393" side_tool="true" weight="0.1738255" />
       <window_info anchor="bottom" id="TypeScript" />
@@ -536,7 +560,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.15281501" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932885" weight="0.15281501" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.08847185" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.04021448" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -592,20 +616,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/team/_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="14" selection-start-line="9" selection-start-column="7" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/task/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/task/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -929,19 +939,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/components/nav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="70" />
+        <state relative-caret-position="491">
+          <caret line="98" column="6" selection-start-line="98" selection-start-column="6" selection-end-line="98" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#4031#4037#0#HTML" expanded="true" />
-            <element signature="e#4038#4044#0#HTML" expanded="true" />
-            <element signature="e#4045#4051#0#HTML" expanded="true" />
-            <element signature="e#4439#4445#0#HTML" expanded="true" />
-            <element signature="e#4445#4451#0#HTML" expanded="true" />
-            <element signature="e#4486#4492#1#HTML" expanded="true" />
+            <element signature="e#4361#4367#0#HTML" expanded="true" />
+            <element signature="e#4367#4373#0#HTML" expanded="true" />
+            <element signature="e#4408#4414#1#HTML" expanded="true" />
             <element signature="n#style#0;n#form#0;n#a#2;n#div#0;n#div#0;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#5361#5367#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#5574#5580#0#HTML" expanded="true" />
+            <element signature="e#5583#5589#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#2;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#ul#0;n#nav#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#6258#6264#0#HTML" expanded="true" />
+            <element signature="e#6267#6273#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Policies/TaskPolicy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/components/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
         </state>
       </provider>
     </entry>
