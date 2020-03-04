@@ -62,13 +62,18 @@ class ProjectController extends Controller
     public function detail($id)
     {
         $project = Project::find($id);
+        
         $configs = $project->project_config;
+        
         $subcbps = "";
         foreach ($configs as $config){
+          
             $subcbps.=$config->cbp_subtask.",";
         }
-        $subcbps = substr_count($subcbps, ',');
         
+        $subcbps = substr_count($subcbps, ',');
+      
+       
         return view('project.detail', compact(['project','configs','subcbps']));
     }    /**
      * Show the form for editing the specified resource.

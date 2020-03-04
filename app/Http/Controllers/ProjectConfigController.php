@@ -187,11 +187,11 @@ class ProjectConfigController extends Controller
     }
 
     public function addSubCbpProject(Request $request){
-
+        
         $p_config = new ProjectConfig();
 
         $p_config->cbp_id = $request->cbpid;
-
+        
         $p_config->cbp_subtask = rtrim($request->ids,",");
 
         $p_config->status = "Assigned";

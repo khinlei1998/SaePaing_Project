@@ -90281,6 +90281,40 @@ Dropzone.options.missionform = {
       }
     });
   }
+}; // Profile 
+
+Dropzone.options.profileform = {
+  maxFilesize: 1,
+  maxFiles: 11,
+  paramName: "profile_img",
+  uploadMultiple: true,
+  addRemoveLinks: true,
+  autoProcessQueue: false,
+  dictResponseError: 'Server not Configured',
+  acceptedFiles: "image/*",
+  parallelUploads: 11,
+  init: function init() {
+    var profileDropZone = this;
+    $.fn.addNewImage(profileDropZone);
+    this.on("queuecomplete", function (progress) {
+      console.log("Uploaded!!!");
+    });
+    this.on("error", function (file, response) {
+      console.log(response);
+    });
+    this.on("addedfile", function (file, response) {
+      if (file == profileDropZone.files[0]) {
+        $('.dz-preview:first').hide();
+      }
+    });
+    this.on("success", function (data) {
+      console.log(data);
+    });
+    this.on("sending", function (file, xhr, data) {});
+    $('#btnprofile').on("click", function () {
+      profileDropZone.processQueue();
+    });
+  }
 };
 Dropzone.options.reportform = {
   maxFilesize: 1,
@@ -90633,8 +90667,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\TYT_28_latest\ui2_28\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\TYT_28_latest\ui2_28\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\test12345\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\test12345\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
