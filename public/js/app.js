@@ -90421,6 +90421,9 @@ $(function () {
   $('#showcbp').click(function () {
     $('#showcbpdiv').show();
   });
+  $('#refresh_page').click(function () {
+    return window.location.assign(window.location.href);
+  });
   $('#to_change_zaw').click(function () {
     if ($('.uniandzawgyi').hasClass('uni')) {
       $('.uniandzawgyi').removeClass('uni');
