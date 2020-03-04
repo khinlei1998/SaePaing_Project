@@ -82,13 +82,7 @@
 
                 </div>
 
-<<<<<<< HEAD
-=======
-                
-               
 
-               
->>>>>>> 1d233d5de2dc9c9fe506d16b67a8a603ba7a3075
                 <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->
             </ul>
         </nav>
