@@ -90421,6 +90421,20 @@ $(function () {
   $('#showcbp').click(function () {
     $('#showcbpdiv').show();
   });
+  $('#to_change_zaw').click(function () {
+    if ($('.uniandzawgyi').hasClass('uni')) {
+      $('.uniandzawgyi').removeClass('uni');
+    }
+
+    $('.uniandzawgyi').addClass('zawgyi');
+  });
+  $('#to_change_uni').click(function () {
+    if ($('.uniandzawgyi').hasClass('zawgyi')) {
+      $('.uniandzawgyi').removeClass('zawgyi');
+    }
+
+    $('.uniandzawgyi').addClass('uni');
+  });
   $('.sub_department').select2({
     placeholder: "Select a Sub_department"
   });
@@ -90633,8 +90647,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\TYT_28_latest\ui2_28\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\TYT_28_latest\ui2_28\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\ui2_29\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\ui2_29\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

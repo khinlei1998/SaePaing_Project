@@ -17,6 +17,7 @@ class CreateTasksTable extends Migration
             $table->increments('task_id');
             $table->string('task_unique_id')->nullable();
             $table->string('project_code')->nullable();
+            $table->foreign('project_code')->references('project_code')->on('projects');
             $table->string('task_title');
             $table->mediumtext('description');
             $table->string('assignee_person');
@@ -35,7 +36,7 @@ class CreateTasksTable extends Migration
             $table->foreign('subdept_id')->references('subdept_id')->on('sub_departments');
             $table->unsignedInteger('team_id')->nullable();
             $table->foreign('team_id')->references('team_id')->on('teams');
-            $table->foreign('project_code')->references('project_code')->on('projects');
+           
             $table->timestamps();
         });
     }

@@ -48,7 +48,7 @@
                                         <div class="row text-center mt-4">
                                             <div class="col-6 border-right">
                                                 <div class="h4 font-weight-bold mb-0">{{ $configs? count($configs):"0" }}</div>
-                                                <span class="small text-gray">CBP Tasks</span>
+                                                <span class="small text-gray">CMP Tasks</span>
                                             </div>
                                             <div class="col-6">
                                                 <div class="h4 font-weight-bold mb-0">{{ $subcbps??"0"}}</div>
@@ -63,7 +63,7 @@
                                                 <div class="icon-circle pl-2 pt-1"><i class="fa fa-tasks"></i></div>
                                             </div>
                                             <div class="col-11 mt-3 pl-4">
-                                                <p><strong>CBP Main Tasks</strong></p>
+                                                <p><strong>CMP Main Tasks</strong></p>
                                             </div>
                                         </div>
                                     </div>

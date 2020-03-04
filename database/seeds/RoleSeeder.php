@@ -28,7 +28,10 @@ class RoleSeeder extends Seeder
                 'role' => 'HOD',
             ],
             [
-                'role'=>'Stuff',
+                'role' => 'HOT',
+            ],
+            [
+                'role'=>'Staff',
             ]
         ];
         DB::table('roles')->insert($roles);

@@ -16,13 +16,20 @@
         </div>
     </div>
     <div class="container">
+
+
+
+
+
+
         <nav class="nav navbar navbar-expand-lg navbar-light bg-light">
+
             <ul class="nav navbar-nav">
 
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'home' ? 'active' : null }}"><a href="{{ url('home')}}"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'project' ? 'active' : null }}"><a href="{{ url('project')}}"><i class="fas fa-fw fa-tasks"></i><span>Projects</span></a></li>
 
-                <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'cbplist' ? 'active' : null }}"><a href="{{ url('cbplist')}}"><i class="fas fa-building"></i><span>CBP</span></a></li>
+                <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'cbplist' ? 'active' : null }}"><a href="{{ url('cbplist')}}"><i class="fas fa-building"></i><span>CMP</span></a></li>
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'task' ? 'active' : null }}"><a href="{{ url('task') }}"><i class="fa fa-fw fa-edit"></i><span>Task List </span></a></li>
 
                 @can('create',\App\Mission::class)
@@ -55,13 +62,10 @@
 
                 <div class="btn-group pt-1" style="position:absolute;margin-left:960px;">
 
-                <!-- <img src="https://c7.uihere.com/files/412/323/768/burma-zawgyi-font-unicode-android-font-android.jpg" width="37" height="37" alt="..." class="rounded"> -->
-                
-                
                 <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" width="37" height="37" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
                 </button>
-            
+
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
@@ -75,7 +79,7 @@
                     </form>
                     </a>
 
-                    
+
                 </div>
 
                 </div>
@@ -90,9 +94,9 @@
 
                 </div> -->
                
-                <div class="rounded-circle bg-primary p-1" style="position:absolute;margin-left:1120px;color:white;">&nbsp;zaw&nbsp;</div>
+                <div class="rounded-circle bg-primary p-1" id="to_change_zaw"  style="position:absolute;margin-left:1120px;color:white;">&nbsp;zaw&nbsp;</div>
 
-                 <div class="rounded-circle bg-success p-1" style="position:absolute;margin-left:1178px;color:white;">&nbsp;uni&nbsp;</div>
+                 <div class="rounded-circle bg-success p-1" id="to_change_uni" style="position:absolute;margin-left:1178px;color:white;">&nbsp;uni&nbsp;</div>
 
                
                 <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->

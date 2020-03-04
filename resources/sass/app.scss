@@ -23,22 +23,22 @@
 @import "~dropzone/dist/dropzone.css";
 
 //fonts
-
-@font-face {
-
-  font-family: PoppinsBlack;
-
-  src: url(../fonts/Poppins-Black.ttf);
-
-}
-
-@font-face {
-
-  font-family: PoppinsBold;
-
-  src: url(../fonts/Poppins-Bold.ttf);
-
-}
+//
+//@font-face {
+//
+//  font-family: PoppinsBlack;
+//
+//  src: url(../fonts/Poppins-Black.ttf);
+//
+//}
+//
+//@font-face {
+//
+//  font-family: PoppinsBold;
+//
+//  src: url(../fonts/Poppins-Bold.ttf);
+//
+//}
 
 @font-face {
 
@@ -48,13 +48,13 @@
 
 }
 
-@font-face {
-
-  font-family: PoppinsRegular;
-
-  src: url(../fonts/Poppins-Regular.ttf);
-
-}
+//@font-face {
+//
+//  font-family: PoppinsRegular;
+//
+//  src: url(../fonts/Poppins-Regular.ttf);
+//
+//}
 
 //common components
 
@@ -62,6 +62,23 @@
   .validate_emsg  {
     color:red;
   }
+}
+@font-face {
+  font-family:'Myanmar3';
+  src:local('Myanmar3'), url('https://mmwebfonts.comquas.com/fonts/myanmar3.woff') format('woff'), url('https://mmwebfonts.comquas.com/fonts/myanmar3.ttf') format('ttf');
+}
+@font-face {
+  font-family:'Zawgyi-One';
+  src:local('Zawgyi-One'), url('https://mmwebfonts.comquas.com/fonts/zawgyi.woff') format('woff'), url('https://mmwebfonts.comquas.com/fonts/zawgyi.ttf') format('ttf');
+}
+.zawgyi{
+
+  font-family:Zawgyi-One ;
+}
+
+.uni{
+
+  font-family:Myanmar3 ;
 }
 
 
@@ -263,11 +280,11 @@ main{
 
 //5. Profile blade csses
 
-*{
-
-  font-family: PoppinsRegular, sans-serif;
-
-}
+//*{
+//
+//  font-family: PoppinsRegular, sans-serif;
+//
+//}
 
 .time{
 
