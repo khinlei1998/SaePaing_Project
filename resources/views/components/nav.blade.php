@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="col-sm-8" style="padding-top: 20px;">
-
+                    
                 </div>
             </div>
         </div>
@@ -54,6 +54,9 @@
                 </li> -->
 
                 <div class="btn-group pt-1" style="position:absolute;margin-left:960px;">
+
+                <!-- <img src="https://c7.uihere.com/files/412/323/768/burma-zawgyi-font-unicode-android-font-android.jpg" width="37" height="37" alt="..." class="rounded"> -->
+                
                 
                 <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" width="37" height="37" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
@@ -76,6 +79,22 @@
                 </div>
 
                 </div>
+
+                <!-- <div class="btn-group pt-1 p-5" style="position:absolute;margin-left:1100px;">
+                <img src="https://home.unicode.org/wp-content/uploads/2019/06/@2X-1.png" width="34" height="33" alt="..." class="rounded">
+
+                </div>
+
+                <div class="btn-group pt-1 p-2" style="position:absolute;margin-left:1150px;">
+                <img src="https://cdn6.aptoide.com/imgs/d/2/c/d2cda67665d0b094cf8e770e9e3e5f2c_icon.png?w=240" width="37" height="37" alt="..." class="rounded">
+
+                </div> -->
+               
+                <div class="rounded-circle bg-primary p-1" style="position:absolute;margin-left:1120px;color:white;">&nbsp;zaw&nbsp;</div>
+
+                 <div class="rounded-circle bg-success p-1" style="position:absolute;margin-left:1178px;color:white;">&nbsp;uni&nbsp;</div>
+
+               
                 <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->
             </ul>
         </nav>
