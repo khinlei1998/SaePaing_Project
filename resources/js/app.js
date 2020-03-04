@@ -53,7 +53,7 @@ import {
     faAngleRight,
     faClock,
     faAngleUp,
-    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey
+    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt,faRedoAlt
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
     faHome,faTasks,faEdit,
@@ -63,7 +63,7 @@ library.add(
     faNetworkWired,faPlusCircle,faCheck
     ,faShareSquare,faCalendarAlt,faInfoCircle
     ,faAngleLeft,faAngleRight,faClock,
-    faAngleUp,faAngleDown,faTrashAlt,faBookmark,faCheckCircle,faAtlas,faDownload,faBell,faMailBulk,faCog,faSortDown,faKey);
+    faAngleUp,faAngleDown,faTrashAlt,faBookmark,faCheckCircle,faAtlas,faDownload,faBell,faMailBulk,faCog,faSortDown,faKey,faExchangeAlt,faRedoAlt);
 dom.watch();
 
 //this declaration is for datetime picker in task create.balde.php
@@ -563,7 +563,30 @@ $(function () {
         $('#showcbpdiv').show();
     });
 
-    
+    $('#refresh_page').click(function() {
+        return window.location.assign(window.location.href)
+    });
+
+    $('#to_change_zaw').click(function() {
+        if($('.uniandzawgyi').hasClass('uni')){
+            $('.uniandzawgyi').removeClass('uni');
+
+        }
+        $('.uniandzawgyi').addClass('zawgyi');
+
+    });
+
+
+
+    $('#to_change_uni').click(function() {
+        if($('.uniandzawgyi').hasClass('zawgyi')){
+            $('.uniandzawgyi').removeClass('zawgyi');
+
+        }
+        $('.uniandzawgyi').addClass('uni');
+
+    });
+
     $('.sub_department').select2({
         placeholder:"Select a Sub_department",
     });

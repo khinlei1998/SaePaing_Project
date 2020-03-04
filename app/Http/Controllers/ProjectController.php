@@ -1,5 +1,8 @@
 <?php
-namespace App\Http\Controllers;use App\Project;
+namespace App\Http\Controllers;
+
+use App\HodReport;
+use App\Project;
 use App\CbpList;
 use DB;
 use App\ProjectConfig;
@@ -57,6 +60,9 @@ class ProjectController extends Controller
             ->select('users.*', 'roles.role')
             ->where('roles.role', '=', "HOD")
             ->get();
+
+
+
         return view('cbp_config.index',compact('cbpList','hods','project'));
     }    
     public function detail($id)
@@ -66,15 +72,28 @@ class ProjectController extends Controller
         $configs = $project->project_config;
         
         $subcbps = "";
+        $per_of_whole_project=0;
+        $get_cbp_all_per=0;
         foreach ($configs as $config){
           
             $subcbps.=$config->cbp_subtask.",";
+            if(HodReport::where('projConfig_id',$config->id)->orderBy('id','desc')->count() > 0){
+                $get_cbp_all_per += HodReport::where('projConfig_id',$config->id)->orderBy('id','desc')->first()->percentage * 0.04;
+
+            }else{
+                $get_cbp_all_per += 0;
+
+            }
         }
-        
+
         $subcbps = substr_count($subcbps, ',');
-      
-       
-        return view('project.detail', compact(['project','configs','subcbps']));
+
+        $cal_cbpgetper=$get_cbp_all_per;
+
+        $per_of_whole_project=ceil($cal_cbpgetper);
+
+        return view('project.detail', compact(['project','configs','subcbps','per_of_whole_project']));
+
     }    /**
      * Show the form for editing the specified resource.
      *

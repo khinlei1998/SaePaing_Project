@@ -38,15 +38,18 @@
                                             <span class="progress-right">
         <span class="progress-bar border-primary"></span>
                                         </span>
+
+
+
                                             <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                                <div class="h2 font-weight-bold">80%<sup class="small"></sup></div>
+                                                <div class="h2 font-weight-bold">{{$per_of_whole_project}} %<sup class="small"></sup></div>
                                             </div>
                                         </div>
                         
                                         <div class="row text-center mt-4">
                                             <div class="col-6 border-right">
                                                 <div class="h4 font-weight-bold mb-0">{{ $configs? count($configs):"0" }}</div>
-                                                <span class="small text-gray">CBP Tasks</span>
+                                                <span class="small text-gray">CMP Tasks</span>
                                             </div>
                                             <div class="col-6">
                                                 <div class="h4 font-weight-bold mb-0">{{ $subcbps??"0"}}</div>
@@ -61,7 +64,7 @@
                                                 <div class="icon-circle pl-2 pt-1"><i class="fa fa-tasks"></i></div>
                                             </div>
                                             <div class="col-11 mt-3 pl-4">
-                                                <p><strong>CBP Main Tasks</strong></p>
+                                                <p><strong>CMP Main Tasks</strong></p>
                                             </div>
                                         </div>
                                     </div>
@@ -215,13 +218,21 @@
                 var totalsubtask = $('#cbp_total_subtask');
                 var progress_complete = $('#cbp_process_complete');
                 var pg_container = $('#progress_container');
+                var show_per='';
+                if(cbp_list[0].percent != ''){
+                    var show_per=cbp_list[0].percent + '%';
+
+                }else{
+                    var show_per='';
+
+                }
                 pg_container.empty();
                 var pg = "\n" +
                     "<div class=\"progress progress-profile\">\n" +
                     "<div class=\"progress-bar bg-danger\"\n" +
                     "                     role=\"progressbar\" style=\"width: "+cbp_list[0].percent+"%;\"\n" +
                     "                     aria-valuenow=\"40\" aria-valuemin=\"0\"\n" +
-                    "                     aria-valuemax=\"100\">"+cbp_list[0].percent+"\n" +
+                    "                     aria-valuemax=\"100\">"+show_per+"\n" +
                     "                </div>\n" +
                     "            </div>";
                 pg_container.append(pg);

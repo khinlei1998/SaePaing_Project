@@ -300,7 +300,7 @@
                                                             <td class="align-middle">{{ Str::limit($mission->remark,50) }}</td>
 
                                                             <td>
-                                                            
+
                                                                 <a href="{{ route('mission.show', $mission) }}" class="mb-2 d-block">
                                                                     <button data-toggle="tooltip" data-placement="left" title="Detail Mission" class="btn shadow bg-orange text-white w-100"><i class="fas fa-edit"></i> </button>
                                                                 </a>
@@ -354,7 +354,7 @@
                                                                            <div>
 
 
-                                                                           
+
                                                                             <div class="panel-heading ml-3" role="tab" id="headingOne">
                                                                                 <h4 class="panel-title">
                                                                                     <a class="collapsed collapsed-profile" role="button">
@@ -379,7 +379,7 @@
                                                                                                                 @php
                                                                                                                 $cbpid=$cbplist->id;
 
-                                                                                                                $get_per=DB::table('hod_reports')->where('projConfig_id',$cbplist->id);
+                                                                                                                $get_per=DB::table('hod_reports')->where('projConfig_id',$cbplist->id)->orderBy('id','desc');
                                                                                                                 @endphp
                                                                                                                 @if($get_per->count() == 0)
                                                                                                                 <div class="progress-bar bg-danger" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
@@ -429,7 +429,7 @@
                                                                                     @if(empty($cbplist->cbp_sub_lists))
                                                                                     @else
                                                                                     @foreach($cbplist->cbp_sub_lists as $sublist)
-                                                                                      
+
 
                                                                                       <div class="col-md-6">
                                                                                               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -465,23 +465,23 @@
                                                                                               </div>
 
                                                                                           </div>
-                                                                                   
-                                                                                       
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                     
-                                                                                     
-                                                                                     
-                                                                                     
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                                                       @endforeach
                                                                                     @endif
 
-                                                                                     
+
                                                                                     </div>
 
 
@@ -498,7 +498,7 @@
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header">
                                                                                     <h5 class="modal-title" id="exampleModalLongTitle"><i class="fa fa-info-circle pr-3" ></i><p class="d-inline-block" id="hot_report_title"></p></h5>
-                                                                                            
+
                                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                                 <span aria-hidden="true">&times;</span>
                                                                                             </button>
@@ -625,9 +625,9 @@
 
                     var hot_id = $('#project_region').find(':selected').val();
                     var deadline=$('#job_start_time').val();
-                    
+
                     if(deadline == ''){
-                        
+
 
                     }else{
                         $.ajax({
@@ -649,7 +649,7 @@
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
                     }
-                 
+
                 });
 
 
@@ -706,7 +706,7 @@
                 });
 
 
-                
+
             });
         }
     </script>

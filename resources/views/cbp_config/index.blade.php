@@ -2,7 +2,7 @@
 @section('title', 'Cbp Configuration')
 @section('content')
     ​
-    <div class="container">
+    <div class="container uniandzawgyi">
         <div class="card shadow-lg index-tables border-0 mt-5">
             <div class="container pb-3">
                 <div class="row">
@@ -102,7 +102,7 @@
                                     </div>
                                 </div>
                             @endif
-                            
+
                             @endforeach
                             <div class="modal fade in show" id="subconfig" tabindex="-1" role="dialog"
                                  aria-labelledby="subconfigTitle" aria-hidden="true">
@@ -286,10 +286,10 @@
                             "<button type=\"submit\" class=\"btn btn-danger btn-sm\">-</button>"+
 
 
-                          
+
 
                             "</form>"+
-                            "</div>"+       
+                            "</div>"+
                             "</ul>\n" +
                             "</div>";
                         $('#subcbp').append(cbp);

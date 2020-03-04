@@ -424,6 +424,10 @@ main{
 
 footer{
 
+.btn:focus {
+    outline: none !important;
+    box-shadow: none;
+  }
   position: fixed;
 
   bottom: 0;

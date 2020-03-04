@@ -12036,6 +12036,11 @@ footer {
   z-index: 1200;
 }
 
+footer .btn:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
 footer p {
   line-height: 60px;
 }
