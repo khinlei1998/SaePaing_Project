@@ -69,7 +69,7 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                                                                                       onclick="event.preventDefault();
+                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         <i class="fa fa-sign-out-alt"></i> <span>{{ __('Logout') }}</span>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -82,6 +82,13 @@
 
                 </div>
 
+<<<<<<< HEAD
+=======
+                
+               
+
+               
+>>>>>>> 1d233d5de2dc9c9fe506d16b67a8a603ba7a3075
                 <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->
             </ul>
         </nav>
