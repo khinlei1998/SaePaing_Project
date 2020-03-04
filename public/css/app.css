@@ -11824,27 +11824,30 @@ a.text-dark:focus {
 }
 
 @font-face {
-  font-family: PoppinsBlack;
-  src: url(/fonts/Poppins-Black.ttf?42cf9f0820d16f3ac2c26a7710ce70f2);
-}
-
-@font-face {
-  font-family: PoppinsBold;
-  src: url(/fonts/Poppins-Bold.ttf?c23534acbeddbaadfd0ab2d2bbfdfc84);
-}
-
-@font-face {
   font-family: PoppinsMedium;
   src: url(/fonts/Poppins-Medium.ttf?ba95810b56f476990ca71d15139d5111);
 }
 
-@font-face {
-  font-family: PoppinsRegular;
-  src: url(/fonts/Poppins-Regular.ttf?41e8dead03fb979ecc23b8dfb0fef627);
-}
-
 .form-group .validate_emsg {
   color: red;
+}
+
+@font-face {
+  font-family: "Myanmar3";
+  src: local("Myanmar3"), url("https://mmwebfonts.comquas.com/fonts/myanmar3.woff") format("woff"), url("https://mmwebfonts.comquas.com/fonts/myanmar3.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Zawgyi-One";
+  src: local("Zawgyi-One"), url("https://mmwebfonts.comquas.com/fonts/zawgyi.woff") format("woff"), url("https://mmwebfonts.comquas.com/fonts/zawgyi.ttf") format("ttf");
+}
+
+.zawgyi {
+  font-family: Zawgyi-One;
+}
+
+.uni {
+  font-family: Myanmar3;
 }
 
 .alert {
@@ -11952,10 +11955,6 @@ main {
 .row-color.report {
   background-color: rgba(255, 237, 74, 0.315);
   border-left-color: #ffed4a;
-}
-
-* {
-  font-family: PoppinsRegular, sans-serif;
 }
 
 .time {

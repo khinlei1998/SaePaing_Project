@@ -20,6 +20,7 @@ header("Content-Type: application/xml; charset=utf-8");
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=zawgyi'/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -27,7 +28,7 @@ header("Content-Type: application/xml; charset=utf-8");
     @stack('css')
 </head>
 <body class="bg-white">
-    <div id="app">
+    <div id="app " class="uniandzawgyi uni">
     <div>
     </div>
         @auth

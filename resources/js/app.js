@@ -516,7 +516,26 @@ $(function () {
         $('#showcbpdiv').show();
     });
 
-    
+    $('#to_change_zaw').click(function() {
+        if($('.uniandzawgyi').hasClass('uni')){
+            $('.uniandzawgyi').removeClass('uni');
+
+        }
+        $('.uniandzawgyi').addClass('zawgyi');
+
+    });
+
+
+
+    $('#to_change_uni').click(function() {
+        if($('.uniandzawgyi').hasClass('zawgyi')){
+            $('.uniandzawgyi').removeClass('zawgyi');
+
+        }
+        $('.uniandzawgyi').addClass('uni');
+
+    });
+
     $('.sub_department').select2({
         placeholder:"Select a Sub_department",
     });

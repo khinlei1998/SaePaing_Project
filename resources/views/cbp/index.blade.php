@@ -12,8 +12,9 @@
                         <h4 class="mt-4 text-center w-100"><strong>CBP Management System</strong></h4>
                         <a class="position-absolute add-button-link mt-4 mr-3">
                         <button class="btn add-button text-white" data-toggle="modal" data-target="#addcbp"><i class="fas fa-plus-circle"></i> Add New CBP </button>
-                        </a>              
+                        </a>
                     </div>
+
                     <hr>
 ​
                     <div class="row index-cbp overflow-auto">
@@ -30,9 +31,9 @@
                                                             <i class="fa fa-info-circle pr-3 pl-0"></i>{{ Str::limit($list->cbp_name,50) }}
                                                         </div>
                                                         <div class="col-md-2">
-                                                            <form action="{{ route('cbplist.destroy',$list->cbp_id) }}" method="POST">                   
+                                                            <form action="{{ route('cbplist.destroy',$list->cbp_id) }}" method="POST">
                                                             @csrf
-                                                            @method('DELETE')      
+                                                            @method('DELETE')
                                                             <button onclick="return confirm('Are you sure want to delete this?')" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></button>
                                                           </form>
                                                         </div>
@@ -86,14 +87,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            
+
+
 ​
                                         </div>
                                     </div>
                                 </div>
-                               
-                                
+
+
                             </div>
                         </div>
                         @endforeach

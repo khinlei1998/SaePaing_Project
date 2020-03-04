@@ -16,7 +16,14 @@
         </div>
     </div>
     <div class="container">
+
+
+
+
+
+
         <nav class="nav navbar navbar-expand-lg navbar-light bg-light">
+
             <ul class="nav navbar-nav">
 
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'home' ? 'active' : null }}"><a href="{{ url('home')}}"><i class="fa fa-home"></i><span>Home</span></a></li>
@@ -54,11 +61,20 @@
                 </li> -->
 
                 <div class="btn-group pt-1" style="position:absolute;margin-left:960px;">
-                
+
+
+
+                <span id="to_change_zaw">zaw</span>
+&nbsp;
+&nbsp;
+&nbsp;            <span id="to_change_uni">uni</span>
+
+
+
                 <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" width="37" height="37" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
                 </button>
-            
+
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
@@ -72,7 +88,7 @@
                     </form>
                     </a>
 
-                    
+
                 </div>
 
                 </div>
