@@ -90,15 +90,7 @@
 
                 
                
-<<<<<<< HEAD
-                &nbsp;<div class="rounded-circle bg-primary p-1 shadow mt-2" id="to_change_zaw"  style="position:absolute;margin-left:1115px;color:white;">&nbsp;zaw&nbsp;</div>
-                <div class="pt-3" style="position:absolute;margin-left:1158px;color:white;"><i class="fas fa-exchange-alt" style="color:black;"></i></div>
 
-                 <div class="rounded-circle bg-success p-1 shadow mt-2" id="to_change_uni" style="position:absolute;margin-left:1173px;color:white;">&nbsp;uni&nbsp;</div>
-
-=======
-                
->>>>>>> 413dc05698f39dd562ada8b738eee75e5782b058
                
                 <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->
             </ul>
