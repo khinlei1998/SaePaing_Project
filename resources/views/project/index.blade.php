@@ -35,15 +35,16 @@
                                                             <i class="fa fa-bookmark pr-3"></i><strong>{{ $project->project_title}}</strong>
                                                         </div>
                                                         <div class="col-md-5 mb-3">
-                                                           <small class="ml-4">From : {{ $project->project_startDate }}</small><br>
-                                                           <small class="ml-4">To <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>: {{ $project->project_endDate}}</small>
+                                                           <small class="ml-3">From : {{ $project->project_startDate }}</small><br>
+                                                           <small class="ml-3">To <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>: {{ $project->project_endDate}}</small>
                                                         </div>
                                                         <div class="col-md-3 mb-3 ">
                                                         <small>Job Description:</small>
                                                         </div>
-                                                        <div class="col-md-9 mb-5 ">
+                                                        <div class="col-md-9 mb-3 ">
                                                             <small>
-                                                                {!!  $project->project_description !!}</small>
+                                                                {!! Str::limit($project->project_description,90) !!}</small>
+
                                                         </div>
                                                         <div class="col-md-12 text-center">
                                                         <?php

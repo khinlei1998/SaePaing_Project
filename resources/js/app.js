@@ -149,16 +149,16 @@ Dropzone.options.taskform = {
             if(!task_title){
                 hasError=false;
                 $('#task-title-append').find("p").remove();
-                $('#task-title-append').append("<p> * Please Enter Test Title.</p>");  
+                $('#task-title-append').append("<p> * Please Enter Test Title.</p>");
             }else{
                 $('#task-title-append').find("p").remove();
             }
              if(!project_code){
                 hasError=false;
                 $('.project_code_append').find("p").remove();
-                $('.project_code_append').append("<p> * Please Enter Project Code.</p>"); 
+                $('.project_code_append').append("<p> * Please Enter Project Code.</p>");
              }else{
-                $('.project_code_append').find("p").remove(); 
+                $('.project_code_append').find("p").remove();
              }
              if(old_image){
                  hasError=true;
@@ -189,14 +189,14 @@ Dropzone.options.taskform = {
                 $('.start_time_append').find('p').remove();
                 $('.start_time_append').append("<p> * Please Select Start Time.</p>")
              }else{
-                $('.start_time_append').find('p').remove(); 
+                $('.start_time_append').find('p').remove();
              }
              if(!end_time){
                 hasError=false;
                 $('.end_time_append').find('p').remove();
                 $('.end_time_append').append("<p> * Please Select End Time .</p>")
              }else{
-                $('.end_time_append').find('p').remove(); 
+                $('.end_time_append').find('p').remove();
              }
              if(hasError){
                myDropZone.processQueue();
@@ -270,7 +270,7 @@ var hasError = true;
 if(!job_type){
     hasError=false;
     $('.job_type_append').find("p").remove();
-    $('.job_type_append').append("<p> * Please Enter Job Type.</p>");  
+    $('.job_type_append').append("<p> * Please Enter Job Type.</p>");
 }else{
     $('.job_type_append').find("p").remove();
 }
@@ -278,7 +278,7 @@ if(!job_type){
 if(!job_target){
     hasError=false;
     $('.job_target_append').find("p").remove();
-    $('.job_target_append').append("<p> * Please Enter Job Target.</p>");  
+    $('.job_target_append').append("<p> * Please Enter Job Target.</p>");
 }else{
     $('.job_target_append').find("p").remove();
 }
@@ -286,7 +286,7 @@ if(!job_target){
 if(!mission_editor){
     hasError=false;
     $('.job_obj_append').find("p").remove();
-    $('.job_obj_append').append("<p> * Please Enter Job Objective.</p>");  
+    $('.job_obj_append').append("<p> * Please Enter Job Objective.</p>");
 }else{
     $('.job_obj_append').find("p").remove();
 }
@@ -294,7 +294,7 @@ if(!mission_editor){
 if(!assignee){
     hasError=false;
     $('.employee_append').find("p").remove();
-    $('.employee_append').append("<p> * Please Enter Assignee.</p>");  
+    $('.employee_append').append("<p> * Please Enter Assignee.</p>");
 }else{
     $('.employee_append').find("p").remove();
 }
@@ -310,7 +310,7 @@ if(!finished_date){
 if(!methods){
     hasError=false;
     $('.doing_method_append').find("p").remove();
-    $('.doing_method_append').append("<p> * Please Enter Doing Methods.</p>");  
+    $('.doing_method_append').append("<p> * Please Enter Doing Methods.</p>");
 }else{
     $('.doing_method_append').find("p").remove();
 }
@@ -319,10 +319,10 @@ if (old_mission_image) {
     hasError = true;
   } else if(missionZone.files.length<2){
     hasError=false;
-    $('.mission_image').find("p").remove();  
-    $('.mission_image').append("<p> * Please Choose Image.</p>"); 
+    $('.mission_image').find("p").remove();
+    $('.mission_image').append("<p> * Please Choose Image.</p>");
  }else{
-    $('.mission_image').find("p").remove();  
+    $('.mission_image').find("p").remove();
  }
 
 if(!resolved_way){
@@ -336,7 +336,7 @@ if(!resolved_way){
 if(!remark){
     hasError=false;
     $('.remark_append').find("p").remove();
-    $('.remark_append').append("<p> * Please Enter Remark.</p>");  
+    $('.remark_append').append("<p> * Please Enter Remark.</p>");
 }else{
     $('.remark_append').find("p").remove();
 }
