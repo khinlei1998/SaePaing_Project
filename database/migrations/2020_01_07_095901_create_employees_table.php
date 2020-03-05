@@ -19,6 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->string('emp_name',60);
             $table->longtext('emp_jobdesp');
             $table->string('emp_position',60);
+            $table->text('emp_profile')->nullable();
             $table->unsignedInteger('group_id');
             $table->foreign('group_id')->references('group_id')->on('groups');
             $table->unsignedInteger('subdept_id')->nullable();

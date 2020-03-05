@@ -20,30 +20,33 @@
                         <div class="col-10">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="infos" role="tabpanel">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <div class="card " style="width: 12rem;">
-                                                <img src="https://i.pinimg.com/236x/84/44/c3/8444c3fc9142170d40c7c86879a279bd.jpg" class="profile_image" alt="Cinque Terre"  >
-                                                <div class="card-body text-center">
-                                                    <button type="button" class="btn btn-primary btnprofile" data-toggle="modal" data-target="#profilemodal">
-                                                        Edit
-                                                    </button>
-                                                </div>
+                                    <div class="col-8">
+                                        <div class="card " style="width: 12rem;">
+                                            <img src="https://i.pinimg.com/236x/84/44/c3/8444c3fc9142170d40c7c86879a279bd.jpg" class="profile_image" alt="Cinque Terre"  >
+                                            <div class="card-body text-center">
+                                                <button type="button" class="btn btn-primary btnprofile" data-toggle="modal" data-target="#profilemodal">
+                                                    Edit
+                                                </button>
+                                            </div>
 
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="mb-2"  >
-                                                <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
-                                            </div>
-                                            <div class="">
-                                                <div class="" >
-                                                    <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="row no-gutters">&nbsp;</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                     <!--Profile Modal -->
                                     <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -56,11 +59,13 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form action="{{route('mission.store')}}"
-                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">
+                                                    <img id="pp" src="https://i.pinimg.com/236x/84/44/c3/8444c3fc9142170d40c7c86879a279bd.jpg" class="profile_image" alt="Cinque Terre"  >
+                                                    <input type="file" onchange="readURL(this);"/>
+{{--                                                    <form action="{{route('mission.store')}}"--}}
+{{--                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">--}}
 
-                                                        @csrf
-                                                    </form>
+{{--                                                        @csrf--}}
+{{--                                                    </form>--}}
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -70,6 +75,24 @@
                                             </div>
                                         </div>
                                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                     <div class="row">
                                         <div class="col-2 mt-1">
                                             <strong>Name :</strong>
@@ -572,10 +595,8 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+
                                                                     <!-- bootstrap modal section -->
-
-
-
                                                                     <div class="modal fade in show" id="cbb_hot_modal" tabindex="-1" role="dialog" aria-labelledby="subconfigTitle" aria-hidden="true">
                                                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                                                             <div class="modal-content">
@@ -586,7 +607,6 @@
                                                                                     </button>
                                                                                 </div>
                                                                                 <div class="modal-body">
-
                                                                                     <div class="container">
                                                                                         <div class="row">
                                                                                             <div class="col-4">
@@ -649,7 +669,26 @@
 @endsection
 @push('scripts')
     <script>
+
+
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#pp')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
         window.onload=function(){
+
+
             localStorage.setItem("require_error", "");
 
             $(function(){
@@ -754,6 +793,14 @@
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
                 });
+
+
+
+
+
+
+
+                //for profile upload image
 
 
 
