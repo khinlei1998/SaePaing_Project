@@ -10,7 +10,7 @@ class Employee extends Model
     protected $casts = [
         'emp_id' => 'string',
     ];
-    protected $fillable = ['emp_name','emp_id','emp_jobdesp','emp_position','group_id','dept_id','subdept_id','team_id'];
+    protected $fillable = ['emp_name','emp_id','emp_jobdesp','emp_position','emp_profile','group_id','dept_id','subdept_id','team_id'];
     public function user(){
         return $this->hasOne(User::class,'emp_id');
     }
