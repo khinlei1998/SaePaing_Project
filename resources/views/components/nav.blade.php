@@ -9,7 +9,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-8" style="padding-top: 20px;">
+                <div class="col-sm-8" style="padding-top: 30px;">
+                    <div class="btn btn-primary p-1 shadow mt-2" id="to_change_zaw"  style="position:absolute;margin-left:700px;color:white;">&nbsp;zaw&nbsp;</div>
+                    <div class="pt-3 pl-1 pr-1" style="position:absolute;margin-left:750px;color:white;"><i class="fas fa-exchange-alt" style="color:black;"></i></div>
+
+                    <div class="btn btn-success p-1 shadow mt-2" id="to_change_uni" style="position:absolute;margin-left:780px;color:white;">&nbsp;uni&nbsp;</div>
 
                 </div>
             </div>
@@ -60,19 +64,10 @@
                     </form>
                 </li> -->
 
-                <div class="btn-group pt-1" style="position:absolute;margin-left:960px;">
-
-
-
-                <span id="to_change_zaw">zaw</span>
-&nbsp;
-&nbsp;
-&nbsp;            <span id="to_change_uni">uni</span>
-
-
+                <div class="btn-group" style="position:absolute;margin-left:940px;">
 
                 <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" width="37" height="37" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" width="43" height="43" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
                 </button>
 
                 <div class="dropdown-menu">
@@ -92,6 +87,11 @@
                 </div>
 
                 </div>
+
+                
+               
+                
+               
                 <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->
             </ul>
         </nav>
