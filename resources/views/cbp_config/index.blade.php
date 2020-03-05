@@ -27,10 +27,10 @@
                             @foreach($cbpList as $list)
                             @php
                             $to_check_assigned=DB::table('project_configs')->where([['cbp_id','=',$list->cbp_id],['project_id','=',$project->project_id]])->count();
-
+                         
                             @endphp
                             @if($to_check_assigned > 0)
-
+                          
 
 
                             <div class="col-md-4">
@@ -224,7 +224,9 @@
             $("div.showmodal").click(function (e) {
                 $('#subcbp').empty();
                 if ($(this).find('a.collapse').length === 0) {
+                  
                     var id = $(this).attr("cbpid");
+                    // alert(id);
                     currentCbp = id;
                     var cbpname = $(this).attr("cbpname");
                     $("#exampleModalLongTitle").text(cbpname);
@@ -241,6 +243,7 @@
 
                         for (var i = 0; i < data.length; i++) {
                             ids += data[i].id + ",";
+                           
                             var cbp = "<div class=\"col-md-10\">\n" +
                                 "<ul class=\"pl-3\">\n" +
                                 "<li>" + data[i].cbp_subtask + "</li>\n" +
@@ -302,43 +305,56 @@
                 });
             });
             $('#cbpPj').click(function () {
+                
                 var pid = '{{$project->project_id}}';
+               
                 var ids = $('#ids').val();
+               
+              
                 var cbpid = currentCbp;
                 var hod = $('#hod_person').find(':selected').val();
                 var dline = $('#d_line').val();
                 // alert(pid + " >> " + cbpid + " >> " + hod + " >> " + dline + " >> " + ids);
-                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    method: "POST",
-                    url: "/addSubCbpProject",
-                    data: {
-                        pid,
-                        ids,
-                        cbpid,
-                        hod,
-                        dline
-                    }
-                }).done(function (data) {
-                    console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
-                    if (data.success) {
-                        var element = $(".accordion").eq(currentCbp - 1);
-                        var bgcolorelement = element.find('a');
-                        var eme = element.find('div.showmodal');
-                        eme.removeClass("showmodal");
-                        eme.addClass('showmodal1');
-                        // alert(bgcolorelement);
-                        bgcolorelement.removeClass("collapsed");
-                        bgcolorelement.addClass("collapse");
-                        $('#subconfig').modal('hide');
-                    } else {
-                        console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + data.success)
-                    }
-                }).fail(function (jqXHR, textStatus) {
-                    console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
-                });
+                if(!ids){
+                    alert("Plz add sub task");
+                }else{
+                        $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        method: "POST",
+                        url: "/addSubCbpProject",
+                        data: {
+                            pid,
+                            ids,
+                            cbpid,
+                            hod,
+                            dline
+                        }
+                    }).done(function (data) {
+                        console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
+                        console.log(data);
+                        if (data.success) {
+                            var element = $(".accordion").eq(currentCbp - 1);
+                            // alert(element);
+                            var bgcolorelement = element.find('a');
+                           
+                            var eme = element.find('div.showmodal');
+                          
+                            eme.removeClass("showmodal");
+                            eme.addClass('showmodal1');
+                           
+                            bgcolorelement.removeClass("collapsed");
+                            bgcolorelement.addClass("collapse");
+                            $('#subconfig').modal('hide');
+                        } else {
+                            console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + data.success)
+                        }
+                    }).fail(function (jqXHR, textStatus) {
+                        console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
+                    });
+                }
+               
 
             });
         };

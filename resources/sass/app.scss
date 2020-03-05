@@ -424,6 +424,10 @@ main{
 
 footer{
 
+.btn:focus {
+    outline: none !important;
+    box-shadow: none;
+  }
   position: fixed;
 
   bottom: 0;
@@ -449,7 +453,6 @@ footer{
   }
 
 }
-
 //Dashboard css
 
 .dashboard-cards{
@@ -1694,7 +1697,7 @@ footer{
     color:red;
   }
   
-    p{
+  label{
     color:red;
   }
 
@@ -1708,4 +1711,12 @@ footer{
     color:red;
   }
 
+}
+// profile image
+.profile_image{
+  width: 188px;
+  height: 196px;
+}
+.btnprofile{
+  width: 100px;
 }

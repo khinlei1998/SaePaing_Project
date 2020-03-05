@@ -90008,7 +90008,7 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_2__["config"].autoReplaceSvg = 'nest';
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_2__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faHome"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faTasks"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faEdit"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faProjectDiagram"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAddressCard"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faSignOutAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faUser"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faUsers"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faChalkboardTeacher"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faBuilding"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faNetworkWired"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faPlusCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faCheck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faShareSquare"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faCalendarAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faInfoCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAngleLeft"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAngleRight"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faClock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAngleUp"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAngleDown"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faTrashAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faBookmark"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faCheckCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAtlas"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faDownload"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faBell"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faMailBulk"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faCog"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faSortDown"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faKey"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faExchangeAlt"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_2__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faHome"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faTasks"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faEdit"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faProjectDiagram"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAddressCard"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faSignOutAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faUser"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faUsers"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faChalkboardTeacher"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faBuilding"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faNetworkWired"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faPlusCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faCheck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faShareSquare"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faCalendarAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faInfoCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAngleLeft"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAngleRight"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faClock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAngleUp"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAngleDown"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faTrashAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faBookmark"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faCheckCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faAtlas"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faDownload"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faBell"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faMailBulk"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faCog"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faSortDown"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faKey"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faExchangeAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faRedoAlt"]);
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_2__["dom"].watch(); //this declaration is for datetime picker in task create.balde.php
 
 window.moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
@@ -90085,60 +90085,68 @@ Dropzone.options.taskform = {
 
       if (!task_title) {
         hasError = false;
-        $('#task-title-append').find("p").remove();
-        $('#task-title-append').append("<p> * Please Enter Test Title.</p>");
+        $('#task-title-append').find("label").remove();
+        $('#task-title-append').append("<label> * Please Enter Test Title.</label>");
       } else {
-        $('#task-title-append').find("p").remove();
+        $('#task-title-append').find("label").remove();
       }
 
       if (!project_code) {
         hasError = false;
-        $('.project_code_append').find("p").remove();
-        $('.project_code_append').append("<p> * Please Enter Project Code.</p>");
+        $('.project_code_append').find("label").remove();
+        $('.project_code_append').append("<label> * Please Enter Project Code.</label>");
       } else {
-        $('.project_code_append').find("p").remove();
+        $('.project_code_append').find("label").remove();
       }
 
       if (old_image) {
         hasError = true;
       } else if (myDropZone.files.length < 2) {
         hasError = false;
-        $('.task_image').find("p").remove();
-        $('.task_image').append("<p> * Please Choose Image.</p>");
+        $('.task_image').find("label").remove();
+        $('.task_image').append("<label> * Please Choose Image.</label>");
       } else {
-        $('.task_image').find("p").remove();
+        $('.task_image').find("label").remove();
       }
 
       if (!project_editor) {
         hasError = false;
-        $('.project_editor_append').find('p').remove();
-        $('.project_editor_append').append("<p> * Please Enter Description.</p>");
+        $('.project_editor_append').find('label').remove();
+        $('.project_editor_append').append("<label> * Please Enter Description.</label>");
       } else {
-        $('.project_editor_append').find('p').remove();
+        $('.project_editor_append').find('label').remove();
       }
 
       if (!employee) {
         hasError = false;
-        $('.employee_append').find('p').remove();
-        $('.employee_append').append("<p> * Please Select Employee.</p>");
+        $('.employee_append').find('label').remove();
+        $('.employee_append').append("<label> * Please Select Employee.</label>");
       } else {
-        $('.employee_append').find('p').remove();
+        $('.employee_append').find('label').remove();
+      }
+
+      if (!department_append) {
+        hasError = false;
+        $('.department_append').find('label').remove();
+        $('.department_append').append("<label> * Please Enter Department.</label>");
+      } else {
+        $('.department_append').find('label').remove();
       }
 
       if (!start_time) {
         hasError = false;
-        $('.start_time_append').find('p').remove();
-        $('.start_time_append').append("<p> * Please Select Start Time.</p>");
+        $('.start_time_append').find('label').remove();
+        $('.start_time_append').append("<label> * Please Select Start Time.</label>");
       } else {
-        $('.start_time_append').find('p').remove();
+        $('.start_time_append').find('label').remove();
       }
 
       if (!end_time) {
         hasError = false;
-        $('.end_time_append').find('p').remove();
-        $('.end_time_append').append("<p> * Please Select End Time .</p>");
+        $('.end_time_append').find('label').remove();
+        $('.end_time_append').append("<label> * Please Select End Time .</label>");
       } else {
-        $('.end_time_append').find('p').remove();
+        $('.end_time_append').find('label').remove();
       }
 
       if (hasError) {
@@ -90281,6 +90289,40 @@ Dropzone.options.missionform = {
       }
     });
   }
+}; // Profile 
+
+Dropzone.options.profileform = {
+  maxFilesize: 1,
+  maxFiles: 11,
+  paramName: "profile_img",
+  uploadMultiple: true,
+  addRemoveLinks: true,
+  autoProcessQueue: false,
+  dictResponseError: 'Server not Configured',
+  acceptedFiles: "image/*",
+  parallelUploads: 11,
+  init: function init() {
+    var profileDropZone = this;
+    $.fn.addNewImage(profileDropZone);
+    this.on("queuecomplete", function (progress) {
+      console.log("Uploaded!!!");
+    });
+    this.on("error", function (file, response) {
+      console.log(response);
+    });
+    this.on("addedfile", function (file, response) {
+      if (file == profileDropZone.files[0]) {
+        $('.dz-preview:first').hide();
+      }
+    });
+    this.on("success", function (data) {
+      console.log(data);
+    });
+    this.on("sending", function (file, xhr, data) {});
+    $('#btnprofile').on("click", function () {
+      profileDropZone.processQueue();
+    });
+  }
 };
 Dropzone.options.reportform = {
   maxFilesize: 1,
@@ -90420,6 +90462,9 @@ $(function () {
   });
   $('#showcbp').click(function () {
     $('#showcbpdiv').show();
+  });
+  $('#refresh_page').click(function () {
+    return window.location.assign(window.location.href);
   });
   $('#to_change_zaw').click(function () {
     if ($('.uniandzawgyi').hasClass('uni')) {

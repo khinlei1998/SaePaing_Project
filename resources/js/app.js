@@ -53,7 +53,7 @@ import {
     faAngleRight,
     faClock,
     faAngleUp,
-    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt
+    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt,faRedoAlt
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
     faHome,faTasks,faEdit,
@@ -63,7 +63,7 @@ library.add(
     faNetworkWired,faPlusCircle,faCheck
     ,faShareSquare,faCalendarAlt,faInfoCircle
     ,faAngleLeft,faAngleRight,faClock,
-    faAngleUp,faAngleDown,faTrashAlt,faBookmark,faCheckCircle,faAtlas,faDownload,faBell,faMailBulk,faCog,faSortDown,faKey,faExchangeAlt);
+    faAngleUp,faAngleDown,faTrashAlt,faBookmark,faCheckCircle,faAtlas,faDownload,faBell,faMailBulk,faCog,faSortDown,faKey,faExchangeAlt,faRedoAlt);
 dom.watch();
 
 //this declaration is for datetime picker in task create.balde.php
@@ -148,55 +148,72 @@ Dropzone.options.taskform = {
             //  alert(start_time);
             if(!task_title){
                 hasError=false;
-                $('#task-title-append').find("p").remove();
-                $('#task-title-append').append("<p> * Please Enter Test Title.</p>");  
+
+                $('#task-title-append').find("label").remove();
+                $('#task-title-append').append("<label> * Please Enter Test Title.</label>");  
+
             }else{
-                $('#task-title-append').find("p").remove();
+                $('#task-title-append').find("label").remove();
             }
              if(!project_code){
                 hasError=false;
-                $('.project_code_append').find("p").remove();
-                $('.project_code_append').append("<p> * Please Enter Project Code.</p>"); 
+
+                $('.project_code_append').find("label").remove();
+                $('.project_code_append').append("<label> * Please Enter Project Code.</label>"); 
              }else{
-                $('.project_code_append').find("p").remove(); 
+                $('.project_code_append').find("label").remove(); 
+
              }
              if(old_image){
                  hasError=true;
              }
              else if(myDropZone.files.length<2){
                 hasError=false;
-                $('.task_image').find("p").remove();  
-                $('.task_image').append("<p> * Please Choose Image.</p>"); 
+                $('.task_image').find("label").remove();  
+                $('.task_image').append("<label> * Please Choose Image.</label>"); 
              }else{
-                $('.task_image').find("p").remove();  
+                $('.task_image').find("label").remove();  
              }
              if(!project_editor){
                 hasError=false;
-                $('.project_editor_append').find('p').remove();
-                $('.project_editor_append').append("<p> * Please Enter Description.</p>");
+                $('.project_editor_append').find('label').remove();
+                $('.project_editor_append').append("<label> * Please Enter Description.</label>");
              }else{
-                $('.project_editor_append').find('p').remove();
+                $('.project_editor_append').find('label').remove();
              }
+             
              if(!employee){
                 hasError=false;
-                $('.employee_append').find('p').remove();
-                $('.employee_append').append("<p> * Please Select Employee.</p>")
+                $('.employee_append').find('label').remove();
+                $('.employee_append').append("<label> * Please Select Employee.</label>")
              }else{
-                $('.employee_append').find('p').remove(); 
+                $('.employee_append').find('label').remove(); 
+             }
+             
+             if(!department_append){
+                hasError=false;
+                $('.department_append').find('label').remove();
+                $('.department_append').append("<label> * Please Enter Department.</label>");
+             }else{
+                $('.department_append').find('label').remove();
              }
              if(!start_time){
                 hasError=false;
-                $('.start_time_append').find('p').remove();
-                $('.start_time_append').append("<p> * Please Select Start Time.</p>")
+                $('.start_time_append').find('label').remove();
+                $('.start_time_append').append("<label> * Please Select Start Time.</label>")
              }else{
-                $('.start_time_append').find('p').remove(); 
+
+                $('.start_time_append').find('label').remove(); 
+
              }
              if(!end_time){
                 hasError=false;
-                $('.end_time_append').find('p').remove();
-                $('.end_time_append').append("<p> * Please Select End Time .</p>")
+                $('.end_time_append').find('label').remove();
+                $('.end_time_append').append("<label> * Please Select End Time .</label>")
              }else{
-                $('.end_time_append').find('p').remove(); 
+
+                $('.end_time_append').find('label').remove(); 
+
              }
              if(hasError){
                myDropZone.processQueue();
@@ -270,7 +287,7 @@ var hasError = true;
 if(!job_type){
     hasError=false;
     $('.job_type_append').find("p").remove();
-    $('.job_type_append').append("<p> * Please Enter Job Type.</p>");  
+    $('.job_type_append').append("<p> * Please Enter Job Type.</p>");
 }else{
     $('.job_type_append').find("p").remove();
 }
@@ -278,7 +295,7 @@ if(!job_type){
 if(!job_target){
     hasError=false;
     $('.job_target_append').find("p").remove();
-    $('.job_target_append').append("<p> * Please Enter Job Target.</p>");  
+    $('.job_target_append').append("<p> * Please Enter Job Target.</p>");
 }else{
     $('.job_target_append').find("p").remove();
 }
@@ -286,7 +303,7 @@ if(!job_target){
 if(!mission_editor){
     hasError=false;
     $('.job_obj_append').find("p").remove();
-    $('.job_obj_append').append("<p> * Please Enter Job Objective.</p>");  
+    $('.job_obj_append').append("<p> * Please Enter Job Objective.</p>");
 }else{
     $('.job_obj_append').find("p").remove();
 }
@@ -294,7 +311,7 @@ if(!mission_editor){
 if(!assignee){
     hasError=false;
     $('.employee_append').find("p").remove();
-    $('.employee_append').append("<p> * Please Enter Assignee.</p>");  
+    $('.employee_append').append("<p> * Please Enter Assignee.</p>");
 }else{
     $('.employee_append').find("p").remove();
 }
@@ -310,7 +327,7 @@ if(!finished_date){
 if(!methods){
     hasError=false;
     $('.doing_method_append').find("p").remove();
-    $('.doing_method_append').append("<p> * Please Enter Doing Methods.</p>");  
+    $('.doing_method_append').append("<p> * Please Enter Doing Methods.</p>");
 }else{
     $('.doing_method_append').find("p").remove();
 }
@@ -319,10 +336,10 @@ if (old_mission_image) {
     hasError = true;
   } else if(missionZone.files.length<2){
     hasError=false;
-    $('.mission_image').find("p").remove();  
-    $('.mission_image').append("<p> * Please Choose Image.</p>"); 
+    $('.mission_image').find("p").remove();
+    $('.mission_image').append("<p> * Please Choose Image.</p>");
  }else{
-    $('.mission_image').find("p").remove();  
+    $('.mission_image').find("p").remove();
  }
 
 if(!resolved_way){
@@ -336,7 +353,7 @@ if(!resolved_way){
 if(!remark){
     hasError=false;
     $('.remark_append').find("p").remove();
-    $('.remark_append').append("<p> * Please Enter Remark.</p>");  
+    $('.remark_append').append("<p> * Please Enter Remark.</p>");
 }else{
     $('.remark_append').find("p").remove();
 }
@@ -349,6 +366,52 @@ if(hasError){
                
                 
             });
+    }
+};
+// Profile 
+Dropzone.options.profileform = {
+    maxFilesize: 1,
+    maxFiles:11,
+    paramName: "profile_img",
+    uploadMultiple : true,
+    addRemoveLinks: true,
+    autoProcessQueue: false,
+    dictResponseError: 'Server not Configured',
+    acceptedFiles: "image/*",
+    parallelUploads: 11,
+    init: function () {
+        var profileDropZone = this;
+        $.fn.addNewImage(profileDropZone);
+       
+        this.on("queuecomplete", function (progress) {
+              
+            console.log("Uploaded!!!");
+        });
+        this.on("error", function (file, response) {
+            console.log(response);
+        });
+        this.on("addedfile", function (file, response) {
+               
+            if (file==profileDropZone.files[0]) {
+
+                $('.dz-preview:first').hide();
+
+            }
+            
+        });
+        this.on("success",function(data){ 
+          console.log(data);
+          
+        });
+        this.on("sending", function (file, xhr, data) {
+           
+        });
+        $('#btnprofile').on("click", function () {
+
+            profileDropZone.processQueue();
+
+        });
+       
     }
 };
 
@@ -412,6 +475,7 @@ Dropzone.options.reportform= {
         
     }
 };
+
 
 $.fn.addNewImage=function(myDropZone) {
     var xhr = new XMLHttpRequest();
@@ -514,6 +578,10 @@ $(function () {
    
     $('#showcbp').click(function() {
         $('#showcbpdiv').show();
+    });
+
+    $('#refresh_page').click(function() {
+        return window.location.assign(window.location.href)
     });
 
     $('#to_change_zaw').click(function() {

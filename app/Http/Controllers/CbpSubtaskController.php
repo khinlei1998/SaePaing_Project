@@ -113,6 +113,7 @@ class CbpSubtaskController extends Controller
 
     public function getCbpList(Request $request){
         $cbpList = CbpList::find($request->id);
+      
         return response()->json($cbpList->cbpsubtasks);
     }
     public function addSubCbp(Request $request){

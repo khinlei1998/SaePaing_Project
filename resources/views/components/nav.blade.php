@@ -1,4 +1,6 @@
 <div class="header shadow-sm">
+
+
     <div class="header-top-area p-4">
         <div class="container">
             <div class="row">
@@ -12,7 +14,6 @@
                 <div class="col-sm-8" style="padding-top: 30px;">
                     <div class="btn btn-primary p-1 shadow mt-2" id="to_change_zaw"  style="position:absolute;margin-left:700px;color:white;">&nbsp;zaw&nbsp;</div>
                     <div class="pt-3 pl-1 pr-1" style="position:absolute;margin-left:750px;color:white;"><i class="fas fa-exchange-alt" style="color:black;"></i></div>
-
                     <div class="btn btn-success p-1 shadow mt-2" id="to_change_uni" style="position:absolute;margin-left:780px;color:white;">&nbsp;uni&nbsp;</div>
 
                 </div>
@@ -20,16 +21,9 @@
         </div>
     </div>
     <div class="container">
-
-
-
-
-
-
         <nav class="nav navbar navbar-expand-lg navbar-light bg-light">
 
             <ul class="nav navbar-nav">
-
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'home' ? 'active' : null }}"><a href="{{ url('home')}}"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'project' ? 'active' : null }}"><a href="{{ url('project')}}"><i class="fas fa-fw fa-tasks"></i><span>Projects</span></a></li>
 
@@ -75,7 +69,7 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                                                                                       onclick="event.preventDefault();
+                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         <i class="fa fa-sign-out-alt"></i> <span>{{ __('Logout') }}</span>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -88,10 +82,7 @@
 
                 </div>
 
-                
-               
-                
-               
+
                 <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->
             </ul>
         </nav>

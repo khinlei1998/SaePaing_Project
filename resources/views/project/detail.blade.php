@@ -15,6 +15,7 @@
                                         <h1 class="h5 font-weight-bold text-center mb-4">
                                             <strong>
                                                 {{ $project->project_title }}
+                                              
                                             </strong>
                                         </h1>
 
