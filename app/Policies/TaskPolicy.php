@@ -43,6 +43,7 @@ class TaskPolicy
      */
     public function create(User $user)
     {
+
         return $user->role_id != Role::where('role','Stuff')->first()->id?
             Response::allow()
             : Response::deny("Oops permission denied!.");

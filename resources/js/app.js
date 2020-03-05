@@ -148,55 +148,72 @@ Dropzone.options.taskform = {
             //  alert(start_time);
             if(!task_title){
                 hasError=false;
-                $('#task-title-append').find("p").remove();
-                $('#task-title-append').append("<p> * Please Enter Test Title.</p>");
+
+                $('#task-title-append').find("label").remove();
+                $('#task-title-append').append("<label> * Please Enter Test Title.</label>");  
+
             }else{
-                $('#task-title-append').find("p").remove();
+                $('#task-title-append').find("label").remove();
             }
              if(!project_code){
                 hasError=false;
-                $('.project_code_append').find("p").remove();
-                $('.project_code_append').append("<p> * Please Enter Project Code.</p>");
+
+                $('.project_code_append').find("label").remove();
+                $('.project_code_append').append("<label> * Please Enter Project Code.</label>"); 
              }else{
-                $('.project_code_append').find("p").remove();
+                $('.project_code_append').find("label").remove(); 
+
              }
              if(old_image){
                  hasError=true;
              }
              else if(myDropZone.files.length<2){
                 hasError=false;
-                $('.task_image').find("p").remove();  
-                $('.task_image').append("<p> * Please Choose Image.</p>"); 
+                $('.task_image').find("label").remove();  
+                $('.task_image').append("<label> * Please Choose Image.</label>"); 
              }else{
-                $('.task_image').find("p").remove();  
+                $('.task_image').find("label").remove();  
              }
              if(!project_editor){
                 hasError=false;
-                $('.project_editor_append').find('p').remove();
-                $('.project_editor_append').append("<p> * Please Enter Description.</p>");
+                $('.project_editor_append').find('label').remove();
+                $('.project_editor_append').append("<label> * Please Enter Description.</label>");
              }else{
-                $('.project_editor_append').find('p').remove();
+                $('.project_editor_append').find('label').remove();
              }
+             
              if(!employee){
                 hasError=false;
-                $('.employee_append').find('p').remove();
-                $('.employee_append').append("<p> * Please Select Employee.</p>")
+                $('.employee_append').find('label').remove();
+                $('.employee_append').append("<label> * Please Select Employee.</label>")
              }else{
-                $('.employee_append').find('p').remove(); 
+                $('.employee_append').find('label').remove(); 
+             }
+             
+             if(!department_append){
+                hasError=false;
+                $('.department_append').find('label').remove();
+                $('.department_append').append("<label> * Please Enter Department.</label>");
+             }else{
+                $('.department_append').find('label').remove();
              }
              if(!start_time){
                 hasError=false;
-                $('.start_time_append').find('p').remove();
-                $('.start_time_append').append("<p> * Please Select Start Time.</p>")
+                $('.start_time_append').find('label').remove();
+                $('.start_time_append').append("<label> * Please Select Start Time.</label>")
              }else{
-                $('.start_time_append').find('p').remove();
+
+                $('.start_time_append').find('label').remove(); 
+
              }
              if(!end_time){
                 hasError=false;
-                $('.end_time_append').find('p').remove();
-                $('.end_time_append').append("<p> * Please Select End Time .</p>")
+                $('.end_time_append').find('label').remove();
+                $('.end_time_append').append("<label> * Please Select End Time .</label>")
              }else{
-                $('.end_time_append').find('p').remove();
+
+                $('.end_time_append').find('label').remove(); 
+
              }
              if(hasError){
                myDropZone.processQueue();
