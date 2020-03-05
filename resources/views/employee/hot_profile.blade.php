@@ -54,11 +54,13 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form action="{{route('mission.store')}}"
-                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">
+                                                    <img id="pp" src="https://i.pinimg.com/236x/84/44/c3/8444c3fc9142170d40c7c86879a279bd.jpg" class="profile_image" alt="Cinque Terre"  >
+                                                    <input type="file" onchange="readURL(this);"/>
+                                                    {{--                                                    <form action="{{route('mission.store')}}"--}}
+                                                    {{--                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">--}}
 
-                                                        @csrf
-                                                    </form>
+                                                    {{--                                                        @csrf--}}
+                                                    {{--                                                    </form>--}}
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -350,7 +352,7 @@
                                                             <td class="align-middle">{{ Str::limit($mission->remark,50) }}</td>
 
                                                             <td>
-                                                            
+
                                                                 <a href="{{ route('mission.show', $mission) }}" class="mb-2 d-block">
                                                                     <button data-toggle="tooltip" data-placement="left" title="Detail Mission" class="btn shadow bg-orange text-white w-100"><i class="fas fa-edit"></i> </button>
                                                                 </a>
@@ -444,7 +446,7 @@
                                                             <td class="align-middle">{{ Str::limit($mission->remark,50) }}</td>
 
                                                             <td>
-                                                            
+
                                                                 <a href="{{ route('mission.show', $mission) }}" class="mb-2 d-block">
                                                                     <button data-toggle="tooltip" data-placement="left" title="Detail Mission" class="btn shadow bg-orange text-white w-100"><i class="fas fa-edit"></i> </button>
                                                                 </a>
@@ -498,13 +500,13 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                 <div class="row">
                     <h4 class="mt-4 text-center w-100"><strong>Assigned CBP Tasks </strong></h4>
-                    
+
                 </div>
             </div>
         </div>
         <div class="row mt-3 mb-3 justify-content-center text-muted pb-3">
 
-          
+
 
 
         </div>
@@ -533,7 +535,7 @@
                         <td class="align-middle">{{DB::table('projects')->where('project_id',$assigned_data->project_id)->first()->project_title}}</td>
                         <td class="align-middle">{{DB::table('cbp_lists')->where('cbp_id',$assigned_data->cbp_id)->first()->cbp_name}}</td>
                         <td class="align-middle">{{DB::table('cbp_subtasks')->where('id',$assigned_data->cbp_subtask_id)->first()->cbp_subtask}}<br><small> </small></td>
-                        
+
                         <td class="align-middle">
                         <?php
                         $hod_id=DB::table('project_configs')->where('cbp_id',$assigned_data->cbp_id)->first()->assign_person;
@@ -553,8 +555,8 @@
                         </td>
 
                         <td>
-                        
-                           
+
+
                         </td>
 
                     </tr>
@@ -588,7 +590,7 @@
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header">
                                                                                     <h5 class="modal-title" id="exampleModalLongTitle"><i class="fa fa-info-circle pr-3" ></i><p class="d-inline-block" id="hot_report_title"></p></h5>
-                                                                                            
+
                                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                                 <span aria-hidden="true">&times;</span>
                                                                                             </button>
@@ -618,7 +620,7 @@
 
 
 
-                              
+
 
                             </div>
                         </div>
@@ -641,6 +643,26 @@
 
 
     <script>
+
+
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#pp')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
+
+
         window.onload=function(){
 
             $(function(){
@@ -708,7 +730,7 @@
                 //submit the model
 
                 $('#hod_report_submit').click(function(){
-                    
+
                     var report_text = $('#report_text').val();
                     console.log(report_text);
                     $.ajax({
@@ -746,7 +768,7 @@
                 });
 
 
-                
+
             });
         }
     </script>
