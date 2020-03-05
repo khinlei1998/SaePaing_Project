@@ -69,7 +69,7 @@
                                         </div>
                                     <div class="row">
                                         <div class="col-2 mt-1">
-                                            <strong>Namee :</strong>
+                                            <strong>Name :</strong>
                                         </div>
                                         <div class="col-5 mt-1">
                                             {{ $employee->emp_name }}

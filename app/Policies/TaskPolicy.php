@@ -43,11 +43,8 @@ class TaskPolicy
      */
     public function create(User $user)
     {
-<<<<<<< HEAD
-        return $user->role_id == Role::where('role','Chairman')->first()->id?
-=======
-        return $user->role_id != Role::where('role','Staff')->first()->id?
->>>>>>> c14d14835ac6356a4c19f13503ec571bba604e96
+
+        return $user->role_id != Role::where('role','Stuff')->first()->id?
             Response::allow()
             : Response::deny("Oops permission denied!.");
     }
