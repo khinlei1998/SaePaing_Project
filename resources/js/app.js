@@ -360,6 +360,52 @@ if(hasError){
             });
     }
 };
+// Profile 
+Dropzone.options.profileform = {
+    maxFilesize: 1,
+    maxFiles:11,
+    paramName: "profile_img",
+    uploadMultiple : true,
+    addRemoveLinks: true,
+    autoProcessQueue: false,
+    dictResponseError: 'Server not Configured',
+    acceptedFiles: "image/*",
+    parallelUploads: 11,
+    init: function () {
+        var profileDropZone = this;
+        $.fn.addNewImage(profileDropZone);
+       
+        this.on("queuecomplete", function (progress) {
+              
+            console.log("Uploaded!!!");
+        });
+        this.on("error", function (file, response) {
+            console.log(response);
+        });
+        this.on("addedfile", function (file, response) {
+               
+            if (file==profileDropZone.files[0]) {
+
+                $('.dz-preview:first').hide();
+
+            }
+            
+        });
+        this.on("success",function(data){ 
+          console.log(data);
+          
+        });
+        this.on("sending", function (file, xhr, data) {
+           
+        });
+        $('#btnprofile').on("click", function () {
+
+            profileDropZone.processQueue();
+
+        });
+       
+    }
+};
 
 Dropzone.options.reportform= {
     maxFilesize: 1,
@@ -421,6 +467,7 @@ Dropzone.options.reportform= {
         
     }
 };
+
 
 $.fn.addNewImage=function(myDropZone) {
     var xhr = new XMLHttpRequest();
@@ -523,6 +570,10 @@ $(function () {
    
     $('#showcbp').click(function() {
         $('#showcbpdiv').show();
+    });
+
+    $('#refresh_page').click(function() {
+        return window.location.assign(window.location.href)
     });
 
     $('#to_change_zaw').click(function() {
