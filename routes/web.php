@@ -34,7 +34,12 @@ Route::group(['middleware' => ['auth']], function () {
     //this will return the accessable department of each user
     //used in task/create call from app.js
     Route::get('/getAccessableDepartments','EmployeeController@AccessableDepartments')->name('getAccessableDepartments');
+
     Route::post('/getAssignablePersons','EmployeeController@AssignablePersons')->name('getAssignablePersons');
+    Route::post('/tosaveprofileimage','EmployeeController@upload_profile')->name('tosaveimg');
+    Route::get('/tosaveprofileimage',function(){
+        return redirect('profile');
+    })->name('tosaveimg');
     Route::post('/getDepartment','TeamController@getdepartment')->name('getDepartment');
     Route::post('/getSubDepartment','TeamController@getSubDepartment')->name('getSubDepartment');
 
