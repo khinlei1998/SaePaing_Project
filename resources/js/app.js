@@ -113,7 +113,7 @@ Dropzone.options.taskform = {
                
             if (file==myDropZone.files[0]) {
 
-                $('.dz-preview:first').hide();
+                $('.dz-preview:first').show();
 
             }
             // console.log(myDropZone.files.length);
