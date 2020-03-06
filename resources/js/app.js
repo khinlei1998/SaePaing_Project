@@ -9,6 +9,8 @@ import {faExclamationCircle} from "@fortawesome/free-solid-svg-icons/faExclamati
 require('./bootstrap');
 window.Vue = require('vue');
 
+require('orgchart');
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -548,7 +550,7 @@ $(function () {
     //configuration for tooltip
     $('[data-toggle="tooltip"]').tooltip();
     //configration for select2 for department dropdown
-    $(".department").select2({
+    $(".department-select2").select2({
         placeholder: "Select a Department",
         allowClear: true
     });

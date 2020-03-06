@@ -19,9 +19,63 @@
                         <div class="col-10">
                             <div class="tab-content">
                                 <div class="tab-pane fade" id="infos" role="tabpanel">
-                                    <div class="row">
+                                    <div class="row mt-2">
                                         <div class="col-8">
-                                            <div class="card " style="width: 12rem;">
+
+                                             <div class="row">
+                                                <div class="col-2 mt-1">
+                                                    <strong>Name :</strong>
+                                                </div>
+                                                <div class="col-5 mt-1">
+                                                    {{ $employee->emp_name }}
+                                                </div>
+                                                <div class="col-5 mt-1">
+                                                    
+                                                </div>
+                                                <div class="col-2 mt-1">
+                                                    <strong>Department :</strong>
+                                                </div>
+                                                <div class="col-5 mt-1">
+                                                    {{ $employee->department->dept_name ??'-' }}
+                                                </div>
+                                                <div class="col-5 mt-1">
+                                                
+                                                </div>
+                                                <div class="col-2 mt-1">
+                                                    <strong>SubDepartment :</strong>
+                                                </div>
+                                                <div class="col-10 mt-1">
+                                                    {{ $employee->subDepartment->subdept_name ?? '-' }}
+                                                </div>
+                                                <div class="col-2 mt-3">
+                                                    <strong>Group :</strong>
+                                                </div>
+                                                <div class="col-10 mt-3">
+                                                    {{ $employee->group->group_name ?? '-' }}
+                                                </div>
+                                                <div class="col-2 mt-3">
+                                                    <strong>Team :</strong>
+                                                </div>
+                                                <div class="col-10 mt-3">
+                                                    {{ $employee->team->team_name ?? '-' }}
+                                                </div>
+                                                <div class="col-2 mt-3">
+                                                    <strong>Email :</strong>
+                                                </div>
+                                                <div class="col-10 mt-3">
+                                                    {{ $employee->user->email }}
+                                                </div>
+                                                <div class="col-2 mt-3">
+                                                    <strong>Job Description :</strong>
+                                                </div>
+                                                <div class="col-10 mt-3">
+                                                    {{ $employee->emp_jobdesp}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+
+                                             <div class="card " style="width: 12rem;">
                                                 <img src="{{url('/storage/profile/'.$img)}}" class="profile_image" alt="Cinque Terre"  >
                                                 <div class="card-body text-center">
                                                     <button type="button" class="btn btn-primary btnprofile" data-toggle="modal" data-target="#profilemodal">
@@ -30,23 +84,18 @@
                                                 </div>
 
                                             </div>
-                                        </div>
-                                        <div class="col-4">
                                             <div class="mb-2"  >
-                                                    <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
+                                                <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
+                                                <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                             </div>
-                                            <div class="">
-                                                <div class="" >
-                                                        <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                         <!--Profile Modal -->
                                     <form method="post" action="{{route('tosaveimg')}}" enctype="multipart/form-data">
                                         @csrf
 
-                                    <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                 <div class="modal-header">
@@ -80,57 +129,6 @@
                                             </div>
                                         </div>
                                     </form>
-
-                                    <div class="row">
-                                        <div class="col-2 mt-1">
-                                            <strong>Name :</strong>
-                                        </div>
-                                        <div class="col-5 mt-1">
-                                            {{ $employee->emp_name }}
-                                        </div>
-                                        <div class="col-5 mt-1">
-
-                                        </div>
-                                        <div class="col-2 mt-1">
-                                            <strong>Department :</strong>
-                                        </div>
-                                        <div class="col-5 mt-1">
-                                            {{ $employee->department->dept_name ??'-' }}
-                                        </div>
-                                        <div class="col-5 mt-1">
-
-                                        </div>
-                                        <div class="col-2 mt-1">
-                                            <strong>SubDepartment :</strong>
-                                        </div>
-                                        <div class="col-10 mt-1">
-                                            {{ $employee->subDepartment->subdept_name ?? '-' }}
-                                        </div>
-                                        <div class="col-2 mt-3">
-                                            <strong>Group :</strong>
-                                        </div>
-                                        <div class="col-10 mt-3">
-                                            {{ $employee->group->group_name ?? '-' }}
-                                        </div>
-                                        <div class="col-2 mt-3">
-                                            <strong>Team :</strong>
-                                        </div>
-                                        <div class="col-10 mt-3">
-                                            {{ $employee->team->team_name ?? '-' }}
-                                        </div>
-                                        <div class="col-2 mt-3">
-                                            <strong>Email :</strong>
-                                        </div>
-                                        <div class="col-10 mt-3">
-                                            {{ $employee->user->email }}
-                                        </div>
-                                        <div class="col-2 mt-3">
-                                            <strong>Job Description :</strong>
-                                        </div>
-                                        <div class="col-10 mt-3">
-                                            {{ $employee->emp_jobdesp}}
-                                        </div>
-                                    </div>
 
                                 </div>
                                 <div class="tab-pane fade" id="tasks" role="tabpanel">

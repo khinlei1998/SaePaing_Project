@@ -19,110 +19,131 @@
                         <div class="col-10">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="infos" role="tabpanel">
-                                    <div class="row">
+                                <div class="row mt-2">
                                         <div class="col-8">
+                                            <div class="row">
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Name </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                    {{ $employee->emp_name }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Department </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->department->dept_name ??'-' }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>SubDepartment </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->subDepartment->subdept_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Group </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->group->group_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Team </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->team->team_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Email </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->user->email }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Job Description </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->emp_jobdesp}}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
                                             <div class="card " style="width: 12rem;">
-                                                <img src="https://i.pinimg.com/236x/84/44/c3/8444c3fc9142170d40c7c86879a279bd.jpg" class="profile_image" alt="Cinque Terre"  >
-                                                <div class="card-body text-center">
+                                                <img src="{{url('/storage/profile/'.$img)}}" class="profile_image" alt="Cinque Terre"  >
+                                                <div class="card-body text-center ml-3">
                                                     <button type="button" class="btn btn-primary btnprofile" data-toggle="modal" data-target="#profilemodal">
                                                         Edit
                                                     </button>
                                                 </div>
-
                                             </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="mb-2"  >
+                                            <div class="mb-2 mt-2">
+                                                <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                                 <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                             </div>
-                                            <div class="">
-                                                <div class="" >
-                                                    <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <!--Profile Modal -->
-                                    <div class="row no-gutters">&nbsp;</div>
-                                    <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
+                                    <form method="post" action="{{route('tosaveimg')}}" enctype="multipart/form-data">
+                                        @csrf
+
+                                        <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
+                                                    <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img id="pp" src="https://i.pinimg.com/236x/84/44/c3/8444c3fc9142170d40c7c86879a279bd.jpg" class="profile_image" alt="Cinque Terre"  >
-                                                    <input type="file" onchange="readURL(this);"/>
+                                                    <img id="pp" src="{{url('/storage/profile/'.$img)}}" class="profile_image" alt="Cinque Terre"  >
+                                                    <input type="file" onchange="readURL(this);" name="profile_img" value=""/>
+
+
+
                                                     {{--                                                    <form action="{{route('mission.store')}}"--}}
                                                     {{--                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">--}}
 
                                                     {{--                                                        @csrf--}}
                                                     {{--                                                    </form>--}}
+
+
+
+
+
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary" id="btnprofile">Save changes</button>
-
+                                                    <input type="submit" class="btn btn-primary" value='save' id="btnprofile"></input>
+                                                </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-2 mt-1">
-                                            <strong>Name :</strong>
-                                        </div>
-                                        <div class="col-5 mt-1">
-                                            {{ $employee->emp_name }}
-                                        </div>
-                                        <div class="col-5 mt-1">
-
-                                        </div>
-                                        <div class="col-2 mt-1">
-                                            <strong>Department :</strong>
-                                        </div>
-                                        <div class="col-5 mt-1">
-                                            {{ $employee->department->dept_name ??'-' }}
-                                        </div>
-                                        <div class="col-5 mt-1">
-
-                                        </div>
-                                        <div class="col-2 mt-1">
-                                            <strong>SubDepartment :</strong>
-                                        </div>
-                                        <div class="col-10 mt-1">
-                                            {{ $employee->subDepartment->subdept_name ?? '-' }}
-                                        </div>
-                                        <div class="col-2 mt-3">
-                                            <strong>Group :</strong>
-                                        </div>
-                                        <div class="col-10 mt-3">
-                                            {{ $employee->group->group_name ?? '-' }}
-                                        </div>
-                                        <div class="col-2 mt-3">
-                                            <strong>Team :</strong>
-                                        </div>
-                                        <div class="col-10 mt-3">
-                                            {{ $employee->team->team_name ?? '-' }}
-                                        </div>
-                                        <div class="col-2 mt-3">
-                                            <strong>Email :</strong>
-                                        </div>
-                                        <div class="col-10 mt-3">
-                                            {{ $employee->user->email }}
-                                        </div>
-                                        <div class="col-2 mt-3">
-                                            <strong>Job Description :</strong>
-                                        </div>
-                                        <div class="col-10 mt-3">
-                                            {{ $employee->emp_jobdesp}}
-                                        </div>
-                                    </div>
+                                    </form>
 
 
-                                </div>
                                 <div class="tab-pane fade" id="tasks" role="tabpanel">
                                     <div class="container">
                                         <div class="row">

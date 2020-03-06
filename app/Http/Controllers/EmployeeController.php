@@ -56,11 +56,11 @@ class EmployeeController extends Controller
     switch (Auth::user()->role_id) {     
                case Role::where("role","HOD")->first()->id:             
                    $hots = User::where('role_id',Role::where('role','HOT')->first()->id)->get();   
-                                return view('employee.hod_profile',compact(['employee','hots']));    
+                                return view('employee.hod_profile',compact(['employee','hots','img']));    
                                         case Role::where("role","HOT")->first()->id:
 
             $assgined_data_for_HOT=AssignToHot::where('hot_id',Auth::user()->emp_id)->get();      
-                      return view('employee.hot_profile',['employee'=>$employee,'assgined_data_for_HOT'=>$assgined_data_for_HOT]);                          
+                      return view('employee.hot_profile',['employee'=>$employee,'assgined_data_for_HOT'=>$assgined_data_for_HOT,'img'=>$img]);                          
                         case "green":
             echo "Your favorite color is green!";
             break;
