@@ -10,9 +10,11 @@ use App\Department;
 use App\SubDepartment;
 use App\Team;
 use App\AssignToHot;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests\EmployeeRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class EmployeeController extends Controller
@@ -42,20 +44,29 @@ class EmployeeController extends Controller
 
    public function profile(){
     $employee = Auth::user()->employee;
+    $get_img=Employee::where('emp_id',Auth::user()->emp_id)->first();
+    if($get_img->emp_profile == Null){
+        $img='default.jpg';
+    }
+    else{
+        $img=$get_img->emp_profile;
+    }
+
+
     switch (Auth::user()->role_id) {     
                case Role::where("role","HOD")->first()->id:             
                    $hots = User::where('role_id',Role::where('role','HOT')->first()->id)->get();   
-                                return view('employee.hod_profile',compact(['employee','hots']));    
+                                return view('employee.hod_profile',compact(['employee','hots','img']));    
                                         case Role::where("role","HOT")->first()->id:
 
             $assgined_data_for_HOT=AssignToHot::where('hot_id',Auth::user()->emp_id)->get();      
-                      return view('employee.hot_profile',['employee'=>$employee,'assgined_data_for_HOT'=>$assgined_data_for_HOT]);                          
+                      return view('employee.hot_profile',['employee'=>$employee,'assgined_data_for_HOT'=>$assgined_data_for_HOT,'img'=>$img]);                          
                         case "green":
             echo "Your favorite color is green!";
             break;
         default:
         $employee = Auth::user()->employee;
-     return view('employee.profile',compact(['employee']));
+     return view('employee.profile',compact(['employee','img']));
     }
 
  
@@ -91,6 +102,40 @@ class EmployeeController extends Controller
         Employee::create($request->all());
         return redirect()->route("employee.index")->withSuccessMessage('Employee created sussessfully!!');
    }
+
+
+
+
+   //image upload for user
+
+
+   public function upload_profile(Request $request){
+       $validator = Validator::make($request->except('_token'),['profile_img'=>'required|mimetypes:image/jpeg,image/png']);
+       if($validator->fails()){
+
+       }else{
+           $images = Carbon::now()->timestamp .','. $request->file('profile_img')->getClientOriginalName();
+
+           $request->file('profile_img')->move(base_path() . '/public/storage/profile/', $images);
+           Employee::where('emp_id',Auth::user()->emp_id)->update(['emp_profile'=>$images]);
+
+       }
+       return redirect('profile');
+
+
+
+
+
+
+
+
+
+
+   }
+
+
+
+
 
     /**
      * Display the specified resource.

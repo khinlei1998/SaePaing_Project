@@ -61,7 +61,13 @@
                 <div class="btn-group" style="position:absolute;margin-left:940px;">
 
                 <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" width="43" height="43" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
+                <?php
+                        $get_img=DB::table('employees')->where('emp_id',Auth::user()->emp_id)->first();
+                        $img=$get_img->emp_profile;
+                ?>
+
+
+                <img src="{{url('/storage/profile/'.$img)}}" width="43" height="43" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
                 </button>
 
                 <div class="dropdown-menu">
