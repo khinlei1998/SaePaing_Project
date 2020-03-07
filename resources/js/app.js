@@ -112,7 +112,7 @@ Dropzone.options.taskform = {
             console.log(response);
         });
         this.on("addedfile", function (file, response) {
-               
+
             if (file==myDropZone.files[0]) {
 
                 $('.dz-preview:first').show();
@@ -121,10 +121,10 @@ Dropzone.options.taskform = {
             // console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
-        this.on("success",function(data){ 
+        this.on("success",function(data){
           console.log(data);
             task_id = data.xhr.response;
-          
+
         });
         this.on("sending", function (file, xhr, data) {
             data.append("project_code", $('#project_code').find(':selected').val());
@@ -140,10 +140,10 @@ Dropzone.options.taskform = {
             var task_title=$(".task_title").val().length;
             // alert(task_title);
              var project_code = $('.project_code').val().length;
-          
+
              var project_editor=taskeditor.getData().length;
              var employee=$('#project_code').val().length;
-             
+
              var start_time=$('.task_start_time').val();
              var end_time=$('.task_end_time').val();
             var hasError = true;
@@ -152,7 +152,7 @@ Dropzone.options.taskform = {
                 hasError=false;
 
                 $('#task-title-append').find("label").remove();
-                $('#task-title-append').append("<label> * Please Enter Test Title.</label>");  
+                $('#task-title-append').append("<label> * Please Enter Test Title.</label>");
 
             }else{
                 $('#task-title-append').find("label").remove();
@@ -161,9 +161,9 @@ Dropzone.options.taskform = {
                 hasError=false;
 
                 $('.project_code_append').find("label").remove();
-                $('.project_code_append').append("<label> * Please Enter Project Code.</label>"); 
+                $('.project_code_append').append("<label> * Please Enter Project Code.</label>");
              }else{
-                $('.project_code_append').find("label").remove(); 
+                $('.project_code_append').find("label").remove();
 
              }
              if(old_image){
@@ -171,10 +171,10 @@ Dropzone.options.taskform = {
              }
              else if(myDropZone.files.length<2){
                 hasError=false;
-                $('.task_image').find("label").remove();  
-                $('.task_image').append("<label> * Please Choose Image.</label>"); 
+                $('.task_image').find("label").remove();
+                $('.task_image').append("<label> * Please Choose Image.</label>");
              }else{
-                $('.task_image').find("label").remove();  
+                $('.task_image').find("label").remove();
              }
              if(!project_editor){
                 hasError=false;
@@ -183,15 +183,15 @@ Dropzone.options.taskform = {
              }else{
                 $('.project_editor_append').find('label').remove();
              }
-             
+
              if(!employee){
                 hasError=false;
                 $('.employee_append').find('label').remove();
                 $('.employee_append').append("<label> * Please Select Employee.</label>")
              }else{
-                $('.employee_append').find('label').remove(); 
+                $('.employee_append').find('label').remove();
              }
-             
+
              if(!department_append){
                 hasError=false;
                 $('.department_append').find('label').remove();
@@ -205,7 +205,7 @@ Dropzone.options.taskform = {
                 $('.start_time_append').append("<label> * Please Select Start Time.</label>")
              }else{
 
-                $('.start_time_append').find('label').remove(); 
+                $('.start_time_append').find('label').remove();
 
              }
              if(!end_time){
@@ -214,19 +214,19 @@ Dropzone.options.taskform = {
                 $('.end_time_append').append("<label> * Please Select End Time .</label>")
              }else{
 
-                $('.end_time_append').find('label').remove(); 
+                $('.end_time_append').find('label').remove();
 
              }
              if(hasError){
                myDropZone.processQueue();
              }
-         
+
 
             //uncomment for testing the vales of task create.blade.php
                 //  alert($("#project_code").val());
             // Tell Dropzone to process all queued files.
         });
-       
+
     }
 };
 
