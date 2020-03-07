@@ -57,12 +57,12 @@ class TaskController extends Controller
 
         $filenames = "";
 
-        //        var_dump($request->assignee_person);
         $assignee_persons = explode(',', $request->assignee_person);
-        // var_dump($assignee_persons);
+
         $files = $request->file('task_file');//file array
 
-        array_shift($files);//remove first array item
+//           array_shift($files);//remove first array item
+//
         foreach ($files as $key => $file) {
 
             if (next($files) == true)
@@ -70,7 +70,8 @@ class TaskController extends Controller
             else
                 $filenames .= $this->taskImageUpload($file);
         }
-        // dd($filenames);
+
+
         $data = array();
         for ($i = 0; $i < count($assignee_persons); $i++) {
             $data[$i] = array_merge($request->except(['start_time', 'end_time', 'assignee_persons']), ['status' => '0', 'subdept_id' => Employee::find($assignee_persons[$i])->subdept_id ? Employee::find($assignee_persons[$i])->subdept_id : null, 'team_id' => Employee::find($assignee_persons[$i])->team_id ?? null, 'assignor_attach_file' => $filenames, 'start_time' => Carbon::create($request->start_time)->toDateTimeString(), 'end_time' => Carbon::create($request->end_time)->toDateTimeString(), 'assignee_person' => $assignee_persons[$i]]);
@@ -92,12 +93,13 @@ class TaskController extends Controller
             //     'success'=>"true"
             // ]);
 
-            return response()->json($createdtasks_id);
+            return response()->json($files);
 
         } else
             return response()->json([
                 'success' => "false"
             ]);
+
 
     }
 
@@ -189,6 +191,7 @@ class TaskController extends Controller
             else
                 $filenames .= $this->taskImageUpload($file);
         }
+
 
         $originfiles = $task->assignor_attach_file;
         if ($originfiles) {
@@ -293,6 +296,7 @@ class TaskController extends Controller
     //for task image uploading return type tasks/filename.extension
     public function taskImageUpload($file)
     {
+
         $path = $file->store('tasks', 'public');
         return $path;
     }

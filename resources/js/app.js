@@ -91,23 +91,27 @@ window.remark=null;
 
 //this declaration is for taskdropzone
 Dropzone.options.taskform = {
-    maxFilesize: 1,
-    maxFiles:11,
+    // maxFiles:11,
     paramName: "task_file",
     uploadMultiple : true,
     addRemoveLinks: true,
     autoProcessQueue: false,
     dictResponseError: 'Server not Configured',
-    acceptedFiles: "image/*",
     parallelUploads: 11,
     init: function () {
         var myDropZone = this;
         $.fn.addNewImage(myDropZone);
         let task_id=0;
-        this.on("queuecomplete", function (progress) {
-              window.location = "/task/"+task_id;
-            console.log("Uploaded!!!");
-        });
+
+
+        //
+        // this.on("queuecomplete", function (progress) {
+        //       window.location = "/task/"+task_id;
+        //     console.log("Uploaded!!!");
+        // });
+
+
+
         this.on("error", function (file, response) {
             console.log(response);
         });
@@ -118,11 +122,11 @@ Dropzone.options.taskform = {
                 $('.dz-preview:first').show();
 
             }
-            // console.log(myDropZone.files.length);
+            console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
         this.on("success",function(data){
-          console.log(data);
+          // console.log($file);
             task_id = data.xhr.response;
 
         });
@@ -136,14 +140,19 @@ Dropzone.options.taskform = {
             data.append("assignee_person", $("#task_assigned_to").val());
         });
         $('#taskform-submit').on("click", function () {
+
+
+
+
             var old_image=$('.old_image').val();
             var task_title=$(".task_title").val().length;
             // alert(task_title);
              var project_code = $('.project_code').val().length;
-
+             var department_append =$('.department_append').find(':selected').val();
+            //
              var project_editor=taskeditor.getData().length;
              var employee=$('#project_code').val().length;
-
+            //
              var start_time=$('.task_start_time').val();
              var end_time=$('.task_end_time').val();
             var hasError = true;
@@ -169,10 +178,10 @@ Dropzone.options.taskform = {
              if(old_image){
                  hasError=true;
              }
-             else if(myDropZone.files.length<2){
+             else if(myDropZone.files.length<1){
                 hasError=false;
                 $('.task_image').find("label").remove();
-                $('.task_image').append("<label> * Please Choose Image.</label>");
+                $('.task_image').append("<label> * Please Choosevvvv Image.</label>");
              }else{
                 $('.task_image').find("label").remove();
              }
@@ -232,7 +241,7 @@ Dropzone.options.taskform = {
 
 //this declaration is for missiondropzone
 Dropzone.options.missionform = {
-    maxFilesize: 1,
+    maxFilesize: 11,
     maxFiles:11,
     paramName: "mission_file",//mission_file[]
     uploadMultiple: true,
