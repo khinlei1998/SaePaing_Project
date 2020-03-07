@@ -91,8 +91,8 @@ window.remark=null;
 
 //this declaration is for taskdropzone
 Dropzone.options.taskform = {
-    maxFilesize: 1,
-    maxFiles:11,
+    
+   
     paramName: "task_file",
     uploadMultiple : true,
     addRemoveLinks: true,
@@ -105,7 +105,7 @@ Dropzone.options.taskform = {
         $.fn.addNewImage(myDropZone);
         let task_id=0;
         this.on("queuecomplete", function (progress) {
-              window.location = "/task/"+task_id;
+            //   window.location = "/task/"+task_id;
             console.log("Uploaded!!!");
         });
         this.on("error", function (file, response) {
@@ -122,7 +122,7 @@ Dropzone.options.taskform = {
             // console.log('New File Added');
         });
         this.on("success",function(data){ 
-          console.log(data);
+          
             task_id = data.xhr.response;
           
         });
@@ -140,7 +140,7 @@ Dropzone.options.taskform = {
             var task_title=$(".task_title").val().length;
             // alert(task_title);
              var project_code = $('.project_code').val().length;
-          
+            var department_append=$('.department').val();
              var project_editor=taskeditor.getData().length;
              var employee=$('#project_code').val().length;
              

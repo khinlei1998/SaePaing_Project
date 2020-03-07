@@ -190,7 +190,7 @@ class TaskController extends Controller
             else
                 $filenames.=$this->taskImageUpload($file);
         }
-
+        dd($filenames);
         $originfiles = $task->assignor_attach_file;
         if( $originfiles){
             $filenames = $filenames?$originfiles.":".$filenames:$originfiles;
@@ -228,7 +228,7 @@ class TaskController extends Controller
         // return response()->json([
         //     'success'=>"Task Update successfull."
         // ]);
-        return response()->json($createdtasks_id);
+        return response()->json($files);
        
     }
     public function updateStatus(Task $task){
@@ -291,10 +291,10 @@ class TaskController extends Controller
     }
     public function removeImage(Request $request){
         $task = Task::find($request->task_id);
-        // dd($task->assignor_attach_file);
+       
         $task->assignor_attach_file = str_replace($request->src.":","",$task->assignor_attach_file);
         $task->assignor_attach_file = str_replace($request->src,"",$task->assignor_attach_file);
-
+        
         if($task->save()) {
             Storage::disk('public')->delete($request->src);
             return response()->json([
