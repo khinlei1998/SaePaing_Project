@@ -48,11 +48,9 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
-              <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+              <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding>
-                <element signature="e#40#57#0#PHP" expanded="true" />
                 <element signature="e#4176#4659#0#PHP" />
-                <element signature="e#4848#9311#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -62,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/resources/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
+              <caret line="534" selection-start-line="534" selection-end-line="534" />
               <folding>
                 <element signature="e#1194#1234#0" expanded="true" />
                 <element signature="e#1341#1870#0" expanded="true" />
@@ -173,8 +171,8 @@
         <option value="$PROJECT_DIR$/resources/views/components/nav.blade.php" />
         <option value="$PROJECT_DIR$/app/Policies/TaskPolicy.php" />
         <option value="$PROJECT_DIR$/resources/views/task/_form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" />
       </list>
     </option>
   </component>
@@ -475,7 +473,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="490508000" />
+    <option name="totallyTimeSpent" value="491105000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -490,9 +488,9 @@
     <frame x="-3" y="-3" width="1542" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8978261" visible="true" weight="0.020134227" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8978261" weight="0.020134227" />
       <window_info id="Structure" order="1" sideWeight="0.6172249" side_tool="true" weight="0.17718121" />
-      <window_info id="npm" order="2" sideWeight="0.10217391" side_tool="true" visible="true" weight="0.020134227" />
+      <window_info id="npm" order="2" sideWeight="0.10217391" side_tool="true" weight="0.020134227" />
       <window_info id="Favorites" order="3" sideWeight="0.45411393" side_tool="true" weight="0.1738255" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
@@ -514,9 +512,9 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3888889" weight="0.17718121" />
-      <window_info id="Structure" order="1" sideWeight="0.6111111" side_tool="true" weight="0.17718121" />
-      <window_info id="npm" order="2" sideWeight="0.45411393" side_tool="true" weight="0.1738255" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8978261" visible="true" weight="0.020134227" />
+      <window_info id="Structure" order="1" sideWeight="0.6172249" side_tool="true" weight="0.17718121" />
+      <window_info id="npm" order="2" sideWeight="0.10217391" side_tool="true" visible="true" weight="0.020134227" />
       <window_info id="Favorites" order="3" sideWeight="0.45411393" side_tool="true" weight="0.1738255" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
@@ -529,7 +527,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.15281501" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932885" weight="0.15281501" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.90348524" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.38337803" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32907802" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -884,7 +882,7 @@
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
+          <caret line="534" selection-start-line="534" selection-end-line="534" />
           <folding>
             <element signature="e#1194#1234#0" expanded="true" />
             <element signature="e#1341#1870#0" expanded="true" />
@@ -898,11 +896,9 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
             <element signature="e#4176#4659#0#PHP" />
-            <element signature="e#4848#9311#0#PHP" />
           </folding>
         </state>
       </provider>

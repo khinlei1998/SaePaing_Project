@@ -90049,7 +90049,10 @@ window.editor_feedback = null;
 window.remark = null; //this declaration is for taskdropzone
 
 Dropzone.options.taskform = {
+<<<<<<< HEAD
   // maxFiles:11,
+=======
+>>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
   paramName: "task_file",
   uploadMultiple: true,
   addRemoveLinks: true,
@@ -90059,12 +90062,20 @@ Dropzone.options.taskform = {
   init: function init() {
     var myDropZone = this;
     $.fn.addNewImage(myDropZone);
+<<<<<<< HEAD
     var task_id = 0; //
     // this.on("queuecomplete", function (progress) {
     //       window.location = "/task/"+task_id;
     //     console.log("Uploaded!!!");
     // });
 
+=======
+    var task_id = 0;
+    this.on("queuecomplete", function (progress) {
+      //   window.location = "/task/"+task_id;
+      console.log("Uploaded!!!");
+    });
+>>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
     this.on("error", function (file, response) {
       console.log(response);
     });
@@ -90076,7 +90087,10 @@ Dropzone.options.taskform = {
       console.log(myDropZone.files.length); // console.log('New File Added');
     });
     this.on("success", function (data) {
+<<<<<<< HEAD
       // console.log($file);
+=======
+>>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
       task_id = data.xhr.response;
     });
     this.on("sending", function (file, xhr, data) {
@@ -90093,8 +90107,12 @@ Dropzone.options.taskform = {
       var task_title = $(".task_title").val().length; // alert(task_title);
 
       var project_code = $('.project_code').val().length;
+<<<<<<< HEAD
       var department_append = $('.department_append').find(':selected').val(); //
 
+=======
+      var department_append = $('.department').val();
+>>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
       var project_editor = taskeditor.getData().length;
       var employee = $('#project_code').val().length; //
 
@@ -90711,8 +90729,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! C:\xampp\htdocs\ui2_29\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\xampp\htdocs\ui2_29\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\xampp\htdocs\3_7_2020\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\3_7_2020\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
 
 
 /***/ })
