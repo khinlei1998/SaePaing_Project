@@ -93,7 +93,7 @@ class TaskController extends Controller
             //     'success'=>"true"
             // ]);
 
-            return response()->json($files);
+            return response()->json($createdtasks_id);
 
         } else
             return response()->json([

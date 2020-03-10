@@ -91,12 +91,11 @@ window.remark=null;
 
 //this declaration is for taskdropzone
 Dropzone.options.taskform = {
-<<<<<<< HEAD
+
     // maxFiles:11,
-=======
+
     
-   
->>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
+
     paramName: "task_file",
     uploadMultiple : true,
     addRemoveLinks: true,
@@ -107,23 +106,12 @@ Dropzone.options.taskform = {
         var myDropZone = this;
         $.fn.addNewImage(myDropZone);
         let task_id=0;
-<<<<<<< HEAD
 
-
-        //
-        // this.on("queuecomplete", function (progress) {
-        //       window.location = "/task/"+task_id;
-        //     console.log("Uploaded!!!");
-        // });
-
-
-
-=======
         this.on("queuecomplete", function (progress) {
-            //   window.location = "/task/"+task_id;
+              window.location = "/task/"+task_id;
             console.log("Uploaded!!!");
         });
->>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
+
         this.on("error", function (file, response) {
             console.log(response);
         });
@@ -137,13 +125,10 @@ Dropzone.options.taskform = {
             console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
-<<<<<<< HEAD
+
         this.on("success",function(data){
           // console.log($file);
-=======
-        this.on("success",function(data){ 
-          
->>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
+
             task_id = data.xhr.response;
 
         });
@@ -165,12 +150,9 @@ Dropzone.options.taskform = {
             var task_title=$(".task_title").val().length;
             // alert(task_title);
              var project_code = $('.project_code').val().length;
-<<<<<<< HEAD
+
              var department_append =$('.department_append').find(':selected').val();
-            //
-=======
-            var department_append=$('.department').val();
->>>>>>> 418301acef499013bfe5cc2bf82b3b6a11694269
+
              var project_editor=taskeditor.getData().length;
              var employee=$('#project_code').val().length;
             //
