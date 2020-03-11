@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^16.0.0",
+        "@toast-ui/vue-image-editor": "^1.2.0",
         "bootstrap-sweetalert": "^1.0.1",
         "dropzone": "^5.5.1",
         "html2canvas": "^1.0.0-rc.5",
@@ -34,6 +35,7 @@
         "orgchart": "^2.1.10",
         "select2": "^4.0.12",
         "tempusdominus-bootstrap-4": "^5.1.2",
+        "tui-code-snippet": "^2.3.1",
         "vue-filepreview": "^0.1.17"
     }
 }

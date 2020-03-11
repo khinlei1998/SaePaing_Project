@@ -7,9 +7,9 @@
             </div>
         </div>
     </div>
-    
+
     <div class="row p-4 pl-5 task-form-require">
-    
+
         <div class="col-3">
             <label for="task_title" class="font-weight-bold text-muted"> <span>*</span> Task Title :</label>
         </div>
@@ -18,14 +18,14 @@
                 <div class="input-group">
                     <input type="text" id="task_title" class="form-control task_title " value="{{ old('task_title',$task->task_title) }}"/ >
                 </div>
-                
+
             </div>
         </div>
 
         <div class="col-3">
             <label for="task_title" class="font-weight-bold text-muted"> <span>*</span> Project code :</label>
         </div>
-        
+
         <div class="col-9">
             <div class="form-group project_code_append">
                 <select class="project_code w-100" id="project_code" >
@@ -33,7 +33,7 @@
                         @foreach($task->all_projects as $one_project)
                             <option value="{{$one_project->project_code}}"{{$one_project->project_code ==$task->project_code ? 'selected' : ''}} >{{$one_project-> project_title}}</option>
                          @endforeach
-                </select>          
+                </select>
             </div>
         </div>
 
