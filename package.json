@@ -29,6 +29,7 @@
         "@ckeditor/ckeditor5-build-classic": "^16.0.0",
         "bootstrap-sweetalert": "^1.0.1",
         "dropzone": "^5.5.1",
+        "html2canvas": "^1.0.0-rc.5",
         "moment": "^2.24.0",
         "orgchart": "^2.1.10",
         "select2": "^4.0.12",

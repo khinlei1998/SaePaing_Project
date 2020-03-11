@@ -31,6 +31,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 //beautiful sweet alert
+
+import html2canvas from 'html2canvas';
+
 import swal from 'bootstrap-sweetalert';
 import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 config.autoReplaceSvg = 'nest';
