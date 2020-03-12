@@ -35,6 +35,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 import html2canvas from 'html2canvas';
 
 import swal from 'bootstrap-sweetalert';
+
+
+
+import {ImageEditor} from '@toast-ui/vue-image-editor';
 import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 config.autoReplaceSvg = 'nest';
 import {

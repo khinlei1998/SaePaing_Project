@@ -13747,1140 +13747,1106 @@ footer strong {
   padding-top: 15px;
 }
 
-.breadcomb-area3 figure {
-  /**
-   * For IE 6/7 only
-   * Include this rule to trigger hasLayout and contain floats.
-   */
-  /* Generic styling */
-  /*a.group2:focus {
-      outline: 2px dashed #f7f7f7;
-  }*/
-  /*
-
-   */
-  /* Department/ section colors */
-}
-
-.breadcomb-area3 figure * {
-  box-sizing: border-box;
-  position: relative;
-}
-
-.breadcomb-area3 figure .cf:before,
-.breadcomb-area3 figure .cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.breadcomb-area3 figure .cf:after {
-  clear: both;
-}
-
-.breadcomb-area3 figure .cf {
-  *zoom: 1;
-}
-
-.breadcomb-area3 figure .content {
-  width: 100%;
-  max-width: 1142px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area3 figure .content {
-    padding: 0 20px;
-  }
-}
-
-.breadcomb-area3 figure ul.group2 {
-  padding: 0;
+.photoeditortest .tui-image-editor-container {
   margin: 0;
-  list-style: none;
-}
-
-.breadcomb-area3 figure ul.group2 a.group2 {
-  display: block;
-  background: #005569;
-  text-align: center;
-  overflow: hidden;
-  font-size: 0.7em;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #fff;
-  height: 70px;
-  margin-bottom: -26px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transition: all linear 0.1s;
-  transition: all linear 0.1s;
-}
-
-.breadcomb-area3 figure ul.group2 a.group2:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-@media print {
-  .breadcomb-area3 figure ul.group2 a.group2 {
-    border: 4px solid #000;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area3 figure ul.group2 a.group2 {
-    font-size: 1em;
-  }
-}
-
-.breadcomb-area3 figure ul.group2 a.group2 span {
-  top: 50%;
-  margin-top: -0.7em;
-  display: block;
-}
-
-.breadcomb-area3 figure .administration > li.group2 > a.group2 {
-  margin-bottom: 25px;
-}
-
-.breadcomb-area3 figure .director > li.group2 > a.group2 {
-  width: 20%;
-  margin: 20px auto 0px auto;
-}
-
-.breadcomb-area3 figure .subdirector:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 130px;
-  background: red;
-  border-left: 4px solid #005569;
-  left: 45.45%;
-  position: relative;
-}
-
-@media print {
-  .breadcomb-area3 figure .subdirector:after {
-    border-left: 4px solid #000;
-  }
-}
-
-.breadcomb-area3 figure .subdirector,
-.breadcomb-area3 figure .departments {
-  position: absolute;
-  width: 100%;
-  left: 4.5%;
-}
-
-.breadcomb-area3 figure .subdirector > li.group2:first-child,
-.breadcomb-area3 figure .departments > li.group2:first-child {
-  width: 18.5989492119%;
-  height: 64px;
-  margin: 0 auto 92px auto;
-  padding-top: 25px;
-  z-index: 1;
-}
-
-@media print {
-  .breadcomb-area3 figure .subdirector > li.group2:first-child,
-  .breadcomb-area3 figure .departments > li.group2:first-child {
-    border-bottom: 4px solid #000;
-  }
-}
-
-.breadcomb-area3 figure .subdirector > li.group2:first-child {
-  float: right;
-  right: 27.2%;
-  border-left: 4px solid #005569;
-}
-
-@media print {
-  .breadcomb-area3 figure .subdirector > li.group2:first-child {
-    border-left: 4px solid black;
-  }
-}
-
-.breadcomb-area3 figure .departments > li.group2:first-child {
-  float: left;
-  left: 27.2%;
-  border-right: 4px solid #005569;
-}
-
-@media print {
-  .breadcomb-area3 figure .departments > li.group2:first-child {
-    border-right: 4px solid black;
-  }
-}
-
-.breadcomb-area3 figure .subdirector > li.group2:first-child a.group2,
-.breadcomb-area3 figure .departments > li.group2:first-child a.group2 {
-  width: 130%;
-}
-
-.breadcomb-area3 figure .subdirector > li.group2:first-child a.group2 {
-  left: 25px;
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area3 figure .subdirector > li.group2:first-child,
-  .breadcomb-area3 figure .departments > li.group2:first-child {
-    width: 40%;
-  }
-
-  .breadcomb-area3 figure .subdirector > li.group2:first-child {
-    right: 10%;
-    margin-right: 2px;
-  }
-
-  .breadcomb-area3 figure .subdirector:after {
-    left: 49.8%;
-  }
-
-  .breadcomb-area3 figure .departments > li.group2:first-child {
-    left: 10%;
-    margin-left: 2px;
-  }
-}
-
-.breadcomb-area3 figure .departments > li.group2:first-child a.group2 {
-  right: 25px;
-}
-
-.breadcomb-area3 figure .department:first-child,
-.breadcomb-area3 figure .departments li.group2:nth-child(2) {
-  margin-left: 0;
-  clear: left;
-}
-
-.breadcomb-area3 figure .departments:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 76.1%;
-  height: 22px;
-  border-top: 4px solid #005569;
-  border-right: 4px solid #005569;
-  border-left: 4px solid #005569;
-  margin: 0 auto;
-  top: 130px;
-  left: 10.7%;
-}
-
-@media print {
-  .breadcomb-area3 figure .departments:after {
-    border-top: 4px solid #000;
-    border-right: 4px solid #000;
-    border-left: 4px solid #000;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area3 figure .departments:after {
-    border-right: none;
-    left: 0;
-    width: 49.8%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .breadcomb-area3 figure .department:first-child:before,
-  .breadcomb-area3 figure .department:last-child:before {
-    border: none;
-  }
-}
-
-.breadcomb-area3 figure .department:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 22px;
-  border-left: 4px solid #fff;
-  z-index: 1;
-  top: -22px;
-  left: 50%;
-  margin-left: -4px;
-}
-
-@media print {
-  .breadcomb-area3 figure .department:before {
-    border-left: 4px solid black;
-  }
-}
-
-.breadcomb-area3 figure .department {
-  border-left: 4px solid #005569;
-  width: 44%;
-  float: left;
-  margin-left: 1.7513134851%;
-  margin-bottom: 60px;
-}
-
-@media print {
-  .breadcomb-area3 figure .department {
-    border-left: 4px solid #000;
-  }
-}
-
-.breadcomb-area3 figure .lt-ie8 .department {
-  width: 18.25%;
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area3 figure .department {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .breadcomb-area3 figure .department:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 60px;
-    border-left: 4px solid #005569;
-    z-index: 1;
-    top: -60px;
-    left: 0%;
-    margin-left: -4px;
-  }
-
-  .breadcomb-area3 figure .department:nth-child(2):before {
-    display: none;
-  }
-}
-
-.breadcomb-area3 figure .department > a.group2 {
-  margin: 0 0 -26px -4px;
-  z-index: 1;
-}
-
-.breadcomb-area3 figure .department > a.group2:hover {
-  height: 80px;
-}
-
-.breadcomb-area3 figure .department > ul.group2 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.breadcomb-area3 figure .department li.group2 {
-  padding-left: 25px;
-  border-bottom: 4px solid #005569;
-  height: 80px;
-}
-
-@media print {
-  .breadcomb-area3 figure .department li.group2 {
-    border-bottom: 4px solid #000;
-  }
-}
-
-.breadcomb-area3 figure .department li.group2 a.group2 {
-  background: #005569;
-  top: 48px;
-  position: absolute;
-  z-index: 1;
-  width: 90%;
-  height: 60px;
-  vertical-align: middle;
-  right: -1px;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#40000000", endColorstr="#00000000", GradientType=1);
-}
-
-.breadcomb-area3 figure .department li.group2 a.group2:hover {
-  box-shadow: 8px 8px 9px -4px rgba(0, 0, 0, 0.1);
-  height: 80px;
-  width: 95%;
-  top: 39px;
-  background-image: none !important;
-}
-
-.breadcomb-area3 figure .department.dep-a a.group2 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area3 figure .department.dep-b a.group2 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area3 figure .department.dep-c a.group2 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area3 figure .department.dep-d a.group2 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area3 figure .department.dep-e a.group2 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area4 figure {
-  /**
-   * For IE 6/7 only
-   * Include this rule to trigger hasLayout and contain floats.
-   */
-  /* Generic styling */
-  /*a.group3:focus {
-      outline: 2px dashed #f7f7f7;
-  }*/
-  /*
-
-   */
-  /* Department/ section colors */
-}
-
-.breadcomb-area4 figure * {
-  box-sizing: border-box;
-  position: relative;
-}
-
-.breadcomb-area4 figure .cf:before,
-.breadcomb-area4 figure .cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.breadcomb-area4 figure .cf:after {
-  clear: both;
-}
-
-.breadcomb-area4 figure .cf {
-  *zoom: 1;
-}
-
-.breadcomb-area4 figure .content {
-  width: 100%;
-  max-width: 1142px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area4 figure .content {
-    padding: 0 20px;
-  }
-}
-
-.breadcomb-area4 figure ul.group3 {
   padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.breadcomb-area4 figure ul.group3 a.group3 {
-  display: block;
-  background: #005569;
-  text-align: center;
-  overflow: hidden;
-  font-size: 0.7em;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #fff;
-  height: 70px;
-  margin-bottom: -26px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transition: all linear 0.1s;
-  transition: all linear 0.1s;
-}
-
-.breadcomb-area4 figure ul.group3 a.group3:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-@media print {
-  .breadcomb-area4 figure ul.group3 a.group3 {
-    border: 4px solid #000;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area4 figure ul.group3 a.group3 {
-    font-size: 1em;
-  }
-}
-
-.breadcomb-area4 figure ul.group3 a.group3 span {
-  top: 50%;
-  margin-top: -0.7em;
-  display: block;
-}
-
-.breadcomb-area4 figure .administration > li.group3 > a.group3 {
-  margin-bottom: 25px;
-}
-
-.breadcomb-area4 figure .director > li.group3 > a.group3 {
-  width: 20%;
-  margin: 20px auto 0px auto;
-}
-
-.breadcomb-area4 figure .subdirector:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 130px;
-  background: red;
-  border-left: 4px solid #005569;
-  left: 45.45%;
-  position: relative;
-}
-
-@media print {
-  .breadcomb-area4 figure .subdirector:after {
-    border-left: 4px solid #000;
-  }
-}
-
-.breadcomb-area4 figure .subdirector,
-.breadcomb-area4 figure .departments {
-  position: absolute;
-  width: 100%;
-  left: 4.5%;
-}
-
-.breadcomb-area4 figure .subdirector > li.group3:first-child,
-.breadcomb-area4 figure .departments > li.group3:first-child {
-  width: 18.5989492119%;
-  height: 64px;
-  margin: 0 auto 92px auto;
-  padding-top: 25px;
-  z-index: 1;
-}
-
-@media print {
-  .breadcomb-area4 figure .subdirector > li.group3:first-child,
-  .breadcomb-area4 figure .departments > li.group3:first-child {
-    border-bottom: 4px solid #000;
-  }
-}
-
-.breadcomb-area4 figure .subdirector > li.group3:first-child {
-  float: right;
-  right: 27.2%;
-  border-left: 4px solid #005569;
-}
-
-@media print {
-  .breadcomb-area4 figure .subdirector > li.group3:first-child {
-    border-left: 4px solid black;
-  }
-}
-
-.breadcomb-area4 figure .departments > li.group3:first-child {
-  float: left;
-  left: 27.2%;
-  border-right: 4px solid #005569;
-}
-
-@media print {
-  .breadcomb-area4 figure .departments > li.group3:first-child {
-    border-right: 4px solid black;
-  }
-}
-
-.breadcomb-area4 figure .subdirector > li.group3:first-child a.group3,
-.breadcomb-area4 figure .departments > li.group3:first-child a.group3 {
-  width: 130%;
-}
-
-.breadcomb-area4 figure .subdirector > li.group3:first-child a.group3 {
-  left: 25px;
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area4 figure .subdirector > li.group3:first-child,
-  .breadcomb-area4 figure .departments > li.group3:first-child {
-    width: 40%;
-  }
-
-  .breadcomb-area4 figure .subdirector > li.group3:first-child {
-    right: 10%;
-    margin-right: 2px;
-  }
-
-  .breadcomb-area4 figure .subdirector:after {
-    left: 49.8%;
-  }
-
-  .breadcomb-area4 figure .departments > li.group3:first-child {
-    left: 10%;
-    margin-left: 2px;
-  }
-}
-
-.breadcomb-area4 figure .departments > li.group3:first-child a.group3 {
-  right: 25px;
-}
-
-.breadcomb-area4 figure .department:first-child,
-.breadcomb-area4 figure .departments li.group3:nth-child(2) {
-  margin-left: 0;
-  clear: left;
-}
-
-.breadcomb-area4 figure .departments:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 76.1%;
-  height: 22px;
-  border-top: 4px solid #005569;
-  border-right: 4px solid #005569;
-  border-left: 4px solid #005569;
-  margin: 0 auto;
-  top: 130px;
-  left: 10.7%;
-}
-
-@media print {
-  .breadcomb-area4 figure .departments:after {
-    border-top: 4px solid #000;
-    border-right: 4px solid #000;
-    border-left: 4px solid #000;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area4 figure .departments:after {
-    border-right: none;
-    left: 0;
-    width: 49.8%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .breadcomb-area4 figure .department:first-child:before,
-  .breadcomb-area4 figure .department:last-child:before {
-    border: none;
-  }
-}
-
-.breadcomb-area4 figure .department:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 22px;
-  border-left: 4px solid #fff;
-  z-index: 1;
-  top: -22px;
-  left: 50%;
-  margin-left: -4px;
-}
-
-@media print {
-  .breadcomb-area4 figure .department:before {
-    border-left: 4px solid black;
-  }
-}
-
-.breadcomb-area4 figure .department {
-  border-left: 4px solid #005569;
-  width: 44%;
-  float: left;
-  margin-left: 1.7513134851%;
-  margin-bottom: 60px;
-}
-
-@media print {
-  .breadcomb-area4 figure .department {
-    border-left: 4px solid #000;
-  }
-}
-
-.breadcomb-area4 figure .lt-ie8 .department {
-  width: 18.25%;
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area4 figure .department {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .breadcomb-area4 figure .department:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 60px;
-    border-left: 4px solid #005569;
-    z-index: 1;
-    top: -60px;
-    left: 0%;
-    margin-left: -4px;
-  }
-
-  .breadcomb-area4 figure .department:nth-child(2):before {
-    display: none;
-  }
-}
-
-.breadcomb-area4 figure .department > a.group3 {
-  margin: 0 0 -26px -4px;
-  z-index: 1;
-}
-
-.breadcomb-area4 figure .department > a.group3:hover {
-  height: 80px;
-}
-
-.breadcomb-area4 figure .department > ul.group3 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.breadcomb-area4 figure .department li.group3 {
-  padding-left: 25px;
-  border-bottom: 4px solid #005569;
-  height: 80px;
-}
-
-@media print {
-  .breadcomb-area4 figure .department li.group3 {
-    border-bottom: 4px solid #000;
-  }
-}
-
-.breadcomb-area4 figure .department li.group3 a.group3 {
-  background: #005569;
-  top: 48px;
-  position: absolute;
-  z-index: 1;
-  width: 90%;
-  height: 60px;
-  vertical-align: middle;
-  right: -1px;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#40000000", endColorstr="#00000000", GradientType=1);
-}
-
-.breadcomb-area4 figure .department li.group3 a.group3:hover {
-  box-shadow: 8px 8px 9px -4px rgba(0, 0, 0, 0.1);
-  height: 80px;
-  width: 95%;
-  top: 39px;
-  background-image: none !important;
-}
-
-.breadcomb-area4 figure .department.dep-a a.group3 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area4 figure .department.dep-b a.group3 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area4 figure .department.dep-c a.group3 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area4 figure .department.dep-d a.group3 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area4 figure .department.dep-e a.group3 {
-  background: #005569;
-  color: #fff;
-}
-
-.breadcomb-area5 figure {
-  /**
-   * For IE 6/7 only
-   * Include this rule to trigger hasLayout and contain floats.
-   */
-  /* Generic styling */
-  /*a.group6:focus {
-      outline: 2px dashed #f7f7f7;
-  }*/
-  /*
-
-   */
-  /* Department/ section colors */
-}
-
-.breadcomb-area5 figure * {
   box-sizing: border-box;
+  min-height: 300px;
+  height: 100%;
   position: relative;
-}
-
-.breadcomb-area5 figure .cf:before,
-.breadcomb-area5 figure .cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.breadcomb-area5 figure .cf:after {
-  clear: both;
-}
-
-.breadcomb-area5 figure .cf {
-  *zoom: 1;
-}
-
-.breadcomb-area5 figure .content {
-  width: 100%;
-  max-width: 1142px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area5 figure .content {
-    padding: 0 20px;
-  }
-}
-
-.breadcomb-area5 figure ul.group6 {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.breadcomb-area5 figure ul.group6 a.group6 {
-  display: block;
-  background: #005569;
-  text-align: center;
+  background-color: #282828;
   overflow: hidden;
-  font-size: 0.7em;
-  border-radius: 8px;
-  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+.photoeditortest .tui-image-editor-container div,
+.photoeditortest .tui-image-editor-container ul,
+.photoeditortest .tui-image-editor-container label,
+.photoeditortest .tui-image-editor-container input,
+.photoeditortest .tui-image-editor-container li {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-header {
+  /* BUTTON AND LOGO */
+  min-width: 533px;
+  position: absolute;
+  background-color: #151515;
+  top: 0;
+  width: 100%;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-header-buttons,
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls-buttons {
+  float: right;
+  margin: 8px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-header-logo,
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls-logo {
+  float: left;
+  width: 30%;
+  padding: 17px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls-logo,
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls-buttons {
+  width: 270px;
+  height: 100%;
+  display: none;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-header-buttons button,
+.photoeditortest .tui-image-editor-container .tui-image-editor-header-buttons div,
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls-buttons button,
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls-buttons div {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 40px;
+  padding: 0;
+  line-height: 40px;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
   font-weight: bold;
+  cursor: pointer;
+  vertical-align: middle;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-download-btn {
+  background-color: #fdba3b;
+  border-color: #fdba3b;
   color: #fff;
-  height: 70px;
-  margin-bottom: -26px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transition: all linear 0.1s;
-  transition: all linear 0.1s;
 }
 
-.breadcomb-area5 figure ul.group6 a.group6:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.photoeditortest .tui-image-editor-container .tui-image-editor-load-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
 }
 
-@media print {
-  .breadcomb-area5 figure ul.group6 a.group6 {
-    border: 4px solid #000;
-  }
+.photoeditortest .tui-image-editor-container .tui-image-editor-main-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 64px;
 }
 
-@media screen and (max-width: 767px) {
-  .breadcomb-area5 figure ul.group6 a.group6 {
-    font-size: 1em;
-  }
+.photoeditortest .tui-image-editor-container .tui-image-editor-main {
+  position: absolute;
+  text-align: center;
+  top: 64px;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
-.breadcomb-area5 figure ul.group6 a.group6 span {
-  top: 50%;
-  margin-top: -0.7em;
-  display: block;
+.photoeditortest .tui-image-editor-container .tui-image-editor-wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
 }
 
-.breadcomb-area5 figure .administration > li.group6 > a.group6 {
-  margin-bottom: 25px;
+.photoeditortest .tui-image-editor-container .tui-image-editor-wrap .tui-image-editor-size-wrap {
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 
-.breadcomb-area5 figure .director > li.group6 > a.group6 {
-  width: 20%;
-  margin: 20px auto 0px auto;
+.photoeditortest .tui-image-editor-container .tui-image-editor-wrap .tui-image-editor-size-wrap .tui-image-editor-align-wrap {
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.breadcomb-area5 figure .subdirector:after {
+.photoeditortest .tui-image-editor-container .tui-image-editor {
+  position: relative;
+  display: inline-block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-menu {
+  width: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-menu > .tui-image-editor-item {
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 7px 8px 3px 8px;
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-menu > .tui-image-editor-item[tooltip-content]:hover:before {
   content: "";
-  display: block;
+  position: absolute;
+  display: inline-block;
+  margin: 0 auto 0;
   width: 0;
-  height: 130px;
-  background: red;
-  border-left: 4px solid #005569;
-  left: 45.45%;
+  height: 0;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #2f2f2f;
+  border-left: 7px solid transparent;
+  left: 13px;
+  top: -2px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-menu > .tui-image-editor-item[tooltip-content]:hover:after {
+  content: attr(tooltip-content);
+  position: absolute;
+  display: inline-block;
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: lighter;
+  border-radius: 3px;
+  max-height: 23px;
+  top: -25px;
+  left: 0;
+  min-width: 24px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-menu > .tui-image-editor-item.active {
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-wrap {
+  position: absolute;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-grid-visual {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-flip .tui-image-editor,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-rotate .tui-image-editor {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-flip .tui-image-editor-grid-visual,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-rotate .tui-image-editor-grid-visual {
+  display: block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-grid-visual table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-grid-visual table td {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-grid-visual table td.dot:before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-grid-visual table td.dot.left-top:before {
+  top: -5px;
+  left: -5px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-grid-visual table td.dot.right-top:before {
+  top: -5px;
+  right: -5px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-grid-visual table td.dot.left-bottom:before {
+  bottom: -5px;
+  left: -5px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-grid-visual table td.dot.right-bottom:before {
+  bottom: -5px;
+  right: -5px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-button:hover svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-item li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-item .tui-image-editor-newline {
+  display: block;
+  margin-top: 0;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-item .tui-image-editor-button {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 11px;
+  margin: 0 9px 0 9px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-item .tui-image-editor-button.preset {
+  margin: 0 9px 20px 5px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-item label > span {
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 5px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 11px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-item .tui-image-editor-button.apply label,
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-item .tui-image-editor-button.cancel label {
+  vertical-align: 7px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu > div {
+  display: none;
+  vertical-align: bottom;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-submenu-style {
+  opacity: 0.95;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-partition > div {
+  width: 1px;
+  height: 52px;
+  border-left: 1px solid #3c3c3c;
+  margin: 0 8px 0 8px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-filter .tui-image-editor-partition > div {
+  height: 108px;
+  margin: 0 29px 0 0px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu-align {
+  text-align: left;
+  margin-right: 30px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu-align label > span {
+  width: 55px;
+  white-space: nowrap;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu-align:first-child {
+  margin-right: 0;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu-align:first-child label > span {
+  width: 70px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-crop .tui-image-editor-submenu > div.tui-image-editor-menu-crop,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-flip .tui-image-editor-submenu > div.tui-image-editor-menu-flip,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-rotate .tui-image-editor-submenu > div.tui-image-editor-menu-rotate,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-shape .tui-image-editor-submenu > div.tui-image-editor-menu-shape,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-text .tui-image-editor-submenu > div.tui-image-editor-menu-text,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-mask .tui-image-editor-submenu > div.tui-image-editor-menu-mask,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-icon .tui-image-editor-submenu > div.tui-image-editor-menu-icon,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-draw .tui-image-editor-submenu > div.tui-image-editor-menu-draw,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-filter .tui-image-editor-submenu > div.tui-image-editor-menu-filter {
+  display: table-cell;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-crop .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-flip .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-rotate .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-shape .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-text .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-mask .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-icon .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-draw .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-filter .tui-image-editor-submenu {
+  display: table;
+}
+
+.photoeditortest .tui-image-editor-container .filter-color-item {
+  display: inline-block;
+}
+
+.photoeditortest .tui-image-editor-container .filter-color-item .tui-image-editor-checkbox {
+  display: block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-checkbox-wrap {
+  display: inline-block !important;
+  text-align: left;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-checkbox-wrap.fixed-width {
+  width: 187px;
+  white-space: normal;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-checkbox {
+  display: inline-block;
+  margin: 1px 0 1px 0;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-checkbox input {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-checkbox > label > span {
+  color: #fff;
+  height: 14px;
   position: relative;
 }
 
-@media print {
-  .breadcomb-area5 figure .subdirector:after {
-    border-left: 4px solid #000;
-  }
+.photoeditortest .tui-image-editor-container .tui-image-editor-checkbox input + label:before,
+.photoeditortest .tui-image-editor-container .tui-image-editor-checkbox > label > span:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  top: 6px;
+  left: -19px;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+  border: 0;
+  border-radius: 2px;
+  padding-top: 1px;
+  box-sizing: border-box;
 }
 
-.breadcomb-area5 figure .subdirector,
-.breadcomb-area5 figure .departments {
+.photoeditortest .tui-image-editor-container .tui-image-editor-checkbox input[type=checkbox]:checked + span:before {
+  background-size: cover;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAMBJREFUKBWVkjEOwjAMRe2WgZW7IIHEDdhghhuwcQ42rlJugAQS54Cxa5cq1QM5TUpByZfS2j9+dlJVt/tX5ZxbS4ZU9VLkQvSHKTIGRaVJYFmKrBbTCJxE2UgCdDzMZDkHrOV6b95V0US6UmgKodujEZbJg0B0ZgEModO5lrY1TMQf1TpyJGBEjD+E2NPN7ukIUDiF/BfEXgRiGEw8NgkffYGYwCi808fpn/6OvfUfsDr/Vc1IfRf8sKnFVqeiVQfDu0tf/nWH9gAAAABJRU5ErkJggg==");
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-selectlist-wrap {
+  position: relative;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-selectlist-wrap select {
+  width: 100%;
+  height: 28px;
+  margin-top: 4px;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  border: 1px solid #cbdbdb;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 7px 0 10px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-selectlist-wrap .tui-image-editor-selectlist {
+  display: none;
+  position: relative;
+  top: -1px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-top: 0px;
+  padding: 4px 0;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-selectlist-wrap .tui-image-editor-selectlist li {
+  display: block;
+  text-align: left;
+  padding: 7px 10px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-selectlist-wrap .tui-image-editor-selectlist li:hover {
+  background-color: rgba(81, 92, 230, 0.05);
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-selectlist-wrap:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  right: 5px;
+  top: 10px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAHlJREFUKBVjYBgFOEOAEVkmPDxc89+/f6eAYjzI4kD2FyYmJrOVK1deh4kzwRggGiQBVJCELAZig8SQNYHEmEEEMrh69eo1HR0dfqCYJUickZGxf9WqVf3IakBsFBthklpaWmVA9mEQhrJhUoTp0NBQCRAmrHL4qgAAuu4cWZOZIGsAAAAASUVORK5CYII=");
+  background-size: cover;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-selectlist-wrap select::-ms-expand {
+  display: none;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-virtual-range-bar .tui-image-editor-disabled,
+.photoeditortest .tui-image-editor-container .tui-image-editor-virtual-range-subbar .tui-image-editor-disabled,
+.photoeditortest .tui-image-editor-container .tui-image-editor-virtual-range-pointer .tui-image-editor-disabled {
+  backbround-color: #f00;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-range {
+  position: relative;
+  top: 5px;
+  width: 166px;
+  height: 17px;
+  display: inline-block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-virtual-range-bar {
+  top: 7px;
   position: absolute;
   width: 100%;
-  left: 4.5%;
+  height: 2px;
+  background-color: #666;
 }
 
-.breadcomb-area5 figure .subdirector > li.group6:first-child,
-.breadcomb-area5 figure .departments > li.group6:first-child {
-  width: 18.5989492119%;
+.photoeditortest .tui-image-editor-container .tui-image-editor-virtual-range-subbar {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background-color: #d1d1d1;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-virtual-range-pointer {
+  position: absolute;
+  cursor: pointer;
+  top: -5px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-range-wrap {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-range-wrap.short .tui-image-editor-range {
+  width: 100px;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-image-editor-range {
+  width: 108px;
+  margin-left: 10px;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-image-editor-virtual-range-pointer {
+  background-color: #333;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-image-editor-virtual-range-bar {
+  background-color: #ccc;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-image-editor-virtual-range-subbar {
+  background-color: #606060;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-range-wrap.tui-image-editor-newline.short {
+  margin-top: -2px;
+  margin-left: 19px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-range-wrap.tui-image-editor-newline.short label {
+  color: #8e8e8e;
+  font-weight: normal;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-range-wrap label {
+  vertical-align: baseline;
+  font-size: 11px;
+  margin-right: 7px;
+  color: #fff;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-range-value {
+  cursor: default;
+  width: 40px;
+  height: 24px;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 1px solid #d5d5d5;
+  text-align: center;
+  background-color: #1c1c1c;
+  color: #fff;
+  font-weight: lighter;
+  vertical-align: baseline;
+  font-family: "Noto Sans", sans-serif;
+  margin-top: 21px;
+  margin-left: 4px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls {
+  position: absolute;
+  background-color: #151515;
+  width: 100%;
   height: 64px;
-  margin: 0 auto 92px auto;
-  padding-top: 25px;
-  z-index: 1;
+  display: table;
+  bottom: 0;
+  z-index: 2;
 }
 
-@media print {
-  .breadcomb-area5 figure .subdirector > li.group6:first-child,
-  .breadcomb-area5 figure .departments > li.group6:first-child {
-    border-bottom: 4px solid #000;
-  }
+.photoeditortest .tui-image-editor-container .tui-image-editor-icpartition {
+  display: inline-block;
+  background-color: #282828;
+  width: 1px;
+  height: 24px;
 }
 
-.breadcomb-area5 figure .subdirector > li.group6:first-child {
-  float: right;
-  right: 27.2%;
-  border-left: 4px solid #005569;
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-menu > .tui-image-editor-item[tooltip-content]:before {
+  left: 28px;
+  top: 11px;
+  border-right: 7px solid #2f2f2f;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
 }
 
-@media print {
-  .breadcomb-area5 figure .subdirector > li.group6:first-child {
-    border-left: 4px solid black;
-  }
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-menu > .tui-image-editor-item[tooltip-content]:after {
+  top: 7px;
+  left: 42px;
+  white-space: nowrap;
 }
 
-.breadcomb-area5 figure .departments > li.group6:first-child {
-  float: left;
-  left: 27.2%;
-  border-right: 4px solid #005569;
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-submenu {
+  left: 0;
+  height: 100%;
+  width: 248px;
 }
 
-@media print {
-  .breadcomb-area5 figure .departments > li.group6:first-child {
-    border-right: 4px solid black;
-  }
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-main-container {
+  left: 64px;
+  width: calc(100% - 64px);
+  height: 100%;
 }
 
-.breadcomb-area5 figure .subdirector > li.group6:first-child a.group6,
-.breadcomb-area5 figure .departments > li.group6:first-child a.group6 {
-  width: 130%;
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-controls {
+  width: 64px;
+  height: 100%;
+  display: table;
 }
 
-.breadcomb-area5 figure .subdirector > li.group6:first-child a.group6 {
-  left: 25px;
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-menu,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-menu {
+  white-space: inherit;
 }
 
-@media screen and (max-width: 767px) {
-  .breadcomb-area5 figure .subdirector > li.group6:first-child,
-  .breadcomb-area5 figure .departments > li.group6:first-child {
-    width: 40%;
-  }
-
-  .breadcomb-area5 figure .subdirector > li.group6:first-child {
-    right: 10%;
-    margin-right: 2px;
-  }
-
-  .breadcomb-area5 figure .subdirector:after {
-    left: 49.8%;
-  }
-
-  .breadcomb-area5 figure .departments > li.group6:first-child {
-    left: 10%;
-    margin-left: 2px;
-  }
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-submenu,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-submenu {
+  white-space: normal;
 }
 
-.breadcomb-area5 figure .departments > li.group6:first-child a.group6 {
-  right: 25px;
-}
-
-.breadcomb-area5 figure .department:first-child,
-.breadcomb-area5 figure .departments li.group6:nth-child(2) {
-  margin-left: 0;
-  clear: left;
-}
-
-.breadcomb-area5 figure .departments:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 76.1%;
-  height: 22px;
-  border-top: 4px solid #005569;
-  border-right: 4px solid #005569;
-  border-left: 4px solid #005569;
-  margin: 0 auto;
-  top: 130px;
-  left: 10.7%;
-}
-
-@media print {
-  .breadcomb-area5 figure .departments:after {
-    border-top: 4px solid #000;
-    border-right: 4px solid #000;
-    border-left: 4px solid #000;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area5 figure .departments:after {
-    border-right: none;
-    left: 0;
-    width: 49.8%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .breadcomb-area5 figure .department:first-child:before,
-  .breadcomb-area5 figure .department:last-child:before {
-    border: none;
-  }
-}
-
-.breadcomb-area5 figure .department:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 22px;
-  border-left: 4px solid #fff;
-  z-index: 1;
-  top: -22px;
-  left: 50%;
-  margin-left: -4px;
-}
-
-@media print {
-  .breadcomb-area5 figure .department:before {
-    border-left: 4px solid black;
-  }
-}
-
-.breadcomb-area5 figure .department {
-  border-left: 4px solid #005569;
-  width: 44%;
-  float: left;
-  margin-left: 1.7513134851%;
-  margin-bottom: 60px;
-}
-
-@media print {
-  .breadcomb-area5 figure .department {
-    border-left: 4px solid #000;
-  }
-}
-
-.breadcomb-area5 figure .lt-ie8 .department {
-  width: 18.25%;
-}
-
-@media screen and (max-width: 767px) {
-  .breadcomb-area5 figure .department {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .breadcomb-area5 figure .department:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 60px;
-    border-left: 4px solid #005569;
-    z-index: 1;
-    top: -60px;
-    left: 0%;
-    margin-left: -4px;
-  }
-
-  .breadcomb-area5 figure .department:nth-child(2):before {
-    display: none;
-  }
-}
-
-.breadcomb-area5 figure .department > a.group6 {
-  margin: 0 0 -26px -4px;
-  z-index: 1;
-}
-
-.breadcomb-area5 figure .department > a.group6:hover {
-  height: 80px;
-}
-
-.breadcomb-area5 figure .department > ul.group6 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.breadcomb-area5 figure .department li.group6 {
-  padding-left: 25px;
-  border-bottom: 4px solid #005569;
-  height: 80px;
-}
-
-@media print {
-  .breadcomb-area5 figure .department li.group6 {
-    border-bottom: 4px solid #000;
-  }
-}
-
-.breadcomb-area5 figure .department li.group6 a.group6 {
-  background: #005569;
-  top: 48px;
-  position: absolute;
-  z-index: 1;
-  width: 90%;
-  height: 60px;
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-submenu > div,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-submenu > div {
   vertical-align: middle;
-  right: -1px;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#40000000", endColorstr="#00000000", GradientType=1);
 }
 
-.breadcomb-area5 figure .department li.group6 a.group6:hover {
-  box-shadow: 8px 8px 9px -4px rgba(0, 0, 0, 0.1);
-  height: 80px;
-  width: 95%;
-  top: 39px;
-  background-image: none !important;
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-controls li,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-controls li {
+  display: inline-block;
+  margin: 4px auto;
 }
 
-.breadcomb-area5 figure .department.dep-a a.group6 {
-  background: #005569;
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-icpartition,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-icpartition {
+  position: relative;
+  top: -7px;
+  width: 24px;
+  height: 1px;
+}
+
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-submenu .tui-image-editor-partition,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-submenu .tui-image-editor-partition {
+  display: block;
+  width: 75%;
+  margin: auto;
+}
+
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-submenu .tui-image-editor-partition > div,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-submenu .tui-image-editor-partition > div {
+  border-left: 0;
+  height: 10px;
+  border-bottom: 1px solid #3c3c3c;
+  width: 100%;
+  margin: 0;
+}
+
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-submenu .tui-image-editor-submenu-align,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-submenu .tui-image-editor-submenu-align {
+  margin-right: 0;
+}
+
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-submenu .tui-image-editor-submenu-item li,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-submenu .tui-image-editor-submenu-item li {
+  margin-top: 15px;
+}
+
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-submenu .tui-image-editor-submenu-item .tui-colorpicker-clearfix li,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-submenu .tui-image-editor-submenu-item .tui-colorpicker-clearfix li {
+  margin-top: 0;
+}
+
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-checkbox-wrap.fixed-width,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-checkbox-wrap.fixed-width {
+  width: 182px;
+  white-space: normal;
+}
+
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-range-wrap.tui-image-editor-newline label.range,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-range-wrap.tui-image-editor-newline label.range {
+  display: block;
+  text-align: left;
+  width: 75%;
+  margin: auto;
+}
+
+.photoeditortest .tui-image-editor-container.left .tui-image-editor-range,
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-range {
+  width: 136px;
+}
+
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-menu > .tui-image-editor-item[tooltip-content]:before {
+  left: -3px;
+  top: 11px;
+  border-left: 7px solid #2f2f2f;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-menu > .tui-image-editor-item[tooltip-content]:after {
+  top: 7px;
+  left: unset;
+  right: 43px;
+  white-space: nowrap;
+}
+
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-submenu {
+  right: 0;
+  height: 100%;
+  width: 248px;
+}
+
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-main-container {
+  right: 64px;
+  width: calc(100% - 64px);
+  height: 100%;
+}
+
+.photoeditortest .tui-image-editor-container.right .tui-image-editor-controls {
+  right: 0;
+  width: 64px;
+  height: 100%;
+  display: table;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-submenu .tui-image-editor-partition.only-left-right,
+.photoeditortest .tui-image-editor-container.bottom .tui-image-editor-submenu .tui-image-editor-partition.only-left-right {
+  display: none;
+}
+
+.photoeditortest .tui-image-editor-container.bottom .tui-image-editor-submenu > div {
+  padding-bottom: 24px;
+}
+
+.photoeditortest .tui-image-editor-container.top .color-picker-control .triangle {
+  top: -8px;
+  border-right: 7px solid transparent;
+  border-top: 0px;
+  border-left: 7px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-size-wrap {
+  height: 100%;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-main-container {
+  bottom: 0;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-menu > .tui-image-editor-item[tooltip-content]:before {
+  left: 13px;
+  border-top: 0;
+  border-bottom: 7px solid #2f2f2f;
+  top: 33px;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-menu > .tui-image-editor-item[tooltip-content]:after {
+  top: 38px;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-submenu {
+  top: 0;
+  bottom: auto;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-submenu > div {
+  padding-top: 24px;
+  vertical-align: top;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-controls-logo {
+  display: table-cell;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-controls-buttons {
+  display: table-cell;
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-main {
+  top: 64px;
+  height: calc(100% - 64px);
+}
+
+.photoeditortest .tui-image-editor-container.top .tui-image-editor-controls {
+  top: 0;
+  bottom: inherit;
+}
+
+.photoeditortest .tui-image-editor-container .tie-icon-add-button .tui-image-editor-button {
+  min-width: 42px;
+}
+
+.photoeditortest .tui-image-editor-container .svg_ic-menu {
+  width: 24px;
+  height: 24px;
+}
+
+.photoeditortest .tui-image-editor-container .svg_ic-submenu {
+  width: 32px;
+  height: 32px;
+}
+
+.photoeditortest .tui-image-editor-container .svg_img-bi {
+  width: 257px;
+  height: 26px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls svg > use {
+  display: none;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls .enabled svg:hover > use.hover,
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls .normal svg:hover > use.hover {
+  display: block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls .active svg:hover > use.hover {
+  display: none;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls svg > use.normal {
+  display: block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls .active svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls .enabled svg > use.enabled {
+  display: block;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls .active svg > use.normal,
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls .enabled svg > use.normal {
+  display: none;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-controls:hover {
+  z-index: 3;
+}
+
+.photoeditortest .tui-image-editor-container div.tui-colorpicker-clearfix {
+  width: 159px;
+  height: 28px;
+  border: 1px solid #d5d5d5;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  margin-top: 6px;
+  padding: 4px 7px 4px 7px;
+}
+
+.photoeditortest .tui-image-editor-container .tui-colorpicker-palette-hex {
+  width: 114px;
+  background-color: #f5f5f5;
+  border: 0;
+  font-size: 11px;
+  margin-top: 2px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.photoeditortest .tui-image-editor-container .tui-colorpicker-palette-hex[value="#ffffff"] + .tui-colorpicker-palette-preview,
+.photoeditortest .tui-image-editor-container .tui-colorpicker-palette-hex[value=""] + .tui-colorpicker-palette-preview {
+  border: 1px solid #ccc;
+}
+
+.photoeditortest .tui-image-editor-container .tui-colorpicker-palette-hex[value=""] + .tui-colorpicker-palette-preview {
+  background-size: cover;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAdBJREFUWAnFl0FuwjAQRZ0ukiugHqFSOQNdseuKW3ALzkA4BateICvUGyCxrtRFd4WuunH/TzykaYJrnLEYaTJJsP2+x8GZZCbQrLU5mj7Bn+EP8HvnCObd+R7xBV5lWfaNON4AnsA38E94qLEt+0yiFaBzAV/Bv+Cxxr4co7hKCDpw1q9wLeNYYdlAwyn8TYt8Hme3+8D5ozcTaMCZ68PXa2tnM2sbEcOZAJhrrpl2DAcTOGNjZPSfCdzkw6JrfbiMv+osBe4y9WOedhm4jZfhbENWuxS44H9Wz/xw4WzqLOAqh1+zycgAwzEMzr5k5gaHOa9ULBwuuDkFlHI1Kl4PJ66kgIpnoywOTmRFAYcbwYk9UMApWkD8zAV5ihcwHk4Rx7gl0IFTQL0EFc+CTQ9OZHWH3YhlVJiVpTHbrTGLhTHLZVgff6s9lyBsI9KduSS83oj+34rTwJutmBmCnMsvozRwZqB5GTkBw6/jdPDu69iJ6BYk6eCcfbcgcQIK/MByaaiMqm8rHcjol2TnpWDhyAKSGdA3FrxtJUToX0ODqatetfGE+8tyEUOV8GY5dGRwLP/MBS4RHQr4bT7NRAQjlcOTfZxmv2G+c4hI8nn+Ax5PG/zhI393AAAAAElFTkSuQmCC");
+}
+
+.photoeditortest .tui-image-editor-container .tui-colorpicker-palette-preview {
+  border-radius: 100%;
+  float: left;
+  width: 17px;
+  height: 17px;
+  border: 0;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control {
+  position: absolute;
+  display: none;
+  z-index: 99;
+  width: 192px;
+  background-color: #fff;
+  box-shadow: 0 3px 22px 6px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  border-radius: 2px;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-colorpicker-palette-toggle-slider {
+  display: none;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-colorpicker-palette-button {
+  border: 0;
+  border-radius: 100%;
+  margin: 2px;
+  background-size: cover;
+  font-size: 1px;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-colorpicker-palette-button[title="#ffffff"] {
+  border: 1px solid #ccc;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-colorpicker-palette-button[title=""] {
+  border: 1px solid #ccc;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .triangle {
+  width: 0;
+  height: 0;
+  border-right: 7px solid transparent;
+  border-top: 8px solid #fff;
+  border-left: 7px solid transparent;
+  position: absolute;
+  bottom: -8px;
+  left: 84px;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-colorpicker-container,
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-colorpicker-palette-container ul,
+.photoeditortest .tui-image-editor-container .color-picker-control .tui-colorpicker-palette-container {
+  width: 100%;
+  height: auto;
+}
+
+.photoeditortest .tui-image-editor-container .filter-color-item .color-picker-control label {
+  font-color: #333;
+  font-weight: normal;
+  margin-right: 7pxleft;
+}
+
+.photoeditortest .tui-image-editor-container .filter-color-item .tui-image-editor-checkbox {
+  margin-top: 0;
+}
+
+.photoeditortest .tui-image-editor-container .filter-color-item .tui-image-editor-checkbox input + label:before,
+.photoeditortest .tui-image-editor-container .filter-color-item .tui-image-editor-checkbox > label:before {
+  left: -16px;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker {
+  width: 100%;
+  height: auto;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-value {
+  width: 32px;
+  height: 32px;
+  border: 0px;
+  border-radius: 100%;
+  margin: auto;
+  margin-bottom: 1px;
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-value.transparent {
+  border: 1px solid #cbcbcb;
+  background-size: cover;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAdBJREFUWAnFl0FuwjAQRZ0ukiugHqFSOQNdseuKW3ALzkA4BateICvUGyCxrtRFd4WuunH/TzykaYJrnLEYaTJJsP2+x8GZZCbQrLU5mj7Bn+EP8HvnCObd+R7xBV5lWfaNON4AnsA38E94qLEt+0yiFaBzAV/Bv+Cxxr4co7hKCDpw1q9wLeNYYdlAwyn8TYt8Hme3+8D5ozcTaMCZ68PXa2tnM2sbEcOZAJhrrpl2DAcTOGNjZPSfCdzkw6JrfbiMv+osBe4y9WOedhm4jZfhbENWuxS44H9Wz/xw4WzqLOAqh1+zycgAwzEMzr5k5gaHOa9ULBwuuDkFlHI1Kl4PJ66kgIpnoywOTmRFAYcbwYk9UMApWkD8zAV5ihcwHk4Rx7gl0IFTQL0EFc+CTQ9OZHWH3YhlVJiVpTHbrTGLhTHLZVgff6s9lyBsI9KduSS83oj+34rTwJutmBmCnMsvozRwZqB5GTkBw6/jdPDu69iJ6BYk6eCcfbcgcQIK/MByaaiMqm8rHcjol2TnpWDhyAKSGdA3FrxtJUToX0ODqatetfGE+8tyEUOV8GY5dGRwLP/MBS4RHQr4bT7NRAQjlcOTfZxmv2G+c4hI8nn+Ax5PG/zhI393AAAAAElFTkSuQmCC");
+}
+
+.photoeditortest .tui-image-editor-container .color-picker-value + label {
   color: #fff;
 }
 
-.breadcomb-area5 figure .department.dep-b a.group6 {
-  background: #005569;
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu svg > use {
+  display: none;
+}
+
+.photoeditortest .tui-image-editor-container .tui-image-editor-submenu svg > use.normal {
+  display: block;
+}
+
+.photoeditortest .tie-icon-add-button.icon-bubble .tui-image-editor-button[data-icontype=icon-bubble] svg > use.active,
+.photoeditortest .tie-icon-add-button.icon-heart .tui-image-editor-button[data-icontype=icon-heart] svg > use.active,
+.photoeditortest .tie-icon-add-button.icon-location .tui-image-editor-button[data-icontype=icon-location] svg > use.active,
+.photoeditortest .tie-icon-add-button.icon-polygon .tui-image-editor-button[data-icontype=icon-polygon] svg > use.active,
+.photoeditortest .tie-icon-add-button.icon-star .tui-image-editor-button[data-icontype=icon-star] svg > use.active,
+.photoeditortest .tie-icon-add-button.icon-star-2 .tui-image-editor-button[data-icontype=icon-star-2] svg > use.active,
+.photoeditortest .tie-icon-add-button.icon-arrow-3 .tui-image-editor-button[data-icontype=icon-arrow-3] svg > use.active,
+.photoeditortest .tie-icon-add-button.icon-arrow-2 .tui-image-editor-button[data-icontype=icon-arrow-2] svg > use.active,
+.photoeditortest .tie-icon-add-button.icon-arrow .tui-image-editor-button[data-icontype=icon-arrow] svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tie-draw-line-select-button.line .tui-image-editor-button.line svg > use.normal,
+.photoeditortest .tie-draw-line-select-button.free .tui-image-editor-button.free svg > use.normal {
+  display: none;
+}
+
+.photoeditortest .tie-draw-line-select-button.line .tui-image-editor-button.line svg > use.active,
+.photoeditortest .tie-draw-line-select-button.free .tui-image-editor-button.free svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tie-flip-button.resetFlip .tui-image-editor-button.resetFlip svg > use.normal,
+.photoeditortest .tie-flip-button.flipX .tui-image-editor-button.flipX svg > use.normal,
+.photoeditortest .tie-flip-button.flipY .tui-image-editor-button.flipY svg > use.normal {
+  display: none;
+}
+
+.photoeditortest .tie-flip-button.resetFlip .tui-image-editor-button.resetFlip svg > use.active,
+.photoeditortest .tie-flip-button.flipX .tui-image-editor-button.flipX svg > use.active,
+.photoeditortest .tie-flip-button.flipY .tui-image-editor-button.flipY svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tie-mask-apply.apply.active .tui-image-editor-button.apply label {
   color: #fff;
 }
 
-.breadcomb-area5 figure .department.dep-c a.group6 {
-  background: #005569;
-  color: #fff;
+.photoeditortest .tie-mask-apply.apply.active .tui-image-editor-button.apply svg > use.active {
+  display: block;
 }
 
-.breadcomb-area5 figure .department.dep-d a.group6 {
-  background: #005569;
-  color: #fff;
+.photoeditortest .tie-crop-button .tui-image-editor-button.apply,
+.photoeditortest .tie-crop-preset-button .tui-image-editor-button.apply {
+  margin-right: 24px;
 }
 
-.breadcomb-area5 figure .department.dep-e a.group6 {
-  background: #005569;
-  color: #fff;
+.photoeditortest .tie-crop-button .tui-image-editor-button.preset.active svg > use.active,
+.photoeditortest .tie-crop-preset-button .tui-image-editor-button.preset.active svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tie-crop-button .tui-image-editor-button.apply.active svg > use.active,
+.photoeditortest .tie-crop-preset-button .tui-image-editor-button.apply.active svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tie-shape-button.rect .tui-image-editor-button.rect svg > use.normal,
+.photoeditortest .tie-shape-button.circle .tui-image-editor-button.circle svg > use.normal,
+.photoeditortest .tie-shape-button.triangle .tui-image-editor-button.triangle svg > use.normal {
+  display: none;
+}
+
+.photoeditortest .tie-shape-button.rect .tui-image-editor-button.rect svg > use.active,
+.photoeditortest .tie-shape-button.circle .tui-image-editor-button.circle svg > use.active,
+.photoeditortest .tie-shape-button.triangle .tui-image-editor-button.triangle svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tie-text-effect-button .tui-image-editor-button.active svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tie-text-align-button.left .tui-image-editor-button.left svg > use.active,
+.photoeditortest .tie-text-align-button.center .tui-image-editor-button.center svg > use.active,
+.photoeditortest .tie-text-align-button.right .tui-image-editor-button.right svg > use.active {
+  display: block;
+}
+
+.photoeditortest .tie-mask-image-file,
+.photoeditortest .tie-icon-image-file {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #008000;
+  cursor: inherit;
+  left: 0;
+  top: 0;
+}
+
+.photoeditortest .tui-image-editor-container.top.tui-image-editor-top-optimization .tui-image-editor-controls ul {
+  text-align: right;
+}
+
+.photoeditortest .tui-image-editor-container.top.tui-image-editor-top-optimization .tui-image-editor-controls-logo {
+  display: none;
 }
 
