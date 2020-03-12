@@ -19,7 +19,7 @@
                         <div class="col-10">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="infos" role="tabpanel">
-                                <div class="row mt-2">
+                                    <div class="row mt-2">
                                         <div class="col-8">
                                             <div class="row">
                                                 <div class="col-3 mt-1 mb-2">
@@ -142,6 +142,7 @@
                                             </div>
                                         </div>
                                     </form>
+                                </div>
 
 
                                 <div class="tab-pane fade" id="tasks" role="tabpanel">
@@ -500,14 +501,6 @@
 
                                 </div>
                                 <!-- MISSION -->
-
-
-
-
-
-
-
-
 
 
 
