@@ -63,7 +63,12 @@
                 <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php
                         $get_img=DB::table('employees')->where('emp_id',Auth::user()->emp_id)->first();
-                        $img=$get_img->emp_profile;
+                        if($get_img->emp_profile == Null){
+                            $img='default.jpg';
+                        }
+                        else{
+                            $img=$get_img->emp_profile;
+                        }
                 ?>
 
 
