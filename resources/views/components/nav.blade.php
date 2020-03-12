@@ -25,8 +25,9 @@
 
             <ul class="nav navbar-nav">
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'home' ? 'active' : null }}"><a href="{{ url('home')}}"><i class="fa fa-home"></i><span>Home</span></a></li>
+                @if(Auth::user()->role_id=="Chairman"||Auth::user()->role_id=="MD")
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'project' ? 'active' : null }}"><a href="{{ url('project')}}"><i class="fas fa-fw fa-tasks"></i><span>Projects</span></a></li>
-
+                @endif
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'cbplist' ? 'active' : null }}"><a href="{{ url('cbplist')}}"><i class="fas fa-building"></i><span>CMP</span></a></li>
                 <li class="mr-1 pr-2 pl-2 {{ Request::segment(1) === 'task' ? 'active' : null }}"><a href="{{ url('task') }}"><i class="fa fa-fw fa-edit"></i><span>Task List </span></a></li>
 

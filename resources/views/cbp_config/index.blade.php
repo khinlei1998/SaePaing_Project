@@ -153,14 +153,6 @@
                                             <hr>
 
 
-
-
-
-
-
-
-
-
                                             <div class="container">
                                                 <input type="hidden" name="cbp_id" value="{{$list->cbp_id}}">
                                                 <div class="row" id="subcbp">
@@ -343,6 +335,9 @@
                           
                             eme.removeClass("showmodal");
                             eme.addClass('showmodal1');
+                            
+                            $('#hod_person').val('');
+                            $('#d_line').val('');
                            
                             bgcolorelement.removeClass("collapsed");
                             bgcolorelement.addClass("collapse");
