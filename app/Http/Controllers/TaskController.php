@@ -309,9 +309,18 @@ class TaskController extends Controller
     {
         $task = Task::find($request->task_id);
 
-       
-        $task->assignor_attach_file = str_replace($request->src.":","",$task->assignor_attach_file);
-        $task->assignor_attach_file = str_replace($request->src,"",$task->assignor_attach_file);
+        if (strpos($task->assignor_attach_file, ":".$request->src) !== false) {
+            $task->assignor_attach_file = str_replace(":".$request->src,"",$task->assignor_attach_file);
+
+        }elseif(strpos($task->assignor_attach_file,$request->src.":") !== false){
+            $task->assignor_attach_file = str_replace($request->src.":","",$task->assignor_attach_file);
+
+        }else{
+            $task->assignor_attach_file = str_replace($request->src,"",$task->assignor_attach_file);
+        }
+
+        // $task->assignor_attach_file = str_replace($request->src.":","",$task->assignor_attach_file);
+        
         
         if($task->save()) {
 
