@@ -98,6 +98,7 @@
             });
         }
         function removeImage(src,task_id,button){
+           
             //function for image deletion
             $.ajax({
                 headers: {

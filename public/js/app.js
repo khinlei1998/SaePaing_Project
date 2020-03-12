@@ -90069,7 +90069,7 @@ Dropzone.options.taskform = {
     });
     this.on("addedfile", function (file, response) {
       if (file == myDropZone.files[0]) {
-        $('.dz-preview:first').show();
+        $('.dz-preview:first').hide();
       }
 
       console.log(myDropZone.files.length); // console.log('New File Added');
@@ -90709,8 +90709,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\ui2_29\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\ui2_29\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\3_12_2020\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\3_12_2020\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
