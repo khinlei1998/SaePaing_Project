@@ -27,11 +27,11 @@ class EmployeeController extends Controller
     public function index()
     {
         $employees = Employee::paginate(6);
-        if ($request->ajax()) {
+        // if ($request->ajax()) {
 
-            return view('employee.index',compact(['employees']));
+        //     return view('employee.index',compact(['employees']));
 
-        }
+        // }
         if(session('success_message')){
             Alert::success('Success!', session('success_message'));
             };
