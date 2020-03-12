@@ -92,7 +92,69 @@ class ProjectController extends Controller
 
         $per_of_whole_project=ceil($cal_cbpgetper);
 
-        return view('project.detail', compact(['project','configs','subcbps','per_of_whole_project']));
+        $count_of_under5=0;
+        $count_of_over5=0;
+        $count_of_completed=0;
+        $count_of_zero=0;
+
+$pid=$id;
+
+        $get_all_project_config=ProjectConfig::where('project_id',$id)->get();
+
+        $get_all_list=CbpList::all();
+
+
+
+
+        foreach($get_all_list as $gapc){
+            if(ProjectConfig::where([['project_id','=',$id],['cbp_id','=',$gapc->cbp_id]])->count() != 0){
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','<',50]])->count() > 0){
+                    $count_of_under5 +=1;
+
+                }
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=',50]])->count() > 0){
+                    $count_of_over5 +=1;
+
+                }
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','>',50]])->count() > 0){
+                    $count_of_over5 +=1;
+
+                }
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=',NULL]])->count() > 0){
+                    $count_of_zero +=1;
+
+                }
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=',0]])->count() > 0){
+                    $count_of_zero +=1;
+
+                }
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=',0]])->count() == 0){
+                    $count_of_zero +=1;
+
+                }
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=','']])->count() > 0){
+                    $count_of_zero +=1;
+
+                }
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=','100']])->count() > 0){
+                    $count_of_completed +=1;
+
+                }
+                if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','>','100']])->count() > 0){
+                    $count_of_completed +=1;
+
+                }
+            }
+            else{
+                $count_of_zero += 1;
+            }
+
+
+        }
+
+
+
+        return view('project.detail', compact(['project','configs','subcbps','per_of_whole_project','pid','count_of_under5','count_of_over5','count_of_completed','count_of_zero']));
 
     }    /**
      * Show the form for editing the specified resource.

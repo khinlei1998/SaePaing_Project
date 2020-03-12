@@ -43,7 +43,7 @@ header("Content-Type: application/xml; charset=utf-8");
     @stack('css')
 </head>
 <body class="bg-white">
-    <div id="app " class="uniandzawgyi uni">
+    <div id="app" class="uniandzawgyi uni">
     <div>
     </div>
         @auth

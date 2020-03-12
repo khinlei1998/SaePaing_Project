@@ -15,7 +15,7 @@
                                         <h1 class="h5 font-weight-bold text-center mb-4">
                                             <strong>
                                                 {{ $project->project_title }}
-                                              
+
                                             </strong>
                                         </h1>
 
@@ -31,21 +31,25 @@
                                         </div>
 
                                         <!-- Progress bar 1 -->
-                                        <div class="progress mx-auto" data-value='80'>
-                                        <span class="progress-left">
-        <span class="progress-bar border-primary"></span>
-                                        </span>
-                                            <span class="progress-right">
-        <span class="progress-bar border-primary"></span>
-                                        </span>
+
+
+                                        {{--//pie chart--}}
 
 
 
-                                            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                                <div class="h2 font-weight-bold">{{$per_of_whole_project}} %<sup class="small"></sup></div>
-                                            </div>
-                                        </div>
-                        
+
+
+
+
+
+
+
+
+
+                                        {{--end pie chart--}}
+
+
+
                                         <div class="row text-center mt-4">
                                             <div class="col-6 border-right">
                                                 <div class="h4 font-weight-bold mb-0">{{ $configs? count($configs):"0" }}</div>
@@ -58,6 +62,33 @@
                                         </div>
                                         <!-- END -->
                                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <piechart v-bind:project_per=[{{$per_of_whole_project}},{{$count_of_under5}},{{$count_of_over5}},{{$count_of_completed}},{{$count_of_zero}}]></piechart>
+
+
+
+
+
+
+
+
+
+
+
+
+
                                     <div class="col-12 cbp-maintask-title ml-0 shadow-sm">
                                         <div class="row">
                                             <div class="col-1 i-c">

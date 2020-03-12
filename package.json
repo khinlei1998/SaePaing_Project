@@ -28,6 +28,7 @@
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^16.0.0",
         "@toast-ui/vue-image-editor": "^1.2.0",
+        "apexcharts": "^3.16.1",
         "bootstrap-sweetalert": "^1.0.1",
         "dropzone": "^5.5.1",
         "moment": "^2.24.0",
@@ -35,6 +36,7 @@
         "select2": "^4.0.12",
         "tempusdominus-bootstrap-4": "^5.1.2",
         "tui-code-snippet": "^2.3.1",
+        "vue-apexcharts": "^1.5.2",
         "vue-filepreview": "^0.1.17"
     }
 }
