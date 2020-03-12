@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="app">
     <div class="card shadow-lg index-tables border-0 mt-5 p-2">
         <div class="container">
             <div class="row">
@@ -555,7 +555,9 @@
                         $hod_id=DB::table('project_configs')->where('cbp_id',$assigned_data->cbp_id)->first()->assign_person;
                         $hod_name=DB::table('users')->where('emp_id',$hod_id)->first()->name;
                         echo $hod_name;
-                        ?><br><small> </small></td>
+                        ?>
+                        <br><small> </small>
+                        </td>
                         <td class="align-middle">
                         {{$deadline_date=DB::table('assign_to_hots')->where('cbp_id',$assigned_data->cbp_id)->first()->deadline}}
 </td>
@@ -617,7 +619,7 @@
                                                                                 </div>
                                                                                 <div class="modal-footer">
                                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                                    <button type="button" class="btn btn-primary" id="hod_report_submit">Report</button>
+                                                                                    <button type="button" class="btn btn-primary" id="hod_report_submit"  >Report</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -729,11 +731,14 @@
 
 
                 //submit the model
+                
+               
 
                 $('#hod_report_submit').click(function(){
 
                     var report_text = $('#report_text').val();
                     console.log(report_text);
+                   
                     $.ajax({
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -744,19 +749,20 @@
                     }).done(function (data) {
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                         if(data.success){
+                           
                             console.log("fine");
                         // textarea value to empty
                         $('#report_text').val('');
                         //hide bs modal
                         $('#hod_report_modal').modal('hide');
-
-
-                        window.swal({
-                                     title: "Successfully Reported",
-                                     text: "",
-                                     icon: "success",
-                                     button: "Close",
-                                    });;
+                        
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                            )
+                                                
+                             
 
                         console.log(data.message);
                         }else{
@@ -767,7 +773,8 @@
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
                 });
-
+                
+                
 
 
             });
