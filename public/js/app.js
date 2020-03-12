@@ -92314,7 +92314,7 @@ $(function () {
 
   $('[data-toggle="tooltip"]').tooltip(); //configration for select2 for department dropdown
 
-  $(".department-select2").select2({
+  $(".department").select2({
     placeholder: "Select a Department",
     allowClear: true
   }); //configuration for select2 for employee dropdown
