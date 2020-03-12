@@ -87,6 +87,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/hot_report_for_cbpsubtask','CbpSubtaskController@hot_report_for_cbpsubtask');
 
     Route::get('/orgchart', 'HomeController@orgchart');
+    Route::get('/pet', function(){
+        return view('pet');
+    });
+
+
     Route::get('OC_group/{id}', 'HomeController@OC_group')->name('OC_group');
 
 });
