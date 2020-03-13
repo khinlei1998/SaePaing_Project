@@ -31,8 +31,10 @@
                 });
                 //employee dropdown in create.blade.php task
                 $('#task_department').on('change', function () {
+                    $('#task_assigned_to').empty();
                     var dept_id = $('#task_department').find(':selected').val();
                     console.log("N blade: [task/create] component :[Department dropdown] from:app.js Selected Department =>"+dept_id);
+                   
                     getAssibleEmployee(dept_id);
                 });
 
