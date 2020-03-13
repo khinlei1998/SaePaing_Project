@@ -38,68 +38,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/employee/profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-112">
+            <state>
               <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-              <folding>
-                <element signature="e#73#72007#0#HTML" />
-                <element signature="e#5158#5179#0#HTML" expanded="true" />
-                <element signature="e#5950#5956#0#HTML" expanded="true" />
-                <element signature="e#6062#6068#0#HTML" expanded="true" />
-                <element signature="e#7218#7225#1#HTML" expanded="true" />
-                <element signature="e#10159#10165#0#HTML" expanded="true" />
-                <element signature="e#10165#10171#0#HTML" expanded="true" />
-                <element signature="e#10513#10519#0#HTML" expanded="true" />
-                <element signature="e#10519#10525#0#HTML" expanded="true" />
-                <element signature="e#10869#10875#0#HTML" expanded="true" />
-                <element signature="e#10875#10881#0#HTML" expanded="true" />
-                <element signature="e#11225#11231#0#HTML" expanded="true" />
-                <element signature="e#11231#11237#0#HTML" expanded="true" />
-                <element signature="e#11580#11586#0#HTML" expanded="true" />
-                <element signature="e#11586#11592#0#HTML" expanded="true" />
-                <element signature="e#17087#17093#0#HTML" expanded="true" />
-                <element signature="e#17093#17099#0#HTML" expanded="true" />
-                <element signature="e#17544#17550#0#HTML" expanded="true" />
-                <element signature="e#17550#17556#0#HTML" expanded="true" />
-                <element signature="e#18005#18011#0#HTML" expanded="true" />
-                <element signature="e#18011#18017#0#HTML" expanded="true" />
-                <element signature="e#18466#18472#0#HTML" expanded="true" />
-                <element signature="e#18472#18478#0#HTML" expanded="true" />
-                <element signature="e#18926#18932#0#HTML" expanded="true" />
-                <element signature="e#18932#18938#0#HTML" expanded="true" />
-                <element signature="e#24839#24845#0#HTML" expanded="true" />
-                <element signature="e#24845#24851#0#HTML" expanded="true" />
-                <element signature="e#25169#25175#0#HTML" expanded="true" />
-                <element signature="e#25175#25181#0#HTML" expanded="true" />
-                <element signature="e#25500#25506#0#HTML" expanded="true" />
-                <element signature="e#25506#25512#0#HTML" expanded="true" />
-                <element signature="e#32506#32525#0#HTML" expanded="true" />
-                <element signature="e#33845#33851#0#HTML" expanded="true" />
-                <element signature="e#41038#41044#0#HTML" expanded="true" />
-                <element signature="e#41461#41468#1#HTML" expanded="true" />
-                <element signature="e#42697#42703#0#HTML" expanded="true" />
-                <element signature="e#45292#45298#0#HTML" expanded="true" />
-                <element signature="e#51764#51783#0#HTML" expanded="true" />
-                <element signature="e#53103#53109#0#HTML" expanded="true" />
-                <element signature="e#60239#60245#0#HTML" expanded="true" />
-                <element signature="e#60662#60669#1#HTML" expanded="true" />
-                <element signature="e#61898#61904#0#HTML" expanded="true" />
-                <element signature="e#64503#64509#0#HTML" expanded="true" />
-                <element signature="e#69772#69779#1#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/project/detail.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="77" column="64" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="64" />
+            <state relative-caret-position="132">
+              <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
               <folding>
-                <element signature="e#4221#7189#0#HTML" />
-                <element signature="e#4654#7090#0#HTML" />
-                <element signature="e#7394#11023#0#HTML" />
-                <element signature="e#11174#12556#0#HTML" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#272#278#0" expanded="true" />
                 <element signature="e#404#410#1" expanded="true" />
@@ -109,20 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-895">
-              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/Piechart.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+            <state relative-caret-position="220">
+              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -137,9 +78,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="29" selection-start-column="29" selection-end-column="29" />
-              <folding>
-                <element signature="n#div#0;n#!!top" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -147,12 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
+            <state relative-caret-position="14146">
               <caret line="666" selection-start-line="666" selection-end-line="666" />
-              <folding>
-                <element signature="e#1267#1307#0" expanded="true" />
-                <element signature="e#1414#1943#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -174,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="990">
               <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
             </state>
           </provider>
@@ -285,9 +219,9 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/employee/profile.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
-        <option value="$PROJECT_DIR$/resources/views/project/detail.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Piechart.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" />
+        <option value="$PROJECT_DIR$/resources/views/project/detail.blade.php" />
       </list>
     </option>
   </component>
@@ -384,8 +318,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-165" />
-    <option name="y" value="160" />
+    <option name="x" value="-38" />
+    <option name="y" value="55" />
     <option name="width" value="1930" />
     <option name="height" value="1090" />
   </component>
@@ -562,12 +496,13 @@
       <workItem from="1583549123407" duration="5069000" />
       <workItem from="1583810404306" duration="1294000" />
       <workItem from="1583909949085" duration="5356000" />
-      <workItem from="1583981207819" duration="21258000" />
+      <workItem from="1583981207819" duration="21346000" />
+      <workItem from="1584069443611" duration="5194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="521224000" />
+    <option name="totallyTimeSpent" value="526506000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -582,8 +517,8 @@
     <frame x="-3" y="-3" width="1542" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8812849" visible="true" weight="0.13087249" />
-      <window_info id="Structure" order="1" sideWeight="0.118715085" side_tool="true" visible="true" weight="0.13087249" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8791045" visible="true" weight="0.13221477" />
+      <window_info id="Structure" order="1" sideWeight="0.12089552" side_tool="true" visible="true" weight="0.13221477" />
       <window_info id="npm" order="2" sideWeight="0.10217391" side_tool="true" weight="0.020134227" />
       <window_info id="Favorites" order="3" sideWeight="0.45411393" side_tool="true" weight="0.1738255" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -597,7 +532,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.15281501" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932885" weight="0.15281501" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.04021448" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.101876676" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32907802" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -659,13 +594,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/Piechart.vue</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/Piechart.vue</url>
           <line>27</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -927,26 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/dropzone/dist/dropzone.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/components/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/vue-apexcharts/dist/vue-apexcharts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4992">
@@ -954,19 +867,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/employee/profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="666" selection-start-line="666" selection-end-line="666" />
-          <folding>
-            <element signature="e#1267#1307#0" expanded="true" />
-            <element signature="e#1414#1943#0" expanded="true" />
-          </folding>
+        <state>
+          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ExampleComponent.vue">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/resources/views/components/nav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14146">
+          <caret line="666" selection-start-line="666" selection-end-line="666" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pet.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -975,87 +895,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Piechart.vue">
+    <entry file="file://$PROJECT_DIR$/node_modules/dropzone/dist/dropzone.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+        <state relative-caret-position="990">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/employee/profile.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/js/components/Piechart.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+        <state relative-caret-position="220">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ExampleComponent.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="178" column="9" lean-forward="true" selection-start-line="178" selection-start-column="9" selection-end-line="178" selection-end-column="9" />
           <folding>
-            <element signature="e#73#72007#0#HTML" />
-            <element signature="e#5158#5179#0#HTML" expanded="true" />
-            <element signature="e#5950#5956#0#HTML" expanded="true" />
-            <element signature="e#6062#6068#0#HTML" expanded="true" />
-            <element signature="e#7218#7225#1#HTML" expanded="true" />
-            <element signature="e#10159#10165#0#HTML" expanded="true" />
-            <element signature="e#10165#10171#0#HTML" expanded="true" />
-            <element signature="e#10513#10519#0#HTML" expanded="true" />
-            <element signature="e#10519#10525#0#HTML" expanded="true" />
-            <element signature="e#10869#10875#0#HTML" expanded="true" />
-            <element signature="e#10875#10881#0#HTML" expanded="true" />
-            <element signature="e#11225#11231#0#HTML" expanded="true" />
-            <element signature="e#11231#11237#0#HTML" expanded="true" />
-            <element signature="e#11580#11586#0#HTML" expanded="true" />
-            <element signature="e#11586#11592#0#HTML" expanded="true" />
-            <element signature="e#17087#17093#0#HTML" expanded="true" />
-            <element signature="e#17093#17099#0#HTML" expanded="true" />
-            <element signature="e#17544#17550#0#HTML" expanded="true" />
-            <element signature="e#17550#17556#0#HTML" expanded="true" />
-            <element signature="e#18005#18011#0#HTML" expanded="true" />
-            <element signature="e#18011#18017#0#HTML" expanded="true" />
-            <element signature="e#18466#18472#0#HTML" expanded="true" />
-            <element signature="e#18472#18478#0#HTML" expanded="true" />
-            <element signature="e#18926#18932#0#HTML" expanded="true" />
-            <element signature="e#18932#18938#0#HTML" expanded="true" />
-            <element signature="e#24839#24845#0#HTML" expanded="true" />
-            <element signature="e#24845#24851#0#HTML" expanded="true" />
-            <element signature="e#25169#25175#0#HTML" expanded="true" />
-            <element signature="e#25175#25181#0#HTML" expanded="true" />
-            <element signature="e#25500#25506#0#HTML" expanded="true" />
-            <element signature="e#25506#25512#0#HTML" expanded="true" />
-            <element signature="e#32506#32525#0#HTML" expanded="true" />
-            <element signature="e#33845#33851#0#HTML" expanded="true" />
-            <element signature="e#41038#41044#0#HTML" expanded="true" />
-            <element signature="e#41461#41468#1#HTML" expanded="true" />
-            <element signature="e#42697#42703#0#HTML" expanded="true" />
-            <element signature="e#45292#45298#0#HTML" expanded="true" />
-            <element signature="e#51764#51783#0#HTML" expanded="true" />
-            <element signature="e#53103#53109#0#HTML" expanded="true" />
-            <element signature="e#60239#60245#0#HTML" expanded="true" />
-            <element signature="e#60662#60669#1#HTML" expanded="true" />
-            <element signature="e#61898#61904#0#HTML" expanded="true" />
-            <element signature="e#64503#64509#0#HTML" expanded="true" />
-            <element signature="e#69772#69779#1#HTML" expanded="true" />
+            <element signature="e#3159#3311#0#PHP" />
+            <element signature="e#3329#3480#0#PHP" />
+            <element signature="e#3498#3673#0#PHP" />
+            <element signature="e#3691#3843#0#PHP" />
+            <element signature="e#3861#4011#0#PHP" />
+            <element signature="e#4030#4181#0#PHP" />
+            <element signature="e#4198#4357#0#PHP" />
+            <element signature="e#4376#4535#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/project/detail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="77" column="64" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="64" />
+        <state relative-caret-position="132">
+          <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
           <folding>
-            <element signature="e#4221#7189#0#HTML" />
-            <element signature="e#4654#7090#0#HTML" />
-            <element signature="e#7394#11023#0#HTML" />
-            <element signature="e#11174#12556#0#HTML" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#272#278#0" expanded="true" />
             <element signature="e#404#410#1" expanded="true" />
             <element signature="e#260#266#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-895">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
         </state>
       </provider>
     </entry>

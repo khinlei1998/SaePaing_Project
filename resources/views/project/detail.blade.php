@@ -64,14 +64,7 @@
                                     </div>
 
 
-
-
-
-
-
-
-
-
+                                    {{--//dynamic pie chart--}}
 
 
 
@@ -79,6 +72,7 @@
 
 
 
+                                    {{--//dynamic pie chart--}}
 
 
 
