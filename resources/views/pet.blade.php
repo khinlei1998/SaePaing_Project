@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="col-sm-12 no-gutters photoeditortest">
+<div class="col-sm-12 no-gutters photoeditortest p-5">
     <div class="tui-image-editor-container" id="tui-image-editor-container" ></div>
 </div>
 

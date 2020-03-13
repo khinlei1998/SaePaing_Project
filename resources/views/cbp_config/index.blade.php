@@ -275,22 +275,25 @@
                 }).done(function (data) {
                     console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                     if (data.success) {
-                        var cbp = "<div class=\"col-md-10\">\n" +
-                            "<ul class=\"pl-3\">\n" +
-                            "<li>" + subcbp + "</li>\n" +
+                        var cbp = "<div class=\"col-md-12\">" +
+                            "<div class=\"container\">" +
+                            "<div class=\"row\">" +
+                            "<div class=\"col-md-10\">" +
+                            "<ul class=\"pl-3\">" +
+                            "<li>" + subcbp + "</li>" +
+                            "</div>" +
                             "<div class=\"col-md-2\">"+
-
                             "<form action=\"h\" method=\"POST\">"+
                             "<input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token() }}\">"+
                             "<input type=\"hidden\" name=\"_method\" value=\"DELETE\">"+
                             "<button type=\"submit\" class=\"btn btn-danger btn-sm\">-</button>"+
 
 
-
-
                             "</form>"+
                             "</div>"+
                             "</ul>\n" +
+                            "</div>"+
+                            "</div>"+
                             "</div>";
                         $('#subcbp').append(cbp);
                         var ids = $('#ids').val() + data.id + ",";

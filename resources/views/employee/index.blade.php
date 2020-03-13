@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                                 <div class="row">
                                     <h4 class="mt-4 text-center w-100"><strong>Employee List</strong></h4>
@@ -29,7 +29,7 @@
                                     <th>Employee Position</th>
                                     <th>Group</th>
                                     <th>Department</th>
-                                    <th>Action</th>
+                                    <th class="text-center">Action</th>
 
                                 </tr>
                                 </thead>
@@ -38,12 +38,12 @@
 
                                 @foreach ($employees as $emp)
 
-                                    <tr class="row-color {{ $emp->emp_id }}">
-                                        <td class="align-middle text-center">{{ $emp->emp_id }}</td>
+                                    <tr class="">
+                                        <td class="align-middle">{{ $emp->emp_id }}</td>
                                         <td class="align-middle">{{ Str::limit($emp->emp_name,30)}}</td>
                                         <td class="align-middle">{!!  Str::limit($emp->emp_position,50)  !!}</td>
                                         <td class="align-middle">{{ $emp->group->group_name}}</td>
-                                        <td class="align-middle"><small>{{ $emp->department?$emp->department->dept_name:"None"}}</small></td>
+                                        <td class="align-middle">{{ $emp->department?$emp->department->dept_name:"None"}}</td>
                                        
 
                                         <td>
