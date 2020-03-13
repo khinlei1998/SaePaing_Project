@@ -153,14 +153,6 @@
                                             <hr>
 
 
-
-
-
-
-
-
-
-
                                             <div class="container">
                                                 <input type="hidden" name="cbp_id" value="{{$list->cbp_id}}">
                                                 <div class="row" id="subcbp">
@@ -286,8 +278,7 @@
                             "<form action=\"h\" method=\"POST\">"+
                             "<input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token() }}\">"+
                             "<input type=\"hidden\" name=\"_method\" value=\"DELETE\">"+
-                            "<button type=\"submit\" class=\"btn btn-danger btn-sm\">-</button>"+
-
+                            "<button class=\"rm-btn\"type=\"submit\" class=\"btn btn-danger btn-sm\">-</button>"+
 
                             "</form>"+
                             "</div>"+
@@ -346,6 +337,9 @@
                           
                             eme.removeClass("showmodal");
                             eme.addClass('showmodal1');
+                            
+                            $('#hod_person').val('');
+                            $('#d_line').val('');
                            
                             bgcolorelement.removeClass("collapsed");
                             bgcolorelement.addClass("collapse");

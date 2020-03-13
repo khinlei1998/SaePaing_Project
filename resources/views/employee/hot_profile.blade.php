@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="app">
     <div class="card shadow-lg index-tables border-0 mt-5 p-2">
         <div class="container">
             <div class="row">
@@ -19,73 +19,67 @@
                         <div class="col-10">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="infos" role="tabpanel">
-                                        <div class="row mt-2">
-                                            <div class="col-8">
-                                                <div class="row">
-                                                    <div class="col-3 mt-1 mb-2">
-                                                        <strong>Name </strong>
-                                                    </div>
-                                                    <div class="col-1 mt-1">
-                                                        :
-                                                    </div>
-                                                    <div class="col-8 mt-1">
-                                                        {{ $employee->emp_name }}
-                                                    </div>
-                                                    <div class="col-3 mt-1 mb-2">
-                                                        <strong>Department </strong>
-                                                    </div>
-                                                    <div class="col-1 mt-1">
-                                                        :
-                                                    </div>
-                                                    <div class="col-8 mt-1">
-                                                    {{ $employee->department->dept_name ??'-' }}
-                                                    </div>
-                                                    <div class="col-3 mt-1 mb-2">
-                                                        <strong>SubDepartment </strong>
-                                                    </div>
-                                                    <div class="col-1 mt-1">
-                                                        :
-                                                    </div>
-                                                    <div class="col-8 mt-1">
-                                                    {{ $employee->subDepartment->subdept_name ?? '-' }}
-                                                    </div>
-                                                    <div class="col-3 mt-1 mb-2">
-                                                        <strong>Group </strong>
-                                                    </div>
-                                                    <div class="col-1 mt-1">
-                                                        :
-                                                    </div>
-                                                    <div class="col-8 mt-1">
-                                                    {{ $employee->group->group_name ?? '-' }}
-                                                    </div>
-                                                    <div class="col-3 mt-1 mb-2">
-                                                        <strong>Team </strong>
-                                                    </div>
-                                                    <div class="col-1 mt-1">
-                                                        :
-                                                    </div>
-                                                    <div class="col-8 mt-1">
-                                                    {{ $employee->team->team_name ?? '-' }}
-                                                    </div>
-                                                    <div class="col-3 mt-1 mb-2">
-                                                        <strong>Email </strong>
-                                                    </div>
-                                                    <div class="col-1 mt-1">
-                                                        :
-                                                    </div>
-                                                    <div class="col-8 mt-1">
-                                                    {{ $employee->user->email }}
-                                                    </div>
-                                                    <div class="col-3 mt-1 mb-2">
-                                                        <strong>Job Description </strong>
-                                                    </div>
-                                                    <div class="col-1 mt-1">
-                                                        :
-                                                    </div>
-                                                    <div class="col-8 mt-1">
-                                                    {{ $employee->emp_jobdesp}}
-                                                    </div>
-                                                    
+
+                                    <div class="row mt-2">
+                                        <div class="col-8">
+                                            <div class="row">
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Name </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                    {{ $employee->emp_name }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Department </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->department->dept_name ??'-' }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>SubDepartment </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->subDepartment->subdept_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Group </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->group->group_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Team </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->team->team_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Email </strong>
+                                                </div>
+                                                <div class="col-1 mt-1">
+                                                    :
+                                                </div>
+                                                <div class="col-8 mt-1">
+                                                {{ $employee->user->email }}
+                                                </div>
+                                                <div class="col-3 mt-1 mb-2">
+                                                    <strong>Job Description </strong>
+
                                                 </div>
                                             </div>
                                             <div class="col-4">
@@ -141,7 +135,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
+                                    </form>
                                 </div>
 
 
@@ -503,6 +498,10 @@
                                 <!-- MISSION -->
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 75fb974b374b499af7cda91fd6963369f4b0c996
         <!-- New CBP Design -->
 
                             <div class="tab-pane fade" id="cbp" role="tabpanel">
@@ -557,17 +556,19 @@
                                                             </td>
 
                                                             <td class="align-middle">
-                                                            <button type="button" class="btn btn-success btn_hot_report" data-hot_person_id="{{$hod_id}}" data-cbp_id="{{ $assigned_data->id}}" data-config_title="{{$hod_name}}">Report</button>
-
+                                                            <?php
+                                                            $hod_id=DB::table('project_configs')->where('cbp_id',$assigned_data->cbp_id)->first()->assign_person;
+                                                            $hod_name=DB::table('users')->where('emp_id',$hod_id)->first()->name;
+                                                            echo $hod_name;
+                                                            ?>
+                                                            <br><small> </small>
+                                                            </td>
+                                                            <td class="align-middle">
+                                                            {{$deadline_date=DB::table('assign_to_hots')->where('cbp_id',$assigned_data->cbp_id)->first()->deadline}}
                                                             </td>
 
 
-                                                            </td>
-
-                                                            <td>
-
-
-                                                            </td>
+                                                            
 
                                                         </tr>
                                                     @endforeach
@@ -615,14 +616,17 @@
                                                                                 </div>
                                                                                 <div class="modal-footer">
                                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                                    <button type="button" class="btn btn-primary" id="hod_report_submit">Report</button>
+                                                                                    <button type="button" class="btn btn-primary" id="hod_report_submit"  >Report</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 75fb974b374b499af7cda91fd6963369f4b0c996
                             </div>
                         </div>
                     </div>
@@ -729,11 +733,14 @@
 
 
                 //submit the model
+                
+               
 
                 $('#hod_report_submit').click(function(){
 
                     var report_text = $('#report_text').val();
                     console.log(report_text);
+                   
                     $.ajax({
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -744,19 +751,20 @@
                     }).done(function (data) {
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                         if(data.success){
+                           
                             console.log("fine");
                         // textarea value to empty
                         $('#report_text').val('');
                         //hide bs modal
                         $('#hod_report_modal').modal('hide');
-
-
-                        window.swal({
-                                     title: "Successfully Reported",
-                                     text: "",
-                                     icon: "success",
-                                     button: "Close",
-                                    });;
+                        
+                        Swal.fire(
+                            'Good job!',
+                            'Report Successfully',
+                            'success'
+                            )
+                                                
+                             
 
                         console.log(data.message);
                         }else{
@@ -767,7 +775,8 @@
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
                 });
-
+                
+                
 
 
             });
