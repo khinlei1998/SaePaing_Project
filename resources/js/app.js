@@ -547,11 +547,6 @@ $(function () {
         
     });
 
-   
-   
-
-
-   
 
     //Default configration for datetime picker
     $.fn.datetimepicker.Constructor.Default = $.extend({}, $.fn.datetimepicker.Constructor.Default, {

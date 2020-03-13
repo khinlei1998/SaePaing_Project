@@ -44,7 +44,17 @@ class User extends Authenticatable
     }
     //this function return department base on user role (used in task create.blade.php)
     public function getAccessibleDepartmentsAttribute(){
-        return $this->role->id==Role::where("role","HOD")->first()->id ? $this->employee->department()->select('dept_id','dept_name')->get() : Department::select('dept_id','dept_name')->get();
+        if( $this->role->id==Role::where("role","HOD")->first()->id){
+         return $this->role->id==Role::where("role","HOD")->first()->id ? $this->employee->department()->select('dept_id','dept_name')->get() : Department::select('dept_id','dept_name')->get();
+
+        }elseif($this->role->id==Role::where("role","D")->first()->id){
+          return $this->role->id==Role::where("role","D")->first()->id ? $this->employee->group->department()->select('dept_id','dept_name')->get() : Department::select('dept_id','dept_name')->get();
+             
+        }else{
+          return $this->role->id==Role::where("role","ED")->first()->id ? $this->employee->group->department()->select('dept_id','dept_name')->get() : Department::select('dept_id','dept_name')->get();
+
+        }
+
     }
 
     
@@ -53,7 +63,7 @@ class User extends Authenticatable
         return $this->role->id==Role::where("role","HOD")->first()->id ? $this->hodAssignablePersons() : $this->higherRoleAssignablePersons();
     }
     public function hodAssignablePersons(){
-        return $this->employee->department->employee()->where("emp_id","!=",$this->emp_id)->select('emp_name as name','emp_id')->get();
+        return $this->employee->department->employee()->where("emp_id","!=",$this->emp_id)-> select('emp_name as name','emp_id')->get();
     }
     public function higherRoleAssignablePersons(){
         return User::where('role_id',">",$this->role->id)->select('name','emp_id')->get();

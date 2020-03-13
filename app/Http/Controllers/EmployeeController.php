@@ -190,6 +190,7 @@ class EmployeeController extends Controller
         return response()->json(Auth::user()->accessible_departments);
     }
     public function AssignablePersons(Request $request){
+       
         if ($request->dept_id=="")
             return response()->json(Auth::user()->assignable_persons);
         else
