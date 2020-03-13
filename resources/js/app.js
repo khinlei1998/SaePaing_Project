@@ -34,8 +34,15 @@ Vue.component('Piechart', require('./components/Piechart.vue').default);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+// sweetlaet2
+import Swal from 'sweetalert2'
+window.Swal = Swal;
+
+// CommonJS
+// const Swal = require('sweetalert2')
+
 //beautiful sweet alert
-import swal from 'bootstrap-sweetalert';
+// import swal from 'bootstrap-sweetalert';
 import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 config.autoReplaceSvg = 'nest';
 import {
@@ -123,7 +130,7 @@ Dropzone.options.taskform = {
 
             if (file==myDropZone.files[0]) {
 
-                $('.dz-preview:first').show();
+                $('.dz-preview:first').hide();
 
             }
             console.log(myDropZone.files.length);
@@ -546,10 +553,6 @@ $(function () {
 
 
 
-
-
-
-
     //Default configration for datetime picker
     $.fn.datetimepicker.Constructor.Default = $.extend({}, $.fn.datetimepicker.Constructor.Default, {
         icons: {
@@ -566,7 +569,7 @@ $(function () {
     //configuration for tooltip
     $('[data-toggle="tooltip"]').tooltip();
     //configration for select2 for department dropdown
-    $(".department-select2").select2({
+    $(".department").select2({
         placeholder: "Select a Department",
         allowClear: true
     });

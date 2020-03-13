@@ -36,9 +36,9 @@
                                 @foreach ($departments as $department)
 
                                     <tr>
-                                        <td class="align-middle text-center">{{ $department->dept_id }}</td>
-                                        <td class="align-middle text-center">{{ $department->dept_name }}</td>
-                                        <td class="align-middle text-center">{{ $department->group->group_name }}</td>
+                                        <td class="align-middle">{{ $department->dept_id }}</td>
+                                        <td class="align-middle">{{ $department->dept_name }}</td>
+                                        <td class="align-middle">{{ $department->group->group_name }}</td>
 
 
                                         <td>

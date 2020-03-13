@@ -34,6 +34,7 @@
         "moment": "^2.24.0",
         "orgchart": "^2.1.10",
         "select2": "^4.0.12",
+        "sweetalert2": "^9.10.0",
         "tempusdominus-bootstrap-4": "^5.1.2",
         "tui-code-snippet": "^2.3.1",
         "vue-apexcharts": "^1.5.2",

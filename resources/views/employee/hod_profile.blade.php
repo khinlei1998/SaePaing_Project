@@ -13,7 +13,7 @@
                                 <a class="list-group-item" href="#tasks" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>Tasks</span></a>
                                 <a class="list-group-item" href="#sharetasks" data-toggle="tab"><span><br><i class="fa fa-share-square"></i><br>Shared Tasks</span></a>
                                 <a class="list-group-item" href="#missions" data-toggle="tab"><span><br><i class="fa fa-calendar-alt"></i><br>Missions</span></a>
-                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CBP</span></a>
+                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMP</span></a>
 
                             </div>
                         </div>
@@ -422,11 +422,11 @@
                                 <div class="tab-pane fade" id="cbp" role="tabpanel">
 
                                     <div class="container">
-                                        <div class="card shadow-lg index-tables border-0">
-                                            <div class="container">
+                                       
+                                            
                                                 <div class="row cbp-container">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                                                        <div class="row cbp-profile overflow-auto mt-3 mb-2">
+                                                        <div class="row cbp-profile  mt-3 mb-2">
                                                             <div class="col-md-12">
                                                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                     <div class="panel panel-default panel-profile">
@@ -658,8 +658,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            
+                                        
                                     </div>
 
                                 </div>
