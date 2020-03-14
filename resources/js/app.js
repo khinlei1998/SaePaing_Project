@@ -43,7 +43,18 @@ window.Swal = Swal;
 // const Swal = require('sweetalert2')
 
 //beautiful sweet alert
+
+
+import html2canvas from 'html2canvas';
+
+import swal from 'bootstrap-sweetalert';
+
+
+
+import {ImageEditor} from '@toast-ui/vue-image-editor';
+
 // import swal from 'bootstrap-sweetalert';
+
 import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 config.autoReplaceSvg = 'nest';
 import {

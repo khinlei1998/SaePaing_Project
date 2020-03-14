@@ -422,12 +422,15 @@
                                 <div class="tab-pane fade" id="cbp" role="tabpanel">
 
                                     <div class="container">
+
                                        
                                             
                                                 <div class="row cbp-container">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                                                         <div class="row cbp-profile  mt-3 mb-2">
+
                                                             <div class="col-md-12">
+
                                                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                     <div class="panel panel-default panel-profile">
                                                                        @foreach($employee->cbplist as $cbplist)
