@@ -1,7 +1,8 @@
 <template>
     <div id="aa">
 
-        <apexchart width="380" type="donut" :options="options" :series="series"></apexchart>
+        <apexchart width="340" type="donut" :options="options" :series="series" ></apexchart>
+
     </div>
 </template>
 
@@ -51,7 +52,7 @@
                                 minAngleToShowLabel: 10
                             },
                             donut: {
-                                size: '55%',
+                                size: '50%',
                                 background: 'white',
                                 labels: {
                                     show: true,
@@ -91,9 +92,7 @@
                         }
                     },
 
-
-
-
+                
 
                 },
 

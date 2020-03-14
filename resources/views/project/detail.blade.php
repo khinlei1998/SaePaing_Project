@@ -19,7 +19,7 @@
                                             </strong>
                                         </h1>
 
-                                        <div class="row text-center mt-4">
+                                        <div class="row text-center mt-4 mb-3">
                                             <div class="col-6 border-right">
                                                 <div class="font-weight-bold mb-0 text-muted">Project Start Time</div>
                                                 <span class="small text-gray">{{ $project->project_startDate }}</span>
@@ -38,16 +38,18 @@
 
 
 
-
-
-
-
-
-
-
-
                                         {{--end pie chart--}}
 
+
+                                        {{--//dynamic pie chart--}}
+
+
+
+                                        <piechart v-bind:project_per=[{{$per_of_whole_project}},{{$count_of_under5}},{{$count_of_over5}},{{$count_of_completed}},{{$count_of_zero}}]></piechart>
+
+
+
+                                        {{--//dynamic pie chart--}}
 
 
                                         <div class="row text-center mt-4">
@@ -64,15 +66,7 @@
                                     </div>
 
 
-                                    {{--//dynamic pie chart--}}
-
-
-
-                                    <piechart v-bind:project_per=[{{$per_of_whole_project}},{{$count_of_under5}},{{$count_of_over5}},{{$count_of_completed}},{{$count_of_zero}}]></piechart>
-
-
-
-                                    {{--//dynamic pie chart--}}
+                                    
 
 
 
