@@ -540,13 +540,7 @@
                                                                                                                               </div>
 
                                                                                                                           </div>
-                                                                                                                        
-                                                                                                                       
-                                                                                                                     {{$assignhot}}
-                                                                                                                      
-                                                                                                                    
-                                                                                                                     
-                                                          
+
                                                                                                                           <div class="col-md-1">
                                                                                                                               <!-- <div class="cog-icon show_cbp_hot"    data-configid="{{$cbplist['id']}}"   data-subcbpid="{{$sublist['id']}}" data-projectid="{{$cbplist['project_id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"  data-subcbptitle="{{$sublist['cbp_subtask']}}"  ><i class="fa fa-cog"></i></div> -->
                                                                                                                               <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}',{{$cbplist['project_id']}})" ><i class="fa fa-cog"></i></div>
@@ -684,17 +678,25 @@
 @endsection
 @push('scripts')
     <script>
-
+//   window.swal("Thank you for the message, we'll look into the issue and fix it as soon as we can!")
     function myFunction(b,c,e,f) {
-        //    console.log(e);
+      
+           console.log(e);
         var i;
         var hors='hide';
+       
         for(i=0;i<b.length;i++){
             console.log(b[i].project_id);
             if(b[i].cbp_subtask_id==c && b[i].project_id==f){
                 console.log("true"); 
                 hors='hide' ;
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'This subtask is assigned to HOT,Plz choose another subtask',
+                    })
             break;
+           
             }else{
                 hors='show' ;
                 console.log("false");  
@@ -702,11 +704,12 @@
             }
 
         }
+       
         $('#cbb_hot_modal').modal(hors);  
         $('#cbp_sub_task_title').html( e );
         
 
-     }
+    }
 
         function readURL(input) {
             if (input.files && input.files[0]) {
