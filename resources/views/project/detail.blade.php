@@ -65,20 +65,6 @@
                                     </div>
 
 
-<<<<<<< HEAD
-                                    
-=======
-                                    {{--//dynamic pie chart--}}
-
-
-                                    <piechart
-                                            v-bind:project_per=[{{$per_of_whole_project}},{{$count_of_under5}},{{$count_of_over5}},{{$count_of_completed}},{{$count_of_zero}}]></piechart>
-
-
-                                    {{--//dynamic pie chart--}}
->>>>>>> 88503782622301701d277a70f33004673acc5739
-
-
                                     <div class="col-12 cbp-maintask-title ml-0 shadow-sm">
                                         <div class="row">
                                             <div class="col-1 i-c">
@@ -167,20 +153,11 @@
                                                             </div>
                                                             <div class="col-sm-12">
 
-{{--                                                                dynamic progress bar--}}
-
-
-
-
-
-
-
+                                                            {{-- dynamic progress bar--}}
 
 
 
                                                         <div id="progress_container"></div>
-
-
 
 
                                                                 {{-- dynamic progress bar--}}
@@ -317,9 +294,11 @@
 
                 var pg_container = $('#progress_container');
                 var show_per = '';
+                
                 if (cbp_list[0].percent != '') {
 
                     var show_per = cbp_list[0].percent + '%';
+                    
                     localStorage.setItem("per_from_server", cbp_list[0].percent);
                     console.log(cbp_list[0].percent);
                     console.log('test');
@@ -359,7 +338,6 @@
                     }
                 },100);
                 //for progress animation
-
 
                 // var pg= "<progressbar v-bind:per_from_server="+ cbp_list[0].percent  +"></progressbar>"
 
