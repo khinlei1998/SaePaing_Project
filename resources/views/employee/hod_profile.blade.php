@@ -694,7 +694,14 @@
             if(b[i].cbp_subtask_id==c && b[i].project_id==f){
                 console.log("true"); 
                 hors='hide' ;
+                window.swal({
+                                     title: "assign hot",
+                                     text: "",
+                                     icon: "success",
+                                     button: "Close",
+                                    });;
             break;
+           
             }else{
                 hors='show' ;
                 console.log("false");  
