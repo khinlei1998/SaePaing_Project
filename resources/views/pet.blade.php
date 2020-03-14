@@ -1,15 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="col-sm-12 no-gutters photoeditortest p-5">
-    <div class="tui-image-editor-container" id="tui-image-editor-container" ></div>
+
+<div class="col-sm-12 no-gutters p-5 test-toast">
+    <div id="tui-image-editor-container" class="shadow-lg rounded" ></div>
 </div>
 
-
-
-
-
+@endsection
+@push('scripts')
     <script>
+
+     window.onload = function () {
         // Image editor
         var imageEditor = new tui.ImageEditor('#tui-image-editor-container', {
             includeUI: {
@@ -17,25 +18,32 @@
                 loadImage: {
                     path: 'img/sampleImage2.png',
                     name: 'SampleImage',
-                    
-                    
                 },
                 
-                theme: whiteTheme, // or whiteTheme
+                theme: blackTheme, // or whiteTheme
                 initMenu: 'filter',
                 uiSize: {
-                    height: '700px'
+                    height:'580px',
+                    width:'50%'
                 },
                 
-                menuBarPosition: 'top',
-                cssMaxWidth: 200,
+                menuBarPosition: 'left',
             },
+                cssMaxWidth: 300,
+                cssMaxHeight: 300,
+                
+                
+            
+            
 
 
         });
-        window.onresize = function() {
-            imageEditor.addIcon('arrow','undo');
-            imageEditor.ui.resizeEditor();
-        }
+        
+
+        
+
+     }
     </script>
-@endsection
+
+@endpush
+
