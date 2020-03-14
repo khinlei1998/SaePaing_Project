@@ -136,6 +136,7 @@ class CbpSubtaskController extends Controller
             'message'=>"Creation fail"
         ]);
     }
+    
 
     public function reportHot(Request $request){
         //get all data from project config

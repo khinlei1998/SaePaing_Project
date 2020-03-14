@@ -11,6 +11,9 @@ use App\SubDepartment;
 use App\Team;
 use App\AssignToHot;
 use Carbon\Carbon;
+use App\CbpList;
+use App\CbpSubtask;
+use App\ProjectConfig;
 use Illuminate\Http\Request;
 use App\Http\Requests\EmployeeRequest;
 use Illuminate\Support\Facades\Auth;
@@ -54,9 +57,28 @@ class EmployeeController extends Controller
 
 
     switch (Auth::user()->role_id) {     
-               case Role::where("role","HOD")->first()->id:             
-                   $hots = User::where('role_id',Role::where('role','HOT')->first()->id)->get();   
-                                return view('employee.hod_profile',compact(['employee','hots','img']));    
+               case Role::where("role","HOD")->first()->id:   
+
+                   $hots = User::where('role_id',Role::where('role','HOT')->first()->id)->get();
+                   $assignhot=AssignToHot::select('cbp_subtask_id','project_id')->get();
+                //  dd( $assignhot);
+                  
+                //    $allcbpsubtasks =ProjectConfig::all();
+                //    $cbpsubtasks = explode(',',$allcbpsubtasks);
+                //    $result = array();
+
+                //    foreach ($allcbpsubtasks as $allcbpsubtask){
+                //     $subtask = CBPSubtask::find($allcbpsubtask)->toArray();
+                //    $hot = AssignToHot::where('cbp_id',$subtask[0])->where('cbp_subtask_id',$subtask['1'])->where('project_id',$this->project_id)->select('hot_id','status')->first();
+                //     // $hot_name=$hot->hot->emp_name;
+                //    }
+                //    dd( $hot);
+                
+                    // @foreach($subtasks as $subtasks)
+                    // @endforeach
+                    //  $hot = AssignToHot::where('cbp_id',$subtask['cbp_id'])->where('cbp_subtask_id',$subtask['id'])->where('project_id',$this->project_id)->select('hot_id','status')->first();
+                    // $hot_name=$hot->hot->emp_name;
+                                return view('employee.hod_profile',compact(['employee','hots','img','assignhot']));    
                                         case Role::where("role","HOT")->first()->id:
 
             $assgined_data_for_HOT=AssignToHot::where('hot_id',Auth::user()->emp_id)->get();      

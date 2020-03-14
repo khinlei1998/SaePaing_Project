@@ -10,4 +10,10 @@ class AssignToHot extends Model
     public function hot(){
         return $this->belongsTo(Employee::class,'hot_id');
     }
+    public function cbplistforhot(){
+        return $this->hasmany(CbpList::class,'cbp_id');
+    }
+    public function projectconfigs(){
+        return $this->belongsTo(AssignToHot::class,'cbp_id');
+    }
 }
