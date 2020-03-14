@@ -30,7 +30,7 @@
                                                     {{ $employee->emp_name }}
                                                 </div>
                                                 <div class="col-5 mt-1">
-                                                    
+
                                                 </div>
                                                 <div class="col-2 mt-1">
                                                     <strong>Department :</strong>
@@ -39,7 +39,7 @@
                                                     {{ $employee->department->dept_name ??'-' }}
                                                 </div>
                                                 <div class="col-5 mt-1">
-                                                
+
                                                 </div>
                                                 <div class="col-2 mt-1">
                                                     <strong>SubDepartment :</strong>
@@ -88,7 +88,7 @@
                                                 <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                                 <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                             </div>
-                                           
+
                                         </div>
                                     </div>
                                         <!--Profile Modal -->
@@ -711,6 +711,7 @@
             </div>
         </div>
     </div>
+
 </div>
 @endsection
 @push('scripts')

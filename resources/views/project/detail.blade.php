@@ -15,7 +15,7 @@
                                         <h1 class="h5 font-weight-bold text-center mb-4">
                                             <strong>
                                                 {{ $project->project_title }}
-                                              
+
                                             </strong>
                                         </h1>
 
@@ -31,21 +31,24 @@
                                         </div>
 
                                         <!-- Progress bar 1 -->
-                                        <div class="progress mx-auto" data-value='80'>
-                                        <span class="progress-left">
-        <span class="progress-bar border-primary"></span>
-                                        </span>
-                                            <span class="progress-right">
-        <span class="progress-bar border-primary"></span>
-                                        </span>
+
+
+                                        {{--//pie chart--}}
 
 
 
-                                            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                                <div class="h2 font-weight-bold">{{$per_of_whole_project}} %<sup class="small"></sup></div>
-                                            </div>
-                                        </div>
-                        
+
+
+
+
+
+
+
+
+
+                                        {{--end pie chart--}}
+
+
                                         <div class="row text-center mt-4">
                                             <div class="col-6 border-right">
                                                 <div class="h4 font-weight-bold mb-0">{{ $configs? count($configs):"0" }}</div>
@@ -58,6 +61,18 @@
                                         </div>
                                         <!-- END -->
                                     </div>
+
+
+                                    {{--//dynamic pie chart--}}
+
+
+                                    <piechart
+                                            v-bind:project_per=[{{$per_of_whole_project}},{{$count_of_under5}},{{$count_of_over5}},{{$count_of_completed}},{{$count_of_zero}}]></piechart>
+
+
+                                    {{--//dynamic pie chart--}}
+
+
                                     <div class="col-12 cbp-maintask-title ml-0 shadow-sm">
                                         <div class="row">
                                             <div class="col-1 i-c">
@@ -72,13 +87,15 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 @foreach($project->project_config as $list)
-                                                    <div class="panel-group showsubcbp" data-cbpid="{{$list->cbp_id}}" data-project_config_id="{{$list->id}}"
+                                                    <div class="panel-group showsubcbp" data-cbpid="{{$list->cbp_id}}"
+                                                         data-project_config_id="{{$list->id}}"
                                                          id="accordion" role="tablist" aria-multiselectable="true">
                                                         <div class="panel panel-default" id="showcbp">
                                                             <div class="panel-heading">
                                                                 <h4 class="panel-title">
                                                                     <a data-toggle="tab"
-                                                                       class="collapsed collapsed-maintask" href="#maintaskopen1">
+                                                                       class="collapsed collapsed-maintask"
+                                                                       href="#maintaskopen1">
                                                                         <div class="container">
                                                                             <div class="row">
                                                                                 <div class="col-md-2"
@@ -103,7 +120,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-8 bg-light border-1 tab-pane show active" id="maintaskopen1" role="tabpanel">
+                            <div class="col-md-8 bg-light border-1 tab-pane show active" id="maintaskopen1"
+                                 role="tabpanel">
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                     <div class="panel panel-default panel-projectlist">
                                         <div class="panel-heading" role="tab" id="headingOne">
@@ -111,43 +129,99 @@
                                                 <a class="collapsed collapsed-maintask-open card shadow-sm border-0"
                                                    role="button" data-toggle="collapse" data-parent="#accordion"
                                                    href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-<div class="container">
-    <div class="row">
-        <div class="col-md-9 mb-3">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-9 mb-3">
 
-            <i class="fa fa-info-circle fa-lg pr-3"></i><strong id="cbp_title"></strong> <br>
+                                                                <i class="fa fa-info-circle fa-lg pr-3"></i><strong
+                                                                        id="cbp_title"></strong> <br>
 
 
-            <small class="ml-5"><i class="fa fa-user mr-2"></i>Responsible
-                Person : <p class="d-inline-block" id="cbp_responsible_person"></p>
-            </small>
-        </div>
-        <div class="col-md-2 mb-3" id="show_noti_box" data-config_id="">
-            <p class="d-inline-block text-danger"><i class="fa fa-bell h5"></i><small class="d-inline-block text-danger" id="text-notification">&nbsp; REPORTS</small></p>
-        </div>
-        <div class="col-md-1 mb-3">
-            <i class="fa fa-sort-down fa-lg"></i>
-        </div>
-        <div class="col-md-12 mt-2 text-sub">
-            <p class="d-inline-block"><strong>Total Sub Tasks - </strong></p><p class="d-inline-block" id="cbp_total_subtask"></p>
-        </div>
-        <div class="col-md-12 mt-0" id="progress_container">
-        </div>
-        <div class="col-md-12 mt-1 text-cpl">
-            <p class="d-inline-block"><strong>Process Complete</strong><label class="mr-2"><p class="d-inline-block" id="cbp_process_complete"></p></label>
-            </p>
-        </div>
+                                                                <small class="ml-5"><i class="fa fa-user mr-2"></i>Responsible
+                                                                    Person : <p class="d-inline-block"
+                                                                                id="cbp_responsible_person"></p>
+                                                                </small>
+                                                            </div>
+                                                            <div class="col-md-2 mb-3" id="show_noti_box"
+                                                                 data-config_id="">
+                                                                <p class="d-inline-block text-danger"><i
+                                                                            class="fa fa-bell h5"></i>
+                                                                    <small class="d-inline-block text-danger"
+                                                                           id="text-notification">&nbsp; REPORTS
+                                                                    </small>
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-1 mb-3">
+                                                                <i class="fa fa-sort-down fa-lg"></i>
+                                                            </div>
+                                                            <div class="col-md-12 mt-2 text-sub">
+                                                                <p class="d-inline-block"><strong>Total Sub Tasks
+                                                                        - </strong></p>
+                                                                <p class="d-inline-block" id="cbp_total_subtask"></p>
+                                                            </div>
+                                                            <div class="col-sm-12">
 
-    </div>
-</div>
+{{--                                                                dynamic progress bar--}}
+
+
+
+
+
+
+
+
+
+
+                                                        <div id="progress_container"></div>
+
+
+
+
+                                                                {{-- dynamic progress bar--}}
+
+
+
+
+
+
+
+
+                                                            </div>
+
+                                                            {{-- <div class="col-md-12 mt-0" id="progress_container">--}}
+{{--                                                            </div>--}}
+                                                            <div class="col-md-12 mt-1 text-cpl">
+                                                                <p class="d-inline-block"><strong>Process
+                                                                        Complete</strong><label class="mr-2">
+                                                                <p class="d-inline-block"
+                                                                   id="">fff</p></label>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
                                                 </a>
                                             </h4>
                                         </div>
 
                                     </div>
 
-
                                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                 <div class="col-12">
                                     <div class="row mt-4 mb-0 justify-content-center text-muted">
@@ -174,23 +248,27 @@
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="chairman_report_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="chairman_report_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="container">
                         <div class="row">
                             <div class="col-8">
-                                <h5 class="modal-title" id="exampleModalLongTitle"><i class="fa fa-info-circle pr-3" ></i><span id="hod_report_title"></span> </h5>
+                                <h5 class="modal-title" id="exampleModalLongTitle"><i
+                                            class="fa fa-info-circle pr-3"></i><span id="hod_report_title"></span></h5>
                             </div>
                             <div class="col-4">
-{{-- <button type="button" class="btn btn-secondary" style="float:right;"><i class="fa fa-check pr-3" ></i>Mark As Complete</button>--}}
+                                {{-- <button type="button" class="btn btn-secondary" style="float:right;"><i class="fa fa-check pr-3" ></i>Mark As Complete</button>--}}
                             </div>
                         </div>
                     </div>
@@ -210,31 +288,75 @@
 @endsection
 @push('scripts')
     <script>
-        window.onload = function () {
-                var project_config_id = 0;
-            function fillCbpHeader(cbp_list) {
-                var title = $("#cbp_title");
-                var responsibleperson = $('#cbp_responsible_person');
-                var totalsubtask = $('#cbp_total_subtask');
-                var progress_complete = $('#cbp_process_complete');
-                var pg_container = $('#progress_container');
-                var show_per='';
-                if(cbp_list[0].percent != ''){
-                    var show_per=cbp_list[0].percent + '%';
 
-                }else{
-                    var show_per='';
+
+
+        window.onload = function () {
+            $(".progress-bar").animate({
+
+                width: "60%"
+            }, 2500);
+
+            var project_config_id = 0;
+
+            function fillCbpHeader(cbp_list) {
+
+                var title = $("#cbp_title");
+
+                var responsibleperson = $('#cbp_responsible_person');
+
+                var totalsubtask = $('#cbp_total_subtask');
+
+                var progress_complete = $('#cbp_process_complete');
+
+                var pg_container = $('#progress_container');
+                var show_per = '';
+                if (cbp_list[0].percent != '') {
+
+                    var show_per = cbp_list[0].percent + '%';
+                    localStorage.setItem("per_from_server", cbp_list[0].percent);
+                    console.log(cbp_list[0].percent);
+                    console.log('test');
+
+                } else {
+
+                    var show_per = '';
+                    localStorage.setItem("per_from_server", 33);
+                    console.log( localStorage.getItem("per_from_server"))
+
 
                 }
                 pg_container.empty();
+
                 var pg = "\n" +
                     "<div class=\"progress progress-profile\">\n" +
-                    "<div class=\"progress-bar bg-danger\"\n" +
-                    "                     role=\"progressbar\" style=\"width: "+cbp_list[0].percent+"%;\"\n" +
-                    "                     aria-valuenow=\"40\" aria-valuemin=\"0\"\n" +
-                    "                     aria-valuemax=\"100\">"+show_per+"\n" +
+                    "<div class=\"progress-bar  bg-danger\"\n" +
+                    "                     role=\"progressbar\" style=\"width: " + 0+ "%;\"\n" +
+                    "                     aria-valuenow=\"0\" aria-valuemin=\"0\"\n" +
+                    "                     aria-valuemax=\"100\">" + 0 + "\n" +
                     "                </div>\n" +
                     "            </div>";
+
+                //for progress animation
+                var percentage_start=0;
+                var end_percentage=cbp_list[0].percent;
+
+                var pGress = setInterval(function() {
+                    if (percentage_start != end_percentage) {
+                        percentage_start = parseInt(percentage_start) + 1;
+                        $('.progress-bar').css("width",percentage_start+'%');
+                        $('.progress-bar').html(percentage_start+'%');
+                        console.log(percentage_start);
+                    } else {
+
+                        clearInterval(pGress);
+                    }
+                },100);
+                //for progress animation
+
+
+                // var pg= "<progressbar v-bind:per_from_server="+ cbp_list[0].percent  +"></progressbar>"
+
                 pg_container.append(pg);
                 title.empty();
                 responsibleperson.empty();
@@ -244,8 +366,8 @@
                 title.append(cbp_list[0].cbp_name);
                 responsibleperson.append(cbp_list[0].emp_name);
                 totalsubtask.append(cbp_list[0].cbp_count);
-                progress_complete.append(cbp_list[0].percent+"%");
-                $('#show_noti_box').data('config_id',project_config_id);
+                progress_complete.append(cbp_list[0].percent + "%");
+                $('#show_noti_box').data('config_id', project_config_id);
             }
 
             function configureModal(data) {
@@ -255,16 +377,16 @@
                 console.log(data.report_list);
 
                 $('#hod_report_title').append(data.cbp_list.cbp_name);
-                for(var i=0;i<data.report_list.length;i++){
+                for (var i = 0; i < data.report_list.length; i++) {
                     var chairman_report = "<div class=\"modal-body\">\n" +
                         "                    <div class=\"card text-center\">\n" +
                         "                        <div class=\"card-header text-left\">\n" +
-                        "                            <p class=\"d-inline-block position-absolute text-left \"><strong><i class=\"fa fa-user fa-sm\"></i>&emsp;Reported by "+data.report_list[i].hodperson.emp_name+"</strong></p>\n" +
-                        "                            <p class=\"text-right text-muted\"><small><i class=\"fa fa-clock\"></i>&emsp;"+data.report_list[i].created_at+"</small></p>\n" +
+                        "                            <p class=\"d-inline-block position-absolute text-left \"><strong><i class=\"fa fa-user fa-sm\"></i>&emsp;Reported by " + data.report_list[i].hodperson.emp_name + "</strong></p>\n" +
+                        "                            <p class=\"text-right text-muted\"><small><i class=\"fa fa-clock\"></i>&emsp;" + data.report_list[i].created_at + "</small></p>\n" +
                         "                        </div>\n" +
                         "\n" +
                         "                        <div class=\"card-body\">\n" +
-                        "                            <p class=\"card-text\">"+data.report_list[i].report_desc+"</p>\n" +
+                        "                            <p class=\"card-text\">" + data.report_list[i].report_desc + "</p>\n" +
                         "                        </div>\n" +
                         "                    </div>\n" +
                         "                    <div class=\"card text-center\">\n" +
@@ -273,7 +395,7 @@
                     $('#hod_container').append(chairman_report);
                 }
                 $('#chairman_report_modal').modal('show');
-                
+
             }
 
             $(function () {
@@ -289,7 +411,7 @@
                         },
                         method: "POST",
                         url: "/getSubCbps",
-                        data:{pid,cbpid}
+                        data: {pid, cbpid}
                     }).done(function (data) {
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                         fillCbpHeader(data.cbp_list);
@@ -298,9 +420,9 @@
                             var subcbp = "<div class=\"col-md-3 sub-hv\">\n" +
                                 "\n" +
                                 "<div class=\"card shadow-sm border-2 bg-white sub-open mb-4 p-3 pt-5 text-center\">\n" +
-                                "<p>"+data.result[i].cbp_subtask+"</p>\n" +
-                                "<span class=\"bg-assigned mt-3 text-center text-white align-center rounded\"><small>"+data.result[i].hot_id+"</small></span>\n" +
-                                "<small class=\"mt-2\">status :&nbsp; <span class=\""+data.result[i].status+" pl-5 status-span\"> </small>"+
+                                "<p>" + data.result[i].cbp_subtask + "</p>\n" +
+                                "<span class=\"bg-assigned mt-3 text-center text-white align-center rounded\"><small>" + data.result[i].hot_id + "</small></span>\n" +
+                                "<small class=\"mt-2\">status :&nbsp; <span class=\"" + data.result[i].status + " pl-5 status-span\"> </small>" +
                                 "</div>\n" +
                                 "</div>";
                             $('#subcbpcontainer').append(subcbp);
@@ -309,7 +431,7 @@
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
                 });
-                $('#show_noti_box').click(function(){
+                $('#show_noti_box').click(function () {
                     var config_id = $('#show_noti_box').data('config_id');
 
                     $.ajax({
@@ -318,7 +440,7 @@
                         },
                         method: "POST",
                         url: "/getChairmanReportByConfigId",
-                        data:{config_id}
+                        data: {config_id}
                     }).done(function (data) {
                         configureModal(data);
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
