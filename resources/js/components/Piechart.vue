@@ -20,7 +20,6 @@
             return {
                 options: {
 
-
                     // colors:['#fa0000', '#E91E63', '#9C27B0'],
 
                     chart: {
