@@ -546,7 +546,7 @@
                                                           
                                                                                                                           <div class="col-md-1">
                                                                                                                               <!-- <div class="cog-icon show_cbp_hot"    data-configid="{{$cbplist['id']}}"   data-subcbpid="{{$sublist['id']}}" data-projectid="{{$cbplist['project_id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"  data-subcbptitle="{{$sublist['cbp_subtask']}}"  ><i class="fa fa-cog"></i></div> -->
-                                                                                                                              <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}}, {{$cbplist['project_id']}})" ><i class="fa fa-cog"></i></div>
+                                                                                                                              <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}',{{$cbplist['project_id']}})" ><i class="fa fa-cog"></i></div>
                                                                                                                               <!-- <button onclick="myFunction('p')">Click me</button> -->
 
                                                                                                                           </div>
@@ -613,7 +613,7 @@
                                                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header modal-header-config">
-                                                                                    <h5 class="modal-title" ><i class="fa fa-cog"></i><p id="cbp_sub_task_title" class="d-inline-block"></p></h5>
+                                                                                    <h5 class="modal-title" ><i class="fa fa-cog"></i>&nbsp;&emsp;<p id="cbp_sub_task_title" class="d-inline-block"></p></h5>
                                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                         <span aria-hidden="true">&times;</span>
                                                                                     </button>
@@ -682,13 +682,13 @@
 @push('scripts')
     <script>
 
-    function myFunction(b,c,e) {
-           console.log(b,c,e);
+    function myFunction(b,c,e,f) {
+        //    console.log(e);
         var i;
         var hors='hide';
         for(i=0;i<b.length;i++){
             console.log(b[i].project_id);
-            if(b[i].cbp_subtask_id==c && b[i].project_id==e){
+            if(b[i].cbp_subtask_id==c && b[i].project_id==f){
                 console.log("true"); 
                 hors='hide' ;
             break;
@@ -700,6 +700,8 @@
 
         }
         $('#cbb_hot_modal').modal(hors);  
+        $('#cbp_sub_task_title').html( e );
+        
 
      }
 
@@ -736,10 +738,7 @@
                 //     subtask_id = $(this).data('subcbpid');
                 //     // alert(subtask_id);
                 //     project_id= $(this).data('projectid');
-                //     assignhot_is=$(this).data('assignhott');  
-                //     assignhot_iss=$(this).data('assignhotts');   
-                //     // cbpsubtaskid=$cbp_subtaskid;
-                //     alert(assignhot_is);
+                   
                        
                         
                 //     $('#cbp_sub_task_title').append(title);
