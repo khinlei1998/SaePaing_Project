@@ -497,12 +497,7 @@
                                 </div>
                                 <!-- MISSION -->
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 75fb974b374b499af7cda91fd6963369f4b0c996
-        <!-- New CBP Design -->
+                                  <!-- New CBP Design -->
 
                             <div class="tab-pane fade" id="cbp" role="tabpanel">
 
@@ -530,6 +525,7 @@
                                                         <th>CBP task</th>
                                                         <th>Assigned Person Name</th>
                                                         <th>Deadline Date</th>
+                                                        <th>Assigned By</th>
                                                         <th>Action</th>
 
                                                     </tr>
@@ -561,15 +557,15 @@
                                                             $hod_name=DB::table('users')->where('emp_id',$hod_id)->first()->name;
                                                             echo $hod_name;
                                                             ?>
+
                                                             <br><small> </small>
                                                             </td>
-                                                            <td class="align-middle">
-                                                            {{$deadline_date=DB::table('assign_to_hots')->where('cbp_id',$assigned_data->cbp_id)->first()->deadline}}
-                                                            </td>
-
-
                                                             
 
+                                                            <td class="align-middle">
+                                                              <button type="button" class="btn btn-success btn_hot_report" data-hot_person_id="{{$hod_id}}" data-cbp_id="{{ $assigned_data->id}}" data-config_title="{{$hod_name}}">Report</button>
+
+                                                            </td>
                                                         </tr>
                                                     @endforeach
                                                     </tbody>
@@ -621,12 +617,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 75fb974b374b499af7cda91fd6963369f4b0c996
                             </div>
                         </div>
                     </div>
