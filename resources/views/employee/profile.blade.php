@@ -110,11 +110,11 @@
 
 
 
-                                                    {{--                                                    <form action="{{route('mission.store')}}"--}}
-                                                    {{--                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">--}}
+                                                    {{-- <form action="{{route('mission.store')}}"--}}
+                                                    {{--class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">--}}
 
-                                                    {{--                                                        @csrf--}}
-                                                    {{--                                                    </form>--}}
+                                                    {{--@csrf--}}
+                                                    {{--</form>--}}
 
 
 
