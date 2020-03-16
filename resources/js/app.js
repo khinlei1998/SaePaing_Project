@@ -140,11 +140,11 @@ Dropzone.options.taskform = {
         });
         this.on("addedfile", function (file, response) {
 
-            if (file==myDropZone.files[0]) {
+            // if (file==myDropZone.files[0]) {
 
-                $('.dz-preview:first').hide();
+            //     $('.dz-preview:first').hide();
 
-            }
+            // }
             console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
