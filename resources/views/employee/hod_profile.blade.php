@@ -540,20 +540,13 @@
                                                                                                                               </div>
 
                                                                                                                           </div>
-                                                                                                                                    {{$assignhot}}
+                                                                                                                                 
                                                                                                                           <div class="col-md-1">
                                                                                                                               <!-- <div class="cog-icon show_cbp_hot"    data-configid="{{$cbplist['id']}}"   data-subcbpid="{{$sublist['id']}}" data-projectid="{{$cbplist['project_id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"  data-subcbptitle="{{$sublist['cbp_subtask']}}"  ><i class="fa fa-cog"></i></div> -->
-<<<<<<< HEAD
-                                                                                                                              <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}',{{$cbplist['project_id']}})" ><i class="fa fa-cog"></i></div>
-                                                                                                                              <!-- <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}})" ><i class="fa fa-cog"></i></div> -->
-
-
-=======
                                                                                                                                
                                                                                                                               <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}','{{$cbplist['project_id']}}','{{$cbplist['id']}}','{{$sublist['id']}}')" ><i class="fa fa-cog"></i></div>
 
                                                                                                                                
->>>>>>> a166003715777abf133f727aeb517fe69ee9eb5b
                                                                                                                               <!-- <button onclick="myFunction('p')">Click me</button> -->
 
                                                                                                                           </div>
@@ -696,7 +689,7 @@
         cbplist=g;
         sublist=h;
       
-        //   console.log(g,h);
+        console.log(c);
         if(b.length==0){
             $('#cbp_sub_task_title').html( e );
              $('#cbb_hot_modal').modal('show');
