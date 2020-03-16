@@ -44,6 +44,8 @@ class User extends Authenticatable
     }
     //this function return department base on user role (used in task create.blade.php)
     public function getAccessibleDepartmentsAttribute(){
+        // return $this->role->id==Role::where("role","HOD")->first()->id ? $this->employee->department()->select('dept_id','dept_name')->get() : Department::select('dept_id','dept_name')->get();
+
         return $this->role->id==Role::where("role","HOD")->first()->id ? $this->employee->department()->select('dept_id','dept_name')->get() : Department::select('dept_id','dept_name')->get();
     }
 
