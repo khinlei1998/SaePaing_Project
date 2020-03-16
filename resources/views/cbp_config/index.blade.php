@@ -315,6 +315,8 @@
                     title: 'Oops...',
                     text: 'Plz choose subtask',
                     })
+                    // alert("hj");
+                    $('#subconfig').modal('hide');
                 }else{
                         $.ajax({
                         headers: {
