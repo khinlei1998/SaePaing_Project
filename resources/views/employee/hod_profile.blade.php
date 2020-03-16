@@ -782,6 +782,8 @@
                         if(data.success){
                             console.log("fine");
                             $('#cbb_hot_modal').modal('hide');
+                            window.location="/profile";
+
                         }else{
                             console.log("error"+data.message);
                         }
