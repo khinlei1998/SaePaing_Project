@@ -60,6 +60,7 @@ class EmployeeController extends Controller
                case Role::where("role","HOD")->first()->id:   
 
                    $hots = User::where('role_id',Role::where('role','HOT')->first()->id)->get();
+                   
                    $assignhot=AssignToHot::select('cbp_subtask_id','project_id')->get();
                 //  dd( $assignhot);
                   

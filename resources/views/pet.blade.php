@@ -24,22 +24,16 @@
                 initMenu: 'filter',
                 uiSize: {
                     height:'580px',
-                    width:'50%'
+                    width:'70%'
                 },
                 
                 menuBarPosition: 'left',
             },
-                cssMaxWidth: 300,
-                cssMaxHeight: 300,
+                cssMaxWidth: 500,
+                cssMaxHeight: 500,
                 
-                
-            
-            
-
 
         });
-        
-
         
 
      }

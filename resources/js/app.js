@@ -168,12 +168,6 @@ Dropzone.options.taskform = {
           
 
           }
-         
-       
-        
-
-
-          
 
         });
         this.on("sending", function (file, xhr, data) {
@@ -584,6 +578,8 @@ $(function () {
 
     });
 
+   
+
 
 
     //Default configration for datetime picker
@@ -676,6 +672,11 @@ $(function () {
     $('.modal').on('shown.bs.modal', function (e) {
         $('.processby').select2({
             placeholder:"Select a HOD",
+            dropdownParent:$('.modal.fade.show')
+        });
+
+        $('#project_regionn').select2({
+            placeholder:"Select a HOT",
             dropdownParent:$('.modal.fade.show')
         });
 
