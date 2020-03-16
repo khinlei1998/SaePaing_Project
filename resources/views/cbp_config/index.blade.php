@@ -310,7 +310,11 @@
                 var dline = $('#d_line').val();
                 // alert(pid + " >> " + cbpid + " >> " + hod + " >> " + dline + " >> " + ids);
                 if(!ids){
-                    alert("Plz add sub task");
+                    Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Plz choose subtask',
+                    })
                 }else{
                         $.ajax({
                         headers: {
