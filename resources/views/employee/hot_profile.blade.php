@@ -19,6 +19,7 @@
                         <div class="col-10">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="infos" role="tabpanel">
+
                                     <div class="row mt-2">
                                         <div class="col-8">
                                             <div class="row">
@@ -78,66 +79,60 @@
                                                 </div>
                                                 <div class="col-3 mt-1 mb-2">
                                                     <strong>Job Description </strong>
+
                                                 </div>
-                                                <div class="col-1 mt-1">
-                                                    :
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="card " style="width: 12rem;">
+                                                    <img src="{{url('/storage/profile/'.$img)}}" class="profile_image" alt="Cinque Terre"  >
+                                                    <div class="card-body text-center ml-3">
+                                                        <button type="button" class="btn btn-primary btnprofile" data-toggle="modal" data-target="#profilemodal">
+                                                            Edit
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <div class="col-8 mt-1">
-                                                {{ $employee->emp_jobdesp}}
+                                                <div class="mb-2 mt-2">
+                                                    <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
+                                                    <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                                 </div>
                                                 
                                             </div>
                                         </div>
-                                        <div class="col-4">
-                                            <div class="card " style="width: 12rem;">
-                                                <img src="{{url('/storage/profile/'.$img)}}" class="profile_image" alt="Cinque Terre"  >
-                                                <div class="card-body text-center ml-3">
-                                                    <button type="button" class="btn btn-primary btnprofile" data-toggle="modal" data-target="#profilemodal">
-                                                        Edit
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="mb-2 mt-2">
-                                                <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
-                                                <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                    <!--Profile Modal -->
-                                    <form method="post" action="{{route('tosaveimg')}}" enctype="multipart/form-data">
-                                        @csrf
+                                        <!--Profile Modal -->
+                                        <form method="post" action="{{route('tosaveimg')}}" enctype="multipart/form-data">
+                                            @csrf
 
-                                        <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <img id="pp" src="{{url('/storage/profile/'.$img)}}" class="profile_image" alt="Cinque Terre"  >
-                                                    <input type="file" onchange="readURL(this);" name="profile_img" value=""/>
+                                            <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img id="pp" src="{{url('/storage/profile/'.$img)}}" class="profile_image" alt="Cinque Terre"  >
+                                                        <input type="file" onchange="readURL(this);" name="profile_img" value=""/>
 
 
 
-                                                    {{--                                                    <form action="{{route('mission.store')}}"--}}
-                                                    {{--                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">--}}
+                                                        {{--                                                    <form action="{{route('mission.store')}}"--}}
+                                                        {{--                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">--}}
 
-                                                    {{--                                                        @csrf--}}
-                                                    {{--                                                    </form>--}}
+                                                        {{--                                                        @csrf--}}
+                                                        {{--                                                    </form>--}}
 
 
 
 
 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <input type="submit" class="btn btn-primary" value='save' id="btnprofile"></input>
-                                                </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <input type="submit" class="btn btn-primary" value='save' id="btnprofile"></input>
+                                                    </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -502,97 +497,95 @@
                                 </div>
                                 <!-- MISSION -->
 
+                                  <!-- New CBP Design -->
 
+                            <div class="tab-pane fade" id="cbp" role="tabpanel">
 
-        <!-- New CBP Design -->
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                                    <div class="row">
+                                                        <h4 class="mt-4 text-center w-100"><strong>Assigned CBP Tasks </strong></h4>
 
-        <div class="tab-pane fade" id="cbp" role="tabpanel">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 mb-3 justify-content-center text-muted pb-3">
 
-<div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                <div class="row">
-                    <h4 class="mt-4 text-center w-100"><strong>Assigned CBP Tasks </strong></h4>
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
 
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3 mb-3 justify-content-center text-muted pb-3">
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Project Name</th>
+                                                        <th>CBP Name</th>
+                                                        <th>CBP task</th>
+                                                        <th>Assigned Person Name</th>
+                                                        <th>Deadline Date</th>
+                                                        <th>Assigned By</th>
+                                                        <th>Action</th>
 
+                                                    </tr>
+                                                    </thead>
 
+                                                    <tbody>
 
+                                                    @foreach($assgined_data_for_HOT as $assigned_data)
 
-        </div>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
+                                                        <tr class="row-color ">
+                                                            <td class="align-middle text-center">{{ $assigned_data->id }}</td>
+                                                            <td class="align-middle">{{DB::table('projects')->where('project_id',$assigned_data->project_id)->first()->project_title}}</td>
+                                                            <td class="align-middle">{{DB::table('cbp_lists')->where('cbp_id',$assigned_data->cbp_id)->first()->cbp_name}}</td>
+                                                            <td class="align-middle">{{DB::table('cbp_subtasks')->where('id',$assigned_data->cbp_subtask_id)->first()->cbp_subtask}}<br><small> </small></td>
 
-                <tr>
-                    <th>ID</th>
-                    <th>Project Name</th>
-                    <th>CBP Name</th>
-                    <th>CBP task</th>
-                    <th>Assigned Person Name</th>
-                    <th>Deadline Date</th>
-                    <th>Action</th>
+                                                            <td class="align-middle">
+                                                            <?php
+                                                            $hod_id=DB::table('project_configs')->where('cbp_id',$assigned_data->cbp_id)->first()->assign_person;
+                                                            $hod_name=DB::table('users')->where('emp_id',$hod_id)->first()->name;
+                                                            echo $hod_name;
+                                                            ?><br><small> </small></td>
+                                                            <td class="align-middle">
+                                                            {{$deadline_date=DB::table('assign_to_hots')->where('cbp_id',$assigned_data->cbp_id)->first()->deadline}}
+                                                            </td>
 
-                </tr>
-                </thead>
+                                                            <td class="align-middle">
+                                                            <?php
+                                                            $hod_id=DB::table('project_configs')->where('cbp_id',$assigned_data->cbp_id)->first()->assign_person;
+                                                            $hod_name=DB::table('users')->where('emp_id',$hod_id)->first()->name;
+                                                            echo $hod_name;
+                                                            ?>
 
-                <tbody>
+                                                            <br><small> </small>
+                                                            </td>
+                                                            
 
-                @foreach($assgined_data_for_HOT as $assigned_data)
+                                                            <td class="align-middle">
+                                                              <button type="button" class="btn btn-success btn_hot_report" data-hot_person_id="{{$hod_id}}" data-cbp_id="{{ $assigned_data->id}}" data-config_title="{{$hod_name}}">Report</button>
 
-                    <tr class="row-color ">
-                        <td class="align-middle text-center">{{ $assigned_data->id }}</td>
-                        <td class="align-middle">{{DB::table('projects')->where('project_id',$assigned_data->project_id)->first()->project_title}}</td>
-                        <td class="align-middle">{{DB::table('cbp_lists')->where('cbp_id',$assigned_data->cbp_id)->first()->cbp_name}}</td>
-                        <td class="align-middle">{{DB::table('cbp_subtasks')->where('id',$assigned_data->cbp_subtask_id)->first()->cbp_subtask}}<br><small> </small></td>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                    </tbody>
+                                                </table>
+                                            </div>
 
-                        <td class="align-middle">
-                        <?php
-                        $hod_id=DB::table('project_configs')->where('cbp_id',$assigned_data->cbp_id)->first()->assign_person;
-                        $hod_name=DB::table('users')->where('emp_id',$hod_id)->first()->name;
-                        echo $hod_name;
-                        ?>
-                        <br><small> </small>
-                        </td>
-                        <td class="align-middle">
-                        {{$deadline_date=DB::table('assign_to_hots')->where('cbp_id',$assigned_data->cbp_id)->first()->deadline}}
-</td>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div>Showing 1 to </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
 
-                        <td class="align-middle">
-                        <button type="button" class="btn btn-success btn_hot_report" data-hot_person_id="{{$hod_id}}" data-cbp_id="{{ $assigned_data->id}}" data-config_title="{{$hod_name}}">Report</button>
-
-                        </td>
-
-
-                        </td>
-
-                        <td>
-
-
-                        </td>
-
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div>Showing 1 to </div>
-            </div>
-            <div class="col-sm-6">
-                <div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-</div>
+                            </div>
 
 
 
@@ -624,7 +617,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-
                             </div>
                         </div>
                     </div>

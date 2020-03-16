@@ -68,8 +68,11 @@ class ProjectController extends Controller
     public function detail($id)
     {
         $project = Project::find($id);
+
+        
         
         $configs = $project->project_config;
+
         
         $subcbps = "";
 
@@ -80,6 +83,7 @@ class ProjectController extends Controller
         foreach ($configs as $config){
           
             $subcbps.=$config->cbp_subtask.",";
+            
 
             if(HodReport::where('projConfig_id',$config->id)->orderBy('id','desc')->count() > 0){
 
@@ -93,10 +97,14 @@ class ProjectController extends Controller
         }
 
         $subcbps = substr_count($subcbps, ',');
+        
+        
 
         $cal_cbpgetper=$get_cbp_all_per;
+       
 
         $per_of_whole_project=ceil($cal_cbpgetper);
+        
 
         $count_of_under5=0;
         $count_of_over5=0;
@@ -106,6 +114,8 @@ class ProjectController extends Controller
         $pid=$id;
 
         $get_all_project_config=ProjectConfig::where('project_id',1);
+        
+        
 
         $get_all_list=CbpList::all();
 
@@ -159,11 +169,7 @@ class ProjectController extends Controller
                     }
 
 
-                    if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','>','100']])->count() > 0){
-                        $count_of_completed +=1;
-
-
-                    }
+                 
                 }
                 else{
                     $count_of_zero +=1;

@@ -422,12 +422,15 @@
                                 <div class="tab-pane fade" id="cbp" role="tabpanel">
 
                                     <div class="container">
+
                                        
                                             
                                                 <div class="row cbp-container">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                                                         <div class="row cbp-profile  mt-3 mb-2">
+
                                                             <div class="col-md-12">
+
                                                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                     <div class="panel panel-default panel-profile">
                                                                        @foreach($employee->cbplist as $cbplist)
@@ -500,18 +503,23 @@
                                                                                 </h4>
                                                                             </div>
 
-
-
+                                                                           
+                                                                            
+                                                                             
+                                                                            
+                                                                          
                                                                             <div id="collapseOne{{$loop->index}}" class="panel-collapse collapse ml-3" role="tabpanel" aria-labelledby="headingOne">
                                                                                 <div class="shadow-sm p-3 mb-3 bg-white rounded panel-body pt-5 rounded">
 
                                                                                     <div class="row hod-cbp-subtask">
+                                                                                   
+
                                                                                     @if(empty($cbplist->cbp_sub_lists))
-                                                                                    @else
-                                                                                    @foreach($cbplist->cbp_sub_lists as $sublist)
+                                                                                        @else
+                                                                                         @foreach($cbplist->cbp_sub_lists as $sublist)
 
-
-                                                                                      <div class="col-md-6">
+                                                                                           
+                                                                                         <div class="col-md-6">
                                                                                               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                                                   <div class="panel panel-default">
                                                                                                       <div class="panel-heading" role="tab" id="headingOne">
@@ -532,8 +540,12 @@
                                                                                                                               </div>
 
                                                                                                                           </div>
+
                                                                                                                           <div class="col-md-1">
-                                                                                                                              <div class="cog-icon show_cbp_hot" data-configid="{{$cbplist['id']}}" data-subcbpid="{{$sublist['id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"><i class="fa fa-cog"></i></div>
+                                                                                                                              <!-- <div class="cog-icon show_cbp_hot"    data-configid="{{$cbplist['id']}}"   data-subcbpid="{{$sublist['id']}}" data-projectid="{{$cbplist['project_id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"  data-subcbptitle="{{$sublist['cbp_subtask']}}"  ><i class="fa fa-cog"></i></div> -->
+                                                                                                                              <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}',{{$cbplist['project_id']}})" ><i class="fa fa-cog"></i></div>
+                                                                                                                              <!-- <button onclick="myFunction('p')">Click me</button> -->
+
                                                                                                                           </div>
 
                                                                                                                       </div>
@@ -547,27 +559,17 @@
                                                                                           </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-                                                                                      @endforeach
+                                                                                         @endforeach
                                                                                     @endif
 
 
-                                                                                    </div>
+                                                                                </div>
 
 
 
                                                                                 </div>
                                                                             </div>
+                                                                           
                                                                            </div>
                                                                         @endforeach
                                                                     </div>
@@ -604,11 +606,11 @@
                                                                     </div>
 
                                                                     <!-- bootstrap modal section -->
-                                                                    <div class="modal fade in show" id="cbb_hot_modal" tabindex="-1" role="dialog" aria-labelledby="subconfigTitle" aria-hidden="true">
+                                                                    <div class="modal fade in hide" id="cbb_hot_modal" tabindex="-1" role="dialog" aria-labelledby="subconfigTitle" aria-hidden="true">
                                                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header modal-header-config">
-                                                                                    <h5 class="modal-title" ><i class="fa fa-cog"></i><p id="cbp_sub_task_title" class="d-inline-block"></p></h5>
+                                                                                    <h5 class="modal-title" ><i class="fa fa-cog"></i>&nbsp;&emsp;<p id="cbp_sub_task_title" class="d-inline-block"></p></h5>
                                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                         <span aria-hidden="true">&times;</span>
                                                                                     </button>
@@ -676,8 +678,38 @@
 @endsection
 @push('scripts')
     <script>
+//   window.swal("Thank you for the message, we'll look into the issue and fix it as soon as we can!")
+    function myFunction(b,c,e,f) {
+      
+           console.log(e);
+        var i;
+        var hors='hide';
+       
+        for(i=0;i<b.length;i++){
+            console.log(b[i].project_id);
+            if(b[i].cbp_subtask_id==c && b[i].project_id==f){
+                console.log("true"); 
+                hors='hide' ;
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'This subtask is assigned to HOT,Plz choose another subtask',
+                    })
+            break;
+           
+            }else{
+                hors='show' ;
+                console.log("false");  
 
+            }
 
+        }
+       
+        $('#cbb_hot_modal').modal(hors);  
+        $('#cbp_sub_task_title').html( e );
+        
+
+    }
 
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -705,15 +737,28 @@
                 });
                 var config_id = 0;
                 var subtask_id  = 0;
-                $(".show_cbp_hot").click(function(){
-                    $('#cbp_sub_task_title').empty();
-                    var title = $(this).data('subcbptitle');
-                    config_id= $(this).data('configid');
-                    subtask_id = $(this).data('subcbpid');
-                    // alert(config_id+" "+subtask_id);
-                    $('#cbp_sub_task_title').append(title);
-                    $('#cbb_hot_modal').modal('show');
-                });
+                // $(".show_cbp_hot").click(function(){
+                //     $('#cbp_sub_task_title').empty();
+                //     var title = $(this).data('subcbptitle');
+                //     config_id= $(this).data('configid');
+                //     subtask_id = $(this).data('subcbpid');
+                //     // alert(subtask_id);
+                //     project_id= $(this).data('projectid');
+                   
+                       
+                        
+                //     $('#cbp_sub_task_title').append(title);
+                   
+                //     if(assignhot_iss ==assignhot_is ){
+                //         $('#cbb_hot_modal').modal('hide');  
+                //     }else{
+                //         $('#cbb_hot_modal').modal('show');
+                //     }
+                  
+                // });
+
+               
+                
 
 
 

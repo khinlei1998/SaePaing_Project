@@ -37,7 +37,7 @@ class ProjectConfig extends Model
                 $newhot->hot_id = "UNSIGNED!";
                 $newhot->status = "bg-warning";
             }
-            array_push($result,array_merge($subtask,$newhot->toArray()));
+            array_push($result,array_merge($subtask,$cbpsubtasks,$newhot->toArray()));
         }
         return $result;
     }
@@ -47,5 +47,8 @@ class ProjectConfig extends Model
             case '1':return "assign";
             case '2':return "complete";
         }
+    }
+    public function Assigntohots(){
+        return $this->hasmany(ProjectConfig::class,'cbp_id');
     }
 }

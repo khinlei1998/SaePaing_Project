@@ -34,7 +34,7 @@ class HomeController extends Controller
     }
     public function orgchart()
     {
-        return view('orgchart.index-main');
+        return view('orgchart.index');
     }
 
     public function OC_group($id)
