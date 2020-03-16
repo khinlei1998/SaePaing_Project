@@ -143,7 +143,7 @@ Dropzone.options.taskform = {
                 $('.dz-preview:first').hide();
 
             }
-            console.log(myDropZone.file.length);
+            console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
 
