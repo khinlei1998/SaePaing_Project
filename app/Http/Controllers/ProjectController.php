@@ -68,31 +68,124 @@ class ProjectController extends Controller
     public function detail($id)
     {
         $project = Project::find($id);
+
+        
         
         $configs = $project->project_config;
+
         
         $subcbps = "";
+
         $per_of_whole_project=0;
+
         $get_cbp_all_per=0;
+
         foreach ($configs as $config){
           
             $subcbps.=$config->cbp_subtask.",";
+            
+
             if(HodReport::where('projConfig_id',$config->id)->orderBy('id','desc')->count() > 0){
+
                 $get_cbp_all_per += HodReport::where('projConfig_id',$config->id)->orderBy('id','desc')->first()->percentage * 0.04;
 
             }else{
+
                 $get_cbp_all_per += 0;
 
             }
         }
 
         $subcbps = substr_count($subcbps, ',');
+        
+        
 
         $cal_cbpgetper=$get_cbp_all_per;
+       
 
         $per_of_whole_project=ceil($cal_cbpgetper);
+        
 
-        return view('project.detail', compact(['project','configs','subcbps','per_of_whole_project']));
+        $count_of_under5=0;
+        $count_of_over5=0;
+        $count_of_completed=0;
+        $count_of_zero=0;
+
+        $pid=$id;
+
+        $get_all_project_config=ProjectConfig::where('project_id',1);
+        
+        
+
+        $get_all_list=CbpList::all();
+
+
+
+//        $count_of_zero=$get_all_project_config->count();
+
+
+        foreach($get_all_project_config->get() as $gapc){
+
+            if(ProjectConfig::where([['project_id','=',$id],['cbp_id','=',$gapc->cbp_id]])->count() != 0){
+
+
+                if(HodReport::where('projConfig_id',$gapc->id)->count() > 0){
+                    if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','<',50]])->count() > 0){
+                        $count_of_under5 +=1;
+
+                    }
+
+                    if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=',50]])->count() > 0){
+                        $count_of_over5 +=1;
+
+                    }
+
+                    if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','>',50],['percentage','!=',100]])->count() > 0){
+                        $count_of_over5 +=1;
+
+                    }
+
+                    if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=',NULL]])->count() > 0){
+                        $count_of_zero +=1;
+
+                    }
+
+                    if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=',0]])->count() > 0){
+                        $count_of_zero +=1;
+
+
+                    }
+
+
+                    if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=','']])->count() > 0){
+                        $count_of_zero +=1;
+
+
+                    }
+                    if(HodReport::where([['projConfig_id','=',$gapc->id],['percentage','=','100']])->count() > 0){
+                        $count_of_completed +=1;
+
+
+                    }
+
+
+                 
+                }
+                else{
+                    $count_of_zero +=1;
+
+
+                }
+
+            }
+
+
+
+
+        }
+
+
+        return view('project.detail', compact(['project','configs','subcbps','per_of_whole_project','pid','count_of_under5','count_of_over5','count_of_completed','count_of_zero']));
 
     }    /**
      * Show the form for editing the specified resource.

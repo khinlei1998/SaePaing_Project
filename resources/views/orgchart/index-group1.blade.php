@@ -3,7 +3,7 @@
 @section('content')
 
 
-<h1 align="center">Sae Paing Organization Chart</h1>
+<h1 align="center"><a href="">Sae Paing Organization Chart</a></h1>
 
 <div class="system-org group1-orgchart">
   <div id="chart-container"></div>

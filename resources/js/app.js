@@ -25,6 +25,11 @@ require('orgchart');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+
+
+Vue.component('Piechart', require('./components/Piechart.vue').default);
+Vue.component('progressbar', require('./components/progressbar.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -38,7 +43,18 @@ window.Swal = Swal;
 // const Swal = require('sweetalert2')
 
 //beautiful sweet alert
+
+
+import html2canvas from 'html2canvas';
+
+import swal from 'bootstrap-sweetalert';
+
+
+
+import {ImageEditor} from '@toast-ui/vue-image-editor';
+
 // import swal from 'bootstrap-sweetalert';
+
 import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 config.autoReplaceSvg = 'nest';
 import {
@@ -101,7 +117,7 @@ Dropzone.options.taskform = {
 
     // maxFiles:11,
 
-    
+
 
     paramName: "task_file",
     uploadMultiple : true,
@@ -115,7 +131,7 @@ Dropzone.options.taskform = {
         let task_id=0;
 
         this.on("queuecomplete", function (progress) {
-              window.location = "/task/"+task_id;
+            //   window.location = "/task/"+task_id;
             console.log("Uploaded!!!");
         });
 
@@ -124,11 +140,11 @@ Dropzone.options.taskform = {
         });
         this.on("addedfile", function (file, response) {
 
-            if (file==myDropZone.files[0]) {
+            // if (file==myDropZone.files[0]) {
 
-                $('.dz-preview:first').hide();
+            //     $('.dz-preview:first').hide();
 
-            }
+            // }
             console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
@@ -287,7 +303,7 @@ Dropzone.options.missionform = {
                 data.append("remark", $('#remark').val());
             });
             this.on("success", function (file, response) {
-               
+
                  mission_id = file.xhr.response;
                 //  console.log(mission_id);
             });
@@ -340,7 +356,7 @@ if(!assignee){
 if(!finished_date){
     hasError=false;
     $('.finished_date_append').find("p").remove();
-    $('.finished_date_append').append("<p> * Please Enter Finish Date.</p>");  
+    $('.finished_date_append').append("<p> * Please Enter Finish Date.</p>");
 }else{
     $('.finished_date_append').find("p").remove();
 }
@@ -366,7 +382,7 @@ if (old_mission_image) {
 if(!resolved_way){
     hasError=false;
     $('.resolved_way_append').find("p").remove();
-    $('.resolved_way_append').append("<p> * Please Enter Resolved Way.</p>");  
+    $('.resolved_way_append').append("<p> * Please Enter Resolved Way.</p>");
 }else{
     $('.resolved_way_append').find("p").remove();
 }
@@ -382,14 +398,14 @@ if(!remark){
 if(hasError){
     missionZone.processQueue();
   }
-              
-              
-               
-                
+
+
+
+
             });
     }
 };
-// Profile 
+// Profile
 Dropzone.options.profileform = {
     maxFilesize: 1,
     maxFiles:11,
@@ -403,36 +419,36 @@ Dropzone.options.profileform = {
     init: function () {
         var profileDropZone = this;
         $.fn.addNewImage(profileDropZone);
-       
+
         this.on("queuecomplete", function (progress) {
-              
+
             console.log("Uploaded!!!");
         });
         this.on("error", function (file, response) {
             console.log(response);
         });
         this.on("addedfile", function (file, response) {
-               
+
             if (file==profileDropZone.files[0]) {
 
                 $('.dz-preview:first').hide();
 
             }
-            
+
         });
-        this.on("success",function(data){ 
+        this.on("success",function(data){
           console.log(data);
-          
+
         });
         this.on("sending", function (file, xhr, data) {
-           
+
         });
         $('#btnprofile').on("click", function () {
 
             profileDropZone.processQueue();
 
         });
-       
+
     }
 };
 
@@ -449,9 +465,9 @@ Dropzone.options.reportform= {
     init: function () {
         var myDropZone = this;
         $.fn.addNewImage(myDropZone);
-      
+
         this.on("queuecomplete", function (progress) {
-           
+
             console.log("Uploaded!!!");
         });
         this.on("error", function (file, response) {
@@ -464,25 +480,25 @@ Dropzone.options.reportform= {
             console.log("Images length>>"+myDropZone.files.length)
 
         });
-        this.on("success",function(data){ 
-            
+        this.on("success",function(data){
+
             window.location="/profile";
         });
         this.on("sending", function (file, xhr, data) {
-         
+
             data.append("feedback", editor_feedback.getData());
             data.append("task_id", $("#task_hidden_id").val());
-            
+
         });
         $('#report_submit').on("click", function () {
             var hasError = true;
 
             if(myDropZone.files.length<2){
                 hasError=false;
-                $('.report_task_image').find("p").remove();  
-                $('.report_task_image').append("<p> * Please Choose Image  First.</p>"); 
+                $('.report_task_image').find("p").remove();
+                $('.report_task_image').append("<p> * Please Choose Image  First.</p>");
              }else{
-                $('.report_task_image').find("p").remove();  
+                $('.report_task_image').find("p").remove();
              }
 
              if(hasError){
@@ -493,7 +509,7 @@ Dropzone.options.reportform= {
             //  alert(editor_feedback.getData());
             // Tell Dropzone to process all queued files.
         });
-        
+
     }
 };
 
@@ -531,8 +547,8 @@ $.fn.addNewImage=function(myDropZone) {
 
 $(function () {
 
-    $("#reject_submit").click(function(e){ 
-          
+    $("#reject_submit").click(function(e){
+
         var remark_editor=remark.getData().replace(/<[^>]*>/gi, '').length;
         //  alert(remark_editor);
         if( !remark_editor ) {
@@ -540,18 +556,14 @@ $(function () {
             $('#remark-box').append("<p> * Please Enter Description First.</p>");
             e.preventDefault();
 
-          
+
          }else{
             $( "#remark_form" ).submit();
          }
-        
+
     });
 
-   
-   
 
-
-   
 
     //Default configration for datetime picker
     $.fn.datetimepicker.Constructor.Default = $.extend({}, $.fn.datetimepicker.Constructor.Default, {
@@ -596,7 +608,7 @@ $(function () {
         placeholder: "Please select years",
         allowClear: true
     });
-   
+
     $('#showcbp').click(function() {
         $('#showcbpdiv').show();
     });
@@ -653,27 +665,27 @@ $(function () {
         });
         $('.modal.fade.show').find("#d_line").datetimepicker();
     });
-   
+
     $(".project_code").select2({
         placeholder: "Select an Project",
     });
 
-    
+
     $("#dept_group").select2({
         placeholder: "Select an Department",
     });
 
-    $("#custom").percircle({
-        text:"hello",
-        percent: 50 
-    })
+    // $("#custom").percircle({
+    //     text:"hello",
+    //     percent: 50
+    // })
 
         $(".progress").each(function() {
-      
+
           var value = $(this).attr('data-value');
           var left = $(this).find('.progress-left .progress-bar');
           var right = $(this).find('.progress-right .progress-bar');
-      
+
           if (value > 0) {
             if (value <= 50) {
               right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
@@ -682,15 +694,15 @@ $(function () {
               left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
             }
           }
-      
+
         })
-      
+
         function percentageToDegrees(percentage) {
-      
+
           return percentage / 100 * 360
-      
+
         }
-      
+
 
     //this function is for pagination with tab-panes in profile.blade.php
     var activeTab  = window.location.hash;
@@ -705,16 +717,11 @@ $(function () {
 
 const app = new Vue({
     el: '#app',
-    data: {
-      message: 'Hello Vue!'
-    }
-
 });
-
 
 // Custom Error Message automatically hide
 window.setTimeout(function() {
     $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
-        $(this).remove(); 
+        $(this).remove();
     });
 }, 1000);

@@ -41,9 +41,11 @@
                                                         <div class="col-md-3 mb-3 ">
                                                         <small>Job Description:</small>
                                                         </div>
+
                                                         <div class="col-md-9 mb-3 " style="height:70px">
                                                             <small>
                                                                 {!! Str::limit($project->project_description,90) !!}</small>
+
 
                                                         </div>
                                                         <div class="col-md-12 text-center">

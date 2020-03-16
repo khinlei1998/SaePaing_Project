@@ -21,4 +21,8 @@ class CbpList extends Model
     public function department(){
         return $this->belongsTo(Department::class,'dept_id');
     }
+
+    public function assigntohot(){
+        return $this->belongsTo(AssignToHot::class,'cbp_id');
+    }
 }
