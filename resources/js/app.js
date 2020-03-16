@@ -128,12 +128,7 @@ Dropzone.options.taskform = {
         var task_id=0;
 
         this.on("queuecomplete", function (progress) {
-<<<<<<< HEAD
-            //   window.location = "/task/"+task_id;
-=======
-          
-     
->>>>>>> 7666ceab4068d60588cf2c6f8ca36d894f9a4b3e
+
             console.log("Uploaded!!!");
         });
 
@@ -142,17 +137,12 @@ Dropzone.options.taskform = {
         });
         this.on("addedfile", function (file, response) {
 
-            // if (file==myDropZone.files[0]) {
+            if (file==myDropZone.files[0]) {
 
-            //     $('.dz-preview:first').hide();
-
-<<<<<<< HEAD
-            // }
-            console.log(myDropZone.files.length);
-=======
+                $('.dz-preview:first').hide();
+       
             }
-            // console.log(myDropZone.file.length);
->>>>>>> 7666ceab4068d60588cf2c6f8ca36d894f9a4b3e
+            console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
 
@@ -550,7 +540,7 @@ $.fn.addNewImage=function(myDropZone) {
 
 // Use JSFiddle logo as a sample image to avoid complicating
 // this example with cross-domain issues.
-    xhr.open( "GET", "http://localhost:8000/images/sae-logo.png", true );
+    xhr.open( "GET", "http://127.0.0.1:8000/images/sae-logo.png", true );
 
 // Ask for the result as an ArrayBuffer.
     xhr.responseType = "arraybuffer";

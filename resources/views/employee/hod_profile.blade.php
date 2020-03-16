@@ -544,6 +544,9 @@
                                                                                                                           <div class="col-md-1">
                                                                                                                               <!-- <div class="cog-icon show_cbp_hot"    data-configid="{{$cbplist['id']}}"   data-subcbpid="{{$sublist['id']}}" data-projectid="{{$cbplist['project_id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"  data-subcbptitle="{{$sublist['cbp_subtask']}}"  ><i class="fa fa-cog"></i></div> -->
                                                                                                                               <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}',{{$cbplist['project_id']}})" ><i class="fa fa-cog"></i></div>
+                                                                                                                              <!-- <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}})" ><i class="fa fa-cog"></i></div> -->
+
+
                                                                                                                               <!-- <button onclick="myFunction('p')">Click me</button> -->
 
                                                                                                                           </div>
