@@ -86,7 +86,7 @@
                                                 <a class="nav-item nav-link" data-toggle="tab" role="tab" aria-controls="nav-report" aria-selected="true" href="#report">{{$task->assignedToEmployee->emp_name}}'s Files</a>
                                             </div>
                                             <div class="tab-content">
-                                                <div class="tab-pane fade show active task-detail-tabpane" id="reference">
+                                                <div class="tab-pane show active task-detail-tabpane" id="reference">
                                                     <div class="row p-3">
                                                         @foreach($task->assignor_file as $src)
                                                             <div class="card mr-2" style="width:250px;">

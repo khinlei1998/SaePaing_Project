@@ -116,9 +116,6 @@ window.remark=null;
 Dropzone.options.taskform = {
 
     // maxFiles:11,
-
-
-
     paramName: "task_file",
     uploadMultiple : true,
     addRemoveLinks: true,
@@ -128,10 +125,11 @@ Dropzone.options.taskform = {
     init: function () {
         var myDropZone = this;
         $.fn.addNewImage(myDropZone);
-        let task_id=0;
+        var task_id=0;
 
         this.on("queuecomplete", function (progress) {
-              window.location = "/task/"+task_id;
+          
+     
             console.log("Uploaded!!!");
         });
 
@@ -145,14 +143,38 @@ Dropzone.options.taskform = {
                 $('.dz-preview:first').hide();
 
             }
-            console.log(myDropZone.files.length);
+            // console.log(myDropZone.file.length);
             // console.log('New File Added');
         });
 
         this.on("success",function(data){
-          // console.log($file);
+          
+          if(data){
+            Swal.fire({
+                title: 'Great Job',
+                text: "Task create successfully",
+                icon: 'success',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'OK'
+            })
+            $( ".swal2-confirm" ).click(function() {
+                task_id = data.xhr.response;
+               
+ 
+                  window.location = "/task/"+task_id;
+               
+            });
+          
 
-            task_id = data.xhr.response;
+          }
+         
+       
+        
+
+
+          
 
         });
         this.on("sending", function (file, xhr, data) {
