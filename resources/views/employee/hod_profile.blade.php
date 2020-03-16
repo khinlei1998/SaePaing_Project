@@ -540,7 +540,7 @@
                                                                                                                               </div>
 
                                                                                                                           </div>
-                                                                                                                                    {{$assignhot}}
+                                                                                                                                 
                                                                                                                           <div class="col-md-1">
                                                                                                                               <!-- <div class="cog-icon show_cbp_hot"    data-configid="{{$cbplist['id']}}"   data-subcbpid="{{$sublist['id']}}" data-projectid="{{$cbplist['project_id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"  data-subcbptitle="{{$sublist['cbp_subtask']}}"  ><i class="fa fa-cog"></i></div> -->
                                                                                                                                
@@ -782,6 +782,8 @@
                         if(data.success){
                             console.log("fine");
                             $('#cbb_hot_modal').modal('hide');
+                            window.location="/profile";
+
                         }else{
                             console.log("error"+data.message);
                         }
