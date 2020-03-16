@@ -60,10 +60,11 @@ class TaskController extends Controller
         $assignee_persons = explode(',', $request->assignee_person);
 
         $files = $request->file('task_file');//file array
+        // dd($files);
 
-   
+
        array_shift($files);//remove first array item
-
+      
         foreach ($files as $key => $file) {
 
             if (next($files) == true)
