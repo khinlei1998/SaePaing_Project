@@ -12350,6 +12350,17 @@ footer strong {
   margin-bottom: 8px;
 }
 
+.test-toast .tui-image-editor-container .tui-image-editor-header-logo > img {
+  display: none;
+  width: 0%;
+  padding: 0px;
+}
+
+.test-toast .tui-image-editor-container .tui-image-editor-header-buttons {
+  float: left;
+  padding-top: 15px;
+}
+
 .modal {
   z-index: 1210;
 }

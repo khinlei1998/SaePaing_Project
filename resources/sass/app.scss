@@ -1053,6 +1053,19 @@ footer{
 
 }
 
+.test-toast{
+  .tui-image-editor-container .tui-image-editor-header-logo > img {
+  display: none;
+  width: 0%;
+    padding: 0px;
+  }
+
+  .tui-image-editor-container .tui-image-editor-header-buttons{
+    float: left;
+    padding-top:15px;
+  }
+}
+
 .modal{
 
   z-index: 1210;
@@ -1249,6 +1262,8 @@ footer{
     }
 
   }
+
+  
 
   
 
