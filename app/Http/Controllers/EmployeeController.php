@@ -193,6 +193,7 @@ class EmployeeController extends Controller
      */
     public function update(EmployeeRequest $employeeRequest,Employee $employee)
     {
+        dd($employee);
         $employee->update($employeeRequest->all());
         return redirect('/employee')->withUpdateMessage('Employee updated sussessfully!!');
    }
