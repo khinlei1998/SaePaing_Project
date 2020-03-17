@@ -187,13 +187,10 @@ Dropzone.options.taskform = {
             var old_image=$('.old_image').val();
             var task_title=$(".task_title").val().length;
             // alert(task_title);
-             var project_code = $('.project_code').val().length;
-
+            //  var project_code = $('.project_code').val().length;
              var department_append =$('.department_append').find(':selected').val();
-
              var project_editor=taskeditor.getData().length;
-             var employee=$('#project_code').val().length;
-            //
+             var employee=$('.employee').val().length;
              var start_time=$('.task_start_time').val();
              var end_time=$('.task_end_time').val();
             var hasError = true;
@@ -207,15 +204,15 @@ Dropzone.options.taskform = {
             }else{
                 $('#task-title-append').find("label").remove();
             }
-             if(!project_code){
-                hasError=false;
+            //  if(!project_code){
+            //     hasError=false;
 
-                $('.project_code_append').find("label").remove();
-                $('.project_code_append').append("<label> * Please Enter Project Code.</label>");
-             }else{
-                $('.project_code_append').find("label").remove();
+            //     $('.project_code_append').find("label").remove();
+            //     $('.project_code_append').append("<label> * Please Enter Project Code.</label>");
+            //  }else{
+            //     $('.project_code_append').find("label").remove();
 
-             }
+            //  }
              if(old_image){
                  hasError=true;
              }
