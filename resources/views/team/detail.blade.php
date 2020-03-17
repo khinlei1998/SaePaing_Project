@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container pb-4">
         <div class="card shadow-lg index-tables border-0 mt-5">
             <div class="w-100 {{ $team->team_name}} rounded-top mb-2 status-height">
             </div>
@@ -13,42 +13,79 @@
                         </div>
                         <div class="card-body">
                             <div class=" p-3" >
-                                <div class="row p-3">
-                                    <div class="col-md-6 col-sm-12">
-                                        <h4> Team Name :</h4>
-                                        <h6 class="font-weight-bold text-muted"> {{ $team->team_name }}</h6>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-2 mb-2">
+                                        <strong class="text-muted">Team Name</strong> 
+                                        </div>
+                                        <div class="col-1 mb-2">
+                                        :
+                                        </div>
+                                        <div class="col-9 mb-2">
+                                        {{ $team->team_name }}
+                                        </div>
+                                        <div class="col-2 mb-2">
+                                        <strong class="text-muted">Subdept Name</strong> 
+                                        </div>
+                                        <div class="col-1 mb-2">
+                                        :
+                                        </div>
+                                        <div class="col-9 mb-2">
+                                        {{ $team->subdepartment->subdept_name??"none" }}
+                                        </div>
+                                        <div class="col-2 mb-2">
+                                        <strong class="text-muted">Dept Name</strong> 
+                                        </div>
+                                        <div class="col-1 mb-2">
+                                        :
+                                        </div>
+                                        <div class="col-9 mb-2">
+                                        {{ $team->department->dept_name ??"none"}}
+                                       
+                                        </div>
+                                        <div class="col-2 mb-2">
+                                        <strong class="text-muted">Group Name </strong> 
+                                        </div>
+                                        <div class="col-1 mb-2">
+                                        :
+                                        </div>
+                                        <div class="col-9 mb-2">
+                                        {{ $team->group->group_name }}
+                                           
+                                        </div>
+                                        
 
-                                        <h4> Subdept Name :</h4>
+                                       
+                                    </div>
+                                </div>
 
-
-
-                                        <h6 class="font-weight-bold text-muted"> {{ $team->subdepartment->subdept_name??"none" }}</h6>
-
-                                        <h4> dept Name :</h4>
-                                        <h6 class="font-weight-bold text-muted"> {{ $team->department->dept_name ??"none"}}</h6>
-
-                                        <h4> gp Name :</h4>
-                                        <h6 class="font-weight-bold text-muted"> {{ $team->group->group_name }}</h6>
-
+                                <div class="container">
+                                        <hr>
                                     </div>
 
-                                    <td>
-                                        <a href="{{ route('team.edit', $team) }}" class="mb-2 d-block">
-                                            <button data-toggle="tooltip" data-placement="left" title="Edit Team" class="btn shadow bg-orange text-white w-100"><i class="fas fa-edit"></i> </button>
-                                        </a>
-
-
-                                    </td>
-
-                                    <td>
-                                        <a href="{{ route('team.index', $team) }}" class="mb-2 d-block">
-                                            <button data-toggle="tooltip" data-placement="left" title="index" class="btn shadow bg-orange text-white w-100"><i class="fas fa-edit"></i> </button>
-                                        </a>
-
-
-                                    </td>
-
+                        <div class="container">
+                            <div class="row">
+                                
+                                <div class="col-6">
+                                
+                                    
+                                        <div class="col-lg-12 bg-white text-left"> <a href="{{ route('team.index', $team) }}" class="btn bg-orange text-white"><i class="fas fa-angle-left"></i>&emsp;Index</a></div>
+                                       
                                 </div>
+                                <div class="col-6">
+                               
+                                    
+                                    <div class="col-md-12 bg-white text-right"><a href="{{ route('team.edit', $team) }}" class="btn btn-outline-secondary"><i class="fas fa-edit"></i>&nbsp;&emsp;Edit Team&emsp; </a></a></div>
+                                    <!-- <div class="col-md-2"> <a href="" class="btn bg-orange text-white"><i class="fas fa-edit"></i>&emsp;Start</a></div> -->
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+
+                                
 
                             </div>
                         </div>
