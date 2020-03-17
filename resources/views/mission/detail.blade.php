@@ -119,7 +119,7 @@
                                                 <div class="col-lg-12 bg-white text-left mr-5"> <a href="{{ url('profile') }}" class="btn bg-orange text-white mr-5"><i class="fas fa-angle-left"></i>&emsp;Back</a></div>
                                                 @endif
                                                 @can('create',\App\Mission::class)
-                                                    <div class="col-lg-12 ml-5"><a href="{{ route('mission.edit', $mission) }}" class="btn btn-outline-secondary ml-5"><i class="fas fa-edit"></i>&nbsp;&emsp;Edit Page&emsp; </a></a></div>
+                                                    <div class="col-lg-12 ml-5"><a href="{{ route('mission.edit', $mission) }}" class="btn btn-outline-secondary ml-5"><i class="fas fa-edit"></i>&nbsp;&emsp;Edit Mission&emsp; </a></a></div>
                                                     <!-- <div class="col-md-2"> <a href="" class="btn bg-orange text-white"><i class="fas fa-edit"></i>&emsp;Start</a></div> -->
                                                 @endcan
                                             </div>
