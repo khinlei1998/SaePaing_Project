@@ -76,7 +76,7 @@
 
 
 
-           console.log(tets);
+           // console.log(tets);
             image=imageEditor.toDataURL();
             image = image.replace('data:image/png;base64,', '');
 
