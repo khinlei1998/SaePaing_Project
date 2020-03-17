@@ -686,45 +686,55 @@
     var sublist=0;
     
     function myFunction(b,c,e,f,g,h) {
-        cbplist=g;
-        sublist=h;
+        var x=localStorage.getItem('Hod_id');
+         console.log(x);
+         if( x !== null){
+            Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops...',
+                                    text: 'This subtask is assigned to HOT,Plz choose another subtask',
+             })
+
+         }else{
+            cbplist=g;
+                sublist=h;
       
         //   console.log(g,h);
-        if(b.length==0){
-            $('#cbp_sub_task_title').html( e );
-             $('#cbb_hot_modal').modal('show');
-        }else{
-                var i;
-                var hors='hide';
-                for(i=0;i<b.length;i++){
-                    console.log(b[i].project_id);
-                    if(b[i].cbp_subtask_id==c && b[i].project_id==f){
-                        console.log("true"); 
-                        hors='hide' ;
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: 'This subtask is assigned to HOT,Plz choose another subtask',
-                            })
-                            
-                        break;
-                
-                    }else{
-                        hors='show' ;
-                        console.log("false");  
+                if(b.length==0){
+                    $('#cbp_sub_task_title').html( e );
+                    $('#cbb_hot_modal').modal('show');
+                }else{
+                        var i;
+                        var hors='hide';
+                        for(i=0;i<b.length;i++){
+                            console.log(b[i].project_id);
+                            if(b[i].cbp_subtask_id==c && b[i].project_id==f){
+                                console.log("true"); 
+                                hors='hide' ;
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops...',
+                                    text: 'This subtask is assigned to HOT,Plz choose another subtask',
+                                    })
+                                    
+                                break;
+                        
+                            }else{
+                                hors='show' ;
+                                console.log("false");  
 
-                    }
+                            }
+
+                        }
+                
+                    $('#cbb_hot_modal').modal(hors);  
+                    $('#cbp_sub_task_title').html( e );
 
                 }
-        
-            $('#cbb_hot_modal').modal(hors);  
-            $('#cbp_sub_task_title').html( e );
-
-        }
-        
+         }
        
-       
-        
+              
+         
 
     }
   
@@ -746,6 +756,10 @@
         }
 
         window.onload=function(){
+            if(localStorage.getItem('Hod_id') !== null){
+                localStorage.removeItem('Hod_id');
+
+            }
 
 
             localStorage.setItem("require_error", "");
@@ -758,9 +772,11 @@
                
   
                 $('#btn_cbp_hot').click(function(){
-                  
                     var hot_id = $('#project_regionn').find(':selected').val();
-                    var deadline=$('#job_start_time').val();
+                    // console.log(hot_id);
+                    // localStorage.setItem('Hod_id',hot_id);
+                  
+                   var deadline=$('#job_start_time').val();
                    var config_id=cbplist;
                    var cbp_subtask_id=sublist;
                
@@ -782,7 +798,9 @@
                         if(data.success){
                             console.log("fine");
                             $('#cbb_hot_modal').modal('hide');
-                            window.location="/profile";
+                             localStorage.setItem('Hod_id',hot_id);
+                            // $( "#project_regionn" ).remove();
+                            // window.location="/profile";
 
                         }else{
                             console.log("error"+data.message);
@@ -790,10 +808,14 @@
                     }).fail(function (jqXHR, textStatcbp_listus) {
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
-                    }
+                  
+                  }
 
                 });
 
+                  
+                  
+                 
 
 
                 var config_id  = 0;
