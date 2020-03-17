@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="card shadow-lg index-tables border-0 mt-5">
-            @include('team._form',['title'=>'team','create'=>false])
+            @include('team._form',['title'=>'Team','create'=>false])
         </div>
     </div>
 @endsection
