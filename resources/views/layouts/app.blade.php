@@ -25,7 +25,7 @@ header("Content-Type: application/xml; charset=utf-8");
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.0/fabric.js"></script>
     <script type="text/javascript" src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.min.js"></script>
     <script type="text/javascript" src="https://uicdn.toast.com/tui-color-picker/v2.2.3/tui-color-picker.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+{{--    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>--}}
     <script src="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.js"></script>
     <script type="text/javascript" src="{{ asset('js/theme/white-theme.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/theme/black-theme.js') }}"></script>

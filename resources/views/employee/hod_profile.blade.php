@@ -86,7 +86,7 @@
                                                 <div class="col-8 mt-1">
                                                 {{ $employee->emp_jobdesp}}
                                                 </div>
-                                                
+
                                             </div>
                                     </div>
                                     <div class="col-4">
@@ -101,11 +101,11 @@
                                             <div class="mb-2 mt-2">
                                                 <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                                 <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
-                                            
+
                                             </div>
-                                            
+
                                     </div>
-                                    
+
                                     <div class="row no-gutters">&nbsp;</div>
                                 </div>
 
@@ -423,8 +423,8 @@
 
                                     <div class="container">
 
-                                       
-                                            
+
+
                                                 <div class="row cbp-container">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                                                         <div class="row cbp-profile  mt-3 mb-2">
@@ -503,22 +503,22 @@
                                                                                 </h4>
                                                                             </div>
 
-                                                                           
-                                                                            
-                                                                             
-                                                                            
-                                                                          
+
+
+
+
+
                                                                             <div id="collapseOne{{$loop->index}}" class="panel-collapse collapse ml-3" role="tabpanel" aria-labelledby="headingOne">
                                                                                 <div class="shadow-sm p-3 mb-3 bg-white rounded panel-body pt-5 rounded">
 
                                                                                     <div class="row hod-cbp-subtask">
-                                                                                   
+
 
                                                                                     @if(empty($cbplist->cbp_sub_lists))
                                                                                         @else
                                                                                          @foreach($cbplist->cbp_sub_lists as $sublist)
 
-                                                                                           
+
                                                                                          <div class="col-md-6">
                                                                                               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                                                   <div class="panel panel-default">
@@ -569,7 +569,7 @@
 
                                                                                 </div>
                                                                             </div>
-                                                                           
+
                                                                            </div>
                                                                         @endforeach
                                                                     </div>
@@ -660,8 +660,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            
-                                        
+
+
                                     </div>
 
                                 </div>
@@ -680,15 +680,15 @@
     <script>
 //   window.swal("Thank you for the message, we'll look into the issue and fix it as soon as we can!")
     function myFunction(b,c,e,f) {
-      
+
            console.log(e);
         var i;
         var hors='hide';
-       
+
         for(i=0;i<b.length;i++){
             console.log(b[i].project_id);
             if(b[i].cbp_subtask_id==c && b[i].project_id==f){
-                console.log("true"); 
+                console.log("true");
                 hors='hide' ;
                 Swal.fire({
                     icon: 'error',
@@ -696,18 +696,18 @@
                     text: 'This subtask is assigned to HOT,Plz choose another subtask',
                     })
             break;
-           
+
             }else{
                 hors='show' ;
-                console.log("false");  
+                console.log("false");
 
             }
 
         }
-       
-        $('#cbb_hot_modal').modal(hors);  
+
+        $('#cbb_hot_modal').modal(hors);
         $('#cbp_sub_task_title').html( e );
-        
+
 
     }
 
@@ -744,21 +744,21 @@
                 //     subtask_id = $(this).data('subcbpid');
                 //     // alert(subtask_id);
                 //     project_id= $(this).data('projectid');
-                   
-                       
-                        
+
+
+
                 //     $('#cbp_sub_task_title').append(title);
-                   
+
                 //     if(assignhot_iss ==assignhot_is ){
-                //         $('#cbb_hot_modal').modal('hide');  
+                //         $('#cbb_hot_modal').modal('hide');
                 //     }else{
                 //         $('#cbb_hot_modal').modal('show');
                 //     }
-                  
+
                 // });
 
-               
-                
+
+
 
 
 
