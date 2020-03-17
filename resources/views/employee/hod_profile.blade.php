@@ -540,10 +540,13 @@
                                                                                                                               </div>
 
                                                                                                                           </div>
-
+                                                                                                                                 
                                                                                                                           <div class="col-md-1">
                                                                                                                               <!-- <div class="cog-icon show_cbp_hot"    data-configid="{{$cbplist['id']}}"   data-subcbpid="{{$sublist['id']}}" data-projectid="{{$cbplist['project_id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"  data-subcbptitle="{{$sublist['cbp_subtask']}}"  ><i class="fa fa-cog"></i></div> -->
-                                                                                                                              <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}',{{$cbplist['project_id']}})" ><i class="fa fa-cog"></i></div>
+                                                                                                                               
+                                                                                                                              <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}','{{$cbplist['project_id']}}','{{$cbplist['id']}}','{{$sublist['id']}}')" ><i class="fa fa-cog"></i></div>
+
+                                                                                                                               
                                                                                                                               <!-- <button onclick="myFunction('p')">Click me</button> -->
 
                                                                                                                           </div>
@@ -636,8 +639,8 @@
                                                                                                 <label class="font-weight-bold text-muted" for="project_region"><i class="fa fa-user"></i> &nbsp;Process By</label>
                                                                                             </div>
                                                                                             <div class="col-7 mr-2">
-
-                                                                                                <select class="w-100" id="project_region">
+                                                                                               
+                                                                                                <select class="w-100" id="project_regionn">
                                                                                                     <option value=""></option>
                                                                                                      @foreach($hots as $hot)
                                                                                                         <option value="{{ $hot->emp_id }}">{{ $hot->name }}</option>
@@ -679,6 +682,7 @@
 @push('scripts')
     <script>
 //   window.swal("Thank you for the message, we'll look into the issue and fix it as soon as we can!")
+<<<<<<< HEAD
     function myFunction(b,c,e,f) {
 
            console.log(e);
@@ -700,16 +704,75 @@
             }else{
                 hors='show' ;
                 console.log("false");
+=======
+    var cbplist=0;
+    var sublist=0;
+    
+    function myFunction(b,c,e,f,g,h) {
+        var x=localStorage.getItem('Hod_id');
+         console.log(x);
+         if( x !== null){
+            Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops...',
+                                    text: 'This subtask is assigned to HOT,Plz choose another subtask',
+             })
 
-            }
+         }else{
+            cbplist=g;
+                sublist=h;
+      
+>>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
 
+        console.log(c);
+        if(b.length==0){
+            $('#cbp_sub_task_title').html( e );
+             $('#cbb_hot_modal').modal('show');
+        }else{
+                var i;
+                var hors='hide';
+                for(i=0;i<b.length;i++){
+                    console.log(b[i].project_id);
+                    if(b[i].cbp_subtask_id==c && b[i].project_id==f){
+                        console.log("true"); 
+                        hors='hide' ;
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'This subtask is assigned to HOT,Plz choose another subtask',
+                            })
+                            
+                        break;
+                
+                    }else{
+                        hors='show' ;
+                        console.log("false");  
+
+<<<<<<< HEAD
         }
 
         $('#cbb_hot_modal').modal(hors);
         $('#cbp_sub_task_title').html( e );
 
+=======
+                            }
+
+                        }
+                
+                    $('#cbb_hot_modal').modal(hors);  
+                    $('#cbp_sub_task_title').html( e );
+
+                }
+         }
+       
+              
+         
+>>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
 
     }
+  
+
+   
 
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -726,11 +789,16 @@
         }
 
         window.onload=function(){
+            if(localStorage.getItem('Hod_id') !== null){
+                localStorage.removeItem('Hod_id');
+
+            }
 
 
             localStorage.setItem("require_error", "");
 
             $(function(){
+<<<<<<< HEAD
                 $('#project_region').select2({
                     placeholder:'Choose HOT',
                     dropdownParent:$('.modal.fade.show')
@@ -762,13 +830,27 @@
 
 
 
+=======
+                // $('#project_region').select2({
+                //     placeholder:'Choose HOT',
+                //     dropdownParent:$('.modal.fade.show')
+                // });
+               
+  
+>>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
                 $('#btn_cbp_hot').click(function(){
+                    var hot_id = $('#project_regionn').find(':selected').val();
+                    // console.log(hot_id);
+                    // localStorage.setItem('Hod_id',hot_id);
+                  
+                   var deadline=$('#job_start_time').val();
+                   var config_id=cbplist;
+                   var cbp_subtask_id=sublist;
+               
 
-                    var hot_id = $('#project_region').find(':selected').val();
-                    var deadline=$('#job_start_time').val();
-
+                    
                     if(deadline == ''){
-
+                           
 
                     }else{
                         $.ajax({
@@ -777,22 +859,30 @@
                         },
                         method: "POST",
                         url: "/assignToHot",
-                        data:{config_id,subtask_id,hot_id,deadline}
+                        data:{config_id,cbp_subtask_id,hot_id,deadline}
                     }).done(function (data) {
-                        console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
+                        console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data);
                         if(data.success){
                             console.log("fine");
                             $('#cbb_hot_modal').modal('hide');
+                             localStorage.setItem('Hod_id',hot_id);
+                            // $( "#project_regionn" ).remove();
+                            // window.location="/profile";
+
                         }else{
                             console.log("error"+data.message);
                         }
                     }).fail(function (jqXHR, textStatcbp_listus) {
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
-                    }
+                  
+                  }
 
                 });
 
+                  
+                  
+                 
 
 
                 var config_id  = 0;

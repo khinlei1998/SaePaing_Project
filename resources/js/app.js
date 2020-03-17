@@ -128,8 +128,7 @@ Dropzone.options.taskform = {
         var task_id=0;
 
         this.on("queuecomplete", function (progress) {
-          
-     
+
             console.log("Uploaded!!!");
         });
 
@@ -141,9 +140,9 @@ Dropzone.options.taskform = {
             if (file==myDropZone.files[0]) {
 
                 $('.dz-preview:first').hide();
-
+       
             }
-            // console.log(myDropZone.file.length);
+            console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
 
@@ -169,12 +168,6 @@ Dropzone.options.taskform = {
           
 
           }
-         
-       
-        
-
-
-          
 
         });
         this.on("sending", function (file, xhr, data) {
@@ -194,13 +187,10 @@ Dropzone.options.taskform = {
             var old_image=$('.old_image').val();
             var task_title=$(".task_title").val().length;
             // alert(task_title);
-             var project_code = $('.project_code').val().length;
-
+            //  var project_code = $('.project_code').val().length;
              var department_append =$('.department_append').find(':selected').val();
-
              var project_editor=taskeditor.getData().length;
-             var employee=$('#project_code').val().length;
-            //
+             var employee=$('.employee').val().length;
              var start_time=$('.task_start_time').val();
              var end_time=$('.task_end_time').val();
             var hasError = true;
@@ -214,15 +204,15 @@ Dropzone.options.taskform = {
             }else{
                 $('#task-title-append').find("label").remove();
             }
-             if(!project_code){
-                hasError=false;
+            //  if(!project_code){
+            //     hasError=false;
 
-                $('.project_code_append').find("label").remove();
-                $('.project_code_append').append("<label> * Please Enter Project Code.</label>");
-             }else{
-                $('.project_code_append').find("label").remove();
+            //     $('.project_code_append').find("label").remove();
+            //     $('.project_code_append').append("<label> * Please Enter Project Code.</label>");
+            //  }else{
+            //     $('.project_code_append').find("label").remove();
 
-             }
+            //  }
              if(old_image){
                  hasError=true;
              }
@@ -541,7 +531,7 @@ $.fn.addNewImage=function(myDropZone) {
 
 // Use JSFiddle logo as a sample image to avoid complicating
 // this example with cross-domain issues.
-    xhr.open( "GET", "http://localhost:8000/images/sae-logo.png", true );
+    xhr.open( "GET", "http://127.0.0.1:8000/images/sae-logo.png", true );
 
 // Ask for the result as an ArrayBuffer.
     xhr.responseType = "arraybuffer";
@@ -584,6 +574,8 @@ $(function () {
          }
 
     });
+
+   
 
 
 
@@ -677,6 +669,11 @@ $(function () {
     $('.modal').on('shown.bs.modal', function (e) {
         $('.processby').select2({
             placeholder:"Select a HOD",
+            dropdownParent:$('.modal.fade.show')
+        });
+
+        $('#project_regionn').select2({
+            placeholder:"Select a HOT",
             dropdownParent:$('.modal.fade.show')
         });
 

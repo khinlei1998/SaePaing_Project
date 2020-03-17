@@ -44,6 +44,7 @@ class User extends Authenticatable
     }
     //this function return department base on user role (used in task create.blade.php)
     public function getAccessibleDepartmentsAttribute(){
+
         if( $this->role->id==Role::where("role","HOD")->first()->id){
          return $this->role->id==Role::where("role","HOD")->first()->id ? $this->employee->department()->select('dept_id','dept_name')->get() : Department::select('dept_id','dept_name')->get();
 
@@ -54,9 +55,7 @@ class User extends Authenticatable
           return $this->role->id==Role::where("role","ED")->first()->id ? $this->employee->group->department()->select('dept_id','dept_name')->get() : Department::select('dept_id','dept_name')->get();
 
         }
-
     }
-
     
     //normal assignable person
     public function getAssignablePersonsAttribute(){

@@ -54,13 +54,14 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-
+    
         $filenames = "";
 
         $assignee_persons = explode(',', $request->assignee_person);
 
         $files = $request->file('task_file');//file array
         // dd($files);
+
 
        array_shift($files);//remove first array item
       

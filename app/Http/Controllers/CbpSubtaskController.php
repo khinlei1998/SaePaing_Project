@@ -125,11 +125,13 @@ class CbpSubtaskController extends Controller
             return response()->json(["success"=>false]);
     }
     public function assignToHot(Request $request){
+     
         $project_config = ProjectConfig::find($request->config_id);
-        if (AssignToHot::create(['cbp_id'=>$project_config->cbp_id,'deadline'=>$request->deadline,'cbp_subtask_id'=>$request->subtask_id,'project_id'=>$project_config->project_id,'hot_id'=>$request->hot_id,'status'=>"0"])){
+        if (AssignToHot::create(['cbp_id'=>$project_config->cbp_id,'deadline'=>$request->deadline,'cbp_subtask_id'=>$request->cbp_subtask_id,'project_id'=>$project_config->project_id,'hot_id'=>$request->hot_id,'status'=>"0"])){
             return response()->json([
                 'success'=>true
             ]);
+           
         }
         return response()->json([
             'success'=>false,
