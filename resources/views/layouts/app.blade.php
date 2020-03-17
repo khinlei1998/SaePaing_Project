@@ -47,6 +47,9 @@ header("Content-Type: application/xml; charset=utf-8");
 </head>
 <body class="bg-white">
     <div id="app" class="uniandzawgyi uni">
+        <div id="test">
+            @{{ bb }}
+        </div>
     <div>
     </div>
         @auth

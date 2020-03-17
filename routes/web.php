@@ -19,16 +19,10 @@ Route::redirect('/', '/login');
 
 Route::group(['middleware' => ['auth']], function () {
 
+Route::get('/home', 'HomeController@index')->name('home');
 
 
-
-    Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-
-
-    Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
+Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
         $u=Storage::disk('public')->put('test.jpg',base64_decode($request->imageData));
         return response()->json(['success'=>$u]);
     });
