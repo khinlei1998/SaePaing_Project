@@ -699,7 +699,7 @@
             cbplist=g;
                 sublist=h;
       
-<<<<<<< HEAD
+
         console.log(c);
         if(b.length==0){
             $('#cbp_sub_task_title').html( e );
@@ -723,31 +723,6 @@
                     }else{
                         hors='show' ;
                         console.log("false");  
-=======
-        //   console.log(g,h);
-                if(b.length==0){
-                    $('#cbp_sub_task_title').html( e );
-                    $('#cbb_hot_modal').modal('show');
-                }else{
-                        var i;
-                        var hors='hide';
-                        for(i=0;i<b.length;i++){
-                            console.log(b[i].project_id);
-                            if(b[i].cbp_subtask_id==c && b[i].project_id==f){
-                                console.log("true"); 
-                                hors='hide' ;
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Oops...',
-                                    text: 'This subtask is assigned to HOT,Plz choose another subtask',
-                                    })
-                                    
-                                break;
-                        
-                            }else{
-                                hors='show' ;
-                                console.log("false");  
->>>>>>> 6654a697c9e5535358f226437bc76b56bb234205
 
                             }
 
