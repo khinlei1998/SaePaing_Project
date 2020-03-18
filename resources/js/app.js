@@ -293,7 +293,7 @@ Dropzone.options.missionform = {
             let mission_id=0;
             $.fn.addNewImage(missionZone);
             this.on("queuecomplete", function (progress) {
-                  window.location = "/mission/"+mission_id;
+                //   window.location = "/mission/"+mission_id;
                 console.log("Uploaded!!!");
             });
             this.on("error", function (file, response) {
@@ -314,10 +314,10 @@ Dropzone.options.missionform = {
                 data.append("issue_resolve_ways", editor3.getData());
                 data.append("remark", $('#remark').val());
             });
-            this.on("success", function (file, response) {
+            this.on("success", function (data) {
 
-                 mission_id = file.xhr.response;
-                 console.log(mission_id);
+                //  mission_id = data.xhr.response;
+                 console.log(data);
             });
             $('#missionform-submit').on("click", function () {
                 var old_mission_image = $(".old_mission_image").val();
@@ -531,7 +531,7 @@ $.fn.addNewImage=function(myDropZone) {
 
 // Use JSFiddle logo as a sample image to avoid complicating
 // this example with cross-domain issues.
-    xhr.open( "GET", "http://127.0.0.1:8000/images/sae-logo.png", true );
+    xhr.open( "GET", "http://localhost:8000/images/sae-logo.png", true );
 
 // Ask for the result as an ArrayBuffer.
     xhr.responseType = "arraybuffer";
