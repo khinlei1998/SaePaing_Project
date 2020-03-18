@@ -531,7 +531,7 @@ $.fn.addNewImage=function(myDropZone) {
 
 // Use JSFiddle logo as a sample image to avoid complicating
 // this example with cross-domain issues.
-    xhr.open( "GET", "http://localhost:8000/images/sae-logo.png", true );
+    xhr.open( "GET", "http://127.0.0.1:8000/images/sae-logo.png", true );
 
 // Ask for the result as an ArrayBuffer.
     xhr.responseType = "arraybuffer";
