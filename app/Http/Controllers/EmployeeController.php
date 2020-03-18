@@ -191,7 +191,7 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(EmployeeRequest $employeeRequest,Employee $employee)
+    public function update(Request $request)
     {
 
         // dd($employee->request);

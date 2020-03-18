@@ -78,7 +78,7 @@ import {
     faAngleRight,
     faClock,
     faAngleUp,
-    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt,faRedoAlt
+    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt,faRedoAlt,faCircle,faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
     faHome,faTasks,faEdit,
@@ -88,7 +88,7 @@ library.add(
     faNetworkWired,faPlusCircle,faCheck
     ,faShareSquare,faCalendarAlt,faInfoCircle
     ,faAngleLeft,faAngleRight,faClock,
-    faAngleUp,faAngleDown,faTrashAlt,faBookmark,faCheckCircle,faAtlas,faDownload,faBell,faMailBulk,faCog,faSortDown,faKey,faExchangeAlt,faRedoAlt);
+    faAngleUp,faAngleDown,faTrashAlt,faBookmark,faCheckCircle,faAtlas,faDownload,faBell,faMailBulk,faCog,faSortDown,faKey,faExchangeAlt,faRedoAlt,faCircle,faShoppingCart);
 dom.watch();
 
 //this declaration is for datetime picker in task create.balde.php
@@ -293,7 +293,7 @@ Dropzone.options.missionform = {
             let mission_id=0;
             $.fn.addNewImage(missionZone);
             this.on("queuecomplete", function (progress) {
-                //   window.location = "/mission/"+mission_id;
+                  window.location = "/mission/"+mission_id;
                 console.log("Uploaded!!!");
             });
             this.on("error", function (file, response) {
@@ -316,8 +316,8 @@ Dropzone.options.missionform = {
             });
             this.on("success", function (data) {
 
-                //  mission_id = data.xhr.response;
-                 console.log(data);
+                 mission_id = data.xhr.response;
+                //  console.log(mission_id);
             });
             $('#missionform-submit').on("click", function () {
                 var old_mission_image = $(".old_mission_image").val();
