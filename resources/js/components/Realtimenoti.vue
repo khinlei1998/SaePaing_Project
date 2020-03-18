@@ -38,11 +38,11 @@
             addafteramin: function () {
 
 
-                    this.noticount = setInterval(() => {
+                 setInterval(() => {
 
                         axios.get('http://127.0.0.1:8000/getnoti').then(resp => {
                                 console.log(resp.data.data.count);
-                                this.noticount = resp.data.data.count;
+                                this.noticount = 1;
                             },
                             error => {
                                 console.log('error'),

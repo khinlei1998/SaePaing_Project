@@ -64,7 +64,7 @@
                                         <td class="align-middle">{{ Str::limit($task->task_title,30)}}</td>
                                         <td class="align-middle">{!!  Str::limit($task->description,50)  !!}</td>
                                         <td class="align-middle"><small> {{$task->assignedToEmployee->group->group_name}}</small></td>
-                                        <td class="align-middle">{{ $task->assignedToEmployee->emp_name }}<br><small> ( Dept : <b>{{ $task->assignedToEmployee->department->dept_name }} </b>)</small><br><small></small></td>
+                                        <td class="align-middle">{{ $task->assignedToEmployee->emp_name }}<br><small> ( Dept : <b>{{ $task->assignedToEmployee->department?$task->assignedToEmployee->department->dept_name:"None" }} </b>)</small><br><small></small></td>
                                         <td class="align-middle"><small> {{$task->all_projects->where('project_code',$task->project_code)->first()->project_title??"none"}}</small></td>
                                        
                                         <td class="align-middle"><small>{{ $task->started_at }}</small></td>

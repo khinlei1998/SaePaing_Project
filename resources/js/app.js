@@ -585,19 +585,9 @@ Dropzone.options.reportform = {
 $.fn.addNewImage = function (myDropZone) {
     var xhr = new XMLHttpRequest();
 
-// Use JSFiddle logo as a sample image to avoid complicating
-// this example with cross-domain issues.
-// <<<<<<< HEAD
-// <<<<<<< HEAD
-    xhr.open("GET", "http://127.0.0.1:8000/images/sae-logo.png", true);
-// =======
-//     xhr.open( "GET", "http://localhost:8000/images/sae-logo.png", true );
-// >>>>>>> 042fe945d75f1b18159b3b4104f44ad810d88584
-// =======
-//     xhr.open( "GET", "http://127.0.0.1:8000/images/sae-logo.png", true );
-// >>>>>>> 93942ebad69a234e21604d47c791d1da763e38ed
 
-// Ask for the result as an ArrayBuffer.
+    xhr.open("GET", "http://127.0.0.1:8000/images/sae-logo.png", true);
+
     xhr.responseType = "arraybuffer";
 
     xhr.onload = function (e) {
