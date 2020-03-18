@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 class MissionController extends Controller
 {
-    public $imagehelper;
-    public function __construct()
-    {
-        $this->imagehelper = new ImageHelper();
-    }
+    // public $imagehelper;
+    // public function __construct()
+    // {
+    //     $this->imagehelper = new ImageHelper();
+    // }
 
     /**
      * Display a listing of the resource.
@@ -47,24 +47,20 @@ class MissionController extends Controller
         $filenames = "";
 
         $files = $request->file('mission_file');//file array
+        dd($files);
         
         array_shift($files);//remove first array item
 
         foreach($files as $key => $file){
             if (next($files)==true)
-                $filenames.=$this->imagehelper->missionImageUpload('missions',$file).":";
+                $filenames.=$this->missionImageUpload($file).":";
             else
-                $filenames.=$this->imagehelper->missionImageUpload('missions',$file);
+                $filenames.=$this->missionImageUpload($file);
         }
         $missions_id=Mission::create(array_merge($request->except(['jobfinished_date']), ['status' => '0','attach_files'=>$filenames,'jobfinished_date'=>Carbon::create($request->jobfinished_date)->toDateTimeString()]));
         $createdmissions_id=$missions_id->mission_id;
        
-        // return response()->json([
-        //     'success'=>$createdmissions_id;
-        // ]);
-        // return response()->json($createdmissions_id);
-        // return Response::json(['success' => $createdmissions_id],
-        // $data = ['success' => $createdmissions_id];
+      
 
         return response()->json($createdmissions_id);
     }

@@ -39,7 +39,6 @@
                     $('#emp_position').change(function(){
 
                         var position = $('#emp_position').find(':selected').val();
-                       
                     console.log("N blade: [employee/create] component :[Group dropdown] from:employee.create Selected pos =>"+position);
                    
                         if( position=="MD" || "ED" || "D"){
@@ -59,7 +58,7 @@
                     
 
                         });
-                        $('#emp_position').trigger('change');
+
 
                     var group=$('#team_group').find(':selected').val();
                     getAssibleDepartment(group);

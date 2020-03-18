@@ -682,29 +682,29 @@
 @push('scripts')
     <script>
 //   window.swal("Thank you for the message, we'll look into the issue and fix it as soon as we can!")
-<<<<<<< HEAD
-    function myFunction(b,c,e,f) {
 
-           console.log(e);
-        var i;
-        var hors='hide';
+    // function myFunction(b,c,e,f) {
 
-        for(i=0;i<b.length;i++){
-            console.log(b[i].project_id);
-            if(b[i].cbp_subtask_id==c && b[i].project_id==f){
-                console.log("true");
-                hors='hide' ;
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'This subtask is assigned to HOT,Plz choose another subtask',
-                    })
-            break;
+//            console.log(e);
+//         var i;
+//         var hors='hide';
 
-            }else{
-                hors='show' ;
-                console.log("false");
-=======
+//         for(i=0;i<b.length;i++){
+//             console.log(b[i].project_id);
+//             if(b[i].cbp_subtask_id==c && b[i].project_id==f){
+//                 console.log("true");
+//                 hors='hide' ;
+//                 Swal.fire({
+//                     icon: 'error',
+//                     title: 'Oops...',
+//                     text: 'This subtask is assigned to HOT,Plz choose another subtask',
+//                     })
+//             break;
+
+//             }else{
+//                 hors='show' ;
+//                 console.log("false");
+// =======
     var cbplist=0;
     var sublist=0;
     
@@ -722,7 +722,7 @@
             cbplist=g;
                 sublist=h;
       
->>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
+
 
         console.log(c);
         if(b.length==0){
@@ -748,13 +748,12 @@
                         hors='show' ;
                         console.log("false");  
 
-<<<<<<< HEAD
-        }
+        // }
 
-        $('#cbb_hot_modal').modal(hors);
-        $('#cbp_sub_task_title').html( e );
+        // $('#cbb_hot_modal').modal(hors);
+        // $('#cbp_sub_task_title').html( e );
 
-=======
+
                             }
 
                         }
@@ -767,7 +766,7 @@
        
               
          
->>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
+
 
     }
   
@@ -798,7 +797,7 @@
             localStorage.setItem("require_error", "");
 
             $(function(){
-<<<<<<< HEAD
+
                 $('#project_region').select2({
                     placeholder:'Choose HOT',
                     dropdownParent:$('.modal.fade.show')
@@ -830,14 +829,14 @@
 
 
 
-=======
+
                 // $('#project_region').select2({
                 //     placeholder:'Choose HOT',
                 //     dropdownParent:$('.modal.fade.show')
                 // });
                
   
->>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
+
                 $('#btn_cbp_hot').click(function(){
                     var hot_id = $('#project_regionn').find(':selected').val();
                     // console.log(hot_id);

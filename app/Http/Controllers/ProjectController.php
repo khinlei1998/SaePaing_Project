@@ -9,6 +9,7 @@ use App\ProjectConfig;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Requests\ProjectFormRequest;
+use Illuminate\Support\Facades\Validator;
 
 class ProjectController extends Controller
 {
@@ -41,9 +42,15 @@ class ProjectController extends Controller
      */
     public function store(ProjectFormRequest $request)
     {
-        $validatedData = $request->validated();
-        Project::create($validatedData);
-        return redirect('project')->withSuccessMessage('Project created sussessfully!!');
+        $messages = ['project_title.min' => 'project tile min 2 char', 'photo4.mimes' => 'Must be photo in Engine photo field', 'photo5.mimes' => 'Must be photo in Inner photo field', 'year' => 'Year must be at least 4'];
+        $validator = Validator::make($request->except("_token"), ['project_title' => 'required|min:2|max:5'], $messages);      
+        if ($validator->fails()) {         
+        return redirect()->back()->withErrors($validator)->withInput();   
+        }else{
+             Project::create($request->except('_token'));
+             return redirect('project')->withSuccessMessage('Project created sussessfully!!');
+        }
+
     }    /**
      * Display the specified resource.
      *

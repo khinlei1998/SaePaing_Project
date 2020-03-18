@@ -299,46 +299,90 @@ Dropzone.options.missionform = {
     acceptedFiles: "image/*",
     parallelUploads: 11,
     init: function () {
-        var missionZone = this;
-        let mission_id = 0;
-        $.fn.addNewImage(missionZone);
-        this.on("queuecomplete", function (progress) {
-            window.location = "/mission/" + mission_id;
-            console.log("Uploaded!!!");
-        });
-        this.on("error", function (file, response) {
-            console.log(response);
-        });
-        this.on("addedfile", function (file, response) {
-            if (file == missionZone.files[0])
-                $('.dz-preview:first').hide();
-            // console.log(missionZone.files.length);
-        });
-        this.on("sending", function (file, xhr, data) {
-            data.append("job_type", $('#job_type').val());
-            data.append("job_target", $('#job_target').val());
-            data.append("job_obj", editor1.getData());
-            data.append("emp_id", $('#responsible_person').find(':selected').val());
-            data.append("jobfinished_date", $('#job_finished_date').val());
-            data.append("doing_methods", editor2.getData());
-            data.append("issue_resolve_ways", editor3.getData());
-            data.append("remark", $('#remark').val());
-        });
-        this.on("success", function (file, response) {
+// <<<<<<< HEAD
+//         var missionZone = this;
+//         let mission_id = 0;
+//         $.fn.addNewImage(missionZone);
+//         this.on("queuecomplete", function (progress) {
+//             window.location = "/mission/" + mission_id;
+//             console.log("Uploaded!!!");
+//         });
+//         this.on("error", function (file, response) {
+//             console.log(response);
+//         });
+//         this.on("addedfile", function (file, response) {
+//             if (file == missionZone.files[0])
+//                 $('.dz-preview:first').hide();
+//             // console.log(missionZone.files.length);
+//         });
+//         this.on("sending", function (file, xhr, data) {
+//             data.append("job_type", $('#job_type').val());
+//             data.append("job_target", $('#job_target').val());
+//             data.append("job_obj", editor1.getData());
+//             data.append("emp_id", $('#responsible_person').find(':selected').val());
+//             data.append("jobfinished_date", $('#job_finished_date').val());
+//             data.append("doing_methods", editor2.getData());
+//             data.append("issue_resolve_ways", editor3.getData());
+//             data.append("remark", $('#remark').val());
+//         });
+//         this.on("success", function (file, response) {
+//
+//             mission_id = file.xhr.response;
+//             //  console.log(mission_id);
+//         });
+//         $('#missionform-submit').on("click", function () {
+//             var old_mission_image = $(".old_mission_image").val();
+//             var job_type = $(".job_type").val().length;
+//             var job_target = $(".job_target").val().length;
+//             var mission_editor = editor1.getData().length;
+//             var assignee = $('.assignee').val().length;
+//             var finished_date = $('.finished_date').val().length;
+//             var methods = editor2.getData().length;
+//             var resolved_way = editor3.getData().length;
+//             var remark = $('#remark').val()
+// =======
+            var missionZone = this;
+            let mission_id=0;
+            $.fn.addNewImage(missionZone);
+            this.on("queuecomplete", function (progress) {
+                //   window.location = "/mission/"+mission_id;
+                console.log("Uploaded!!!");
+            });
+            this.on("error", function (file, response) {
+                console.log(response);
+            });
+            this.on("addedfile", function (file, response) {
+                if (file==missionZone.files[0])
+                    $('.dz-preview:first').hide(  );
+                 console.log(missionZone.files.length);
+            });
+            this.on("sending", function (file, xhr, data) {
+                data.append("job_type", $('#job_type').val());
+                data.append("job_target", $('#job_target').val());
+                data.append("job_obj", editor1.getData());
+                data.append("emp_id", $('#responsible_person').find(':selected').val());
+                data.append("jobfinished_date", $('#job_finished_date').val());
+                data.append("doing_methods", editor2.getData());
+                data.append("issue_resolve_ways", editor3.getData());
+                data.append("remark", $('#remark').val());
+            });
+            this.on("success", function (data) {
 
-            mission_id = file.xhr.response;
-            //  console.log(mission_id);
-        });
-        $('#missionform-submit').on("click", function () {
-            var old_mission_image = $(".old_mission_image").val();
-            var job_type = $(".job_type").val().length;
-            var job_target = $(".job_target").val().length;
-            var mission_editor = editor1.getData().length;
-            var assignee = $('.assignee').val().length;
-            var finished_date = $('.finished_date').val().length;
-            var methods = editor2.getData().length;
-            var resolved_way = editor3.getData().length;
-            var remark = $('#remark').val()
+                //  mission_id = data.xhr.response;
+                 console.log(data);
+            });
+            $('#missionform-submit').on("click", function () {
+                var old_mission_image = $(".old_mission_image").val();
+               var job_type=$(".job_type").val().length;
+               var job_target=$(".job_target").val().length;
+                var mission_editor=editor1.getData().length;
+                 var assignee= $('.assignee').val().length;
+                var finished_date=$('.finished_date').val().length;
+                var methods=editor2.getData().length;
+                var resolved_way=editor3.getData().length;
+                var remark=$('#remark').val();
+
+
 
 // alert(resolved_way);
             var hasError = true;
@@ -539,7 +583,11 @@ $.fn.addNewImage = function (myDropZone) {
 
 // Use JSFiddle logo as a sample image to avoid complicating
 // this example with cross-domain issues.
+// <<<<<<< HEAD
     xhr.open("GET", "http://127.0.0.1:8000/images/sae-logo.png", true);
+// =======
+//     xhr.open( "GET", "http://localhost:8000/images/sae-logo.png", true );
+// >>>>>>> 042fe945d75f1b18159b3b4104f44ad810d88584
 
 // Ask for the result as an ArrayBuffer.
     xhr.responseType = "arraybuffer";
