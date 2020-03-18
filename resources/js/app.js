@@ -749,13 +749,16 @@ $(function () {
 
 new Vue({
     el: '#app',
+
     data: {
         bb: 0,
         tostopi: true
     },
+
     watch: {
 
     },
+
     methods: {
 
         addnow: function () {
@@ -765,7 +768,6 @@ new Vue({
                     if (this.bb < 10) {
                         this.bb += 1;
                         console.log(this.bb);
-
                     } else{
                         let ff=clearInterval( this.bb );
                     }
@@ -784,7 +786,6 @@ new Vue({
     created: function () {
         // `this` points to the vm instance
         var selsf = this;
-
         selsf.addnow();
         console.log(selsf.bb)
     }
