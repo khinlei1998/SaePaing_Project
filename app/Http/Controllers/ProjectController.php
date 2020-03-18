@@ -48,8 +48,8 @@ class ProjectController extends Controller
         return redirect()->back()->withErrors($validator)->withInput();   
          }
         // $validatedData = $request->validated();
-        // Project::create();
-        // return redirect('project')->withSuccessMessage('Project created sussessfully!!');
+        Project::create($request->except("_token"));
+        return redirect('project')->withSuccessMessage('Project created sussessfully!!');
     }    /**
      * Display the specified resource.
      *
