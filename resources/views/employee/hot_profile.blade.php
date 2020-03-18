@@ -194,7 +194,7 @@
                                                                 <td class="align-middle text-center">{{ ($loop->index+1).'.'}}</td>
                                                                 <td class="align-middle text-center">{{ $task->task_id }}</td>
                                                                 <td class="align-middle">{{ Str::limit($task->task_title,30)}}</td>
-                                                                <td class="align-middle">{{ $task->assignedToEmployee->emp_name }}<br><small> ( Position : <b>{{ $task->assignedToEmployee->emp_position }} </b>)</small></td>
+                                                                <td class="align-middle">{{ $task->assignedByEmployee->emp_name }}<br><small> ( Position : <b>{{ $task->assignedByEmployee->emp_position }} </b>)</small></td>
                                                                 <td class="align-middle"><small>{{ $task->started_at }}</small></td>
                                                                 <td class="align-middle"><small>{{ $task->finish_date }}</small></td>
 
