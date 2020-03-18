@@ -49,7 +49,7 @@
                                     
 
                         }
-                        if( position=="HOD" || position=="Stuff"){
+                        if( position=="HOD" || position=="Staff" || position=="HOT"){
                             $("#Dept").show();
                                     $("#SubDept").show();
                                     $("#Team").show();

@@ -302,7 +302,7 @@ Dropzone.options.missionform = {
             this.on("addedfile", function (file, response) {
                 if (file==missionZone.files[0])
                     $('.dz-preview:first').hide(  );
-                // console.log(missionZone.files.length);
+                 console.log(missionZone.files.length);
             });
             this.on("sending", function (file, xhr, data) {
                 data.append("job_type", $('#job_type').val());
@@ -317,7 +317,7 @@ Dropzone.options.missionform = {
             this.on("success", function (file, response) {
 
                  mission_id = file.xhr.response;
-                //  console.log(mission_id);
+                 console.log(mission_id);
             });
             $('#missionform-submit').on("click", function () {
                 var old_mission_image = $(".old_mission_image").val();

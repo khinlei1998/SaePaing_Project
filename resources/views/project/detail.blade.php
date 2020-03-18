@@ -363,6 +363,12 @@
 
                 $('#hod_report_title').append(data.cbp_list.cbp_name);
                 for (var i = 0; i < data.report_list.length; i++) {
+                    var desc = "";
+                    if (data.report_list[i].report_desc==null){
+                         desc = "-";
+                    } else {
+                        desc = data.report_list[i].report_desc;
+                    }
                     var chairman_report = "<div class=\"modal-body\">\n" +
                         "                    <div class=\"card text-center\">\n" +
                         "                        <div class=\"card-header text-left\">\n" +
@@ -371,7 +377,7 @@
                         "                        </div>\n" +
                         "\n" +
                         "                        <div class=\"card-body\">\n" +
-                        "                            <p class=\"card-text\">" + data.report_list[i].report_desc + "</p>\n" +
+                        "                            <p class=\"card-text\">" + desc + "</p>\n" +
                         "                        </div>\n" +
                         "                    </div>\n" +
                         "                    <div class=\"card text-center\">\n" +
