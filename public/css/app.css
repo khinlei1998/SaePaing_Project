@@ -12368,7 +12368,7 @@ footer strong {
 .container-fornoti .box {
   position: absolute;
   top: 13%;
-  left: 76%;
+  left: 96%;
 }
 
 .container-fornoti .notifications {
@@ -12382,10 +12382,11 @@ footer strong {
 }
 
 .container-fornoti .notifications:hover {
-  width: 200px;
+  width: 290px;
   height: 60px;
   left: 80px;
   text-align: left;
+  margin-left: -140px;
   padding: 15px;
   background: #006382;
   border-bottom-left-radius: 0;
@@ -12410,6 +12411,10 @@ footer strong {
   text-align: center;
 }
 
+.container-fornoti .notifications:hover .dropdown-menu {
+  margin-left: -140px;
+}
+
 .container-fornoti .notifications:hover i {
   display: none;
 }
@@ -12429,10 +12434,10 @@ footer strong {
 
 .container-fornoti .dropdown-menu {
   position: absolute;
-  left: 0;
+  right: 100px;
   top: 50px;
-  margin: 0;
-  width: 100%;
+  width: 290px;
+  margin-right: 50px;
   background: #fff;
   padding: 10px;
   box-sizing: border-box;
