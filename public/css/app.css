@@ -12361,6 +12361,10 @@ footer strong {
   padding-top: 15px;
 }
 
+.tui-image-editor-download-btn {
+  display: none !important;
+}
+
 .modal {
   z-index: 1210;
 }

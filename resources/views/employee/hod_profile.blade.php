@@ -86,7 +86,7 @@
                                                 <div class="col-8 mt-1">
                                                 {{ $employee->emp_jobdesp}}
                                                 </div>
-                                                
+
                                             </div>
                                     </div>
                                     <div class="col-4">
@@ -101,11 +101,11 @@
                                             <div class="mb-2 mt-2">
                                                 <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                                 <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
-                                            
+
                                             </div>
-                                            
+
                                     </div>
-                                    
+
                                     <div class="row no-gutters">&nbsp;</div>
                                 </div>
 
@@ -423,8 +423,8 @@
 
                                     <div class="container">
 
-                                       
-                                            
+
+
                                                 <div class="row cbp-container">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                                                         <div class="row cbp-profile  mt-3 mb-2">
@@ -503,22 +503,22 @@
                                                                                 </h4>
                                                                             </div>
 
-                                                                           
-                                                                            
-                                                                             
-                                                                            
-                                                                          
+
+
+
+
+
                                                                             <div id="collapseOne{{$loop->index}}" class="panel-collapse collapse ml-3" role="tabpanel" aria-labelledby="headingOne">
                                                                                 <div class="shadow-sm p-3 mb-3 bg-white rounded panel-body pt-5 rounded">
 
                                                                                     <div class="row hod-cbp-subtask">
-                                                                                   
+
 
                                                                                     @if(empty($cbplist->cbp_sub_lists))
                                                                                         @else
                                                                                          @foreach($cbplist->cbp_sub_lists as $sublist)
 
-                                                                                           
+
                                                                                          <div class="col-md-6">
                                                                                               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                                                   <div class="panel panel-default">
@@ -572,7 +572,7 @@
 
                                                                                 </div>
                                                                             </div>
-                                                                           
+
                                                                            </div>
                                                                         @endforeach
                                                                     </div>
@@ -663,8 +663,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            
-                                        
+
+
                                     </div>
 
                                 </div>
@@ -682,6 +682,29 @@
 @push('scripts')
     <script>
 //   window.swal("Thank you for the message, we'll look into the issue and fix it as soon as we can!")
+<<<<<<< HEAD
+    function myFunction(b,c,e,f) {
+
+           console.log(e);
+        var i;
+        var hors='hide';
+
+        for(i=0;i<b.length;i++){
+            console.log(b[i].project_id);
+            if(b[i].cbp_subtask_id==c && b[i].project_id==f){
+                console.log("true");
+                hors='hide' ;
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'This subtask is assigned to HOT,Plz choose another subtask',
+                    })
+            break;
+
+            }else{
+                hors='show' ;
+                console.log("false");
+=======
     var cbplist=0;
     var sublist=0;
     
@@ -699,6 +722,7 @@
             cbplist=g;
                 sublist=h;
       
+>>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
 
         console.log(c);
         if(b.length==0){
@@ -724,6 +748,13 @@
                         hors='show' ;
                         console.log("false");  
 
+<<<<<<< HEAD
+        }
+
+        $('#cbb_hot_modal').modal(hors);
+        $('#cbp_sub_task_title').html( e );
+
+=======
                             }
 
                         }
@@ -736,6 +767,7 @@
        
               
          
+>>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
 
     }
   
@@ -766,12 +798,46 @@
             localStorage.setItem("require_error", "");
 
             $(function(){
+<<<<<<< HEAD
+                $('#project_region').select2({
+                    placeholder:'Choose HOT',
+                    dropdownParent:$('.modal.fade.show')
+                });
+                var config_id = 0;
+                var subtask_id  = 0;
+                // $(".show_cbp_hot").click(function(){
+                //     $('#cbp_sub_task_title').empty();
+                //     var title = $(this).data('subcbptitle');
+                //     config_id= $(this).data('configid');
+                //     subtask_id = $(this).data('subcbpid');
+                //     // alert(subtask_id);
+                //     project_id= $(this).data('projectid');
+
+
+
+                //     $('#cbp_sub_task_title').append(title);
+
+                //     if(assignhot_iss ==assignhot_is ){
+                //         $('#cbb_hot_modal').modal('hide');
+                //     }else{
+                //         $('#cbb_hot_modal').modal('show');
+                //     }
+
+                // });
+
+
+
+
+
+
+=======
                 // $('#project_region').select2({
                 //     placeholder:'Choose HOT',
                 //     dropdownParent:$('.modal.fade.show')
                 // });
                
   
+>>>>>>> a14f98e2f7f67b4a5ee91526d8082624563b01a0
                 $('#btn_cbp_hot').click(function(){
                     var hot_id = $('#project_regionn').find(':selected').val();
                     // console.log(hot_id);

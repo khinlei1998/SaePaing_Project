@@ -177,7 +177,7 @@
                                                                 <p class="d-inline-block"><strong>Process
                                                                         Complete</strong><label class="mr-2">
                                                                 <p class="d-inline-block"
-                                                                   id="">fff</p></label>
+                                                                   id="complete_process">0</p></label>
                                                                 </p>
                                                             </div>
 
@@ -331,6 +331,7 @@
                         percentage_start = parseInt(percentage_start) + 1;
                         $('.progress-bar').css("width",percentage_start+'%');
                         $('.progress-bar').html(percentage_start+'%');
+                        $('#complete_process').html(percentage_start+'%');
                         console.log(percentage_start);
                     } else {
 

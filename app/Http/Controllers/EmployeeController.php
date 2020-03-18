@@ -193,28 +193,28 @@ class EmployeeController extends Controller
      */
     public function update(EmployeeRequest $employeeRequest,Employee $employee)
     {
-        dd($employee);
-        // if($employee->emp_position==='D'){
-        //    dd($employee->emp_position);
-        //     $emp=new Employee();
-        //     $emp->emp_id=$employee->emp_id;
-        //     $emp->emp_name=$employee->emp_name;
-        //     $emp->emp_jobdesc=$employee->emp_jobdesc;
-        //     $emp->emp_position=$employee->emp_position;
-        //     $emp->emp_profile=$employee->emp_profile;
-        //     $emp->group_id=$employee->group_id;
-        //     $emp->subdept_id=0;
-        //     $emp->dept_id=0;
-        //     $emp->team_id=0;
-        //     $emp->save();
+        dd($employee->request);
+        if($employee->request->emp_position==='D'){
+           dd($employee->emp_position);
+            $emp=new Employee();
+            $emp->emp_id=$employee->emp_id;
+            $emp->emp_name=$employee->emp_name;
+            $emp->emp_jobdesc=$employee->emp_jobdesc;
+            $emp->emp_position=$employee->emp_position;
+            $emp->emp_profile=$employee->emp_profile;
+            $emp->group_id=$employee->group_id;
+            $emp->subdept_id=0;
+            $emp->dept_id=0;
+            $emp->team_id=0;
+            $emp->save();
 
 
 
 
-        // }else{
-        //     $employee->update($employeeRequest->all());
-        //     return redirect('/employee')->withUpdateMessage('Employee updated sussessfully!!');
-        // }
+        }else{
+            $employee->update($employeeRequest->all());
+            return redirect('/employee')->withUpdateMessage('Employee updated sussessfully!!');
+        }
         
       
        

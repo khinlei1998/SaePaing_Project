@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container pb-4">
         <div class="card shadow-lg index-tables border-0 mt-5">
