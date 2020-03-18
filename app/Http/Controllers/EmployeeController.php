@@ -190,9 +190,10 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(EmployeeRequest $employeeRequest,Employee $employee)
+    public function update(Request $request)
     {
-        $employee->update($employeeRequest->all());
+        dd($request);
+        // $employee->update($employeeRequest->all());
         return redirect('/employee')->withUpdateMessage('Employee updated sussessfully!!');
    }
 

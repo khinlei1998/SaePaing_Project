@@ -78,7 +78,7 @@ import {
     faAngleRight,
     faClock,
     faAngleUp,
-    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt,faRedoAlt
+    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt,faRedoAlt,faCircle,faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
     faHome,faTasks,faEdit,
@@ -88,7 +88,7 @@ library.add(
     faNetworkWired,faPlusCircle,faCheck
     ,faShareSquare,faCalendarAlt,faInfoCircle
     ,faAngleLeft,faAngleRight,faClock,
-    faAngleUp,faAngleDown,faTrashAlt,faBookmark,faCheckCircle,faAtlas,faDownload,faBell,faMailBulk,faCog,faSortDown,faKey,faExchangeAlt,faRedoAlt);
+    faAngleUp,faAngleDown,faTrashAlt,faBookmark,faCheckCircle,faAtlas,faDownload,faBell,faMailBulk,faCog,faSortDown,faKey,faExchangeAlt,faRedoAlt,faCircle,faShoppingCart);
 dom.watch();
 
 //this declaration is for datetime picker in task create.balde.php

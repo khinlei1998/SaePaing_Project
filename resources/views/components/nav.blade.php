@@ -59,7 +59,18 @@
                     </form>
                 </li> -->
 
-                <div class="btn-group" style="position:absolute;margin-left:940px;">
+
+                <!-- <div id="ex3" style="padding-left:400px;">
+                <span class="fa-stack fa-2x has-badge" data-count="3">
+                    <i class="p2 fa fa-circle fa-stack-2x fa-xs" style="color:white"></i>
+                    <i class="p2 fas fa-bell fa-xs" style="position: absolute; z-index:1;left:27px;top:5px;"></i>
+                   
+                </span>
+                </div> -->
+
+                
+
+                <div class="btn-group" style="position:absolute;margin-left:890px;">
 
                 <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php
@@ -76,7 +87,7 @@
                 <img src="{{url('/storage/profile/'.$img)}}" width="43" height="43" alt="..." class="rounded-circle"><strong>&nbsp;&nbsp;{{ auth()->user()->name }}</strong>&emsp;<span class="sr-only">Toggle Dropdown</span>
                 </button>
 
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" style="width:205px;">
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                     <div class="dropdown-divider"></div>
@@ -92,11 +103,42 @@
 
                 </div>
 
+                
+
                 </div>
+
+                <div class="container-fornoti">
+                    <div class="row">
+                        <div class="box pt-2">
+                    <div class="notifications p-2">
+                        <i class="fa fa-bell fa-lg y-index"></i>
+                        <span class="num">5</span>
+
+                        <div class="dropdown-menu shadow">
+                            <a class="dropdown-item" href="#"><i class="fa fa-info-circle"></i> Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+                    </div>
+                </div>
+
+                
+                
+
+
+
 
 
                 <!-- <li class="mr-1 pr-2 pl-2"><i class="fa fa-user"></i><span class="ml-1">{{ auth()->user()->name }}</span></li> -->
             </ul>
+
+
         </nav>
+
+        
     </div>
 </div>
