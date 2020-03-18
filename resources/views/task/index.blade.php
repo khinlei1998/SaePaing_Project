@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                                 <div class="row">
-                                    <h4 class="mt-4 text-center w-100"><strong>To Do List</strong></h4>
+                                    <h4 class="mt-4 text-center w-100"><strong>Lists of Task</strong></h4>
                                     <a href="{{ route('task.create') }}" class="position-absolute add-button-link mt-4 mr-3">
                                         <button data-toggle="tooltip" data-placement="left" title="Add New To Do Lists" class="btn add-button text-white"><i class="fas fa-plus-circle"></i> Add </button>
                                     </a>

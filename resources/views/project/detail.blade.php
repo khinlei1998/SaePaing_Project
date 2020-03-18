@@ -177,7 +177,7 @@
                                                                 <p class="d-inline-block"><strong>Process
                                                                         Complete</strong><label class="mr-2">
                                                                 <p class="d-inline-block"
-                                                                   id="">fff</p></label>
+                                                                   id="complete_process">0</p></label>
                                                                 </p>
                                                             </div>
 
@@ -331,6 +331,7 @@
                         percentage_start = parseInt(percentage_start) + 1;
                         $('.progress-bar').css("width",percentage_start+'%');
                         $('.progress-bar').html(percentage_start+'%');
+                        $('#complete_process').html(percentage_start+'%');
                         console.log(percentage_start);
                     } else {
 
@@ -362,6 +363,12 @@
 
                 $('#hod_report_title').append(data.cbp_list.cbp_name);
                 for (var i = 0; i < data.report_list.length; i++) {
+                    var desc = "";
+                    if (data.report_list[i].report_desc==null){
+                         desc = "-";
+                    } else {
+                        desc = data.report_list[i].report_desc;
+                    }
                     var chairman_report = "<div class=\"modal-body\">\n" +
                         "                    <div class=\"card text-center\">\n" +
                         "                        <div class=\"card-header text-left\">\n" +
@@ -370,7 +377,7 @@
                         "                        </div>\n" +
                         "\n" +
                         "                        <div class=\"card-body\">\n" +
-                        "                            <p class=\"card-text\">" + data.report_list[i].report_desc + "</p>\n" +
+                        "                            <p class=\"card-text\">" + desc + "</p>\n" +
                         "                        </div>\n" +
                         "                    </div>\n" +
                         "                    <div class=\"card text-center\">\n" +

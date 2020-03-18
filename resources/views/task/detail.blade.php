@@ -269,7 +269,7 @@
                                         <div class="col-lg-12 bg-white text-right"><button class="btn btn-danger rounded shadow text-right" name="status" value="start">Start</button></div>
                                         @endif
                                         @if(auth::user()->emp_id==$task->assignor_person && $task->status != 3)
-                                    <div class="col-md-12 bg-white text-right"><a href="{{ route('task.edit', $task) }}" class="btn btn-outline-secondary"><i class="fas fa-edit"></i>&nbsp;&emsp;Edit Page&emsp; </a></a></div>
+                                    <div class="col-md-12 bg-white text-right"><a href="{{ route('task.edit', $task) }}" class="btn btn-outline-secondary"><i class="fas fa-edit"></i>&nbsp;&emsp;Edit Task&emsp; </a></a></div>
                                     <!-- <div class="col-md-2"> <a href="" class="btn bg-orange text-white"><i class="fas fa-edit"></i>&emsp;Start</a></div> -->
                                     @endif
                                     </form>

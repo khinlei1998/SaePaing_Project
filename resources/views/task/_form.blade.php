@@ -23,7 +23,7 @@
         </div>
 
         <div class="col-3">
-            <label for="task_title" class="font-weight-bold text-muted"> <span>*</span> Project code :</label>
+            <label for="task_title" class="font-weight-bold text-muted"> <span>&nbsp;&nbsp;</span> Project code :</label>
         </div>
 
         <div class="col-9">

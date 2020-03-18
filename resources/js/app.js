@@ -128,8 +128,7 @@ Dropzone.options.taskform = {
         var task_id=0;
 
         this.on("queuecomplete", function (progress) {
-          
-     
+
             console.log("Uploaded!!!");
         });
 
@@ -138,11 +137,11 @@ Dropzone.options.taskform = {
         });
         this.on("addedfile", function (file, response) {
 
-            // if (file==myDropZone.files[0]) {
+            if (file==myDropZone.files[0]) {
 
-            //     $('.dz-preview:first').hide();
-
-            // }
+                $('.dz-preview:first').hide();
+       
+            }
             console.log(myDropZone.files.length);
             // console.log('New File Added');
         });
@@ -169,12 +168,6 @@ Dropzone.options.taskform = {
           
 
           }
-         
-       
-        
-
-
-          
 
         });
         this.on("sending", function (file, xhr, data) {
@@ -194,13 +187,10 @@ Dropzone.options.taskform = {
             var old_image=$('.old_image').val();
             var task_title=$(".task_title").val().length;
             // alert(task_title);
-             var project_code = $('.project_code').val().length;
-
+            //  var project_code = $('.project_code').val().length;
              var department_append =$('.department_append').find(':selected').val();
-
              var project_editor=taskeditor.getData().length;
-             var employee=$('#project_code').val().length;
-            //
+             var employee=$('.employee').val().length;
              var start_time=$('.task_start_time').val();
              var end_time=$('.task_end_time').val();
             var hasError = true;
@@ -214,15 +204,15 @@ Dropzone.options.taskform = {
             }else{
                 $('#task-title-append').find("label").remove();
             }
-             if(!project_code){
-                hasError=false;
+            //  if(!project_code){
+            //     hasError=false;
 
-                $('.project_code_append').find("label").remove();
-                $('.project_code_append').append("<label> * Please Enter Project Code.</label>");
-             }else{
-                $('.project_code_append').find("label").remove();
+            //     $('.project_code_append').find("label").remove();
+            //     $('.project_code_append').append("<label> * Please Enter Project Code.</label>");
+            //  }else{
+            //     $('.project_code_append').find("label").remove();
 
-             }
+            //  }
              if(old_image){
                  hasError=true;
              }
@@ -303,7 +293,7 @@ Dropzone.options.missionform = {
             let mission_id=0;
             $.fn.addNewImage(missionZone);
             this.on("queuecomplete", function (progress) {
-                  window.location = "/mission/"+mission_id;
+                //   window.location = "/mission/"+mission_id;
                 console.log("Uploaded!!!");
             });
             this.on("error", function (file, response) {
@@ -312,7 +302,7 @@ Dropzone.options.missionform = {
             this.on("addedfile", function (file, response) {
                 if (file==missionZone.files[0])
                     $('.dz-preview:first').hide(  );
-                // console.log(missionZone.files.length);
+                 console.log(missionZone.files.length);
             });
             this.on("sending", function (file, xhr, data) {
                 data.append("job_type", $('#job_type').val());
@@ -324,10 +314,10 @@ Dropzone.options.missionform = {
                 data.append("issue_resolve_ways", editor3.getData());
                 data.append("remark", $('#remark').val());
             });
-            this.on("success", function (file, response) {
+            this.on("success", function (data) {
 
-                 mission_id = file.xhr.response;
-                //  console.log(mission_id);
+                //  mission_id = data.xhr.response;
+                 console.log(data);
             });
             $('#missionform-submit').on("click", function () {
                 var old_mission_image = $(".old_mission_image").val();
@@ -585,6 +575,8 @@ $(function () {
 
     });
 
+   
+
 
 
     //Default configration for datetime picker
@@ -677,6 +669,11 @@ $(function () {
     $('.modal').on('shown.bs.modal', function (e) {
         $('.processby').select2({
             placeholder:"Select a HOD",
+            dropdownParent:$('.modal.fade.show')
+        });
+
+        $('#project_regionn').select2({
+            placeholder:"Select a HOT",
             dropdownParent:$('.modal.fade.show')
         });
 

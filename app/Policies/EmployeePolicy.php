@@ -57,7 +57,8 @@ class EmployeePolicy
      */
     public function update(User $user, Employee $employee)
     {
-        return $user->role->id === Role::where("role","MD")->first()->id ?
+
+        return $user->role->id === Role::where("role","Chairman")->first()->id ?
             Response::allow() : Response::deny('You need Chairman access to update Employee.');
     }
 

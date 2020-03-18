@@ -1,4 +1,4 @@
-<form class="form-horizontal" method="POST" action="{{ route('project.store') }}">
+<form class="form-horizontal" method="POST" action="{{ route('project.store') }}" >
 @csrf
 
 <div class="container">
@@ -16,12 +16,16 @@
         <div class="col-9">
             <div class="form-group">
                 <div class="input-group">
-                    <input type="text" class="@error('project_title') is-invalid @enderror form-control" name="project_title" placeholder="Name" value="{{ old('project_title') }}" autocomplete="project_title" autofocus required />
-                    @error('project_title')
+                    <input type="text" class="@error('project_title') is-invalid @enderror form-control" name="project_title" placeholder="Name" value="{{ old('project_title') }}" autocomplete="project_title" autofocus  />
+                  
+                    @if($errors->has('project_title'))
+                    @foreach($errors->get('project_title') as $pt)
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
+                            <strong>{{ $pt }}</strong>
                         </span>
+                        @endforeach
                     @enderror
+                   
                 </div>
             </div>
         </div>
@@ -32,11 +36,7 @@
         <div class="col-9">
             <div class="form-group">
                     <textarea name="project_description" class="editor"></textarea>
-                    @error('project_description')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
+                
             </div>
         </div>
 ​
@@ -46,12 +46,8 @@
         <div class="col-9">
             <div class="form-group">
                 <div class="input-group">
-                    <input type="text" class="@error('project_code') is-invalid @enderror form-control" name="project_code" placeholder="Project Code" value="{{ old('project_code') }}" autocomplete="project_code" required />
-                    @error('project_code')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
+                    <input type="text" class="@error('project_code') is-invalid @enderror form-control" name="project_code" placeholder="Project Code" value="{{ old('project_code') }}" autocomplete="project_code"  />
+                   
                 </div>
             </div>
         </div>
@@ -98,7 +94,9 @@
        
 
         <div class="offset-3 col-9 mt-2">
-            <button class="btn btn-primary rounded shadow" type="submit">Create Project</button>
+           
+          <button class="btn btn-primary rounded shadow" type="submit"  id="createsub">Create Project</button>
+
         </div>
     </div>
 </div>

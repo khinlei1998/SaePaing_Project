@@ -95,7 +95,7 @@
                                                     <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                                     <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                         <!--Profile Modal -->
@@ -560,7 +560,7 @@
 
                                                             <br><small> </small>
                                                             </td>
-                                                            
+
 
                                                             <td class="align-middle">
                                                               <button type="button" class="btn btn-success btn_hot_report" data-hot_person_id="{{$hod_id}}" data-cbp_id="{{ $assigned_data->id}}" data-config_title="{{$hod_name}}">Report</button>
@@ -581,7 +581,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
 
@@ -723,14 +723,14 @@
 
 
                 //submit the model
-                
-               
+
+
 
                 $('#hod_report_submit').click(function(){
 
                     var report_text = $('#report_text').val();
                     console.log(report_text);
-                   
+
                     $.ajax({
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -741,20 +741,20 @@
                     }).done(function (data) {
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                         if(data.success){
-                           
+
                             console.log("fine");
                         // textarea value to empty
                         $('#report_text').val('');
                         //hide bs modal
                         $('#hod_report_modal').modal('hide');
-                        
+
                         Swal.fire(
                             'Good job!',
                             'Report Successfully',
                             'success'
                             )
-                                                
-                             
+
+
 
                         console.log(data.message);
                         }else{
@@ -765,8 +765,8 @@
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
                 });
-                
-                
+
+
 
 
             });
