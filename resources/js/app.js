@@ -293,7 +293,7 @@ Dropzone.options.missionform = {
             let mission_id=0;
             $.fn.addNewImage(missionZone);
             this.on("queuecomplete", function (progress) {
-                //   window.location = "/mission/"+mission_id;
+                  window.location = "/mission/"+mission_id;
                 console.log("Uploaded!!!");
             });
             this.on("error", function (file, response) {
@@ -316,8 +316,8 @@ Dropzone.options.missionform = {
             });
             this.on("success", function (data) {
 
-                //  mission_id = data.xhr.response;
-                 console.log(data);
+                 mission_id = data.xhr.response;
+                //  console.log(mission_id);
             });
             $('#missionform-submit').on("click", function () {
                 var old_mission_image = $(".old_mission_image").val();
