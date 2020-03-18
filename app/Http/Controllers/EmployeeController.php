@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Employee;
+use App\Histories;
 use App\Role;
 use App\User;
 use App\Group;
@@ -155,6 +156,15 @@ class EmployeeController extends Controller
     }
 
 
+    public function getnoti(){
+        $emp_id=Auth::user()->emp_id;
+        $get_notifrom_db=Histories::where([['receiver_id','=',$emp_id],['read_this','=',false]]);
+
+        return response()->json(['data'=>['count'=>$get_notifrom_db->count(),'data'=>$get_notifrom_db]]);
+
+    }
+
+
     /**
      * Display the specified resource.
      *
@@ -187,6 +197,7 @@ class EmployeeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(EmployeeRequest $employeeRequest, Employee $employee)
+
     {
 
         // dd($employee->request);

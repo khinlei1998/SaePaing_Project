@@ -47,7 +47,7 @@ class MissionController extends Controller
         $filenames = "";
 
         $files = $request->file('mission_file');//file array
-        dd($files);
+      
         
         array_shift($files);//remove first array item
 
@@ -64,6 +64,12 @@ class MissionController extends Controller
 
         return response()->json($createdmissions_id);
     }
+    public function missionImageUpload($file){
+       
+        $path = $file->store('missions', 'public');
+        return $path;
+    }
+    
     /**
      * Display the specified resource.
      *
@@ -98,15 +104,22 @@ class MissionController extends Controller
     {
         $filenames = "";
         $files = $request->file('mission_file');
+        // dd($files);
+       
         array_shift($files);
-        foreach($files as $file){
+        foreach($files as $key => $file){
             if (next($files)==true)
-                $filenames.=$this->imagehelper->missionImageUpload('missions',$file).":";
+                $filenames.=$this->missionImageUpload($file).":";
             else
-                $filenames.=$this->imagehelper->missionImageUpload('missions',$file);
+                $filenames.=$this->missionImageUpload($file);
         }
+        // dd($filenames);
         $originfiles = $mission->attach_files;
-        $filenames = strlen($originfiles)>0?$originfiles.":".$filenames:$filenames;
+        if ($originfiles) {
+            $filenames = $filenames ? $originfiles . ":" . $filenames : $originfiles;
+        } else {
+            $filenames = $filenames ? $originfiles . $filenames : $originfiles;
+        }
         $mission->update(array_merge($request->except(['jobfinished_date']), ['status' => '0','attach_files'=>$filenames,'jobfinished_date'=>Carbon::create($request->jobfinished_date)->toDateTimeString()]));
        $updated_mission=$mission->mission_id;
 
@@ -142,6 +155,35 @@ class MissionController extends Controller
     //for mission image uploading return type missions/filename.extension
     public function removeImage(Request $request)
     {
-        return $this->imagehelper->removeImage($request);
+        //return $this->imagehelper->removeImage($request);
+        $mission = Mission::find($request->mission_id);
+        // dd($task->assignor_attach_file);
+        
+        if (strpos($mission->attach_files, ":".$request->src) !== false) {
+            $mission->attach_files = str_replace(":".$request->src,"", $mission->attach_files);
+
+        }elseif(strpos( $mission->attach_files,$request->src.":") !== false){
+            $mission->attach_files = str_replace($request->src.":","", $mission->attach_files);
+
+        }else{
+            $mission->attach_files = str_replace($request->src,"", $mission->attach_files);
+        }
+        // dd( $mission->attach_files);
+
+
+       
+        // $mission->attach_files = str_replace($request->src.":","",$mission->attach_files);
+        // $mission->attach_files= str_replace($request->src,"",$mission->attach_files);
+        //  dd( $mission->attach_files);
+        if($mission->save()) {
+            Storage::disk('public')->delete($request->src);
+            return response()->json([
+                'success' => "true"
+            ]);
+        } else{
+            return response()->json([
+                'success'=>"false"
+            ]);
+        }
     }
 }

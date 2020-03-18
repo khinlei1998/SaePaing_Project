@@ -43,9 +43,7 @@
 </head>
 <body class="bg-white">
     <div id="app" class="uniandzawgyi uni">
-        <div id="test">
-            @{{ bb }}
-        </div>
+
     <div>
     </div>
         @auth

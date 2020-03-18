@@ -212,11 +212,15 @@ class ProjectConfigController extends Controller
 
         $p_config->save();
 
+        //this line is for notification
 
         if($this->historyhelper->setnoti(Auth::user()->id,$request->hod,$request->cbpid,$request->pid,'ffffffff',false)){
             return response()->json(["success"=>true]);
 
         }
+
+        //this line is for notification
+
 
 
     }

@@ -27,6 +27,7 @@ Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
         return response()->json(['success'=>$u]);
     });
 
+    Route::get('/getnoti','EmployeeController@getnoti');
 
 
 
@@ -69,6 +70,8 @@ Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
     
     //removeimage
     Route::post('/removeimage','TaskController@removeImage')->name('removeimage');
+      // Mission remove image
+      Route::post('/removeMissionImage','MissionController@removeImage')->name('removeMissionImage');
     //cbpsub task
     Route::resource('/cbp_subtask', 'CBPSubtaskController');
     // cbp_config
