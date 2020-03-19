@@ -160,7 +160,7 @@ class EmployeeController extends Controller
         $emp_id=Auth::user()->emp_id;
         $get_notifrom_db=Histories::where([['receiver_id','=',$emp_id],['read_this','=',false]]);
 
-        return response()->json(['data'=>['count'=>$get_notifrom_db->count(),'data'=>$get_notifrom_db]]);
+        return response()->json(['data'=>['count'=>$get_notifrom_db->count(),'data'=>$get_notifrom_db->get()]]);
 
     }
 

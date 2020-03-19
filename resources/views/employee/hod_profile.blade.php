@@ -9,17 +9,19 @@
                     <div class="row">
                         <div class="col-2">
                             <div class="list-group profile-list">
-                                <a href="#infos" class="list-group-item active" data-toggle="tab"><span><br><i class="fa fa-user"></i><br>Profile</span></a>
+
+
+                                <a  class="list-group-item" href="#aaf" data-toggle="tab"><span><br><i class="fa fa-user"></i><br>Profile</span></a>
                                 <a class="list-group-item" href="#tasks" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>Tasks</span></a>
                                 <a class="list-group-item" href="#sharetasks" data-toggle="tab"><span><br><i class="fa fa-share-square"></i><br>Shared Tasks</span></a>
                                 <a class="list-group-item" href="#missions" data-toggle="tab"><span><br><i class="fa fa-calendar-alt"></i><br>Missions</span></a>
-                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMP</span></a>
+                                <a class="list-group-item " href="#cbp" id="cbp_active" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMP</span></a>
 
                             </div>
                         </div>
                         <div class="col-10">
                             <div class="tab-content">
-                                <div class="tab-pane fade show active" id="infos" role="tabpanel">
+                                <div class="tab-pane fade" id="aaf" role="tabpanel">
                                 <div class="row mt-2">
                                     <div class="col-8">
                                     <div class="row">
@@ -129,11 +131,11 @@
 
 
 
-                                                    {{--                                                    <form action="{{route('mission.store')}}"--}}
-                                                    {{--                                                          class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">--}}
+                                                                                                        <form action="{{route('mission.store')}}"
+                                                                                                              class="dropzone" id="profileform" method="POST" enctype="multipart/form-data">
 
-                                                    {{--                                                        @csrf--}}
-                                                    {{--                                                    </form>--}}
+                                                                                                            @csrf
+                                                                                                        </form>
 
 
 
@@ -540,13 +542,13 @@
                                                                                                                               </div>
 
                                                                                                                           </div>
-                                                                                                                                 
+
                                                                                                                           <div class="col-md-1">
                                                                                                                               <!-- <div class="cog-icon show_cbp_hot"    data-configid="{{$cbplist['id']}}"   data-subcbpid="{{$sublist['id']}}" data-projectid="{{$cbplist['project_id']}}" data-subcbptitle="{{$sublist['cbp_subtask']}}"  data-subcbptitle="{{$sublist['cbp_subtask']}}"  ><i class="fa fa-cog"></i></div> -->
-                                                                                                                               
+
                                                                                                                               <div class="cog-icon show_cbp_hot" onclick="myFunction({{$assignhot}},{{$sublist['id']}},'{{$sublist['cbp_subtask']}}','{{$cbplist['project_id']}}','{{$cbplist['id']}}','{{$sublist['id']}}')" ><i class="fa fa-cog"></i></div>
 
-                                                                                                                               
+
                                                                                                                               <!-- <button onclick="myFunction('p')">Click me</button> -->
 
                                                                                                                           </div>
@@ -639,7 +641,7 @@
                                                                                                 <label class="font-weight-bold text-muted" for="project_region"><i class="fa fa-user"></i> &nbsp;Process By</label>
                                                                                             </div>
                                                                                             <div class="col-7 mr-2">
-                                                                                               
+
                                                                                                 <select class="w-100" id="project_regionn">
                                                                                                     <option value=""></option>
                                                                                                      @foreach($hots as $hot)
@@ -707,7 +709,7 @@
 // =======
     var cbplist=0;
     var sublist=0;
-    
+
     function myFunction(b,c,e,f,g,h) {
         var x=localStorage.getItem('Hod_id');
          console.log(x);
@@ -721,7 +723,7 @@
          }else{
             cbplist=g;
                 sublist=h;
-      
+
 
 
         console.log(c);
@@ -734,19 +736,19 @@
                 for(i=0;i<b.length;i++){
                     console.log(b[i].project_id);
                     if(b[i].cbp_subtask_id==c && b[i].project_id==f){
-                        console.log("true"); 
+                        console.log("true");
                         hors='hide' ;
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
                             text: 'This subtask is assigned to HOT,Plz choose another subtask',
                             })
-                            
+
                         break;
-                
+
                     }else{
                         hors='show' ;
-                        console.log("false");  
+                        console.log("false");
 
         // }
 
@@ -757,21 +759,21 @@
                             }
 
                         }
-                
-                    $('#cbb_hot_modal').modal(hors);  
+
+                    $('#cbb_hot_modal').modal(hors);
                     $('#cbp_sub_task_title').html( e );
 
                 }
          }
-       
-              
-         
+
+
+
 
 
     }
-  
 
-   
+
+
 
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -788,6 +790,22 @@
         }
 
         window.onload=function(){
+
+        if(localStorage.getItem('cmp') == 'Active'){
+            $('#cbp_active').addClass( 'active' );
+            $('#cbp').addClass( 'in' );
+
+            $('#cbp').addClass( 'active' );
+            $('#cbp').addClass( 'show' );
+            // var element = document.getElementById("cbp_active");
+            // element.add("Active");
+            console.log('afeafeae');
+
+        }else{
+            console.log('ppppp');
+        }
+
+
             if(localStorage.getItem('Hod_id') !== null){
                 localStorage.removeItem('Hod_id');
 
@@ -834,22 +852,22 @@
                 //     placeholder:'Choose HOT',
                 //     dropdownParent:$('.modal.fade.show')
                 // });
-               
-  
+
+
 
                 $('#btn_cbp_hot').click(function(){
                     var hot_id = $('#project_regionn').find(':selected').val();
                     // console.log(hot_id);
                     // localStorage.setItem('Hod_id',hot_id);
-                  
+
                    var deadline=$('#job_start_time').val();
                    var config_id=cbplist;
                    var cbp_subtask_id=sublist;
-               
 
-                    
+
+
                     if(deadline == ''){
-                           
+
 
                     }else{
                         $.ajax({
@@ -874,14 +892,14 @@
                     }).fail(function (jqXHR, textStatcbp_listus) {
                         console.log("F blade: [task/create] component :[department dropdown] from:app.js Fail =>" + textStatus)
                     });
-                  
+
                   }
 
                 });
 
-                  
-                  
-                 
+
+
+
 
 
                 var config_id  = 0;

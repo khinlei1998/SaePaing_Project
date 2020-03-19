@@ -1091,7 +1091,7 @@ footer{
   .box {
     position:absolute;
     top:13%;
-    left:76%;
+    left:96%;
   }
   .notifications {
       width:38px;
@@ -1104,10 +1104,11 @@ footer{
      
   }
   .notifications:hover {
-      width:200px;
+      width:290px;
       height:60px;
       left:80px;
       text-align:left;
+      margin-left:-140px;
       padding:15px;
       background:#006382;
       border-bottom-left-radius:0;
@@ -1129,6 +1130,9 @@ footer{
       font-family:sans-serif;
       text-align:center;
   }
+  .notifications:hover .dropdown-menu{
+      margin-left:-140px;
+  }
   .notifications:hover i{
     display:none;
   }
@@ -1146,10 +1150,10 @@ footer{
   }
   .dropdown-menu {
       position:absolute;
-      left:0;
+      right:100px;
       top:50px;
-      margin:0;
-      width:100%;
+      width:290px;
+      margin-right:50px;
       background:#fff;
       padding:10px;
       box-sizing:border-box;

@@ -12,6 +12,7 @@
     Vue.component('apexchart', VueApexCharts);
 
     export default {
+
         name: "Piechart",
 
         props: ['project_per'],

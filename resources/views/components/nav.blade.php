@@ -70,7 +70,7 @@
 
                 
 
-                <div class="btn-group" style="position:absolute;margin-left:890px;">
+                <div class="btn-group" style="position:absolute;margin-left:800px;max-width:230px;">
 
                 <button class="btn bg-white btn-sm dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php

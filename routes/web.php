@@ -30,6 +30,14 @@ Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
     Route::get('/getnoti','EmployeeController@getnoti');
 
 
+    Route::get('td',function(){
+       $fe=\App\Histories::get();
+       foreach($fe as $f){
+           echo $f->human_date;
+       }
+    });
+
+
 
 
 
