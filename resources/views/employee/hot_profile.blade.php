@@ -154,16 +154,16 @@
                                                 <div class="row mt-3 mb-3 justify-content-center text-muted pb-3">
 
                                                     <div class="col-md-2 col-sm-4 text-md-center">
-                                                        <small><span class="bg-info mr-2">&nbsp;&nbsp;</span>Assigned <b>{{ $employee->assignedTasks()->where('status','0')->count() }}</b></small>
+                                                        <small><span class="bg-light mr-2">&nbsp;&nbsp;</span>Assigned <b>{{ $employee->assignedTasks()->where('status','0')->count() }}</b></small>
                                                     </div>
                                                     <div class="col-md-2 col-sm-4 text-md-center">
-                                                        <small><span class="bg-success mr-2">&nbsp;&nbsp;</span>Started <b>{{ $employee->assignedTasks()->where('status','1')->count() }}</b></small>
+                                                        <small><span class="bg-info mr-2">&nbsp;&nbsp;</span>Started <b>{{ $employee->assignedTasks()->where('status','1')->count() }}</b></small>
                                                     </div>
                                                     <div class="col-md-2 col-sm-4 text-md-center">
                                                         <small><span class="bg-warning mr-2">&nbsp;&nbsp;</span>Reported <b>{{ $employee->assignedTasks()->where('status','2')->count()}}</b></small>
                                                     </div>
                                                     <div class="col-md-2 col-sm-4 text-md-center">
-                                                        <small><span class="bg-secondary mr-2">&nbsp;&nbsp;</span>Complete <b>{{ $employee->assignedTasks()->where('status','3')->count()}}</b></small>
+                                                        <small><span class="bg-success mr-2">&nbsp;&nbsp;</span>Complete <b>{{ $employee->assignedTasks()->where('status','3')->count()}}</b></small>
                                                     </div>
                                                     <div class="col-md-2 col-sm-4 text-md-center">
                                                         <small><span class="bg-danger mr-2">&nbsp;&nbsp;</span>Reject <b>{{ $employee->assignedTasks()->where('status','4')->count()}}</b></small>
