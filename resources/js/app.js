@@ -774,14 +774,14 @@ $(function () {
     }
 
 
-    //this function is for pagination with tab-panes in profile.blade.php
-    var activeTab = window.location.hash;
-    if (activeTab == "") {
-        activeTab = "#infos";
-    }
-    $(".tab-pane").removeClass("active in");
-    $(activeTab).addClass("active in");
-    $('a[href="' + activeTab + '"]').tab('show');
+    // //this function is for pagination with tab-panes in profile.blade.php
+    // var activeTab = window.location.hash;
+    // if (activeTab == "") {
+    //     activeTab = "#infos";
+    // }
+    // $(".tab-pane").removeClass("active in");
+    // $(activeTab).addClass("active in");
+    // $('a[href="' + activeTab + '"]').tab('show');
 });
 
 

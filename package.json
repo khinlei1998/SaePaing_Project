@@ -30,6 +30,7 @@
         "@toast-ui/vue-image-editor": "^1.2.0",
         "apexcharts": "^3.16.1",
         "bootstrap-sweetalert": "^1.0.1",
+        "console.pretty": "^0.1.0",
         "dropzone": "^5.5.1",
         "html2canvas": "^1.0.0-rc.5",
         "moment": "^2.24.0",

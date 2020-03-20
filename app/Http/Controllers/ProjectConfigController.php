@@ -213,8 +213,9 @@ class ProjectConfigController extends Controller
         $p_config->save();
 
         //this line is for notification
+        $get_title=CbpList::where('cbp_id',$request->cbpid)->first();
 
-        if($this->historyhelper->setnoti(Auth::user()->id,$request->hod,$request->cbpid,$request->pid,'ffffffff',false)){
+        if($this->historyhelper->setnoti(Auth::user()->id,$request->hod,$request->cbpid,$request->pid,$get_title->cbp_name,'profile',false)){
             return response()->json(["success"=>true]);
 
         }

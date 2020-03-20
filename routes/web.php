@@ -27,7 +27,10 @@ Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
         return response()->json(['success'=>$u]);
     });
 
+
+//for notification
     Route::get('/getnoti','EmployeeController@getnoti');
+    Route::post('/readnoti','EmployeeController@readnoti');
 
 
     Route::get('td',function(){
@@ -37,7 +40,7 @@ Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
        }
     });
 
-
+//for notification
 
 
 
@@ -122,6 +125,7 @@ Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
 
 
     Route::get('OC_group/{id}', 'HomeController@OC_group')->name('OC_group');
+    Route::get('click_on_noti_btn/{emp_id}', 'HomeController@click_on_noti_btn');
 
 });
 

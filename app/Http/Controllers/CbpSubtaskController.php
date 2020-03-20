@@ -19,6 +19,13 @@ class CbpSubtaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public $historyhelper;
+
+    public function __construct()
+    {
+        $this->historyhelper = new HistoriesHelper();
+    }
+
     public function index()
     {
         //
@@ -128,6 +135,11 @@ class CbpSubtaskController extends Controller
      
         $project_config = ProjectConfig::find($request->config_id);
         if (AssignToHot::create(['cbp_id'=>$project_config->cbp_id,'deadline'=>$request->deadline,'cbp_subtask_id'=>$request->cbp_subtask_id,'project_id'=>$project_config->project_id,'hot_id'=>$request->hot_id,'status'=>"0"])){
+            $get_subtask_name=CbpSubtask::where('id',$request->cbp_subtask_id)->first();
+            //FOR SET NOTI
+            $this->historyhelper->setnoti(Auth::user()->id,$request->hot_id,$project_config->cbp_id,$project_config->project_id,$get_subtask_name->cbp_subtask,'profile',false);
+            //FOR SET NOTI
+
             return response()->json([
                 'success'=>true
             ]);

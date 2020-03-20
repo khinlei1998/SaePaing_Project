@@ -12381,20 +12381,21 @@ footer strong {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.container-fornoti .notifications:hover {
-  width: 290px;
-  height: 60px;
-  left: 80px;
+.container-fornoti .noticlick {
+  width: 348px;
+  height: 50px;
   text-align: left;
-  margin-left: -140px;
-  padding: 15px;
+  top: 100px;
+  padding: 15px 0px 20px 15px;
   background: #006382;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
 }
 
-.container-fornoti .notifications:hover .fa {
-  color: #fff;
+.container-fornoti .noticlick i {
+  color: white;
+  border-color: 10px black solid;
 }
 
 .container-fornoti .notifications .num {
@@ -12404,50 +12405,57 @@ footer strong {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ff2c74;
+  background: #ee1d26;
   color: #fff;
   line-height: 21px;
   font-family: sans-serif;
   text-align: center;
 }
 
-.container-fornoti .notifications:hover .dropdown-menu {
-  margin-left: -140px;
-}
-
-.container-fornoti .notifications:hover i {
-  display: none;
-}
-
-.container-fornoti .notifications:hover .num {
-  position: relative;
-  background: transparent;
-  color: #fff;
-  left: 10px;
-  font-size: 19px;
-  top: 4px;
-}
-
-.container-fornoti .notifications:hover .num:after {
-  content: " Notifications";
+.container-fornoti .dropdown-menu:before {
+  content: "";
+  position: absolute;
+  border-color: #006382 transparent;
+  border-style: solid;
+  border-width: 0px 10px 10px 10px;
+  height: 0px;
+  width: 0px;
+  left: 208px;
+  top: -10px;
 }
 
 .container-fornoti .dropdown-menu {
   position: absolute;
-  right: 100px;
-  top: 50px;
-  width: 290px;
-  margin-right: 50px;
+  left: -200px;
+  top: 55px;
+  width: 350px;
   background: #fff;
-  padding: 10px;
+  padding: 0px 0px 10px 0px;
   box-sizing: border-box;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  display: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.container-fornoti .notifications:hover .dropdown-menu {
-  display: block;
+.container-fornoti .dropdown-menu .dropdown-item {
+  padding: 0.25rem 1rem;
+}
+
+.container-fornoti .dropdown-menu a .dropdown-item {
+  line-height: 0px;
+}
+
+.container-fornoti .dropdown-menu a .time-noti {
+  text-align: right;
+  color: #a1a1a1;
+  margin-bottom: 0px;
+  font-size: 10px;
+}
+
+.container-fornoti .dropdown-menu a p {
+  margin-bottom: 0px;
+  color: #a1a1a1;
 }
 
 .modal {

@@ -17,8 +17,10 @@ use App\CbpSubtask;
 use App\ProjectConfig;
 use Illuminate\Http\Request;
 use App\Http\Requests\EmployeeRequest;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class EmployeeController extends Controller
@@ -29,7 +31,12 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public $historyhelper;
 
+    public function __construct()
+    {
+        $this->historyhelper = new HistoriesHelper();
+    }
     public function index()
     {
 
@@ -89,6 +96,7 @@ class EmployeeController extends Controller
                 // $hot_name=$hot->hot->emp_name;
                 return view('employee.hod_profile', compact(['employee', 'hots', 'img', 'assignhot']));
             case Role::where("role", "HOT")->first()->id:
+
 
                 $assgined_data_for_HOT = AssignToHot::where('hot_id', Auth::user()->emp_id)->get();
                 return view('employee.hot_profile', ['employee' => $employee, 'assgined_data_for_HOT' => $assgined_data_for_HOT, 'img' => $img]);
@@ -154,16 +162,32 @@ class EmployeeController extends Controller
 
 
     }
-
+    public function click_on_noti_btn($user_id){
+        return response()->json('afe');
+    }
 
     public function getnoti(){
         $emp_id=Auth::user()->emp_id;
         $get_notifrom_db=Histories::where([['receiver_id','=',$emp_id],['read_this','=',false]]);
+        $filterarray=[];
 
-        return response()->json(['data'=>['count'=>$get_notifrom_db->count(),'data'=>$get_notifrom_db->get()]]);
+        foreach($get_notifrom_db->get() as $gnfdb){
+            $gnfdb->description = Str::limit($gnfdb->description, 47);
+            array_push($filterarray, $gnfdb);;
+
+        }
+
+        return response()->json(['data'=>['count'=>$get_notifrom_db->count(),'data'=>$filterarray]]);
 
     }
+      public function readnoti(Request $request){
 
+          $get_notifrom_db=Histories::where('id',$request->noti_id)->update(['read_this'=>true]);
+
+
+          return response()->json($request->noti_id);
+
+      }
 
     /**
      * Display the specified resource.
