@@ -110,14 +110,24 @@
                 <div class="container-fornoti">
                     <div class="row">
                         <div class="box pt-2">
-                    <div class="notifications p-2">
+                    <div class="notifications p-2" type="button" data-toggle="dropdown">
                         <i class="fa fa-bell fa-lg"></i>
                         <span class="num">5</span>
-
+                        
                         <div class="dropdown-menu shadow">
-                            <a class="dropdown-item" href="#"><i class="fa fa-info-circle"></i> Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="uparrow"></div>
+                            <div class="noticlick"><h5><i class="fa fa-bell fa-sm"></i>&emsp;5 Notifications</h5></div>
+                            <a class="dropdown-item" href="#">
+                                <p class="pt-2"><i class="fa fa-info-circle"></i>&nbsp;Tittle status</p> 
+                                <label class="pt-1 pl-2">Another action Another actionAnother .</label>
+                                <p class="time-noti"><i class="fa fa-clock"></i>&nbsp;20.10.2020/ 8:00 PM</p>
+                            </a>
+                            <div class="dropdown-divider"> </div>
+                            <a class="dropdown-item" href="#">
+                                <p class="pt-2"><i class="fa fa-info-circle"></i>&nbsp;Tittle status</p> 
+                                <label class="pt-1 pl-2">Another action Another actionAnother .</label>
+                                <p class="time-noti"><i class="fa fa-clock"></i>&nbsp;20.10.2020/ 8:00 PM</p>
+                            </a>
                           
                         </div>
                         
