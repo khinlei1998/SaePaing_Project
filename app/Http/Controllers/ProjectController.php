@@ -46,10 +46,18 @@ class ProjectController extends Controller
         $validator = Validator::make($request->except("_token"), ['project_title' => 'required|min:2|max:5'], $messages);      
         if ($validator->fails()) {         
         return redirect()->back()->withErrors($validator)->withInput();   
-         }
-        // $validatedData = $request->validated();
-        Project::create($request->except("_token"));
-        return redirect('project')->withSuccessMessage('Project created sussessfully!!');
+//<<<<<<< HEAD
+        }else{
+             Project::create($request->except('_token'));
+             return redirect('project')->withSuccessMessage('Project created sussessfully!!');
+        }
+
+//=======
+//         }
+//        // $validatedData = $request->validated();
+//        Project::create($request->except("_token"));
+//        return redirect('project')->withSuccessMessage('Project created sussessfully!!');
+//>>>>>>> 93942ebad69a234e21604d47c791d1da763e38ed
     }    /**
      * Display the specified resource.
      *

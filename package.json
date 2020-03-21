@@ -12,7 +12,7 @@
     "devDependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.26",
         "@fortawesome/free-solid-svg-icons": "^5.12.0",
-        "axios": "^0.19.1",
+        "axios": "^0.19.2",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
         "jquery": "^3.2",
@@ -30,6 +30,7 @@
         "@toast-ui/vue-image-editor": "^1.2.0",
         "apexcharts": "^3.16.1",
         "bootstrap-sweetalert": "^1.0.1",
+        "console.pretty": "^0.1.0",
         "dropzone": "^5.5.1",
         "html2canvas": "^1.0.0-rc.5",
         "moment": "^2.24.0",
@@ -37,8 +38,13 @@
         "select2": "^4.0.12",
         "sweetalert2": "^9.10.0",
         "tempusdominus-bootstrap-4": "^5.1.2",
+        "timers": "^0.1.1",
+        "timers-browserify": "^2.0.11",
         "tui-code-snippet": "^2.3.1",
         "vue-apexcharts": "^1.5.2",
-        "vue-filepreview": "^0.1.17"
+        "vue-axios": "^2.1.5",
+        "vue-filepreview": "^0.1.17",
+        "vue-router": "^3.1.6",
+        "vue-sessionstorage": "^1.0.0"
     }
 }

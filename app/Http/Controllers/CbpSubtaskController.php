@@ -9,7 +9,9 @@ use Auth;
 use DB;
 use App\HodReport;
 use App\HotReport;
+use App\Histories;
 use App\ProjectConfig;
+use Carbon\Carbon;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CbpSubtaskController extends Controller
@@ -19,6 +21,13 @@ class CbpSubtaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public $historyhelper;
+
+    public function __construct()
+    {
+        $this->historyhelper = new HistoriesHelper();
+    }
+
     public function index()
     {
         //
@@ -128,6 +137,11 @@ class CbpSubtaskController extends Controller
      
         $project_config = ProjectConfig::find($request->config_id);
         if (AssignToHot::create(['cbp_id'=>$project_config->cbp_id,'deadline'=>$request->deadline,'cbp_subtask_id'=>$request->cbp_subtask_id,'project_id'=>$project_config->project_id,'hot_id'=>$request->hot_id,'status'=>"0"])){
+            $get_subtask_name=CbpSubtask::where('id',$request->cbp_subtask_id)->first();
+            //FOR SET NOTI
+            $this->historyhelper->setnoti(Auth::user()->id,$request->hot_id,$project_config->cbp_id,$project_config->project_id,$get_subtask_name->cbp_subtask,'profile',false);
+            //FOR SET NOTI
+
             return response()->json([
                 'success'=>true
             ]);
@@ -190,8 +204,13 @@ class CbpSubtaskController extends Controller
     // }
 
     public function hot_report_for_cbpsubtask(Request $request){
+       
         $getassigntb_id=$request->cbp_id;
         $create=HotReport::create(['hot_person'=>$request->hot_person_id,'status'=>0,'hot_feedback'=>'','hot_report_desc'=>$request->report_text,'hot_report_attached_file','assigntb_id'=>$request->cbp_id]);
+        // $create=Histories::create(['hot_person'=>$request->hot_person_id,'status'=>0,'hot_feedback'=>'','hot_report_desc'=>$request->report_text,'hot_report_attached_file','assigntb_id'=>$request->cbp_id]);
+        // $this->historyhelper->setnoti(Auth::user()->id,$request->hod,$request->cbpid,$request->pid,$get_title->cbp_name,'profile',false);
+        $created = Histories::create(['sender_id' =>$request->hot_person_id,'project_id'=>'','cbp_id'=>$request->cbp_id,'read_this'=>0,'receiver_id' => $request->hod_id, 'description' =>$request->report_text, 'link_name'=>'current_link','created_at' => Carbon::now(), 'updated_at' => Carbon::now()]); 
+      
         if(!$create){
             $success='error';
             $message="Creation fail";        }else{
