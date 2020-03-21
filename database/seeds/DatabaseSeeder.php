@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UserSeeder::class,
             CBPSeeder::class,
-            CBPSubtaskSeeder::class
+            CBPSubtaskSeeder::class,
+            HistoriesSeeder::class
 
         ]);
         factory(\App\Task::class,10)->create();
