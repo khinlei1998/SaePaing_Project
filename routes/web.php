@@ -19,22 +19,28 @@ Route::redirect('/', '/login');
 
 Route::group(['middleware' => ['auth']], function () {
 
+Route::get('/home', 'HomeController@index')->name('home');
 
 
-
-    Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-
-
-    Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
+Route::post('/saveimagetoserver', function(\Illuminate\Http\Request $request){
         $u=Storage::disk('public')->put('test.jpg',base64_decode($request->imageData));
         return response()->json(['success'=>$u]);
     });
 
 
+//for notification
+    Route::get('/getnoti','EmployeeController@getnoti');
+    Route::post('/readnoti','EmployeeController@readnoti');
 
+
+    Route::get('td',function(){
+       $fe=\App\Histories::get();
+       foreach($fe as $f){
+           echo $f->human_date;
+       }
+    });
+
+//for notification
 
 
 
@@ -119,6 +125,7 @@ Route::post('/removeMissionImage','MissionController@removeImage')->name('remove
 
 
     Route::get('OC_group/{id}', 'HomeController@OC_group')->name('OC_group');
+    Route::get('click_on_noti_btn/{emp_id}', 'HomeController@click_on_noti_btn');
 
 });
 
