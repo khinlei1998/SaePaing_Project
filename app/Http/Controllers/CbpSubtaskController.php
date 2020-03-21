@@ -155,6 +155,7 @@ class CbpSubtaskController extends Controller
     
 
     public function reportHot(Request $request){
+        
         //get all data from project config
         $all_pconfig=HodReport::find($request->config_id);
         $per=$request->per;
@@ -164,8 +165,11 @@ class CbpSubtaskController extends Controller
         $feedback='';
         $report_attached_file='';
         $projConfig_id=$request->config_id;
+        $created = Histories::create(['sender_id' =>$hod_id,'project_id'=>'','cbp_id'=>'','read_this'=>0,'receiver_id' => $request->receiver_id, 'description' =>$request->report_text, 'link_name'=>'current_link','created_at' => Carbon::now(), 'updated_at' => Carbon::now()]); 
+        
         //start create
         $result_from_create=HodReport::create(['hod_person'=>$hod_id,'status'=>$status,'percentage'=>$per,'feedback'=>$feedback,'report_desc'=>$report_desc,'report_attached_file  '=>$report_attached_file,'projConfig_id'=>$projConfig_id]);
+
         if(!$result_from_create){
             $success='error';
             $message="Creation fail";        
@@ -209,7 +213,7 @@ class CbpSubtaskController extends Controller
         $create=HotReport::create(['hot_person'=>$request->hot_person_id,'status'=>0,'hot_feedback'=>'','hot_report_desc'=>$request->report_text,'hot_report_attached_file','assigntb_id'=>$request->cbp_id]);
         // $create=Histories::create(['hot_person'=>$request->hot_person_id,'status'=>0,'hot_feedback'=>'','hot_report_desc'=>$request->report_text,'hot_report_attached_file','assigntb_id'=>$request->cbp_id]);
         // $this->historyhelper->setnoti(Auth::user()->id,$request->hod,$request->cbpid,$request->pid,$get_title->cbp_name,'profile',false);
-        $created = Histories::create(['sender_id' =>$request->hot_person_id,'project_id'=>'','cbp_id'=>$request->cbp_id,'read_this'=>0,'receiver_id' => $request->hod_id, 'description' =>$request->report_text, 'link_name'=>'current_link','created_at' => Carbon::now(), 'updated_at' => Carbon::now()]); 
+        $created = Histories::create(['sender_id' =>auth()->user()->id,'project_id'=>'','cbp_id'=>$request->cbp_id,'read_this'=>0,'receiver_id' => $request->hod_id, 'description' =>$request->report_text, 'link_name'=>'current_link','created_at' => Carbon::now(), 'updated_at' => Carbon::now()]); 
       
         if(!$create){
             $success='error';

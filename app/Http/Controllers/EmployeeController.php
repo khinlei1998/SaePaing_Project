@@ -77,6 +77,10 @@ class EmployeeController extends Controller
                 $hots = User::where('role_id', Role::where('role', 'HOT')->first()->id)->get();
 
                 $assignhot = AssignToHot::select('cbp_subtask_id', 'project_id')->get();
+                // for chairmnan
+                $chairman_id=User::where('emp_id', '99999999')->first();
+               
+
                 //  dd( $assignhot);
 
                 //    $allcbpsubtasks =ProjectConfig::all();
@@ -94,7 +98,7 @@ class EmployeeController extends Controller
                 // @endforeach
                 //  $hot = AssignToHot::where('cbp_id',$subtask['cbp_id'])->where('cbp_subtask_id',$subtask['id'])->where('project_id',$this->project_id)->select('hot_id','status')->first();
                 // $hot_name=$hot->hot->emp_name;
-                return view('employee.hod_profile', compact(['employee', 'hots', 'img', 'assignhot']));
+                return view('employee.hod_profile', compact(['employee', 'hots', 'img', 'assignhot','chairman_id']));
             case Role::where("role", "HOT")->first()->id:
 
 

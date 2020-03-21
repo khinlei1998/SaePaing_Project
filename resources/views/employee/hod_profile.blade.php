@@ -530,7 +530,7 @@
                                                             <div class="panel-group" id="accordion" role="tablist"
                                                                  aria-multiselectable="true">
                                                                 <div class="panel panel-default panel-profile">
-                                                                    @foreach($employee->cbplist as $cbplist)
+                                                                    @foreach($employee->cbplistdesc as $cbplist)
                                                                     
                                                                         <div>
 
@@ -722,6 +722,7 @@
                                                                 </div>
 
                                                                 <!-- bootstrap modal section -->
+                                                               
                                                                 <div class="modal fade" id="hod_report_modal"
                                                                      tabindex="-1" role="dialog"
                                                                      aria-labelledby="exampleModalCenterTitle"
@@ -758,6 +759,7 @@
                                                                                            class="form-control" id="per"
                                                                                            min="0" max="100"></input>
                                                                                 </div>
+                                                                                <input type="hidden" name="receiver_id" value="{{$chairman_id->emp_id}}" id="receiver_id">
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button"
@@ -1116,8 +1118,9 @@
 
                 $('#hod_report_submit').click(function () {
                     var report_text = $('#report_text').val();
+                    var receiver_id=$('#receiver_id').val();
                     var per = $('#per').val();
-
+                    // alert(receiver_id);
                     // console.log(report_text);
                     $.ajax({
                         headers: {
@@ -1125,7 +1128,7 @@
                         },
                         method: "POST",
                         url: "/reportHot",
-                        data: {config_id, report_text, per}
+                        data: {config_id, report_text, per,receiver_id}
                     }).done(function (data) {
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                         if (data.success) {
@@ -1136,13 +1139,14 @@
                             $('#hod_report_modal').modal('hide');
 
 
-                            window.swal({
-                                title: "Successfully Reported",
-                                text: "",
-                                icon: "success",
+                           
+                            
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Successfully Reported',
+                                text: '',
                                 button: "Close",
-                            });
-                            ;
+                                })
 
 
                         } else {

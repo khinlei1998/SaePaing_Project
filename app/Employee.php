@@ -50,6 +50,9 @@ class Employee extends Model
      public function cbplist(){
         return $this->hasMany(ProjectConfig::class,'assign_person');
     }
+    public function cbplistdesc(){
+        return $this->hasMany(ProjectConfig::class,'assign_person')->orderBy('id','desc');
+    }
     public function hodpersons(){
         return $this->belongsTo(HodReport::class,'hod_person');
     }
