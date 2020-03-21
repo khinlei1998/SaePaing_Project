@@ -117,6 +117,10 @@ Route::group(['middleware' => ['auth']], function () {
         return view('pet');
     });
 
+    Route::get('/history', function(){
+        return view('history');
+    });
+
 
     Route::get('OC_group/{id}', 'HomeController@OC_group')->name('OC_group');
 
