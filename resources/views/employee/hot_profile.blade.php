@@ -13,7 +13,7 @@
                                 <a class="list-group-item" href="#tasks" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>Tasks</span></a>
                                 <a class="list-group-item" href="#sharetasks" data-toggle="tab"><span><br><i class="fa fa-share-square"></i><br>Shared Tasks</span></a>
                                 <a class="list-group-item" href="#missions" data-toggle="tab"><span><br><i class="fa fa-calendar-alt"></i><br>Missions</span></a>
-                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMP</span></a>
+                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMPh</span></a>
                             </div>
                         </div>
                         <div class="col-10">
