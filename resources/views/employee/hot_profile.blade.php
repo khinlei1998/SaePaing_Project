@@ -9,16 +9,17 @@
                     <div class="row">
                         <div class="col-2">
                             <div class="list-group profile-list">
-                                <a href="#infos" class="list-group-item active" data-toggle="tab"><span><br><i class="fa fa-user"></i><br>Profile</span></a>
-                                <a class="list-group-item" href="#tasks" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>Tasks</span></a>
+                                <a class="list-group-item active" href="#tasks" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>Tasks</span></a>
                                 <a class="list-group-item" href="#sharetasks" data-toggle="tab"><span><br><i class="fa fa-share-square"></i><br>Shared Tasks</span></a>
                                 <a class="list-group-item" href="#missions" data-toggle="tab"><span><br><i class="fa fa-calendar-alt"></i><br>Missions</span></a>
-                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMPh</span></a>
+                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMP</span></a>
+                                <a href="#infos" class="list-group-item " data-toggle="tab"><span><br><i class="fa fa-user"></i><br>Profile</span></a>
+
                             </div>
                         </div>
                         <div class="col-10">
                             <div class="tab-content">
-                                <div class="tab-pane fade show active" id="infos" role="tabpanel">
+                                <div class="tab-pane fade " id="infos" role="tabpanel">
 
                                     <div class="row mt-2">
                                         <div class="col-8">
@@ -140,7 +141,7 @@
                                 </div>
 
 
-                                <div class="tab-pane fade" id="tasks" role="tabpanel">
+                                <div class="tab-pane fade show active" id="tasks " role="tabpanel">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -753,7 +754,7 @@
                         $('#hod_report_modal').modal('hide');
 
                         Swal.fire(
-                            'Good job!',
+                            'Success!',
                             'Report Successfully',
                             'success'
                             )

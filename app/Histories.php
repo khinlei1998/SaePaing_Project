@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Histories extends Model
 {
     //
-    protected $table='Histories';
+    protected $table='histories';
     protected $fillable=['sender_id','receiver_id','description','read_this','project_id','cbp_id','link_name'];
     // public function getDateFormat()
     // {

@@ -85,14 +85,23 @@
                     noti_id: val,
                 },options)
                     .then(function (response) {
-                        console.log('Readed noti');
+                      
                         if(response.data.link_name == 'current_link'){
-                        return window.location.assign(window.location.href);
+                         return window.location.assign(window.location.href);
+                         
 
-                        }else{
-                        window.localStorage.setItem('cmp', 'Active');
+                        }
+                        else if(response.data.link_name == 'task'){
+                         
+                              window.localStorage.setItem('task', 'Active');
 
-                        return window.location.assign(response.data.link_name);
+                                return window.location.assign('profile');
+                        }
+                        else{
+
+                            window.localStorage.setItem('cmp', 'Active');
+
+                            return window.location.assign(response.data.link_name);
 
                         }
                     })
