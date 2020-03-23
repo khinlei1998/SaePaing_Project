@@ -622,6 +622,7 @@
                                                                                                     <button type="button"
                                                                                                             class="btn btn-success btn_hot_report"
                                                                                                             data-config_id="{{$cbplist->id}}"
+                                                                                                            data-main_cbp_id="{{$cbplist->cbp_id}}"
                                                                                                             data-config_title="{{$cbplist->CBPlist->cbp_name}}">
                                                                                                         Report
                                                                                                     </button>
@@ -721,8 +722,11 @@
                                                                     @endforeach
                                                                 </div>
 
+
+
+
                                                                 <!-- bootstrap modal section -->
-                                                               
+
                                                                 <div class="modal fade" id="hod_report_modal"
                                                                      tabindex="-1" role="dialog"
                                                                      aria-labelledby="exampleModalCenterTitle"
@@ -776,6 +780,24 @@
                                                                 </div>
 
                                                                 <!-- bootstrap modal section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                                 <div class="modal fade in hide" id="cbb_hot_modal"
                                                                      tabindex="-1" role="dialog"
                                                                      aria-labelledby="subconfigTitle"
@@ -980,9 +1002,12 @@
             }
         }
 
+
         window.onload = function () {
 
+
             //for profile page
+
 
             if (localStorage.getItem('cmp') == 'Active') {
                 $('#cbp_active').addClass('active');
@@ -1030,7 +1055,6 @@
             localStorage.setItem("require_error", "");
 
             $(function () {
-
                 $('#project_region').select2({
                     placeholder: 'Choose HOT',
                     dropdownParent: $('.modal.fade.show')
@@ -1106,10 +1130,22 @@
 
 
                 var config_id = 0;
+                var main_cbp_id = 0;
+
                 $('.btn_hot_report').click(function () {
                     $('#hot_report_title').empty();
+                    $('#report_text').val('');
+                    var per = $('#per').val(0);
+
+
+
                     config_id = $(this).data('config_id');
+
+                    main_cbp_id = $(this).data('main_cbp_id');
+
+
                     var config_title = $(this).data('config_title');
+                    cbp_list_id=$(this).data('')
                     $('#hot_report_title').append(config_title);
                     // alert(config_id+" "+config_title); for test
                     $('#hod_report_modal').modal('show');
@@ -1117,6 +1153,7 @@
 
 
                 $('#hod_report_submit').click(function () {
+                    // console.log(main_cbp_id);
                     var report_text = $('#report_text').val();
                     var receiver_id=$('#receiver_id').val();
                     var per = $('#per').val();
@@ -1128,7 +1165,7 @@
                         },
                         method: "POST",
                         url: "/reportHot",
-                        data: {config_id, report_text, per,receiver_id}
+                        data: {config_id, report_text, per,receiver_id,main_cbp_id}
                     }).done(function (data) {
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                         if (data.success) {
@@ -1139,8 +1176,8 @@
                             $('#hod_report_modal').modal('hide');
 
 
-                           
-                            
+
+
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Successfully Reported',

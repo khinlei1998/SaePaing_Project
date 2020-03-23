@@ -20,7 +20,10 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      *
      */
+
+
     public $historyhelper;
+
 
     public function __construct()
     {
@@ -42,11 +45,14 @@ class TaskController extends Controller
         return view('task.index', compact(['alltasks', 'assigntasks', 'starttasks', 'reporttasks', 'completetasks', 'rejecttasks']));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function create()
     {
         $this->authorize('create', Task::class);
