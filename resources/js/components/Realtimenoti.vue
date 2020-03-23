@@ -54,7 +54,7 @@
 
                 setInterval(() => {
 
-                    axios.get('http://127.0.0.1:8000/getnoti').then(resp => {
+                    axios.get('http://localhost:8000/getnoti').then(resp => {
                             console.log(resp.data.data.count);
                             this.noticount = resp.data.data.count;
                             this.desc = resp.data.data.data;
@@ -86,8 +86,15 @@
                 },options)
                     .then(function (response) {
                         console.log('Readed noti');
+                        if(response.data.link_name == 'current_link'){
+                        return window.location.assign(window.location.href);
+
+                        }else{
                         window.localStorage.setItem('cmp', 'Active');
-                        return window.location.assign('profile')
+
+                        return window.location.assign(response.data.link_name);
+
+                        }
                     })
                     .catch(function (error) {
                         log.red(error);
@@ -97,7 +104,7 @@
 
             addnow: function () {
 
-                axios.get('http://127.0.0.1:8000/getnoti').then(resp => {
+                axios.get('http://localhost:8000/getnoti').then(resp => {
                         console.log(resp.data.data.count);
                         this.noticount = resp.data.data.count;
                         this.desc = resp.data.data.data;

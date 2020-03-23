@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProjectConfig extends Model
 {
     protected $fillable = [
-        'cbp_id', 'cbp_subtask', 'status','project_id','assign_person','d_line','percent'
+        'cbp_id', 'cbp_subtask', 'status','project_id','assign_person','d_line','percent','user_id'
     ];
 
     public function CBPlist(){

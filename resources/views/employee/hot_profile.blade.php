@@ -13,7 +13,7 @@
                                 <a class="list-group-item" href="#tasks" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>Tasks</span></a>
                                 <a class="list-group-item" href="#sharetasks" data-toggle="tab"><span><br><i class="fa fa-share-square"></i><br>Shared Tasks</span></a>
                                 <a class="list-group-item" href="#missions" data-toggle="tab"><span><br><i class="fa fa-calendar-alt"></i><br>Missions</span></a>
-                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMP</span></a>
+                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMPh</span></a>
                             </div>
                         </div>
                         <div class="col-10">
@@ -532,9 +532,9 @@
                                                     </thead>
 
                                                     <tbody>
-
+                                                   
                                                     @foreach($assgined_data_for_HOT as $assigned_data)
-
+                                                      
                                                         <tr class="row-color ">
                                                             <td class="align-middle text-center">{{ $assigned_data->id }}</td>
                                                             <td class="align-middle">{{DB::table('projects')->where('project_id',$assigned_data->project_id)->first()->project_title}}</td>
@@ -594,6 +594,8 @@
 <!-- cbp report model for Hot -->
 
 
+
+
 <div class="modal fade" id="hod_report_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                                         <div class="modal-dialog modal-lg" role="document">
                                                                             <div class="modal-content">
@@ -608,6 +610,7 @@
                                                                                     <div class="form-group">
                                                                                         <label for="message-text" class="col-form-label">Report Letter:</label>
                                                                                         <textarea class="form-control" id="report_text"></textarea>
+                                                                                        <input type="hidden" name="hod_id" value="{{$hod_id}}" id="hod_id">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="modal-footer">
@@ -729,7 +732,8 @@
                 $('#hod_report_submit').click(function(){
 
                     var report_text = $('#report_text').val();
-                    console.log(report_text);
+                    var hod_id = $('#hod_id').val();
+                    // alert(hod_id);
 
                     $.ajax({
                         headers: {
@@ -737,7 +741,7 @@
                         },
                         method: "POST",
                         url: "/hot_report_for_cbpsubtask",
-                        data:{cbp_id,report_text,hot_person_id}
+                        data:{cbp_id,report_text,hot_person_id,hod_id}
                     }).done(function (data) {
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                         if(data.success){
