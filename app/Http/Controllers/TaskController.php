@@ -18,7 +18,15 @@ class TaskController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     *
      */
+    public $historyhelper;
+
+    public function __construct()
+    {
+        $this->historyhelper = new HistoriesHelper();
+    }
+
     public function index()
     {
         $employee = Auth::user()->employee;
@@ -54,7 +62,7 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-    
+
         $filenames = "";
 
         $assignee_persons = explode(',', $request->assignee_person);
@@ -63,8 +71,8 @@ class TaskController extends Controller
         // dd($files);
 
 
-       array_shift($files);//remove first array item
-      
+        array_shift($files);//remove first array item
+
         foreach ($files as $key => $file) {
 
             if (next($files) == true)
@@ -94,6 +102,12 @@ class TaskController extends Controller
             //  return response()->json([
             //     'success'=>"true"
             // ]);
+
+
+             //            for notification
+            $this->historyhelper->setnoti(1, 1, 'dddfa');
+            //            for notification
+
 
             return response()->json($createdtasks_id);
 
@@ -193,8 +207,6 @@ class TaskController extends Controller
             else
                 $filenames .= $this->taskImageUpload($file);
         }
-
-
 
 
         $originfiles = $task->assignor_attach_file;
@@ -311,20 +323,20 @@ class TaskController extends Controller
     {
         $task = Task::find($request->task_id);
 
-        if (strpos($task->assignor_attach_file, ":".$request->src) !== false) {
-            $task->assignor_attach_file = str_replace(":".$request->src,"",$task->assignor_attach_file);
+        if (strpos($task->assignor_attach_file, ":" . $request->src) !== false) {
+            $task->assignor_attach_file = str_replace(":" . $request->src, "", $task->assignor_attach_file);
 
-        }elseif(strpos($task->assignor_attach_file,$request->src.":") !== false){
-            $task->assignor_attach_file = str_replace($request->src.":","",$task->assignor_attach_file);
+        } elseif (strpos($task->assignor_attach_file, $request->src . ":") !== false) {
+            $task->assignor_attach_file = str_replace($request->src . ":", "", $task->assignor_attach_file);
 
-        }else{
-            $task->assignor_attach_file = str_replace($request->src,"",$task->assignor_attach_file);
+        } else {
+            $task->assignor_attach_file = str_replace($request->src, "", $task->assignor_attach_file);
         }
 
         // $task->assignor_attach_file = str_replace($request->src.":","",$task->assignor_attach_file);
-        
-        
-        if($task->save()) {
+
+
+        if ($task->save()) {
 
             Storage::disk('public')->delete($request->src);
             return response()->json([

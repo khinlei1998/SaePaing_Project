@@ -9,6 +9,8 @@ use App\ProjectConfig;
 use Illuminate\Http\Request;
 use DB;
 use Redirect;
+use Illuminate\Support\Facades\Auth;
+
 
 class ProjectConfigController extends Controller
 
@@ -23,6 +25,12 @@ class ProjectConfigController extends Controller
      * @return \Illuminate\Http\Response
 
      */
+    public $historyhelper;
+
+    public function __construct()
+    {
+        $this->historyhelper = new HistoriesHelper();
+    }
 
     public function index()
 
@@ -204,7 +212,17 @@ class ProjectConfigController extends Controller
 
         $p_config->save();
 
-        return response()->json(["success"=>true]);
+        //this line is for notification
+        $get_title=CbpList::where('cbp_id',$request->cbpid)->first();
+
+        if($this->historyhelper->setnoti(Auth::user()->id,$request->hod,$request->cbpid,$request->pid,$get_title->cbp_name,'profile',false)){
+            return response()->json(["success"=>true]);
+
+        }
+
+        //this line is for notification
+
+
 
     }
     public function getSubCbps(Request $request){

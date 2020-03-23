@@ -5,8 +5,14 @@
  */
 import {faExclamationCircle} from "@fortawesome/free-solid-svg-icons/faExclamationCircle";
 
-
+//beautiful sweet alert
+{/* <script type="text/javascript" src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.js"></script> */}
 require('./bootstrap');
+require('./dt');
+require('./dtbs');
+
+
 window.Vue = require('vue');
 
 require('orgchart');
@@ -42,7 +48,6 @@ window.Swal = Swal;
 // CommonJS
 // const Swal = require('sweetalert2')
 
-//beautiful sweet alert
 
 
 import html2canvas from 'html2canvas';
@@ -78,7 +83,7 @@ import {
     faAngleRight,
     faClock,
     faAngleUp,
-    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt,faRedoAlt,faCircle,faShoppingCart,faHistory, faSearch
+    faAngleDown, faTrashAlt, faBookmark, faCheckCircle, faAtlas, faDownload, faMailBulk, faCog, faSortDown, faBell,faKey,faExchangeAlt,faRedoAlt,faCircle,faShoppingCart,faHistory,faSearch
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
     faHome,faTasks,faEdit,
@@ -558,6 +563,26 @@ $.fn.addNewImage=function(myDropZone) {
 }
 
 $(function () {
+
+    var users = $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "dom":'tp'
+
+    });
+
+    $('#customSearchBox').keyup(function(){
+        users.search($(this).val()).draw() ;
+    })
+
+
+    // $('#example2').DataTable({
+        
+    //   });
 
     $("#reject_submit").click(function(e){
 

@@ -2730,7 +2730,7 @@ footer{
   .orgchart.l2r .node.slide-left, .orgchart.r2l .node.slide-left {
     transform: translateX(-40px);
   }
-} gfffffffffffffffffff
+} 
 
 .group1-orgchart{
   
@@ -2848,6 +2848,9 @@ footer{
 }
 
 .history-log-test{
+  // .dataTables_filter{
+  //   display:none;
+  // }
   img{ max-width:100%;}
   .inbox_people {
     background: #ffffff none repeat scroll 0 0;
@@ -2942,5 +2945,7 @@ footer{
   .received_withd_msg { width: 57%;}
 
 }
+
+
 
 

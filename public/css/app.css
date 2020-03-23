@@ -13718,96 +13718,96 @@ footer strong {
           transform: translateX(-40px);
 }
 
-gfffffffffffffffffff .group1-orgchart .nav.navbar-nav.notika-top-nav li a {
+.group1-orgchart .nav.navbar-nav.notika-top-nav li a {
   font-size: 20px;
   position: relative;
   top: 0px;
 }
 
-gfffffffffffffffffff .group1-orgchart .navbar .navbar-nav {
+.group1-orgchart .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
 }
 
-gfffffffffffffffffff .group1-orgchart .navbar .navbar-collapse {
+.group1-orgchart .navbar .navbar-collapse {
   text-align: center;
 }
 
-gfffffffffffffffffff .group1-orgchart .navbar-nav > li:hover,
-gfffffffffffffffffff .group1-orgchart .navbar-default .navbar-nav > li:focus {
+.group1-orgchart .navbar-nav > li:hover,
+.group1-orgchart .navbar-default .navbar-nav > li:focus {
   background: #28288ead;
   color: white;
 }
 
-gfffffffffffffffffff .group1-orgchart .navbar-default .navbar-nav > li > a:active {
+.group1-orgchart .navbar-default .navbar-nav > li > a:active {
   background: #28288ead;
   color: white;
 }
 
-gfffffffffffffffffff .group1-orgchart .nav > li > a:hover,
-gfffffffffffffffffff .group1-orgchart .nav > li > a:focus {
+.group1-orgchart .nav > li > a:hover,
+.group1-orgchart .nav > li > a:focus {
   text-decoration: none;
   background-color: #28288ead;
   color: #fff;
 }
 
-gfffffffffffffffffff .group1-orgchart .nav .open > a,
-gfffffffffffffffffff .group1-orgchart .nav .open > a:hover,
-gfffffffffffffffffff .group1-orgchart .nav .open > a:focus {
+.group1-orgchart .nav .open > a,
+.group1-orgchart .nav .open > a:hover,
+.group1-orgchart .nav .open > a:focus {
   background-color: #28288ead;
   border-color: #428bca;
 }
 
-gfffffffffffffffffff .group1-orgchart .navbar-nav > li:hover {
+.group1-orgchart .navbar-nav > li:hover {
   background: transparent;
 }
 
-gfffffffffffffffffff .group1-orgchart .dropdown-menu > li > a:hover {
+.group1-orgchart .dropdown-menu > li > a:hover {
   font-weight: 400;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart {
+.group1-orgchart .orgchart {
   background-image: none;
 }
 
-gfffffffffffffffffff .group1-orgchart #chart-container {
+.group1-orgchart #chart-container {
   border: none;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .node .title {
+.group1-orgchart .orgchart .node .title {
   background-color: #005569;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .node .content {
+.group1-orgchart .orgchart .node .content {
   border: 1px solid #005569;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .lines .rightLine {
+.group1-orgchart .orgchart .lines .rightLine {
   border-right: 1px solid #005569;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .lines .leftLine {
+.group1-orgchart .orgchart .lines .leftLine {
   border-left: 1px solid #005569;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .lines .downLine {
+.group1-orgchart .orgchart .lines .downLine {
   background-color: #005569;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .lines .topLine {
+.group1-orgchart .orgchart .lines .topLine {
   border-top: 2px solid #005569;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart {
+.group1-orgchart .orgchart {
   padding: 0px;
 }
 
-gfffffffffffffffffff .group1-orgchart div.node {
+.group1-orgchart div.node {
   width: 170px;
 }
 
-gfffffffffffffffffff .group1-orgchart div.node:hover {
+.group1-orgchart div.node:hover {
   padding-top: 7px;
   box-shadow: 0 9px 12px rgba(0, 0, 0, 0.16), 0 9px 12px rgba(0, 0, 0, 0.23);
   -webkit-transition: all linear 0.1s;
@@ -13815,43 +13815,43 @@ gfffffffffffffffffff .group1-orgchart div.node:hover {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .node.focused {
+.group1-orgchart .orgchart .node.focused {
   background-color: #005569;
   border-radius: 7px;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .node.hover {
+.group1-orgchart .orgchart .node.hover {
   background-color: #005569;
   border-radius: 7px;
 }
 
-gfffffffffffffffffff .group1-orgchart .fa {
+.group1-orgchart .fa {
   display: none;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .node .title {
+.group1-orgchart .orgchart .node .title {
   width: 160px;
   height: 50px;
 }
 
-gfffffffffffffffffff .group1-orgchart .orgchart .node .content {
+.group1-orgchart .orgchart .node .content {
   width: 160px;
   height: 30px;
 }
 
-gfffffffffffffffffff .group1-orgchart p {
+.group1-orgchart p {
   padding-top: 8px;
   color: white;
   font-size: 13px;
   padding-bottom: 62px;
 }
 
-gfffffffffffffffffff .group1-orgchart label {
+.group1-orgchart label {
   padding-top: 3px;
   font-size: 12px;
 }
 
-gfffffffffffffffffff .group1-orgchart .p {
+.group1-orgchart .p {
   padding-top: 15px;
 }
 
