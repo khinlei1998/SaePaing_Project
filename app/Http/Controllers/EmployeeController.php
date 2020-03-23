@@ -161,6 +161,7 @@ class EmployeeController extends Controller
             $request->file('profile_img')->move(base_path() . '/public/storage/profile/', $images);
             Employee::where('emp_id', Auth::user()->emp_id)->update(['emp_profile' => $images]);
 
+
         }
         return redirect('profile');
 

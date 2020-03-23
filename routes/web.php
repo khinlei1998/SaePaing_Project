@@ -123,6 +123,10 @@ Route::post('/removeMissionImage','MissionController@removeImage')->name('remove
         return view('pet');
     });
 
+    Route::get('/history', function(){
+        return view('history');
+    });
+
 
     Route::get('OC_group/{id}', 'HomeController@OC_group')->name('OC_group');
     Route::get('click_on_noti_btn/{emp_id}', 'HomeController@click_on_noti_btn');
