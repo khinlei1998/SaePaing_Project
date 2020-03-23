@@ -183,6 +183,7 @@
                                                         <label class="font-weight-bold text-muted" for="project_region"><i
                                                                     class="fa fa-user"></i> &nbsp;Process By</label>
                                                     </div>
+                                                    
                                                     <div class="col-7 mr-2">
                                                         <select class="w-100 processby" id="hod_person"
                                                                 name="assign_person">
@@ -304,7 +305,7 @@
                
                 var ids = $('#ids').val();
                
-              
+             
                 var cbpid = currentCbp;
                 var hod = $('#hod_person').find(':selected').val();
                 var dline = $('#d_line').val();

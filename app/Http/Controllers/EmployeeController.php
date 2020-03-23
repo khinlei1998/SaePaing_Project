@@ -174,13 +174,14 @@ class EmployeeController extends Controller
         $emp_id=Auth::user()->emp_id;
         $get_notifrom_db=Histories::where([['receiver_id','=',$emp_id],['read_this','=',0]]);
         $filterarray=[];
+      
 
         foreach($get_notifrom_db->get() as $gnfdb){
             $gnfdb->description = Str::limit($gnfdb->description, 47);
-            array_push($filterarray, $gnfdb);;
+            array_push($filterarray, $gnfdb);
 
         }
-
+      
         return response()->json(['data'=>['count'=>$get_notifrom_db->count(),'data'=>$filterarray]]);
 
     }

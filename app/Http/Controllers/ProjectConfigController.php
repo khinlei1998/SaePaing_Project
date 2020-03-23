@@ -207,6 +207,7 @@ class ProjectConfigController extends Controller
         $p_config->project_id = $request->pid;
 
         $p_config->assign_person = $request->hod;
+        $p_config->user_id =auth::user()->id;
 
         $p_config->d_line = $request->dline;
 
