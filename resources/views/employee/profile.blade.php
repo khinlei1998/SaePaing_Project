@@ -1,83 +1,122 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="card shadow-lg index-tables border-0 mt-5 p-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 py-3">
-                        <div class="row">
-                            <div class="col-2">
-                                <div class="list-group profile-list">
-                                    <a href="#infos" class="list-group-item" data-toggle="tab"><span><br><i
-                                                    class="fa fa-user"></i><br>Profile</span></a>
-                                    <a class="list-group-item" href="#tasks" data-toggle="tab"><span><br><i
-                                                    class="fa fa-tasks"></i><br>Tasks</span></a>
-                                    <a class="list-group-item" href="#sharetasks" data-toggle="tab"><span><br><i
-                                                    class="fa fa-share-square"></i><br>Shared Tasks</span></a>
-                                    <a class="list-group-item" href="#missions" data-toggle="tab"><span><br><i
-                                                    class="fa fa-calendar-alt"></i><br>Missions</span></a>
-                                    <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i
-                                                    class="fa fa-tasks"></i><br>CMP</span></a>
-                                </div>
+
+<div class="container">
+    <div class="card shadow-lg index-tables border-0 mt-5 p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 py-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="list-group profile-list">
+                                <a href="#tasks" class="list-group-item" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>Tasks</span></a>
+                                <a class="list-group-item" href="#sharetasks" data-toggle="tab"><span><br><i class="fa fa-share-square"></i><br>Shared Tasks</span></a>
+                                <a class="list-group-item" href="#missions" data-toggle="tab"><span><br><i class="fa fa-calendar-alt"></i><br>Missions</span></a>
+                                <a class="list-group-item" href="#cbp" data-toggle="tab"><span><br><i class="fa fa-tasks"></i><br>CMP</span></a>
+                                <a class="list-group-item" href="#infos" data-toggle="tab"><span><br><i class="fa fa-user"></i><br>Profile</span></a>
+
                             </div>
-                            <div class="col-10">
-                                <div class="tab-content">
-                                    <div class="tab-pane fade" id="infos" role="tabpanel">
-                                        <div class="row mt-2">
-                                            <div class="col-8">
 
-                                                <div class="row">
-                                                    <div class="col-2 mt-1">
-                                                        <strong>Name :</strong>
-                                                    </div>
-                                                    <div class="col-5 mt-1">
-                                                        {{ $employee->emp_name }}
-                                                    </div>
-                                                    <div class="col-5 mt-1">
+                        </div>
+                        <div class="col-10 p-2">
+                            <div class="tab-content">
+                                <div class="tab-pane fade" id="infos" role="tabpanel">
+                                    <div class="row mt-2">
+                                        <div class="col-8">
 
-                                                    </div>
-                                                    <div class="col-2 mt-1">
-                                                        <strong>Department :</strong>
-                                                    </div>
-                                                    <div class="col-5 mt-1">
-                                                        {{ $employee->department->dept_name ??'-' }}
-                                                    </div>
-                                                    <div class="col-5 mt-1">
-
-                                                    </div>
-                                                    <div class="col-2 mt-1">
-                                                        <strong>SubDepartment :</strong>
-                                                    </div>
-                                                    <div class="col-10 mt-1">
-                                                        {{ $employee->subDepartment->subdept_name ?? '-' }}
-                                                    </div>
-                                                    <div class="col-2 mt-3">
-                                                        <strong>Group :</strong>
-                                                    </div>
-                                                    <div class="col-10 mt-3">
-                                                        {{ $employee->group->group_name ?? '-' }}
-                                                    </div>
-                                                    <div class="col-2 mt-3">
-                                                        <strong>Team :</strong>
-                                                    </div>
-                                                    <div class="col-10 mt-3">
-                                                        {{ $employee->team->team_name ?? '-' }}
-                                                    </div>
-                                                    <div class="col-2 mt-3">
-                                                        <strong>Email :</strong>
-                                                    </div>
-                                                    <div class="col-10 mt-3">
-                                                        {{ $employee->user->email }}
-                                                    </div>
-                                                    <div class="col-2 mt-3">
-                                                        <strong>Job Description :</strong>
-                                                    </div>
-                                                    <div class="col-10 mt-3">
-                                                        {{ $employee->emp_jobdesp}}
-                                                    </div>
+                                             <div class="row">
+                                                <div class="col-3 mb-2">
+                                                <strong class="text-muted">Name</strong> 
                                                 </div>
+                                                <div class="col-1">
+                                                :
+                                                </div>
+                                                <div class="col-8">
+                                                {{ $employee->emp_name }}
+                                                </div>
+                                                <div class="col-3 mb-2">
+                                                <strong class="text-muted">Department</strong> 
+                                                </div>
+                                                <div class="col-1">
+                                                :
+                                                </div>
+                                                <div class="col-8 ">
+                                                {{ $employee->department->dept_name ??'-' }}
+                                                </div>
+                                                <div class="col-3 mb-2">
+                                                <strong class="text-muted">SubDepartment</strong> 
+                                                </div>
+                                                <div class="col-1 ">
+                                                :
+                                                </div>
+                                                <div class="col-8 ">
+                                                {{ $employee->subDepartment->subdept_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mb-2">
+                                                <strong class="text-muted">Group</strong> 
+                                                </div>
+                                                <div class="col-1 ">
+                                                :
+                                                </div>
+                                                <div class="col-8 ">
+                                                {{ $employee->group->group_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mb-2">
+                                                <strong class="text-muted">Team</strong> 
+                                                </div>
+                                                <div class="col-1 ">
+                                                :
+                                                </div>
+                                                <div class="col-8 ">
+                                                {{ $employee->team->team_name ?? '-' }}
+                                                </div>
+                                                <div class="col-3 mb-2">
+                                                <strong class="text-muted">Email</strong> 
+                                                </div>
+                                                <div class="col-1 ">
+                                                :
+                                                </div>
+                                                <div class="col-8 ">
+                                                {{ $employee->user->email }}
+                                                </div>
+                                                <div class="col-3 mb-2">
+                                                <strong class="text-muted">Job Description</strong> 
+
+                                                </div>
+                                                <div class="col-1 ">
+                                                :
+                                                </div>
+                                                <div class="col-8 ">
+                                                {{ $employee->emp_jobdesp}}
+                                                </div>
+                                                
+                                                
                                             </div>
+
+                                        </div>
+                                        <div class="col-4">
+
+                                             <div class="card " style="width: 15rem;">
+                                                <img src="{{url('/storage/profile/'.$img)}}" class="profile_image" alt="Cinque Terre" width="15"  >
+                                                <div class="card-body text-center">
+                                                    <hr>
+                                                    <button type="button" class="btn btn-primary btnprofile" data-toggle="modal" data-target="#profilemodal">
+                                                        Edit
+                                                    </button>
+                                                    
+                                                </div>
+
+                                            </div>
+                                            <div class="mb-2 mt-2">
+                                                <button class="btn btn-outline-info  ">HR FROM &nbsp;1</button>
+                                               
+                                            </div>
+                                            <div class="mb-2"  >
+                                                <button class="btn btn-outline-info  ">HR FROM &nbsp;2</button>
+                                               
+                                            </div>
+       
                                             <div class="col-4">
 
                                                 <div class="card " style="width: 12rem;">
