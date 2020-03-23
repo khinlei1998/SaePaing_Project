@@ -165,9 +165,12 @@ class CbpSubtaskController extends Controller
         $feedback='';
         $report_attached_file='';
         $projConfig_id=$request->config_id;
+
        
-        // $created = Histories::create(['sender_id' =>$hod_id,'project_id'=>'','cbp_id'=>'','read_this'=>0,'receiver_id' => $request->user_id, 'description' =>$request->report_text, 'link_name'=>'current_link','created_at' => Carbon::now() , 'updated_at' => Carbon::now()]); 
-        $this->historyhelper->setnoti(Auth::user()->id,$request->hod_id,$request->cbp_id,'','$request->report_text','current_link',false);
+      
+
+        $created = Histories::create(['sender_id' =>$hod_id,'project_id'=>'','cbp_id'=>$request->main_cbp_id,'read_this'=>0,'receiver_id' => $request->receiver_id, 'description' =>$request->report_text, 'link_name'=>'current_link','created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
+
         
        
         //start create
