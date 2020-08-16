@@ -8,6 +8,14 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 class MissionController extends Controller
 {
+
+    public $historyhelper;
+
+
+    public function __construct()
+    {
+        $this->historyhelper = new HistoriesHelper();
+    }
     // public $imagehelper;
     // public function __construct()
     // {
@@ -57,13 +65,17 @@ class MissionController extends Controller
             else
                 $filenames.=$this->missionImageUpload($file);
         }
+
+        $this->historyhelper->setnoti(Auth::user()->id,$request->emp_id,'','',$request->job_obj,'mission',false);
+ 
         $missions_id=Mission::create(array_merge($request->except(['jobfinished_date']), ['status' => '0','attach_files'=>$filenames,'jobfinished_date'=>Carbon::create($request->jobfinished_date)->toDateTimeString()]));
         $createdmissions_id=$missions_id->mission_id;
        
       
 
         return response()->json($createdmissions_id);
-    }
+
+           }
     public function missionImageUpload($file){
        
         $path = $file->store('missions', 'public');

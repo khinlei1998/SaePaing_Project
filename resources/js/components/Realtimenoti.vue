@@ -54,7 +54,7 @@
 
                 setInterval(() => {
 
-                    axios.get('http://localhost:8000/getnoti').then(resp => {
+                    axios.get('http://'+window.location.hostname+':8000/getnoti').then(resp => {
                             console.log(resp.data.data.count);
                             this.noticount = resp.data.data.count;
                             this.desc = resp.data.data.data;
@@ -97,7 +97,13 @@
 
                                 return window.location.assign('profile');
                         }
-                        else{
+                        else if(response.data.link_name == 'mission'){
+                         
+                              window.localStorage.setItem('mission', 'Active');
+
+                                return window.location.assign('profile');
+                        }
+                       else{
 
                             window.localStorage.setItem('cmp', 'Active');
 
@@ -113,7 +119,7 @@
 
             addnow: function () {
 
-                axios.get('http://localhost:8000/getnoti').then(resp => {
+                axios.get('http://'+window.location.hostname+':8000/getnoti').then(resp => {
                         console.log(resp.data.data.count);
                         this.noticount = resp.data.data.count;
                         this.desc = resp.data.data.data;

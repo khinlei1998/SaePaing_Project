@@ -17,9 +17,9 @@
                                                     class="fa fa-tasks"></i><br>Tasks</span></a>
                                     <a class="list-group-item" href="#sharetasks" data-toggle="tab"><span><br><i
                                                     class="fa fa-share-square"></i><br>Shared Tasks</span></a>
-                                    <a class="list-group-item" href="#missions" data-toggle="tab"><span><br><i
+                                    <a class="list-group-item" href="#missions"  data-toggle="tab"\><span><br><i
                                                     class="fa fa-calendar-alt"></i><br>Missions</span></a>
-                                    <a class="list-group-item " href="#cbp" id="cbp_active" data-toggle="tab"><span><br><i
+                                    <a class="list-group-item " href="#cbp"  data-toggle="tab"><span><br><i
                                                     class="fa fa-tasks"></i><br>CMP</span></a>
 
                                 </div>
@@ -1002,6 +1002,18 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
+        // if (localStorage.getItem('cmp') == 'Active') {
+        //         alert('cmp');
+        //         $('#cbp_active').addClass('active');
+        //         $('#cbp').addClass('in');
+
+        //         $('#cbp').addClass('active');
+        //         $('#cbp').addClass('show');
+        //         // var element = document.getElementById("cbp_active");
+        //         // element.add("Active");
+        //         console.log('Cmp');
+
+        //     } 
 
 
         window.onload = function () {
@@ -1010,44 +1022,45 @@
             //for profile page
 
 
-            if (localStorage.getItem('cmp') == 'Active') {
-                $('#cbp_active').addClass('active');
-                $('#cbp').addClass('in');
+           
+            //  if(localStorage.getItem('task') == 'Active'){
+                 
+            //     $('#task_active').addClass('active');
+            //     $('#tasks').addClass('in');
 
-                $('#cbp').addClass('active');
-                $('#cbp').addClass('show');
-                // var element = document.getElementById("cbp_active");
-                // element.add("Active");
-                console.log('afeafeae');
+            //     $('#tasks').addClass('active');
+            //     $('#tasks').addClass('show');
+            //     // var element = document.getElementById("cbp_active");
+            //     // element.add("Active");
+            //     console.log('task tab');
+            // }
+            // else {
+            //     console.log('test');
+            //     $('#pf_active').addClass('active');
+            //     $('#pf').addClass('in');
 
-            } 
-            else if(localStorage.getItem('task') == 'Active'){
-                $('#task_active').addClass('active');
-                $('#tasks').addClass('in');
+            //     $('#pf').addClass('active');
+            //     $('#pf').addClass('show');
+            //     // var element = document.getElementById("cbp_active");
+            //     // element.add("Active");
+            //     console.log('profile tab');
+            // }
+            // if(localStorage.getItem('mission') == 'Active'){
+            //     $('#mission_active').addClass('active');
+            //     $('#missions').addClass('in');
 
-                $('#tasks').addClass('active');
-                $('#tasks').addClass('show');
-                // var element = document.getElementById("cbp_active");
-                // element.add("Active");
-                console.log('task tab');
-            }
-            else {
-                console.log('test');
-                $('#pf_active').addClass('active');
-                $('#pf').addClass('in');
-
-                $('#pf').addClass('active');
-                $('#pf').addClass('show');
-                // var element = document.getElementById("cbp_active");
-                // element.add("Active");
-                console.log('afeafeae');
-            }
+            //     $('#missions').addClass('active');
+            //     $('#missions').addClass('show');
+            //     // var element = document.getElementById("cbp_active");
+            //     // element.add("Active");
+            //     console.log('mission tab');
+            // }
 
 
             // clear locastorage
-            setInterval(function () {
-                return localStorage.clear('cmp')
-            }, 3000);
+            // setInterval(function () {
+            //     return localStorage.clear('cmp')
+            // }, 3000);
             // clear locastorage
 
 
@@ -1180,11 +1193,8 @@
                         },
                         method: "POST",
                         url: "/reportHot",
-<<<<<<< HEAD
-                        data: {config_id, report_text, per,user_id}
-=======
+                        // data: {config_id, report_text, per,user_id}
                         data: {config_id, report_text, per,receiver_id,main_cbp_id}
->>>>>>> 31a96a3d7df3fe8da4d39f88d782e1f12c021a7d
                     }).done(function (data) {
                         console.log("S blade: [task/create] component :[employee dropdown] from:app.js Data => Employee count" + data.length);
                         if (data.success) {
